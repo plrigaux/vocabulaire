@@ -34,3 +34,11 @@
     <input matInput placeholder="Ex. Pizza" [(ngModel)]="textToSpeak" type="text">
   </mat-form-field>
  <span>&nbsp;</span><button mat-raised-button color="accent" (click)="test()">Speak</button>
+
+
+
+ <ul>
+  <li *ngFor="let theme of themes">
+    <h2>{{theme.theme}}</h2>
+  </li>
+</ul>

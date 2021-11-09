@@ -1,0 +1,146 @@
+[{
+    "theme": 1,
+    "semaines": [{
+      "semaine": 1,
+      "groupes": [{
+        "indice": "Le son [s] au début d'un mot s'écrit s.",
+        "mots": [{
+          "mot": "salade",
+          "classe": "NF"
+        }, {
+          "mot": "sec",
+          "classe":"ADJ",
+          "fem":"sèche"
+        }]
+      }]
+    }]
+  },
+  {
+    "theme": 2,
+    "semaines": [{
+        "semaine": 4,
+        "groupes": [{
+          "indice": "Le e muet à la fin d'un mot",
+          "mots": [{
+            "mot": "bande",
+            "classe": "NF"
+          }, {
+            "mot": "barbe",
+            "classe": "NF"
+          }, {
+            "mot": "cuisine",
+            "classe": "NF"
+          }, {
+            "mot": "danse",
+            "classe": "NF"
+          }, {
+            "mot": "demande",
+            "classe": "NF"
+          }, {
+            "mot": "demie",
+            "classe": "NF"
+          }, {
+            "mot": "libre",
+            "classe": "ADJ"
+          }, {
+            "mot": "maladie",
+            "classe": "NF"
+          }, {
+            "mot": "mine",
+            "classe": "NF"
+          }, {
+            "mot": "murmure",
+            "classe": "NM"
+          }, {
+            "mot": "pâle",
+            "classe": "ADJ"
+          }, {
+            "mot": "partie",
+            "classe": "NF"
+          }, {
+            "mot": "perdre",
+            "classe": "V"
+          }, {
+            "mot": "pile",
+            "classe": "NF"
+          }, {
+            "mot": "poudre",
+            "classe": "NF"
+          }, {
+            "mot": "timide",
+            "classe": "ADJ"
+          }, {
+            "mot": "vivre",
+            "classe": "V"
+          }, {
+            "mot": "voiture",
+            "classe": "NF"
+          }, {
+            "mot": "vue",
+            "classe": "NF"
+          }]
+        }]
+      },
+      {
+        "semaine": 5,
+        "groupes": [{
+          "indice": "Le son[j] devant un e peut s 'écrire g ou j. À la fin d 'un mot, il s'écrit le plus souvent g.",
+          "mots": [{
+              "mot": "âge",
+              "classe": "NM"
+            }, {
+              "mot": "changer",
+              "classe": "V"
+            },
+            {
+              "mot": "danger",
+              "classe": "NM"
+            }, {
+              "mot": "genou",
+              "classe": ""
+            }, {
+              "mot": "genre",
+              "classe": "NM"
+            }, {
+              "mot": "jeter",
+              "classe": "V"
+            }, {
+              "mot": "jeune",
+              "classe": "ADJ"
+            }, {
+              "mot": "ménage",
+              "classe": "NM"
+            }, {
+              "mot": "nuage",
+              "classe": "NM"
+            }, {
+              "mot": "passage",
+              "classe": "NM"
+            }, {
+              "mot": "village",
+              "classe": "NM"
+            }
+          ]
+        }, {
+          "indice": "Le son [j] devant a, o et u s'écrit j.",
+          "mots": [{
+            "mot": "bonjour",
+            "classe": "NM"
+          }, {
+            "mot": "janvier",
+            "classe": "NM"
+          }, {
+            "mot": "joue",
+            "classe": "NF"
+          }, {
+            "mot": "jus",
+            "classe": "NM"
+          }, {
+            "mot": "rejoindre",
+            "classe": "V"
+          }]
+        }]
+      }
+    ]
+  }
+]
