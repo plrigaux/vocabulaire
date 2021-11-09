@@ -1,0 +1,10 @@
+<p>speech works!</p>
+
+<mat-form-field appearance="fill">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="voice">
+      <mat-option *ngFor="let v of voices" [value]="v">{{v}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="test()">test it</button>
