@@ -13,9 +13,18 @@ export class CardComponent implements OnInit {
   @Input()
   mot: Mot | null = null;
 
+  frenchVoices: SpeechSynthesisVoice[] = []
+  selectedVoice: SpeechSynthesisVoice | null = null
+
   constructor() { }
 
   ngOnInit(): void {
+
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+      speechSynthesis.onvoiceschanged = () => {
+        this.listVoices()
+      }
+    }
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -25,7 +34,33 @@ export class CardComponent implements OnInit {
     if (this.mot) {
       let to_speak = new SpeechSynthesisUtterance(this.mot.mot);
 
+      if (this.selectedVoice) {
+        to_speak.voice = this.selectedVoice
+      }
+
       window.speechSynthesis.speak(to_speak);
     }
+  }
+
+  private listVoices() {
+    console.log("list voices")
+    let voices = speechSynthesis.getVoices();
+
+    voices.forEach(voice => {
+
+      console.log(voice.name)
+
+      if (voice.lang.startsWith("fr")) {
+        this.frenchVoices.push(voice);
+      }
+
+      if (this.frenchVoices.length > 0) {
+        this.selectedVoice = this.frenchVoices[0]
+      }
+    });
+  }
+
+  validate(): void {
+    console.log("validate")
   }
 }

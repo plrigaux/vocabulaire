@@ -1,8 +1,9 @@
 <mat-card>
     <mat-form-field appearance="fill">
         <mat-label>Votre réponse</mat-label>
-        <input matInput placeholder="Votre réponse" [(ngModel)]="value">
+        <input matInput placeholder="Votre réponse" [(ngModel)]="value" (keydown.enter)="validate()">
       </mat-form-field>
+      <button mat-raised-button color="primary" (click)="validate()">Validate</button>
 
       <p>Mot: {{mot?.mot}}</p>
 </mat-card>
