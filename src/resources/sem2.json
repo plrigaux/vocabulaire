@@ -1,93 +1,173 @@
-La lettre c fait le son[k] devant a, o et u.
-cacher y.
-camion n.m.coin n.m.commencer y.consoler v.continuer y.contre mot inv.costume n.m.coucher y.
-courant n.m.Cours n.m.
-course n.f.
-La lettre c fait le son[s] devant e, i et y.
-avancer y.glace n.f.lancer y.
-naissance n.f.
+Semaine 1 bord n.m.but n.m.chant n.m.doigt n.m.droit adj.droite droit n.m.
+fond n.m.haut n.m.mechant adj.mechante mort n.f.Mort adjin.m.morte adj. / n.f.nid n.m.pot n.m.rat n.m.rate n.f.
+renard n.m.renarde n.f.retard n.m.rond adj.ronde salut n.m.
+
+Semaine 2 Lettre finale muette: s ou t ajout n.m.alphabet n.m.argent n.m.Court adj.courte dos n.m.epais adj.epaisse gentil adj.gentille important adj.importante mauvais adj.mauvaise minuit n.m.ouvert adj.ouverte part n.f.point n.m.precis adj.precise sabot n.m.sourcil n.m.
+Semaine 3 Le n devient m devant le b et le p.ampoule n.f.champ n.m.combien mot inv.comprendre v.compter v.decembre n.m.embrasser v.ensemble mot inv.exemple n.m.jambe n.f.longtemps mot inv.nombre n.m.novembre n.m.ombre n.f.remplir v.sembler v.septembre n.m.
 
 
 [{
   "theme": 1,
   "semaines": [{
-    "semaine": 3,
+    "semaine": 1,
     "groupes": [{
-      "indice": "La lettre <i>c</i> fait le son [k] devant <i>a</i>, <i>o</i> et <i>u</i>.",
+      "indice": "Lettre finale muette: <i>d</i> ou <i>t</i>.",
       "mots": [{
-          "mot": "cacher",
-          "classe": "V"
-        },
-        {
-          "mot": "camion",
+          "mot": "bord",
           "classe": "NM"
         },
         {
-          "mot": "coin",
+          "mot": "but",
           "classe": "NM"
         },
         {
-          "mot": "commencer",
-          "classe": "V"
-        },
-        {
-          "mot": "consoler",
-          "classe": "V"
-        },
-        {
-          "mot": "continuer",
-          "classe": "V"
-        },
-        {
-          "mot": "contre",
-          "classe": "MI"
-        },
-        {
-          "mot": "costume",
+          "mot": "chant",
           "classe": "NM"
         },
         {
-          "mot": "coucher",
-          "classe": "V"
-        },
-        {
-          "mot": "courant",
+          "mot": "doigt",
           "classe": "NM"
         },
         {
-          "mot": "cours ",
+          "mot": "droit",
+          "classe": "ADJ",
+          "fem": "droite"
+        }, {
+          "mot": "fond",
           "classe": "NM"
         },
         {
-          "mot": "course",
+          "mot": "haut",
+          "classe": "NM"
+        }, {
+          "mot": "mechant",
+          "classe": "ADJ",
+          "fem": "mechante"
+        },
+        {
+          "mot": "mort",
+          "classe": ["NM", "NF", "ADJ"],
+          "fem": "morte"
+        }, {
+          "mot": "nid ",
+          "classe": "NM"
+        },
+        {
+          "mot": "pot ",
+          "classe": "NM"
+        }, {
+          "mot": "rat ",
+          "classe": ["NM", "NF"],
+          "fem": "rate"
+        },
+        {
+          "mot": "renard",
+          "classe": ["NM", "NF"],
+          "fem": "renarde"
+        },
+        {
+          "mot": "precis",
+          "classe": "ADJ",
+          "fem": "precise"
+        }, {
+          "mot": "sabot",
+          "classe": "NM"
+        },
+        {
+          "mot": "sourcil",
           "classe": "NF"
-        }
-      ]
-    }, {
-      "indice": "La lettre <i>c</i> fait le son [s] devant <i>e</i>, <i>i</i> et <i>y</i>.",
-      "mots": [
-
-        {
-          "mot": "avancer ",
-          "classe": "V"
-        },
-        {
-          "mot": "glace ",
-          "classe": "NF"
-        },
-        {
-          "mot": "lancer ",
-          "classe": "V"
-        },
-        {
-          "mot": "naissance ",
-          "classe": "NF"
-        },
-        {
+        }, {
           "mot": "",
           "classe": ""
         },
         {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }, {
           "mot": "",
           "classe": ""
         },

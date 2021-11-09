@@ -7,7 +7,7 @@
           "mots": [{
               "mot": "salade",
               "classe": "NF"
-            },{
+            }, {
               "mot": "salade",
               "classe": "NF"
             },
@@ -79,7 +79,7 @@
       {
         "semaine": 2,
         "groupes": [{
-          "indice": "Le son [é] au début et à l'intérieur d'un mot s'écrit le plus souvent é. <br/> Le son [é] à la fin d'un mot s'écrit le plus souvent ei.",
+          "indice": "Le son [é] au début et à l'intérieur d'un mot s'écrit le plus souvent <i>é</i>. <br/> Le son [é] à la fin d'un mot s'écrit le plus souvent <i>er</i>.",
           "mots": [{
               "mot": "aréna",
               "classe": ["NM", "NM"]
@@ -142,7 +142,7 @@
             }
           ]
         }]
-      },{
+      }, {
         "semaine": 3,
         "groupes": [{
           "indice": "La lettre <i>c</i> fait le son [k] devant <i>a</i>, <i>o</i> et <i>u</i>.",
@@ -197,8 +197,7 @@
           ]
         }, {
           "indice": "La lettre <i>c</i> fait le son [s] devant <i>e</i>, <i>i</i> et <i>y</i>.",
-          "mots": [
-            {
+          "mots": [{
               "mot": "avancer ",
               "classe": "V"
             },
@@ -222,6 +221,98 @@
   {
     "theme": 2,
     "semaines": [{
+        "semaine": 1,
+        "groupes": [{
+          "indice": "Lettre finale muette: <i>d</i> ou <i>t</i>.",
+          "mots": [{
+              "mot": "bord",
+              "classe": "NM"
+            },
+            {
+              "mot": "but",
+              "classe": "NM"
+            },
+            {
+              "mot": "chant",
+              "classe": "NM"
+            },
+            {
+              "mot": "doigt",
+              "classe": "NM"
+            },
+            {
+              "mot": "droit",
+              "classe": "ADJ",
+              "fem": "droite"
+            }, {
+              "mot": "fond",
+              "classe": "NM"
+            },
+            {
+              "mot": "haut",
+              "classe": "NM"
+            }, {
+              "mot": "méchant",
+              "classe": "ADJ",
+              "fem": "méchante"
+            },
+            {
+              "mot": "mort",
+              "classe": ["NM", "NF", "ADJ"],
+              "fem": "morte"
+            }, {
+              "mot": "nid ",
+              "classe": "NM"
+            },
+            {
+              "mot": "pot ",
+              "classe": "NM"
+            }, {
+              "mot": "rat ",
+              "classe": ["NM", "NF"],
+              "fem": "rate"
+            },
+            {
+              "mot": "renard",
+              "classe": ["NM", "NF"],
+              "fem": "renarde"
+            },
+            {
+              "mot": "retard",
+              "classe": "NM"
+            },
+            {
+              "mot": "rond",
+              "classe": ["NM", "NF"],
+              "fem": "ronde"
+            },
+            {
+              "mot": "salut",
+              "classe": "NM"
+            }
+          ]
+        }]
+      },
+      {
+        "semaine": 2,
+        "groupes": [{
+          "indice": "Le e muet à la fin d'un mot",
+          "mots": [{
+              "mot": "precis",
+              "classe": "ADJ",
+              "fem": "precise"
+            }, {
+              "mot": "sabot",
+              "classe": "NM"
+            },
+            {
+              "mot": "sourcil",
+              "classe": "NM"
+            }
+          ]
+        }]
+      },
+      {
         "semaine": 4,
         "groupes": [{
           "indice": "Le e muet à la fin d'un mot",
@@ -288,7 +379,7 @@
       {
         "semaine": 5,
         "groupes": [{
-          "indice": "Le son[j] devant un e peut s 'écrire g ou j. À la fin d 'un mot, il s'écrit le plus souvent g.",
+          "indice": "Le son[j] devant un e peut s'écrire g ou j. À la fin d'un mot, il s'écrit le plus souvent g.",
           "mots": [{
               "mot": "âge",
               "classe": "NM"
