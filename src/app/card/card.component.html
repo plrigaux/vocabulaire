@@ -1,1 +1,8 @@
-<p>card works!</p>
+<mat-card>
+    <mat-form-field appearance="fill">
+        <mat-label>Votre réponse</mat-label>
+        <input matInput placeholder="Votre réponse" [(ngModel)]="value">
+      </mat-form-field>
+
+      <p>Mot: {{mot?.mot}}</p>
+</mat-card>

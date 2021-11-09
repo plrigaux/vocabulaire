@@ -1,29 +1,34 @@
 <h4>Thème</h4>
 <mat-form-field appearance="fill">
-  <mat-label>Choisisez un thème</mat-label>
-  <mat-select [(value)]="theme">
-    <mat-option *ngFor="let theme of themes" [value]="theme">
-        Thème {{theme.theme}}
-    </mat-option>
-  </mat-select>
+    <mat-label>Choisisez un thème</mat-label>
+    <mat-select [(value)]="theme">
+        <mat-option *ngFor="let theme of themes" [value]="theme">
+            Thème {{theme.theme}}
+        </mat-option>
+    </mat-select>
 </mat-form-field>
 
 <h4>Semaine</h4>
 <mat-form-field appearance="fill">
-  <mat-label>Choisisez une semaine</mat-label>
-  <mat-select [(value)]="semaine">
-    <mat-option *ngFor="let sem of theme?.semaines" [value]="sem">
-        Semaine {{sem.semaine}}
-    </mat-option>
-  </mat-select>
+    <mat-label>Choisisez une semaine</mat-label>
+    <mat-select (selectionChange)="onChangeSemaine($event.value)">
+        <mat-option *ngFor="let sem of theme?.semaines" [value]="sem">
+            Semaine {{sem.semaine}}
+        </mat-option>
+    </mat-select>
 </mat-form-field>
-
 
 <div *ngFor="let groupe of semaine?.groupes">
     <h3 [innerHTML]="groupe.indice"></h3>
     <ul>
         <li *ngFor="let mot of groupe.mots">
-             {{mot.mot}} {{mot.classe}}
+            {{mot.mot}} {{mot.classe}}
         </li>
     </ul>
+</div>
+<div>
+    <button mat-raised-button color="primary" (click)="previous()">Précédent</button>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <button mat-raised-button color="primary" (click)="next()">Suivant</button>
+    <app-card [mot]="mot"></app-card>
 </div>

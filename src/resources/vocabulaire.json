@@ -298,9 +298,9 @@
         "groupes": [{
           "indice": "Le e muet à la fin d'un mot",
           "mots": [{
-              "mot": "precis",
+              "mot": "précis",
               "classe": "ADJ",
-              "fem": "precise"
+              "fem": "précise"
             }, {
               "mot": "sabot",
               "classe": "NM"

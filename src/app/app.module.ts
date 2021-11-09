@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
 import { VocabulaireComponent } from './vocabulaire/vocabulaire.component';
 import { CardComponent } from './card/card.component';
 import { CardcontrolComponent } from './cardcontrol/cardcontrol.component'
@@ -32,6 +33,7 @@ import { CardcontrolComponent } from './cardcontrol/cardcontrol.component'
     MatButtonModule,
     MatInputModule,
     MatSliderModule,
+    MatCardModule,
     FormsModule
   ],
   providers: [],
