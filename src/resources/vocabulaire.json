@@ -1,19 +1,223 @@
 [{
     "theme": 1,
     "semaines": [{
-      "semaine": 1,
-      "groupes": [{
-        "indice": "Le son [s] au début d'un mot s'écrit s.",
-        "mots": [{
-          "mot": "salade",
-          "classe": "NF"
-        }, {
-          "mot": "sec",
-          "classe":"ADJ",
-          "fem":"sèche"
+        "semaine": 1,
+        "groupes": [{
+          "indice": "Le son [s] au début d'un mot s'écrit s.",
+          "mots": [{
+              "mot": "salade",
+              "classe": "NF"
+            },{
+              "mot": "salade",
+              "classe": "NF"
+            },
+            {
+              "mot": "sec",
+              "classe": "ADJ",
+              "fem": "sèche"
+            },
+            {
+              "mot": "secouer",
+              "classe": "V"
+            },
+            {
+              "mot": "sentier",
+              "classe": "NM"
+            },
+            {
+              "mot": "sentir",
+              "classe": "V"
+            },
+            {
+              "mot": "service",
+              "classe": "NM"
+            },
+            {
+              "mot": "soie",
+              "classe": "NF"
+            },
+            {
+              "mot": "soin",
+              "classe": "NM"
+            },
+            {
+              "mot": "son",
+              "classe": "NM"
+            },
+            {
+              "mot": "soulier",
+              "classe": "NM"
+            },
+            {
+              "mot": "souper",
+              "classe": "NM"
+            },
+            {
+              "mot": "souriant",
+              "classe": "ADJ",
+              "fem": "souriante"
+            },
+            {
+              "mot": "spectacle",
+              "classe": "NM"
+            },
+            {
+              "mot": "sucre",
+              "classe": "NM"
+            },
+            {
+              "mot": "sucrerie",
+              "classe": "NF"
+            },
+            {
+              "mot": "surface",
+              "classe": "NF"
+            }
+          ]
         }]
-      }]
-    }]
+      },
+      {
+        "semaine": 2,
+        "groupes": [{
+          "indice": "Le son [é] au début et à l'intérieur d'un mot s'écrit le plus souvent é. <br/> Le son [é] à la fin d'un mot s'écrit le plus souvent ei.",
+          "mots": [{
+              "mot": "aréna",
+              "classe": ["NM", "NM"]
+            },
+            {
+              "mot": "caméra",
+              "classe": "NM"
+            },
+            {
+              "mot": "cinéma",
+              "classe": "NM"
+            },
+            {
+              "mot": "déposer",
+              "classe": "V"
+            },
+            {
+              "mot": "écouter",
+              "classe": "V"
+            },
+            {
+              "mot": "espérer",
+              "classe": "V"
+            },
+            {
+              "mot": "étoile",
+              "classe": "V"
+            },
+            {
+              "mot": "février",
+              "classe": "NM"
+            },
+            {
+              "mot": "météo",
+              "classe": "NF"
+            },
+            {
+              "mot": "métier",
+              "classe": "NM"
+            },
+            {
+              "mot": "posséder",
+              "classe": "V"
+            },
+            {
+              "mot": "précipiter",
+              "classe": "V"
+            },
+            {
+              "mot": "préparer",
+              "classe": "V"
+            },
+            {
+              "mot": "présenter",
+              "classe": "V"
+            },
+            {
+              "mot": "protéger",
+              "classe": "V"
+            }
+          ]
+        }]
+      },{
+        "semaine": 3,
+        "groupes": [{
+          "indice": "La lettre <i>c</i> fait le son [k] devant <i>a</i>, <i>o</i> et <i>u</i>.",
+          "mots": [{
+              "mot": "cacher",
+              "classe": "V"
+            },
+            {
+              "mot": "camion",
+              "classe": "NM"
+            },
+            {
+              "mot": "coin",
+              "classe": "NM"
+            },
+            {
+              "mot": "commencer",
+              "classe": "V"
+            },
+            {
+              "mot": "consoler",
+              "classe": "V"
+            },
+            {
+              "mot": "continuer",
+              "classe": "V"
+            },
+            {
+              "mot": "contre",
+              "classe": "MI"
+            },
+            {
+              "mot": "costume",
+              "classe": "NM"
+            },
+            {
+              "mot": "coucher",
+              "classe": "V"
+            },
+            {
+              "mot": "courant",
+              "classe": "NM"
+            },
+            {
+              "mot": "cours ",
+              "classe": "NM"
+            },
+            {
+              "mot": "course",
+              "classe": "NF"
+            }
+          ]
+        }, {
+          "indice": "La lettre <i>c</i> fait le son [s] devant <i>e</i>, <i>i</i> et <i>y</i>.",
+          "mots": [
+            {
+              "mot": "avancer ",
+              "classe": "V"
+            },
+            {
+              "mot": "glace ",
+              "classe": "NF"
+            },
+            {
+              "mot": "lancer ",
+              "classe": "V"
+            },
+            {
+              "mot": "naissance ",
+              "classe": "NF"
+            }
+          ]
+        }]
+      }
+    ]
   },
   {
     "theme": 2,

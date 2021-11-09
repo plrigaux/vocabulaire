@@ -1,0 +1,189 @@
+La lettre c fait le son[k] devant a, o et u.
+cacher y.
+camion n.m.coin n.m.commencer y.consoler v.continuer y.contre mot inv.costume n.m.coucher y.
+courant n.m.Cours n.m.
+course n.f.
+La lettre c fait le son[s] devant e, i et y.
+avancer y.glace n.f.lancer y.
+naissance n.f.
+
+
+[{
+  "theme": 1,
+  "semaines": [{
+    "semaine": 3,
+    "groupes": [{
+      "indice": "La lettre <i>c</i> fait le son [k] devant <i>a</i>, <i>o</i> et <i>u</i>.",
+      "mots": [{
+          "mot": "cacher",
+          "classe": "V"
+        },
+        {
+          "mot": "camion",
+          "classe": "NM"
+        },
+        {
+          "mot": "coin",
+          "classe": "NM"
+        },
+        {
+          "mot": "commencer",
+          "classe": "V"
+        },
+        {
+          "mot": "consoler",
+          "classe": "V"
+        },
+        {
+          "mot": "continuer",
+          "classe": "V"
+        },
+        {
+          "mot": "contre",
+          "classe": "MI"
+        },
+        {
+          "mot": "costume",
+          "classe": "NM"
+        },
+        {
+          "mot": "coucher",
+          "classe": "V"
+        },
+        {
+          "mot": "courant",
+          "classe": "NM"
+        },
+        {
+          "mot": "cours ",
+          "classe": "NM"
+        },
+        {
+          "mot": "course",
+          "classe": "NF"
+        }
+      ]
+    }, {
+      "indice": "La lettre <i>c</i> fait le son [s] devant <i>e</i>, <i>i</i> et <i>y</i>.",
+      "mots": [
+
+        {
+          "mot": "avancer ",
+          "classe": "V"
+        },
+        {
+          "mot": "glace ",
+          "classe": "NF"
+        },
+        {
+          "mot": "lancer ",
+          "classe": "V"
+        },
+        {
+          "mot": "naissance ",
+          "classe": "NF"
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        },
+        {
+          "mot": "",
+          "classe": ""
+        }
+      ]
+    }]
+  }]
+}]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import vocabulaire from '../../resources/vocabulaire.json';
+
 
 @Component({
   selector: 'app-speech',
@@ -15,7 +15,7 @@ export class SpeechComponent implements OnInit {
   textToSpeak : string = "Mange du caca";
   pitch : number = 1
   rate : number = 1
-  themes : any = vocabulaire
+
 
   ngOnInit(): void {
     if (typeof speechSynthesis === 'undefined') {

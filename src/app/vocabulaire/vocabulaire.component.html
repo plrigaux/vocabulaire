@@ -1,0 +1,18 @@
+<ul>
+    <li *ngFor="let theme of themes">
+        <h1>Thème {{theme.theme}}</h1>
+        <ul>
+            <li *ngFor="let semaine of theme.semaines">
+                <h2>Semaine {{semaine.semaine}}</h2>
+                <div *ngFor="let groupe of semaine.groupes">
+                    <h3 [innerHTML]="groupe.indice"></h3>
+                    <ul>
+                        <li *ngFor="let mot of groupe.mots">
+                             {{mot.mot}} {{mot.classe}}
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>
