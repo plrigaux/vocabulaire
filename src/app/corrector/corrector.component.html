@@ -1,0 +1,16 @@
+<p>corrector works!</p>
+
+
+<div *ngIf="given == correct; else notShow">
+
+    <code>
+        <span  class="typeGood">{{given}}</span></code>
+</div>
+
+<ng-template #notShow>
+    <code>
+    <span *ngFor="let elem of givenElems; let i = index" [ngClass]="setClassGiven(elem)">{{elem.text}}</span>
+    <br><span id=typearrow>&darr;</span><br>
+    <span *ngFor="let elem of correctElems; let i = index" [ngClass]="setClassCorrect(elem)">{{elem.text}}</span>
+</code>
+</ng-template>

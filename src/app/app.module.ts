@@ -14,7 +14,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { VocabulaireComponent } from './vocabulaire/vocabulaire.component';
 import { CardComponent } from './card/card.component';
-import { CardcontrolComponent } from './cardcontrol/cardcontrol.component'
+import { CardcontrolComponent } from './cardcontrol/cardcontrol.component';
+import { CorrectorComponent } from './corrector/corrector.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardcontrolComponent } from './cardcontrol/cardcontrol.component'
     SpeechComponent,
     VocabulaireComponent,
     CardComponent,
-    CardcontrolComponent
+    CardcontrolComponent,
+    CorrectorComponent
   ],
   imports: [
     BrowserModule,
