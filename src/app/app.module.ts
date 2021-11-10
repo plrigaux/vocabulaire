@@ -12,10 +12,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { VocabulaireComponent } from './vocabulaire/vocabulaire.component';
 import { CardComponent } from './card/card.component';
 import { CardcontrolComponent } from './cardcontrol/cardcontrol.component';
-import { CorrectorComponent } from './corrector/corrector.component'
+import { CorrectorComponent } from './corrector/corrector.component';
+import { CorrectorDisplayTestComponent } from './corrector-display-test/corrector-display-test.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { CorrectorComponent } from './corrector/corrector.component'
     VocabulaireComponent,
     CardComponent,
     CardcontrolComponent,
-    CorrectorComponent
+    CorrectorComponent,
+    CorrectorDisplayTestComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { CorrectorComponent } from './corrector/corrector.component'
     MatInputModule,
     MatSliderModule,
     MatCardModule,
+    MatIconModule,
     FormsModule
   ],
   providers: [],

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { SequenceMatcher } from 'difflib-ts';
 
 @Component({
@@ -6,36 +6,44 @@ import { SequenceMatcher } from 'difflib-ts';
   templateUrl: './corrector.component.html',
   styleUrls: ['./corrector.component.scss']
 })
-export class CorrectorComponent implements OnInit {
+export class CorrectorComponent implements OnInit, OnChanges {
 
   @Input()
-  userInput: string = ""
+  given: string = ""
 
   @Input()
-  correctInput: string = ""
+  correct: string = ""
 
-  outTest =""
   givenElems: Truc[] = []
   correctElems: Truc[] = []
 
-  given: string = "abd"
-  correct: string = "abcd"
 
   constructor() { }
 
   ngOnInit(): void {
-
-    this.bigFunc(this.given, this.correct)
-
-    console.log( this.outTest)
+    
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    const log: string[] = [];
+    for (const propName in changes) {
+      const changedProp = changes[propName];
+      const to = JSON.stringify(changedProp.currentValue);
+      if (changedProp.isFirstChange()) {
+        console.log(`Initial value of ${propName} set to ${to}`);
+      } else {
+        const from = JSON.stringify(changedProp.previousValue);
+        console.log(`${propName} changed from ${from} to ${to}`);
+      }
+    }
+    this.bigFunc(this.given, this.correct);
+  }
 
-  setClassGiven(elem : Truc) : string {
+  setClassGiven(elem: Truc): string {
     return elem.ok ? "typeGood" : "typeBad";
   }
 
-  setClassCorrect(elem : Truc) : string {
+  setClassCorrect(elem: Truc): string {
     return elem.ok ? "typeGood" : "typeMissed";
   }
 

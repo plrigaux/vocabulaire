@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Theme, Semaine, Groupe, Mot } from '../vocabulaire/vocabulaireInterfaces';
 import vocabulaire from '../../resources/vocabulaire.json';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-cardcontrol',
@@ -17,6 +18,8 @@ export class CardcontrolComponent implements OnInit {
   mots: Mot[] = []
   motIndex: number = 0
 
+  @ViewChild(CardComponent)
+  private cardComponent!: CardComponent;
   constructor() { }
 
   ngOnInit(): void {
@@ -61,6 +64,7 @@ export class CardcontrolComponent implements OnInit {
     if (index >= 0 && index < this.mots.length) {
       this.mot = this.mots[index]
       this.motIndex = index
+      this.cardComponent.newWord(this.mot)
     }
   }
 }
