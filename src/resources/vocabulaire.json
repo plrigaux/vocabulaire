@@ -297,7 +297,62 @@
         "semaine": 2,
         "groupes": [{
           "indice": "Le e muet à la fin d'un mot",
-          "mots": [{
+          "mots": [
+            
+            {
+              "mot": "ajout",
+              "classe": "NM"
+            
+            },  {
+              "mot": "alphabet",
+              "classe": "NM"
+            
+            },  {
+            "mot": "argent",
+              "classe": "NM"
+            
+            },  {
+              "mot": "court",
+              "classe": "ADJ",
+              "fem": "courte"
+            },{
+              "mot": "épais",
+              "classe": "ADJ",
+              "fem": "épaise"
+            },
+            {
+              "mot": "",
+              "classe": ""
+            },
+            {
+              "mot": "gentil",
+              "classe": "ADJ",
+              "fem": "gentille"
+            },
+            {
+              "mot": "important",
+              "classe": "ADJ",
+              "fem": "importante"
+            },
+            {
+              "mot": "mauvais",
+              "classe": "ADJ",
+              "fem": "mauvaise"
+            },{
+              "mot": "minuit",
+              "classe": "NM"
+            },{
+              "mot": "ouvert",
+              "classe": "",
+              "fem" : "ouverte"
+            },{
+              "mot": "part",
+              "classe": "NF"
+            },{
+              "mot": "point",
+              "classe": "NM"
+            },
+            {
               "mot": "précis",
               "classe": "ADJ",
               "fem": "précise"

@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Mot } from '../vocabulaire/vocabulaireInterfaces';
 
 @Component({
@@ -16,6 +16,9 @@ export class CardComponent implements OnInit {
   selectedVoice: SpeechSynthesisVoice | null = null
   validation: boolean = false
 
+  //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
+  @ViewChild('answerInput') answerInput! :ElementRef;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -28,9 +31,12 @@ export class CardComponent implements OnInit {
   }
 
   newWord(mot: Mot) {
-    console.log("Piazza")
+    console.log("newWord" + mot.mot)
     this.mot = mot;
     this.userInput = "";
+    console.log(this.answerInput)
+    this.answerInput.nativeElement.focus();
+    console.log("    this.answerInput.focus(); ")
     this.given = "";
     this.validation = false;
     this.play()

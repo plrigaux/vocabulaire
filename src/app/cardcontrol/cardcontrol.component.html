@@ -17,7 +17,7 @@
         </mat-option>
     </mat-select>
 </mat-form-field>
-
+<!--
 <div *ngFor="let groupe of semaine?.groupes">
     <h3 [innerHTML]="groupe.indice"></h3>
     <ul>
@@ -26,10 +26,11 @@
         </li>
     </ul>
 </div>
+-->
 <div>
-    <button mat-raised-button color="primary" (click)="previous()">Précédent</button>
+    <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled">Précédent</button>
     <span>&nbsp;&nbsp;&nbsp;</span>
-    <button mat-raised-button color="primary" (click)="next()">Suivant</button>
+    <button mat-raised-button color="primary" (click)="next()" [disabled]="nextDisabled">Suivant</button>
     <app-card></app-card>
 </div>
 <app-corrector></app-corrector>

@@ -1,13 +1,13 @@
 <mat-card>
     <mat-form-field appearance="fill">
         <mat-label>Votre réponse</mat-label>
-        <input matInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()">
+        <input matInput #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()">
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="validate()">Validate</button>
+      <button mat-raised-button color="primary" (click)="validate()">Valider</button>
       <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'>
         <mat-icon>play_circle_filled</mat-icon>
       </button>
-      <p>Mot: {{mot?.mot}}</p>
+      <!--p>Mot: {{mot?.mot}}</p-->
       <div *ngIf="validation" >
         <app-corrector [given]="given" [correct]="getMot()" ></app-corrector>
       </div>

@@ -17,7 +17,8 @@ import { VocabulaireComponent } from './vocabulaire/vocabulaire.component';
 import { CardComponent } from './card/card.component';
 import { CardcontrolComponent } from './cardcontrol/cardcontrol.component';
 import { CorrectorComponent } from './corrector/corrector.component';
-import { CorrectorDisplayTestComponent } from './corrector-display-test/corrector-display-test.component'
+import { CorrectorDisplayTestComponent } from './corrector-display-test/corrector-display-test.component';
+import { PortalComponent } from './portal/portal.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CorrectorDisplayTestComponent } from './corrector-display-test/correcto
     CardComponent,
     CardcontrolComponent,
     CorrectorComponent,
-    CorrectorDisplayTestComponent
+    CorrectorDisplayTestComponent,
+    PortalComponent
   ],
   imports: [
     BrowserModule,
