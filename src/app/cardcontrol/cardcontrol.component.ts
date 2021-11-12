@@ -67,26 +67,26 @@ export class CardcontrolComponent implements OnInit {
   }
 
   private setMot(index: number) {
-    console.log("setMot - index " + index)
+    //console.log("setMot - index " + index)
     if (index >= 0 && index < this.mots.length) {
       
       this.motIndex = index
       this.mot = this.mots[this.motIndex]
-      console.log("setMot - new mot " + this.motIndex + " mot " + this.mot.mot)
+      //console.log("setMot - new mot " + this.motIndex + " mot " + this.mot.mot)
       this.cardComponent.newWord(this.mot)
       
       this.prevDisabled = false
       this.nextDisabled = false
-      console.log("setMot - index " + index)
+      //console.log("setMot - index " + index)
     }
 
     if (index <= 0) {
-      console.log("setMot - prevDisabled " + index)
+      //console.log("setMot - prevDisabled " + index)
       this.prevDisabled = true
     } else if (index >= this.mots.length - 1) {
-      console.log("setMot - nextDisabled " + index)
+      //console.log("setMot - nextDisabled " + index)
       this.nextDisabled = true
     }
-    console.log(this)
+    //console.log(this)
   }
 }

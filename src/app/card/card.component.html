@@ -1,14 +1,45 @@
 <mat-card>
-    <mat-form-field appearance="fill">
-        <mat-label>Votre réponse</mat-label>
-        <input matInput #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()">
-      </mat-form-field>
-      <button mat-raised-button color="primary" (click)="validate()">Valider</button>
-      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'>
-        <mat-icon>play_circle_filled</mat-icon>
-      </button>
-      <!--p>Mot: {{mot?.mot}}</p-->
-      <div *ngIf="validation" >
-        <app-corrector [given]="given" [correct]="getMot()" ></app-corrector>
-      </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Votre réponse</mat-label>
+    <input matInput #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="validate()" [disabled]="validationDisable()">Valider</button>
+  <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'>
+    <mat-icon>play_circle_filled</mat-icon>
+  </button>
+  <mat-form-field appearance="fill">
+    <mat-label>Choix de voix</mat-label>
+    <mat-select [(value)]="selectedVoice">
+      <mat-option *ngFor="let v of voices" [value]="v" lang="v.lang">{{v.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <div>
+    <label>pitch {{pitch}}</label>
+    <br />
+    <mat-slider
+      thumbLabel
+      [(ngModel)]="pitch"
+      step="0.1"
+      min="0"
+      max="2"
+      aria-label="units"></mat-slider>
+  </div>
+  <div>
+    <label>rate {{rate}}</label>
+    <br />
+    <mat-slider
+      thumbLabel
+      [(ngModel)]="rate"
+      step="0.1"
+      min="0.1"
+      max="10"
+      aria-label="units"></mat-slider>
+  </div>
+  <br />
+  <!--p>Mot: {{mot?.mot}}</p-->
+  <div *ngIf="validation">
+    <app-corrector [given]="given" [correct]="getMot()"></app-corrector>
+  </div>
 </mat-card>

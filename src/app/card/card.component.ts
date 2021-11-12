@@ -14,10 +14,14 @@ export class CardComponent implements OnInit {
 
   frenchVoices: SpeechSynthesisVoice[] = []
   selectedVoice: SpeechSynthesisVoice | null = null
+  voices: SpeechSynthesisVoice[] = []
   validation: boolean = false
 
+  pitch : number = 1
+  rate : number = 1
+
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
-  @ViewChild('answerInput') answerInput! :ElementRef;
+  @ViewChild('answerInput') answerInput!: ElementRef;
 
   constructor() { }
 
@@ -35,8 +39,11 @@ export class CardComponent implements OnInit {
     this.mot = mot;
     this.userInput = "";
     console.log(this.answerInput)
-    this.answerInput.nativeElement.focus();
-    console.log("    this.answerInput.focus(); ")
+    setTimeout(() => {
+      this.answerInput.nativeElement.focus();
+      console.log("    this.answerInput.focus(); ")
+    }, 250)
+
     this.given = "";
     this.validation = false;
     this.play()
@@ -44,20 +51,24 @@ export class CardComponent implements OnInit {
 
   private listVoices() {
     console.log("list voices")
-    let voices = speechSynthesis.getVoices();
+    this.voices = speechSynthesis.getVoices();
 
-    voices.forEach(voice => {
+    this.voices.forEach(voice => {
 
-      console.log(voice.name)
+      //console.log(voice.name)
 
       if (voice.lang.startsWith("fr")) {
         this.frenchVoices.push(voice);
-      }
-
-      if (this.frenchVoices.length > 0) {
-        this.selectedVoice = this.frenchVoices[0]
-      }
+      } 
     });
+
+    if (this.frenchVoices.length > 0) {
+      this.setVoice(this.frenchVoices[0])
+    }
+  }
+
+  setVoice(voice : SpeechSynthesisVoice) {
+    this.selectedVoice = voice;
   }
 
   validate(): void {
@@ -75,11 +86,18 @@ export class CardComponent implements OnInit {
         to_speak.voice = this.selectedVoice
       }
 
+      to_speak.pitch = this.pitch
+      to_speak.rate = this.rate
+
       window.speechSynthesis.speak(to_speak);
     }
   }
 
   getMot(): string {
     return this.mot ? this.mot.mot : ""
+  }
+
+  validationDisable() : boolean {
+    return this.userInput === '' || this.mot == null
   }
 }
