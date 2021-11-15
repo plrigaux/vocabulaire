@@ -28,9 +28,13 @@
 </div>
 -->
 <div>
-    <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled">Précédent</button>
+    <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled">
+        <mat-icon>arrow_back_ios</mat-icon>
+        Précédent
+    </button>
     <span>&nbsp;&nbsp;&nbsp;</span>
-    <button mat-raised-button color="primary" (click)="next()" [disabled]="nextDisabled">Suivant</button>
+    <button mat-raised-button color="primary" (click)="next()" [disabled]="nextDisabled">Suivant <mat-icon>
+            arrow_forward_ios</mat-icon></button>
     <br />
     <div *ngIf='mots.length > 0'>
         Mot de vocabulaire {{motIndex + 1}} de {{mots.length}}

@@ -17,8 +17,8 @@ export class CardComponent implements OnInit {
   voices: SpeechSynthesisVoice[] = []
   validation: boolean = false
 
-  pitch : number = 1
-  rate : number = 1
+  pitch: number = 1
+  rate: number = 1
 
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
@@ -59,7 +59,7 @@ export class CardComponent implements OnInit {
 
       if (voice.lang.startsWith("fr")) {
         this.frenchVoices.push(voice);
-      } 
+      }
     });
 
     if (this.frenchVoices.length > 0) {
@@ -67,7 +67,7 @@ export class CardComponent implements OnInit {
     }
   }
 
-  setVoice(voice : SpeechSynthesisVoice) {
+  setVoice(voice: SpeechSynthesisVoice) {
     this.selectedVoice = voice;
   }
 
@@ -80,7 +80,10 @@ export class CardComponent implements OnInit {
 
   play() {
     if (this.mot) {
-      let to_speak = new SpeechSynthesisUtterance(this.mot.mot);
+
+      let text = this.generateText(this.mot)
+
+      let to_speak = new SpeechSynthesisUtterance(text);
 
       if (this.selectedVoice) {
         to_speak.voice = this.selectedVoice
@@ -93,11 +96,40 @@ export class CardComponent implements OnInit {
     }
   }
 
+  private generateText(mot: Mot): string {
+    let text = ""
+    switch (mot.classe) {
+      case "NM":
+        text = this.apostrophe("le", mot.mot)
+        break;
+      case "NF":
+        text = this.apostrophe("la", mot.mot)
+        break;
+      default:
+        text = mot.mot
+    }
+
+    return text
+  }
+
+  private apostrophe(determinant: string, mot: string) {
+    let premiereLettre = mot.charAt(0)
+
+    let text = ""
+    if (/[áàâäãåéèêëíìîïóòôöõúùûüýÿæœÁÀÂÄÃÅÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝŸ]/.test(premiereLettre)) {
+      text = "l'" + mot
+    } else {
+      text = determinant + " " + mot
+    }
+
+    return text
+  }
+
   getMot(): string {
     return this.mot ? this.mot.mot : ""
   }
 
-  validationDisable() : boolean {
+  validationDisable(): boolean {
     return this.userInput === '' || this.mot == null
   }
 }
