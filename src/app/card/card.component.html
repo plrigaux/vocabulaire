@@ -1,20 +1,34 @@
 <mat-card>
-  <mat-form-field appearance="fill">
+  <mat-card-title>Mot vocabulaire</mat-card-title>
+  <div class="answer">
+  {{prefix}}
+  <mat-form-field appearance="outline">
     <mat-label>Votre réponse</mat-label>
-    <input matInput #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()">
+    <input matInput #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
+      autocomplete="off" spellcheck="false">
   </mat-form-field>
+  </div>
+  <span>&nbsp;&nbsp;&nbsp;</span>
   <button mat-raised-button color="primary" (click)="validate()" [disabled]="validationDisable()">Valider</button>
+  <span>&nbsp;&nbsp;&nbsp;</span>
   <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'>
     <mat-icon>play_circle_filled</mat-icon>
   </button>
+  <div *ngIf="validation">
+    <app-corrector [given]="given" [correct]="getMot()"></app-corrector>
+  </div>
+  <br />
+
+</mat-card>
+<br />
+<mat-card>
+  <mat-card-title>Contrôle voix</mat-card-title>
   <mat-form-field appearance="fill">
     <mat-label>Choix de voix</mat-label>
     <mat-select [(value)]="selectedVoice">
       <mat-option *ngFor="let v of voices" [value]="v" lang="v.lang">{{v.name}}</mat-option>
     </mat-select>
   </mat-form-field>
-
-
   <div>
     <label>pitch {{pitch}}</label>
     <br />
@@ -25,6 +39,10 @@
       min="0"
       max="2"
       aria-label="units"></mat-slider>
+    <mat-form-field appearance="outline">
+      <input matInput type="number" [(ngModel)]="pitch">
+    </mat-form-field>
+  
   </div>
   <div>
     <label>rate {{rate}}</label>
@@ -36,10 +54,8 @@
       min="0.1"
       max="10"
       aria-label="units"></mat-slider>
-  </div>
-  <br />
-  <!--p>Mot: {{mot?.mot}}</p-->
-  <div *ngIf="validation">
-    <app-corrector [given]="given" [correct]="getMot()"></app-corrector>
+    <mat-form-field appearance="outline">
+      <input matInput type="number" [(ngModel)]="rate">
+    </mat-form-field>
   </div>
 </mat-card>

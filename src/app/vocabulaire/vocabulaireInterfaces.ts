@@ -20,4 +20,6 @@ type MotClasse = "ADJ" | "V" | "NF" | "NM" | "MI"
 export interface Mot {
     mot: string,
     classe: MotClasse | MotClasse[]
+    fem?: string
+    detail?: string
 }

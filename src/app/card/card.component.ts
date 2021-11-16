@@ -11,6 +11,7 @@ export class CardComponent implements OnInit {
   userInput: string = ""
   given: string = ""
   mot: Mot | null = null;
+  prefix = ""
 
   frenchVoices: SpeechSynthesisVoice[] = []
   selectedVoice: SpeechSynthesisVoice | null = null
@@ -37,6 +38,7 @@ export class CardComponent implements OnInit {
   newWord(mot: Mot) {
     console.log("newWord" + mot.mot)
     this.mot = mot;
+    this.prefix = ""
     this.userInput = "";
     console.log(this.answerInput)
     setTimeout(() => {
@@ -46,6 +48,7 @@ export class CardComponent implements OnInit {
 
     this.given = "";
     this.validation = false;
+    window.speechSynthesis.cancel()
     this.play()
   }
 
@@ -92,6 +95,7 @@ export class CardComponent implements OnInit {
       to_speak.pitch = this.pitch
       to_speak.rate = this.rate
 
+
       window.speechSynthesis.speak(to_speak);
     }
   }
@@ -116,12 +120,13 @@ export class CardComponent implements OnInit {
     let premiereLettre = mot.charAt(0)
 
     let text = ""
-    if (/[áàâäãåéèêëíìîïóòôöõúùûüýÿæœÁÀÂÄÃÅÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝŸ]/.test(premiereLettre)) {
-      text = "l'" + mot
+    if (/[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœÁÀÂÄÃÅÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝŸ]/.test(premiereLettre)) {
+      this.prefix = "l'"
     } else {
-      text = determinant + " " + mot
+      this.prefix = determinant + " "
     }
 
+    text = this.prefix + mot
     return text
   }
 

@@ -298,31 +298,23 @@
         "groupes": [{
           "indice": "Le e muet à la fin d'un mot",
           "mots": [
-            
             {
               "mot": "ajout",
               "classe": "NM"
-            
-            },  {
+            }, {
               "mot": "alphabet",
               "classe": "NM"
-            
-            },  {
-            "mot": "argent",
+            }, {
+              "mot": "argent",
               "classe": "NM"
-            
-            },  {
+            }, {
               "mot": "court",
               "classe": "ADJ",
               "fem": "courte"
-            },{
+            }, {
               "mot": "épais",
               "classe": "ADJ",
               "fem": "épaise"
-            },
-            {
-              "mot": "",
-              "classe": ""
             },
             {
               "mot": "gentil",
@@ -338,17 +330,17 @@
               "mot": "mauvais",
               "classe": "ADJ",
               "fem": "mauvaise"
-            },{
+            }, {
               "mot": "minuit",
               "classe": "NM"
-            },{
+            }, {
               "mot": "ouvert",
-              "classe": "",
-              "fem" : "ouverte"
-            },{
+              "classe": "ADJ",
+              "fem": "ouverte"
+            }, {
               "mot": "part",
               "classe": "NF"
-            },{
+            }, {
               "mot": "point",
               "classe": "NM"
             },
@@ -368,6 +360,67 @@
         }]
       },
       {
+        "semaine": 3,
+        "groupes": [{
+          "indice": "Le e muet à la fin d'un mot",
+          "mots": [
+            {
+              "mot": "ampoule",
+              "classe": "NF"
+            }, {
+              "mot": "champ",
+              "classe": "NM"
+            }, {
+              "mot": "combien",
+              "classe": "MI"
+            }, {
+              "mot": "comprendre",
+              "classe": "V"
+            }, {
+              "mot": "compter",
+              "classe": "V"
+            }, {
+              "mot": "décembre",
+              "classe": "NM"
+            }, {
+              "mot": "embrasser",
+              "classe": "V"
+            }, {
+              "mot": "ensemble",
+              "classe": "MI"
+            }, {
+              "mot": "exemple",
+              "classe": "NM"
+            }, {
+              "mot": "jambe",
+              "classe": "NF"
+            }, {
+              "mot": "longtemps",
+              "classe": "MI"
+            }, {
+              "mot": "nombre",
+              "classe": "NM"
+            }, {
+              "mot": "novembre",
+              "classe": "NM",
+              "detail": "mois de"
+            }, {
+              "mot": "ombre",
+              "classe": "NF"
+            }, {
+              "mot": "remplir",
+              "classe": "V"
+            }, {
+              "mot": "sembler",
+              "classe": "V"
+            }, {
+              "mot": "septembre",
+              "classe": "V",
+              "detail": "mois de"
+            }
+          ]
+        }]
+      }, {
         "semaine": 4,
         "groupes": [{
           "indice": "Le e muet à la fin d'un mot",
@@ -447,7 +500,7 @@
               "classe": "NM"
             }, {
               "mot": "genou",
-              "classe": ""
+              "classe": "NM"
             }, {
               "mot": "genre",
               "classe": "NM"
@@ -472,13 +525,14 @@
             }
           ]
         }, {
-          "indice": "Le son [j] devant a, o et u s'écrit j.",
+          "indice": "Le son [j] devant <i>a</i>, <i>o</i> et <i>u</i> s'écrit <i>j</i>.",
           "mots": [{
             "mot": "bonjour",
             "classe": "NM"
           }, {
             "mot": "janvier",
-            "classe": "NM"
+            "classe": "NM",
+            "detail": "mois de"
           }, {
             "mot": "joue",
             "classe": "NF"
