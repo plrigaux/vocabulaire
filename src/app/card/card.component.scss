@@ -1,3 +1,15 @@
+
+$aswerFontSize : x-large;
+.answer input{
+    font-size: $aswerFontSize;
+    background-color: darkgray;
+    border: 0;
+}
+
+.answer span{
+    font-size: $aswerFontSize;
+}
+
 .answer {
-    font-size: x-large;
+    margin: 1em 0 1em;
 }

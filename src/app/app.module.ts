@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { VocabulaireComponent } from './vocabulaire/vocabulaire.component';
 import { CardComponent } from './card/card.component';
 import { CardcontrolComponent } from './cardcontrol/cardcontrol.component';
@@ -41,6 +42,7 @@ import { PortalComponent } from './portal/portal.component'
     MatInputModule,
     MatSliderModule,
     MatCardModule,
+    MatTooltipModule,
     MatIconModule,
     FormsModule
   ],

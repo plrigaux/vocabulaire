@@ -20,6 +20,7 @@ export class CardComponent implements OnInit {
 
   pitch: number = 1
   rate: number = 1
+  volume: number = 100
 
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
@@ -94,6 +95,7 @@ export class CardComponent implements OnInit {
 
       to_speak.pitch = this.pitch
       to_speak.rate = this.rate
+      to_speak.volume = this.volume / 100
 
 
       window.speechSynthesis.speak(to_speak);
@@ -136,5 +138,9 @@ export class CardComponent implements OnInit {
 
   validationDisable(): boolean {
     return this.userInput === '' || this.mot == null
+  }
+
+  playDisable(): boolean {
+    return this.mot == null
   }
 }

@@ -1,17 +1,17 @@
 <mat-card>
   <mat-card-title>Mot vocabulaire</mat-card-title>
   <div class="answer">
-  {{prefix}}
-  <mat-form-field appearance="outline">
-    <mat-label>Votre réponse</mat-label>
-    <input matInput #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
-      autocomplete="off" spellcheck="false">
-  </mat-form-field>
+    <span>{{prefix}}</span>
+    <!--label>Votre réponse</label-->
+    <input #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
+      autocomplete="off" spellcheck="false" [disabled]="playDisable()">
+
   </div>
   <span>&nbsp;&nbsp;&nbsp;</span>
   <button mat-raised-button color="primary" (click)="validate()" [disabled]="validationDisable()">Valider</button>
   <span>&nbsp;&nbsp;&nbsp;</span>
-  <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'>
+  <button mat-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'
+    matTooltip="Rejouer" [disabled]="playDisable()">
     <mat-icon>play_circle_filled</mat-icon>
   </button>
   <div *ngIf="validation">
@@ -30,7 +30,7 @@
     </mat-select>
   </mat-form-field>
   <div>
-    <label>pitch {{pitch}}</label>
+    <label>Pitch {{pitch}}</label>
     <br />
     <mat-slider
       thumbLabel
@@ -42,10 +42,10 @@
     <mat-form-field appearance="outline">
       <input matInput type="number" [(ngModel)]="pitch">
     </mat-form-field>
-  
+
   </div>
   <div>
-    <label>rate {{rate}}</label>
+    <label>Rate {{rate}}</label>
     <br />
     <mat-slider
       thumbLabel
@@ -56,6 +56,20 @@
       aria-label="units"></mat-slider>
     <mat-form-field appearance="outline">
       <input matInput type="number" [(ngModel)]="rate">
+    </mat-form-field>
+  </div>
+  <div>
+    <label>Volume {{volume}} %</label>
+    <br />
+    <mat-slider
+      thumbLabel
+      [(ngModel)]="volume"
+      step="1"
+      min="0"
+      max="100"
+      aria-label="units"></mat-slider>
+    <mat-form-field appearance="outline">
+      <input matInput type="number" [(ngModel)]="volume">
     </mat-form-field>
   </div>
 </mat-card>
