@@ -20,6 +20,9 @@ import { CardcontrolComponent } from './cardcontrol/cardcontrol.component';
 import { CorrectorComponent } from './corrector/corrector.component';
 import { CorrectorDisplayTestComponent } from './corrector-display-test/corrector-display-test.component';
 import { PortalComponent } from './portal/portal.component'
+import { ReactiveFormsModule } from '@angular/forms';
+//import { ErrorStateMatcher } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import { PortalComponent } from './portal/portal.component'
     MatCardModule,
     MatTooltipModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
