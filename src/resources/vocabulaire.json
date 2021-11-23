@@ -82,7 +82,7 @@
           "indice": "Le son [é] au début et à l'intérieur d'un mot s'écrit le plus souvent <i>é</i>. <br/> Le son [é] à la fin d'un mot s'écrit le plus souvent <i>er</i>.",
           "mots": [{
               "mot": "aréna",
-              "classe": ["NM", "NM"]
+              "classe": ["NM", "NF"]
             },
             {
               "mot": "caméra",
@@ -198,19 +198,19 @@
         }, {
           "indice": "La lettre <i>c</i> fait le son [s] devant <i>e</i>, <i>i</i> et <i>y</i>.",
           "mots": [{
-              "mot": "avancer ",
+              "mot": "avancer",
               "classe": "V"
             },
             {
-              "mot": "glace ",
+              "mot": "glace",
               "classe": "NF"
             },
             {
-              "mot": "lancer ",
+              "mot": "lancer",
               "classe": "V"
             },
             {
-              "mot": "naissance ",
+              "mot": "naissance",
               "classe": "NF"
             }
           ]
@@ -775,7 +775,7 @@
         "mots": [{
           "mot": "clé",
           "alt": "clef",
-          "classe": "NM"
+          "classe": "NF"
         }, {
           "mot": "moitié",
           "classe": "NF"

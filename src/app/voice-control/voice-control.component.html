@@ -2,10 +2,10 @@
 <div mat-dialog-content>
     <mat-form-field appearance="fill">
         <mat-label>Choix de voix</mat-label>
-        <mat-select [(value)]="data.selectedVoice">
-          <mat-option *ngFor="let v of getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
+        <mat-select [value]="getVoice()" (selectionChange)="setVoice($event)">
+            <mat-option *ngFor="let v of getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
         </mat-select>
-      </mat-form-field>
+    </mat-form-field>
     <div>
         <label>Pitch {{data.pitch}}</label>
         <app-input-slider [min]="pitchMin"

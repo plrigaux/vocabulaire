@@ -8,7 +8,7 @@
 <span>&nbsp;&nbsp;&nbsp;</span>
 <button mat-raised-button color="primary" (click)="validate()" [disabled]="validationDisable()">Valider</button>
 <span>&nbsp;&nbsp;&nbsp;</span>
-<button mat-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'
+<button mat-fab color="accent"  (click)='play()'
   matTooltip="Rejouer" [disabled]="playDisable()">
   <mat-icon>play_circle_filled</mat-icon>
 </button>
@@ -19,7 +19,7 @@
 
 <br />
 <button mat-raised-button color="accent" (click)="openDialog()"><mat-icon>settings</mat-icon> Contrôle de la voix</button>
-<mat-expansion-panel>
+<!--mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon>settings</mat-icon> Contrôle de la voix</mat-panel-title>
@@ -49,4 +49,4 @@
       max=100 [value]="volume" step="1" (changeValue)="changeVolume($event)" label="Volume"></app-input-slider>
 
   </div>
-</mat-expansion-panel>
+</mat-expansion-panel-->

@@ -4,7 +4,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 export class VoiceService {
     static voices: SpeechSynthesisVoice[] = []
     frenchVoices: SpeechSynthesisVoice[] = []
-    selectedVoice!: SpeechSynthesisVoice
+    selectedVoice: SpeechSynthesisVoice | null = null
 
     constructor() {
         console.log("VoiceService")
@@ -45,7 +45,12 @@ export class VoiceService {
         return VoiceService.voices
     }
 
-    getSelectedVoice() : SpeechSynthesisVoice {
+    getSelectedVoice() : SpeechSynthesisVoice | null {
+        if (this.selectedVoice == null) {
+            this.listVoices();
+        }
         return this.selectedVoice
     }
+
+ 
 }

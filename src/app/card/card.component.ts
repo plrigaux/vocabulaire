@@ -10,7 +10,7 @@ import { VoiceService } from '../voice-control/voiceService';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-  providers:  [ VoiceService ]
+  providers: [VoiceService]
 })
 export class CardComponent implements OnInit {
 
@@ -31,15 +31,11 @@ export class CardComponent implements OnInit {
   @ViewChild('answerInput') answerInput!: ElementRef;
 
 
-  readonly pitchMin = 0
-  readonly pitchMax = 2
   pitch = 1
 
-  readonly rateMin = 0.1
-  readonly rateMax = 10
   rate = 1
 
-  constructor(public dialog: MatDialog, public voiceService : VoiceService) {
+  constructor(public dialog: MatDialog, public voiceService: VoiceService) {
 
   }
 
@@ -69,18 +65,6 @@ export class CardComponent implements OnInit {
     });
   }
 
-  changePitch(newPitch: number) {
-    this.pitch = newPitch
-  }
-
-  changeRate(newRate: number) {
-    this.rate = newRate
-  }
-
-  changeVolume(volume: number) {
-    this.volume = volume
-  }
-
   ngOnInit(): void {
     /*
         if (speechSynthesis.onvoiceschanged !== undefined) {
@@ -89,9 +73,7 @@ export class CardComponent implements OnInit {
           }
         }*/
 
-    if (!this.selectedVoice) {
-      this.selectedVoice = this.voiceService.getSelectedVoice()
-    }
+
   }
 
   newWord(mot: Mot) {
@@ -127,6 +109,11 @@ export class CardComponent implements OnInit {
 
       if (this.selectedVoice) {
         to_speak.voice = this.selectedVoice
+      } else {
+        this.selectedVoice = this.voiceService.getSelectedVoice()
+        if (this.selectedVoice) {
+          to_speak.voice = this.selectedVoice
+        }
       }
 
       to_speak.pitch = this.pitch
