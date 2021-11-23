@@ -1,28 +1,31 @@
-<mat-card>
-  <mat-card-title>Mot vocabulaire</mat-card-title>
-  <div class="answer">
-    <span>{{prefix}}</span>
-    <!--label>Votre réponse</label-->
-    <input #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
-      autocomplete="off" spellcheck="false" [disabled]="playDisable()">
+<div class="answer">
+  <span>{{prefix}}</span>&nbsp;
+  <!--label>Votre réponse</label-->
+  <input #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
+    autocomplete="off" spellcheck="false" [disabled]="playDisable()">
 
-  </div>
-  <span>&nbsp;&nbsp;&nbsp;</span>
-  <button mat-raised-button color="primary" (click)="validate()" [disabled]="validationDisable()">Valider</button>
-  <span>&nbsp;&nbsp;&nbsp;</span>
-  <button mat-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'
-    matTooltip="Rejouer" [disabled]="playDisable()">
-    <mat-icon>play_circle_filled</mat-icon>
-  </button>
-  <div *ngIf="validation">
-    <app-corrector [given]="given" [correct]="getMot()"></app-corrector>
-  </div>
-  <br />
-
-</mat-card>
+</div>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<button mat-raised-button color="primary" (click)="validate()" [disabled]="validationDisable()">Valider</button>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<button mat-fab color="accent" aria-label="Example icon button with a plus one icon" (click)='play()'
+  matTooltip="Rejouer" [disabled]="playDisable()">
+  <mat-icon>play_circle_filled</mat-icon>
+</button>
+<div *ngIf="validation">
+  <app-corrector [given]="given" [correct]="getMot()"></app-corrector>
+</div>
 <br />
-<mat-card>
-  <mat-card-title>Contrôle voix</mat-card-title>
+
+<br />
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon>settings</mat-icon> Contrôle de la voix</mat-panel-title>
+      <mat-panel-description>
+        Changer la voix et ses propriétés
+      </mat-panel-description>
+  </mat-expansion-panel-header>
   <mat-form-field appearance="fill">
     <mat-label>Choix de voix</mat-label>
     <mat-select [(value)]="selectedVoice">
@@ -45,4 +48,4 @@
       max=100 [value]="volume" step="1" (changeValue)="changeVolume($event)" label="Volume"></app-input-slider>
 
   </div>
-</mat-card>
+</mat-expansion-panel>

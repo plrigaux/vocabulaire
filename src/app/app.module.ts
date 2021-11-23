@@ -22,7 +22,7 @@ import { CorrectorDisplayTestComponent } from './corrector-display-test/correcto
 import { PortalComponent } from './portal/portal.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputSliderComponent } from './input-slider/input-slider.component';
-//import { ErrorStateMatcher } from '@angular/material/core';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -50,7 +50,8 @@ import { InputSliderComponent } from './input-slider/input-slider.component';
     MatTooltipModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
