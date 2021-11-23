@@ -21,6 +21,7 @@ import { CorrectorComponent } from './corrector/corrector.component';
 import { CorrectorDisplayTestComponent } from './corrector-display-test/corrector-display-test.component';
 import { PortalComponent } from './portal/portal.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { InputSliderComponent } from './input-slider/input-slider.component';
 //import { ErrorStateMatcher } from '@angular/material/core';
 
 
@@ -33,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardcontrolComponent,
     CorrectorComponent,
     CorrectorDisplayTestComponent,
-    PortalComponent
+    PortalComponent,
+    InputSliderComponent
   ],
   imports: [
     BrowserModule,

@@ -30,68 +30,19 @@
     </mat-select>
   </mat-form-field>
   <div>
-    <label>Pitch {{pitchFormControl.value}}</label>
-    <br />
-    <mat-slider
-      thumbLabel
-      [value]="pitchFormControl.value" (change)="pitchFormControl.setValue($event.value)"
-      step="0.1"
-      [min]="pitchMin"
-      [max]="pitchMax"
-      aria-label="units"></mat-slider>
-    <mat-form-field appearance="outline">
-      <mat-label>Pitch</mat-label>
-      <!-- input matInput type="number" [(ngModel)]="pitch" [formControl]="pitchFormControl" [errorStateMatcher]="matcher" -->
-      <input matInput type="number" [formControl]="pitchFormControl" [errorStateMatcher]="matcher" autocomplete="off"
-        spellcheck="false">
-      <mat-error *ngIf="pitchFormControl.hasError('required')">
-        SVP le champs ne peux etre vide
-      </mat-error>
-      <mat-error *ngIf="pitchFormControl.hasError('min')">
-        SVP la valeur minimum est {{pitchMin}}
-      </mat-error>
-      <mat-error *ngIf="pitchFormControl.hasError('max')">
-        SVP la valeur maximum est {{pitchMax}}
-      </mat-error>
-    </mat-form-field>
-
+    <label>Pitch {{pitch}}</label>
+    <app-input-slider [min]="pitchMin"
+      [max]="pitchMax" [value]="pitch" step="0.1" (changeValue)="changePitch($event)" label="Pitch"></app-input-slider>
   </div>
   <div>
-    <label>Rate {{rateFormControl.value}}</label>
-    <br />
-    <mat-slider
-      thumbLabel
-      step="0.1"
-      [min]="rateMin"
-      [max]="rateMax"
-      [value]="rateFormControl.value"
-      (change)="rateFormControl.setValue($event.value)"
-      aria-label="units"></mat-slider>
-    <mat-form-field appearance="outline">
-      <input matInput type="number" [formControl]="rateFormControl" [errorStateMatcher]="matcher" >
-      <mat-error *ngIf="rateFormControl.hasError('required')">
-        SVP le champs ne peux etre vide
-      </mat-error>
-      <mat-error *ngIf="rateFormControl.hasError('min')">
-        SVP la valeur minimum est {{rateMin}}
-      </mat-error>
-      <mat-error *ngIf="rateFormControl.hasError('max')">
-        SVP la valeur maximum est {{rateMax}}
-      </mat-error>
-    </mat-form-field>
+    <label>Rate {{rate}}</label>
+    <app-input-slider [min]="rateMin"
+      [max]="rateMax" [value]="rate" step="0.1" (changeValue)="changeRate($event)" label="Rate"></app-input-slider>
   </div>
   <div>
     <label>Volume {{volume}} %</label>
-    <br />
-    <mat-slider
-      thumbLabel
-      [(ngModel)]="volume"
-      step="1"
-      min="0"
-      max="100"
-      aria-label="units"></mat-slider>
-    <mat-form-field appearance="outline">
-      <input matInput type="number" [(ngModel)]="volume">
-    </mat-form-field>
+    <app-input-slider min=1
+      max=100 [value]="volume" step="1" (changeValue)="changeVolume($event)" label="Volume"></app-input-slider>
+
   </div>
 </mat-card>

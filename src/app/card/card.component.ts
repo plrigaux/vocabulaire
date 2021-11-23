@@ -1,17 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Mot } from '../vocabulaire/vocabulaireInterfaces';
-import { FormGroup, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
-
 
 /** Error when invalid control is dirty, touched, or submitted. */
-
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
-}
 
 @Component({
   selector: 'app-card',
@@ -36,38 +26,31 @@ export class CardComponent implements OnInit {
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
 
-  sampleForm = new FormGroup({}) // Instantiating our form
 
-  static readonly pitchMin = 0
-  static readonly pitchMax = 2
-  pitchFormControl = new FormControl(1, [Validators.required, Validators.min(CardComponent.pitchMin), Validators.max(CardComponent.pitchMax)]);
+  readonly pitchMin = 0
+  readonly pitchMax = 2
+  pitch = 1
+  
+  readonly rateMin = 0.1
+  readonly rateMax = 10
+  rate = 1
 
-  static readonly rateMin = 0.1
-  static readonly ratehMax = 10
-  rateFormControl = new FormControl(1, [Validators.required, Validators.min(CardComponent.rateMin), Validators.max(CardComponent.ratehMax)]);
-
-
-  matcher = new MyErrorStateMatcher();
 
 
   constructor() { // Injecting the ReactiveForms FormBuilder.
 
   }
 
-  get pitchMin() : number {
-    return CardComponent.pitchMin
+  changePitch(newPitch : number) {
+    this.pitch = newPitch
+  }
+ 
+  changeRate(newRate : number) {
+    this.rate = newRate
   }
 
-  get pitchMax() : number {
-    return CardComponent.pitchMax
-  }
-
-  get rateMin() : number {
-    return CardComponent.rateMin
-  }
-
-  get rateMax() : number {
-    return CardComponent.ratehMax
+  changeVolume(volume : number) {
+    this.volume = volume
   }
 
   ngOnInit(): void {
@@ -136,8 +119,8 @@ export class CardComponent implements OnInit {
         to_speak.voice = this.selectedVoice
       }
 
-      to_speak.pitch = this.pitchFormControl.value
-      to_speak.rate = this.rateFormControl.value
+      to_speak.pitch = this.pitch
+      to_speak.rate = this.rate
       to_speak.volume = this.volume / 100
 
 
