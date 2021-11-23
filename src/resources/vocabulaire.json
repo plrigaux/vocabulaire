@@ -297,8 +297,7 @@
         "semaine": 2,
         "groupes": [{
           "indice": "Le e muet à la fin d'un mot",
-          "mots": [
-            {
+          "mots": [{
               "mot": "ajout",
               "classe": "NM"
             }, {
@@ -363,62 +362,60 @@
         "semaine": 3,
         "groupes": [{
           "indice": "Le e muet à la fin d'un mot",
-          "mots": [
-            {
-              "mot": "ampoule",
-              "classe": "NF"
-            }, {
-              "mot": "champ",
-              "classe": "NM"
-            }, {
-              "mot": "combien",
-              "classe": "MI"
-            }, {
-              "mot": "comprendre",
-              "classe": "V"
-            }, {
-              "mot": "compter",
-              "classe": "V"
-            }, {
-              "mot": "décembre",
-              "classe": "NM"
-            }, {
-              "mot": "embrasser",
-              "classe": "V"
-            }, {
-              "mot": "ensemble",
-              "classe": "MI"
-            }, {
-              "mot": "exemple",
-              "classe": "NM"
-            }, {
-              "mot": "jambe",
-              "classe": "NF"
-            }, {
-              "mot": "longtemps",
-              "classe": "MI"
-            }, {
-              "mot": "nombre",
-              "classe": "NM"
-            }, {
-              "mot": "novembre",
-              "classe": "NM",
-              "detail": "mois de"
-            }, {
-              "mot": "ombre",
-              "classe": "NF"
-            }, {
-              "mot": "remplir",
-              "classe": "V"
-            }, {
-              "mot": "sembler",
-              "classe": "V"
-            }, {
-              "mot": "septembre",
-              "classe": "V",
-              "detail": "mois de"
-            }
-          ]
+          "mots": [{
+            "mot": "ampoule",
+            "classe": "NF"
+          }, {
+            "mot": "champ",
+            "classe": "NM"
+          }, {
+            "mot": "combien",
+            "classe": "MI"
+          }, {
+            "mot": "comprendre",
+            "classe": "V"
+          }, {
+            "mot": "compter",
+            "classe": "V"
+          }, {
+            "mot": "décembre",
+            "classe": "NM"
+          }, {
+            "mot": "embrasser",
+            "classe": "V"
+          }, {
+            "mot": "ensemble",
+            "classe": "MI"
+          }, {
+            "mot": "exemple",
+            "classe": "NM"
+          }, {
+            "mot": "jambe",
+            "classe": "NF"
+          }, {
+            "mot": "longtemps",
+            "classe": "MI"
+          }, {
+            "mot": "nombre",
+            "classe": "NM"
+          }, {
+            "mot": "novembre",
+            "classe": "NM",
+            "detail": "mois de"
+          }, {
+            "mot": "ombre",
+            "classe": "NF"
+          }, {
+            "mot": "remplir",
+            "classe": "V"
+          }, {
+            "mot": "sembler",
+            "classe": "V"
+          }, {
+            "mot": "septembre",
+            "classe": "V",
+            "detail": "mois de"
+          }]
         }]
       }, {
         "semaine": 4,
@@ -546,5 +543,141 @@
         }]
       }
     ]
+  }, {
+    "theme": 3,
+    "semaines": [{
+      "semaine": 1,
+      "groupes": [{
+        "indice": "La lettre <i>s</i> entre deux voyelles fait le son [z].",
+        "mots": [{
+          "mot": "chaise",
+          "classe": "NF"
+        }, {
+          "mot": "choisir",
+          "classe": "V"
+        }, {
+          "mot": "crise",
+          "classe": "NF"
+        }, {
+          "mot": "église",
+          "classe": "NF"
+        }, {
+          "mot": "fraise",
+          "classe": "NF"
+        }, {
+          "mot": "poser",
+          "classe": "V"
+        }, {
+          "mot": "télévision",
+          "classe": "NF"
+        }, {
+          "mot": "usine",
+          "classe": "NF"
+        }]
+      }, {
+        "indice": "II faut écrire <i>ss</i> pour entendre le son [s].",
+        "mots": [{
+          "mot": "chasse",
+          "classe": "NF"
+        }, {
+          "mot": "chasser",
+          "classe": "V"
+        }, {
+          "mot": "chasseur",
+          "classe": "NM"
+        }, {
+          "mot": "chasseuse",
+          "classe": "NF"
+        }, {
+          "mot": "glisser",
+          "classe": "V"
+        }, {
+          "mot": "possible",
+          "classe": "ADJ"
+        }, {
+          "mot": "pousser",
+          "classe": "V"
+        }, {
+          "mot": "poussin",
+          "classe": "NM"
+        }, {
+          "mot": "professeur",
+          "classe": "NM"
+        }, {
+          "mot": "professeure",
+          "classe": "NF"
+        }, {
+          "mot": "reussir",
+          "classe": "V"
+        }, {
+          "mot": "vitesse",
+          "classe": "NF"
+        }]
+      }]
+    }, {
+      "semaine": 2,
+      "groupes": [{
+        "indice": "Le son [gn] s'écrit gn.",
+        "mots": [{
+          "mot": "baigner",
+          "classe": "V"
+        }, {
+          "mot": "gagner",
+          "classe": "V"
+        }, {
+          "mot": "ligne",
+          "classe": "NF"
+        }, {
+          "mot": "soigner",
+          "classe": "V"
+        }]
+      }, {
+        "indice": "La lettre <i>g</i> fait le son [g] devant <i>a, o, u</i> et devant une consonne.",
+        "mots": [{
+          "mot": "diagonal",
+          "classe": "ADJ",
+          "fem": "diagonale"
+        }, {
+          "mot": "garder",
+          "classe": "V"
+        }, {
+          "mot": "gauche",
+          "classe": "ADJ"
+        }, {
+          "mot": "gauche",
+          "classe": "NF"
+        }, {
+          "mot": "glacier",
+          "classe": "NM"
+        }, {
+          "mot": "gorge",
+          "classe": "NF"
+        }, {
+          "mot": "goutte",
+          "classe": "NF"
+        }, {
+          "mot": "groupe",
+          "classe": "NM"
+        }, {
+          "mot": "magasin",
+          "classe": "NM"
+        }]
+      }, {
+        "indice": "Devant un e ou un i, it faut ajouter un u pour entendre le son [g].",
+        "mots": [{
+          "mot": "déguiser",
+          "classe": "V"
+        }, {
+          "mot": "guerre",
+          "classe": "NF"
+        }, {
+          "mot": "guidon",
+          "classe": "NM"
+        }, {
+          "mot": "langue",
+          "classe": "NF"
+        }]
+      }]
+    }]
   }
 ]
