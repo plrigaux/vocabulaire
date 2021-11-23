@@ -7,3 +7,26 @@
 .selectContainer div{
     margin: 1em;
 }
+
+.cardContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center 
+}
+
+.cardContent {
+    max-width: 450px;
+}
+
+.footer {
+    display: flex;
+}
+
+.flex-spacer {
+    flex-grow: 1;
+}
+
+.footer button {
+    margin: 0.5em;
+    min-width: 125px;
+}

@@ -23,7 +23,9 @@ import { PortalComponent } from './portal/portal.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputSliderComponent } from './input-slider/input-slider.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import { MatNativeDateModule } from '@angular/material/core';
+import { VoiceControlComponent } from './voice-control/voice-control.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CorrectorComponent,
     CorrectorDisplayTestComponent,
     PortalComponent,
-    InputSliderComponent
+    InputSliderComponent,
+    VoiceControlComponent
   ],
   imports: [
     BrowserModule,
@@ -50,8 +53,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatTooltipModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule, 
-    MatExpansionModule
+    ReactiveFormsModule,
+    MatExpansionModule,
+    MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

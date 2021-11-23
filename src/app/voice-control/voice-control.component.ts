@@ -1,0 +1,61 @@
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { VoiceService } from './voiceService';
+
+export interface VolumeDialogData {
+  pitch: number;
+  rate: number;
+  volume: number;
+  selectedVoice:  SpeechSynthesisVoice | null
+}
+
+@Component({
+  selector: 'app-voice-control',
+  templateUrl: './voice-control.component.html',
+  styleUrls: ['./voice-control.component.scss'],
+  providers:  [ VoiceService ]
+})
+export class VoiceControlComponent implements OnInit {
+  readonly pitchMin = 0
+  readonly pitchMax = 2
+
+
+  readonly rateMin = 0.1
+  readonly rateMax = 10
+
+  static voices: SpeechSynthesisVoice[] = []
+  frenchVoices: SpeechSynthesisVoice[] = []
+
+  constructor(
+    public dialogRef: MatDialogRef<VoiceControlComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: VolumeDialogData,
+    public voiceService: VoiceService) {
+
+  }
+
+  ngOnInit(): void {
+
+  }
+
+
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  changePitch(newPitch: number) {
+    this.data.pitch = newPitch
+  }
+
+  changeRate(newRate: number) {
+    this.data.rate = newRate
+  }
+
+  changeVolume(volume: number) {
+    this.data.volume = volume
+  }
+
+  getVoices() {
+    return this.voiceService.getVoices();
+  }
+}

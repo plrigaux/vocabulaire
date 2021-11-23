@@ -1,12 +1,16 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Mot } from '../vocabulaire/vocabulaireInterfaces';
+import { MatDialog } from '@angular/material/dialog';
+import { VoiceControlComponent, VolumeDialogData } from '../voice-control/voice-control.component';
+import { VoiceService } from '../voice-control/voiceService';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
+  providers:  [ VoiceService ]
 })
 export class CardComponent implements OnInit {
 
@@ -15,9 +19,9 @@ export class CardComponent implements OnInit {
   mot: Mot | null = null;
   prefix = ""
 
-  frenchVoices: SpeechSynthesisVoice[] = []
+  //frenchVoices: SpeechSynthesisVoice[] = []
   selectedVoice: SpeechSynthesisVoice | null = null
-  voices: SpeechSynthesisVoice[] = []
+  //voices: SpeechSynthesisVoice[] = []
   validation: boolean = false
 
   //pitch: number = 1
@@ -30,35 +34,63 @@ export class CardComponent implements OnInit {
   readonly pitchMin = 0
   readonly pitchMax = 2
   pitch = 1
-  
+
   readonly rateMin = 0.1
   readonly rateMax = 10
   rate = 1
 
-
-
-  constructor() { // Injecting the ReactiveForms FormBuilder.
+  constructor(public dialog: MatDialog, public voiceService : VoiceService) {
 
   }
 
-  changePitch(newPitch : number) {
+  openDialog(): void {
+
+
+    let voiceData: VolumeDialogData = {
+      pitch: this.pitch,
+      rate: this.rate,
+      volume: this.volume,
+      selectedVoice: this.selectedVoice
+    }
+    const dialogRef = this.dialog.open(VoiceControlComponent, {
+      width: '350px',
+      data: voiceData,
+    });
+
+    dialogRef.afterClosed().subscribe((result: VolumeDialogData) => {
+      console.log('The dialog was closed');
+      console.log(result);
+      if (result) {
+        this.pitch = result.pitch;
+        this.rate = result.rate;
+        this.volume = result.volume;
+        this.selectedVoice = result.selectedVoice;
+      }
+    });
+  }
+
+  changePitch(newPitch: number) {
     this.pitch = newPitch
   }
- 
-  changeRate(newRate : number) {
+
+  changeRate(newRate: number) {
     this.rate = newRate
   }
 
-  changeVolume(volume : number) {
+  changeVolume(volume: number) {
     this.volume = volume
   }
 
   ngOnInit(): void {
+    /*
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+          speechSynthesis.onvoiceschanged = () => {
+            this.listVoices()
+          }
+        }*/
 
-    if (speechSynthesis.onvoiceschanged !== undefined) {
-      speechSynthesis.onvoiceschanged = () => {
-        this.listVoices()
-      }
+    if (!this.selectedVoice) {
+      this.selectedVoice = this.voiceService.getSelectedVoice()
     }
   }
 
@@ -77,28 +109,6 @@ export class CardComponent implements OnInit {
     this.validation = false;
     window.speechSynthesis.cancel()
     this.play()
-  }
-
-  private listVoices() {
-    console.log("list voices")
-    this.voices = speechSynthesis.getVoices();
-
-    this.voices.forEach(voice => {
-
-      //console.log(voice.name)
-
-      if (voice.lang.startsWith("fr")) {
-        this.frenchVoices.push(voice);
-      }
-    });
-
-    if (this.frenchVoices.length > 0) {
-      this.setVoice(this.frenchVoices[0])
-    }
-  }
-
-  setVoice(voice: SpeechSynthesisVoice) {
-    this.selectedVoice = voice;
   }
 
   validate(): void {

@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Contôles de la voix</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Choix de voix</mat-label>
+        <mat-select [(value)]="data.selectedVoice">
+          <mat-option *ngFor="let v of getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <div>
+        <label>Pitch {{data.pitch}}</label>
+        <app-input-slider [min]="pitchMin"
+            [max]="pitchMax" [value]="data.pitch" step="0.1" (changeValue)="changePitch($event)" label="Pitch">
+        </app-input-slider>
+    </div>
+    <div>
+        <label>Rate {{data.rate}}</label>
+        <app-input-slider [min]="rateMin"
+            [max]="rateMax" [value]="data.rate" step="0.1" (changeValue)="changeRate($event)" label="Rate">
+        </app-input-slider>
+    </div>
+    <div>
+        <label>Volume {{data.volume}} %</label>
+        <app-input-slider min=1
+            max=100 [value]="data.volume" step="1" (changeValue)="changeVolume($event)" label="Volume">
+        </app-input-slider>
+
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Annuler</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

@@ -18,7 +18,8 @@
 <br />
 
 <br />
-<mat-expansion-panel hideToggle>
+<button mat-raised-button color="accent" (click)="openDialog()"><mat-icon>settings</mat-icon> Contrôle de la voix</button>
+<mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon>settings</mat-icon> Contrôle de la voix</mat-panel-title>
@@ -29,7 +30,7 @@
   <mat-form-field appearance="fill">
     <mat-label>Choix de voix</mat-label>
     <mat-select [(value)]="selectedVoice">
-      <mat-option *ngFor="let v of voices" [value]="v" lang="v.lang">{{v.name}}</mat-option>
+      <mat-option *ngFor="let v of voiceService.getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
     </mat-select>
   </mat-form-field>
   <div>

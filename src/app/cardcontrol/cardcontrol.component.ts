@@ -3,6 +3,7 @@ import { Theme, Semaine, Groupe, Mot } from '../vocabulaire/vocabulaireInterface
 import vocabulaire from '../../resources/vocabulaire.json';
 import { CardComponent } from '../card/card.component';
 
+
 @Component({
   selector: 'app-cardcontrol',
   templateUrl: './cardcontrol.component.html',
