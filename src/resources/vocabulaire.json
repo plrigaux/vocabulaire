@@ -678,6 +678,127 @@
           "classe": "NF"
         }]
       }]
+    }, {
+      "semaine": 3,
+      "groupes": [{
+        "indice": "Le son [é] à la fin d'un verbe à l'infinitif s'écrit <i>er</i>. ",
+        "mots": [{
+          "mot": "aider",
+          "classe": "V"
+        }, {
+          "mot": "avaler",
+          "classe": "V"
+        }, {
+          "mot": "crier",
+          "classe": "V"
+        }, {
+          "mot": "diriger",
+          "classe": "V"
+        }, {
+          "mot": "mener",
+          "classe": "V"
+        }, {
+          "mot": "montrer",
+          "classe": "V"
+        }, {
+          "mot": "oublier",
+          "classe": "V"
+        }, {
+          "mot": "porter",
+          "classe": "V"
+        }, {
+          "mot": "raconter",
+          "classe": "V"
+        }, {
+          "mot": "remonter",
+          "classe": "V"
+        }, {
+          "mot": "retourner",
+          "classe": "V"
+        }, {
+          "mot": "retrouver",
+          "classe": "V"
+        }, {
+          "mot": "rouler",
+          "classe": "V"
+        }, {
+          "mot": "terminer",
+          "classe": "V"
+        }, {
+          "mot": "tirer",
+          "classe": "V"
+        }, {
+          "mot": "traverser",
+          "classe": "V"
+        }, {
+          "mot": "tuer",
+          "classe": "V"
+        }, {
+          "mot": "verser",
+          "classe": "V"
+        }]
+      }]
+    }, {
+      "semaine": 4,
+      "groupes": [{
+        "indice": "Le son [é] à la fin d'un nom feminin s'écrit le plus souvent <i>ée</i>.",
+        "mots": [{
+          "mot": "armée",
+          "classe": "NF"
+        }, {
+          "mot": "araignée",
+          "classe": "NF"
+        }, {
+          "mot": "bouchée",
+          "classe": "NF"
+        }, {
+          "mot": "purée",
+          "classe": "NF"
+        }, {
+          "mot": "randonnée",
+          "classe": "NF"
+        }, {
+          "mot": "rangée",
+          "classe": "NF"
+        }, {
+          "mot": "soirée",
+          "classe": "NF"
+        }, {
+          "mot": "traversée",
+          "classe": "NF"
+        }, {
+          "mot": "veillée",
+          "classe": "NM"
+        }]
+      }, {
+        "indice": "Le son [é] à la fin d'un nom feminin s'écrit le plus souvent <i>ée</i>. Sauf exception.",
+        "mots": [{
+          "mot": "clé",
+          "alt": "clef",
+          "classe": "NM"
+        }, {
+          "mot": "moitié",
+          "classe": "NF"
+        }, {
+          "mot": "santé",
+          "classe": "NF"
+        }]
+      }, {
+        "indice": "Le son [é] à la fin d'un peut s'écrire <i>é</i>, <i>ai</i> ou <i>ez</i>.",
+        "mots": [{
+          "mot": "assez",
+          "classe": "MI"
+        }, {
+          "mot": "congé",
+          "classe": "NM"
+        }, {
+          "mot": "mai",
+          "classe": "NM"
+        }, {
+          "mot": "marché",
+          "classe": "NM"
+        }]
+      }]
     }]
   }
 ]
