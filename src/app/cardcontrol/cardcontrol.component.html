@@ -29,12 +29,8 @@
             <mat-card-subtitle *ngIf='mots.length > 0'>
                 {{motIndex + 1}} de {{mots.length}}
             </mat-card-subtitle>
-
         </mat-card-header>
-
         <app-card></app-card>
-
-        <app-corrector></app-corrector>
         <mat-card-footer class="footer">
             <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled">
                 <mat-icon>arrow_back_ios</mat-icon>

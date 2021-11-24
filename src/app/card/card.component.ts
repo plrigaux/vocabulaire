@@ -30,10 +30,8 @@ export class CardComponent implements OnInit {
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
 
-
-  pitch = 1
-
-  rate = 1
+  private pitch = 1
+  private rate = 1
 
   constructor(public dialog: MatDialog, public voiceService: VoiceService) {
 
@@ -66,13 +64,6 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    /*
-        if (speechSynthesis.onvoiceschanged !== undefined) {
-          speechSynthesis.onvoiceschanged = () => {
-            this.listVoices()
-          }
-        }*/
-
 
   }
 
@@ -157,6 +148,10 @@ export class CardComponent implements OnInit {
 
   getMot(): string {
     return this.mot ? this.mot.mot : ""
+  }
+
+  getIndice(): string {
+    return this.mot?.indice ? this.mot.indice : ""
   }
 
   validationDisable(): boolean {

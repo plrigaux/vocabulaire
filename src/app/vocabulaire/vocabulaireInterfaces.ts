@@ -22,4 +22,5 @@ export interface Mot {
     classe: MotClasse | MotClasse[]
     fem?: string
     detail?: string
+    indice?: string
 }

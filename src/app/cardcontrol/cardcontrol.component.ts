@@ -49,7 +49,10 @@ export class CardcontrolComponent implements OnInit {
     this.semaine.groupes.forEach((g: Groupe) => {
 
       let indice = g.indice
-      g.mots.forEach(m => { this.mots.push(m) })
+      g.mots.forEach(m => {
+        m.indice = indice
+        this.mots.push(m)
+      })
     });
 
     this.next();
@@ -70,12 +73,12 @@ export class CardcontrolComponent implements OnInit {
   private setMot(index: number) {
     //console.log("setMot - index " + index)
     if (index >= 0 && index < this.mots.length) {
-      
+
       this.motIndex = index
       this.mot = this.mots[this.motIndex]
       //console.log("setMot - new mot " + this.motIndex + " mot " + this.mot.mot)
       this.cardComponent.newWord(this.mot)
-      
+
       this.prevDisabled = false
       this.nextDisabled = false
       //console.log("setMot - index " + index)

@@ -7,9 +7,6 @@
           "mots": [{
               "mot": "salade",
               "classe": "NF"
-            }, {
-              "mot": "salade",
-              "classe": "NF"
             },
             {
               "mot": "sec",
@@ -255,38 +252,32 @@
               "mot": "méchant",
               "classe": "ADJ",
               "fem": "méchante"
-            },
-            {
+            }, {
               "mot": "mort",
               "classe": ["NM", "NF", "ADJ"],
               "fem": "morte"
             }, {
               "mot": "nid ",
               "classe": "NM"
-            },
-            {
+            }, {
               "mot": "pot ",
               "classe": "NM"
             }, {
               "mot": "rat ",
               "classe": ["NM", "NF"],
               "fem": "rate"
-            },
-            {
+            }, {
               "mot": "renard",
               "classe": ["NM", "NF"],
               "fem": "renarde"
-            },
-            {
+            }, {
               "mot": "retard",
               "classe": "NM"
-            },
-            {
+            }, {
               "mot": "rond",
               "classe": ["NM", "NF"],
               "fem": "ronde"
-            },
-            {
+            }, {
               "mot": "salut",
               "classe": "NM"
             }
@@ -768,7 +759,7 @@
           "classe": "NF"
         }, {
           "mot": "veillée",
-          "classe": "NM"
+          "classe": "NF"
         }]
       }, {
         "indice": "Le son [é] à la fin d'un nom feminin s'écrit le plus souvent <i>ée</i>. Sauf exception.",

@@ -3,12 +3,12 @@
   <!--label>Votre réponse</label-->
   <input #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
     autocomplete="off" spellcheck="false" [disabled]="playDisable()">
-
+  <p id="indice" [innerHTML]="getIndice()"></p>
 </div>
 <span>&nbsp;&nbsp;&nbsp;</span>
 <button mat-raised-button color="primary" (click)="validate()" [disabled]="validationDisable()">Valider</button>
 <span>&nbsp;&nbsp;&nbsp;</span>
-<button mat-fab color="accent"  (click)='play()'
+<button mat-fab color="accent" (click)='play()'
   matTooltip="Rejouer" [disabled]="playDisable()">
   <mat-icon>play_circle_filled</mat-icon>
 </button>
@@ -18,7 +18,9 @@
 <br />
 
 <br />
-<button mat-raised-button color="accent" (click)="openDialog()"><mat-icon>settings</mat-icon> Contrôle de la voix</button>
+<button mat-raised-button color="accent" (click)="openDialog()">
+  <mat-icon>settings</mat-icon> Contrôle de la voix
+</button>
 <!--mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
