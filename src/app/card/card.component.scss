@@ -1,13 +1,15 @@
+$answerFontSize: x-large;
 
-$aswerFontSize : x-large;
-.answer input{
-    font-size: $aswerFontSize;
+#answerInput {
+    font-size: $answerFontSize;
     background-color: darkgray;
     border: 0;
+    width: 10em;
 }
 
-.answer span{
-    font-size: $aswerFontSize;
+#answerPrefix {
+    font-size: $answerFontSize;
+    margin-right: 0.5em;
 }
 
 .answer {
@@ -16,4 +18,10 @@ $aswerFontSize : x-large;
 
 #indice {
     margin-top: 0.5em;
+}
+
+.answerLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }

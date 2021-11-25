@@ -3,7 +3,7 @@
     "semaines": [{
         "semaine": 1,
         "groupes": [{
-          "indice": "Le son [s] au début d'un mot s'écrit s.",
+          "indice": "Le son [s] au début d'un mot s'écrit <i>s</i>.",
           "mots": [{
               "mot": "salade",
               "classe": "NF"
@@ -281,7 +281,7 @@
       {
         "semaine": 2,
         "groupes": [{
-          "indice": "Le e muet à la fin d'un mot",
+          "indice": "Le e muet à la fin d'un mot.",
           "mots": [{
               "mot": "ajout",
               "classe": "NM"
@@ -346,7 +346,7 @@
       {
         "semaine": 3,
         "groupes": [{
-          "indice": "Le e muet à la fin d'un mot",
+          "indice": "Le e muet à la fin d'un mot.",
           "mots": [{
             "mot": "ampoule",
             "classe": "NF"
@@ -726,7 +726,7 @@
     }, {
       "semaine": 4,
       "groupes": [{
-        "indice": "Le son [é] à la fin d'un nom feminin s'écrit le plus souvent <i>ée</i>.",
+        "indice": "Le son [é] à la fin d'un nom féminin s'écrit le plus souvent <i>ée</i>.",
         "mots": [{
           "mot": "armée",
           "classe": "NF"
@@ -756,7 +756,7 @@
           "classe": "NF"
         }]
       }, {
-        "indice": "Le son [é] à la fin d'un nom feminin s'écrit le plus souvent <i>ée</i>. Sauf exception.",
+        "indice": "Le son [é] à la fin d'un nom féminin s'écrit le plus souvent <i>ée</i>. Sauf exception.",
         "mots": [{
           "mot": "clé",
           "alt": "clef",

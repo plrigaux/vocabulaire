@@ -26,8 +26,8 @@
     <mat-card class="cardContent">
         <mat-card-header>
             <mat-card-title>Mot de vocabulaire</mat-card-title>
-            <mat-card-subtitle *ngIf='mots.length > 0'>
-                {{motIndex + 1}} de {{mots.length}}
+            <mat-card-subtitle>
+                <ng-container *ngIf='mots.length > 0'>{{motIndex + 1}} de {{mots.length}}</ng-container>&nbsp;
             </mat-card-subtitle>
         </mat-card-header>
         <app-card></app-card>

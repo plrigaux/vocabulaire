@@ -1,8 +1,9 @@
 <div class="answer">
-  <span>{{prefix}}</span>&nbsp;
-  <!--label>Votre réponse</label-->
-  <input #answerInput placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
-    autocomplete="off" spellcheck="false" [disabled]="playDisable()">
+  <div class="answerLine">
+    <span id="answerPrefix">{{prefix}}</span>
+    <input #answerInput id="answerInput" placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
+      autocomplete="off" spellcheck="false" [disabled]="playDisable()">
+  </div>
   <p id="indice" [innerHTML]="getIndice()"></p>
 </div>
 <span>&nbsp;&nbsp;&nbsp;</span>
