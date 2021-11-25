@@ -11,7 +11,7 @@ export class VoiceControlService {
     //static instances = 0
     //thisinstanceId = 0
     //pitch: number = 1
-    volume: number = 75
+    volume: number = 0.75
     pitch = 1
     rate = 1
 
@@ -79,7 +79,7 @@ export class VoiceControlService {
 
         to_speak.pitch = this.pitch
         to_speak.rate = this.rate
-        to_speak.volume = this.volume / 100
+        to_speak.volume = this.volume
 
         window.speechSynthesis.speak(to_speak);
     }

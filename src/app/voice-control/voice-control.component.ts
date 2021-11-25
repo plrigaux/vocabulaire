@@ -31,7 +31,7 @@ export class VoiceControlComponent implements OnInit {
     this.data = {
       pitch: voiceService.pitch,
       rate: voiceService.rate,
-      volume: voiceService.volume,
+      volume: voiceService.volume * 100,
       selectedVoice: voiceService.selectedVoice
     }
   }
@@ -47,7 +47,7 @@ export class VoiceControlComponent implements OnInit {
   onOkClick(): void {
     this.voiceService.pitch = this.data.pitch
     this.voiceService.rate = this.data.rate
-    this.voiceService.volume = this.data.volume
+    this.voiceService.volume = this.data.volume / 100
     this.voiceService.selectedVoice = this.data.selectedVoice
     this.dialogRef.close();
   }
@@ -68,15 +68,15 @@ export class VoiceControlComponent implements OnInit {
     return this.voiceService.getVoices();
   }
 
-  getVoice() {
+  getSelectedVoice() {
     if (this.data.selectedVoice == null) {
       return this.voiceService.getSelectedVoice()
     }
     return this.data.selectedVoice;
   }
 
-  setVoice(voice: MatSelectChange) {
-    console.log(voice)
+  setSelectedVoice(voice: MatSelectChange) {
+    //console.log(voice)
     this.data.selectedVoice = voice.value;
   }
 }

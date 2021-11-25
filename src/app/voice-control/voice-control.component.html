@@ -2,7 +2,7 @@
 <div mat-dialog-content>
     <mat-form-field appearance="fill">
         <mat-label>Choix de voix</mat-label>
-        <mat-select [value]="getVoice()" (selectionChange)="setVoice($event)" class="voiceSelect">
+        <mat-select [value]="getSelectedVoice()" (selectionChange)="setSelectedVoice($event)" class="voiceSelect">
             <mat-option *ngFor="let v of getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
         </mat-select>
     </mat-form-field>
