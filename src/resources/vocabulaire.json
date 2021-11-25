@@ -222,66 +222,60 @@
         "groupes": [{
           "indice": "Lettre finale muette: <i>d</i> ou <i>t</i>.",
           "mots": [{
-              "mot": "bord",
-              "classe": "NM"
-            },
-            {
-              "mot": "but",
-              "classe": "NM"
-            },
-            {
-              "mot": "chant",
-              "classe": "NM"
-            },
-            {
-              "mot": "doigt",
-              "classe": "NM"
-            },
-            {
-              "mot": "droit",
-              "classe": "ADJ",
-              "fem": "droite"
-            }, {
-              "mot": "fond",
-              "classe": "NM"
-            },
-            {
-              "mot": "haut",
-              "classe": "NM"
-            }, {
-              "mot": "méchant",
-              "classe": "ADJ",
-              "fem": "méchante"
-            }, {
-              "mot": "mort",
-              "classe": ["NM", "NF", "ADJ"],
-              "fem": "morte"
-            }, {
-              "mot": "nid ",
-              "classe": "NM"
-            }, {
-              "mot": "pot ",
-              "classe": "NM"
-            }, {
-              "mot": "rat ",
-              "classe": ["NM", "NF"],
-              "fem": "rate"
-            }, {
-              "mot": "renard",
-              "classe": ["NM", "NF"],
-              "fem": "renarde"
-            }, {
-              "mot": "retard",
-              "classe": "NM"
-            }, {
-              "mot": "rond",
-              "classe": ["NM", "NF"],
-              "fem": "ronde"
-            }, {
-              "mot": "salut",
-              "classe": "NM"
-            }
-          ]
+            "mot": "bord",
+            "classe": "NM"
+          }, {
+            "mot": "but",
+            "classe": "NM"
+          }, {
+            "mot": "chant",
+            "classe": "NM"
+          }, {
+            "mot": "doigt",
+            "classe": "NM"
+          }, {
+            "mot": "droit",
+            "classe": "ADJ",
+            "fem": "droite"
+          }, {
+            "mot": "fond",
+            "classe": "NM"
+          }, {
+            "mot": "haut",
+            "classe": "NM"
+          }, {
+            "mot": "méchant",
+            "classe": "ADJ",
+            "fem": "méchante"
+          }, {
+            "mot": "mort",
+            "classe": ["NM", "NF", "ADJ"],
+            "fem": "morte"
+          }, {
+            "mot": "nid ",
+            "classe": "NM"
+          }, {
+            "mot": "pot ",
+            "classe": "NM"
+          }, {
+            "mot": "rat ",
+            "classe": ["NM", "NF"],
+            "fem": "rate"
+          }, {
+            "mot": "renard",
+            "classe": ["NM", "NF"],
+            "fem": "renarde"
+          }, {
+            "mot": "retard",
+            "classe": "NM"
+          }, {
+            "mot": "rond",
+            "classe": ["NM", "NF"],
+            "fem": "ronde"
+          }, {
+            "mot": "salut",
+            "classe": "NM"
+          }]
         }]
       },
       {

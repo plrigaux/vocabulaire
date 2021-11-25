@@ -1,7 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSelectChange } from '@angular/material/select';
-import { VoiceService } from './voiceService';
+import { VoiceControlService } from './voice-control.service';
+
 
 export interface VolumeDialogData {
   pitch: number;
@@ -13,8 +14,7 @@ export interface VolumeDialogData {
 @Component({
   selector: 'app-voice-control',
   templateUrl: './voice-control.component.html',
-  styleUrls: ['./voice-control.component.scss'],
-  providers: [VoiceService]
+  styleUrls: ['./voice-control.component.scss']
 })
 export class VoiceControlComponent implements OnInit {
   readonly pitchMin = 0
@@ -27,7 +27,7 @@ export class VoiceControlComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<VoiceControlComponent>,
     @Inject(MAT_DIALOG_DATA) public data: VolumeDialogData,
-    public voiceService: VoiceService) {
+    public voiceService: VoiceControlService) {
 
   }
 

@@ -2,15 +2,14 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Mot } from '../vocabulaire/vocabulaireInterfaces';
 import { MatDialog } from '@angular/material/dialog';
 import { VoiceControlComponent, VolumeDialogData } from '../voice-control/voice-control.component';
-import { VoiceService } from '../voice-control/voiceService';
+import { VoiceControlService } from '../voice-control/voice-control.service';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'],
-  providers: [VoiceService]
+  styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
 
@@ -33,7 +32,7 @@ export class CardComponent implements OnInit {
   private pitch = 1
   private rate = 1
 
-  constructor(public dialog: MatDialog, public voiceService: VoiceService) {
+  constructor(public dialog: MatDialog, public voiceService: VoiceControlService) {
 
   }
 
@@ -118,7 +117,8 @@ export class CardComponent implements OnInit {
 
   private generateText(mot: Mot): string {
     let text = ""
-    switch (mot.classe) {
+    let cls = Array.isArray(mot.classe) ? mot.classe[0] : mot.classe
+    switch (cls) {
       case "NM":
         text = this.apostrophe("le", mot.mot)
         break;

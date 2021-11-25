@@ -51,6 +51,20 @@ export class CardcontrolComponent implements OnInit {
       let indice = g.indice
       g.mots.forEach(m => {
         m.indice = indice
+        if (Array.isArray(m.classe)) {
+          if (m.classe.length >= 1) {
+            let cls = m.classe[0]
+            let isNom = cls == "NM" || cls == "NF"
+            if (isNom && m.fem) {
+              let newMot: Mot = {
+                mot: m.fem,
+                classe: "NF",
+                indice: indice
+              }
+              this.mots.push(newMot)
+            }
+          }
+        }
         this.mots.push(m)
       })
     });
