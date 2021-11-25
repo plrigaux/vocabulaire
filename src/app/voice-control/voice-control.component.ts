@@ -19,10 +19,11 @@ export interface VolumeDialogData {
 export class VoiceControlComponent implements OnInit {
   readonly pitchMin = 0
   readonly pitchMax = 2
-
-
   readonly rateMin = 0.1
   readonly rateMax = 10
+
+  voiceTest: string = "test de voix"
+
   data: VolumeDialogData
   constructor(
     public dialogRef: MatDialogRef<VoiceControlComponent>,
@@ -78,5 +79,10 @@ export class VoiceControlComponent implements OnInit {
   setSelectedVoice(voice: MatSelectChange) {
     //console.log(voice)
     this.data.selectedVoice = voice.value;
+  }
+
+  playVoice() {
+    this.voiceService.cancel()
+    this.voiceService.play(this.voiceTest)
   }
 }

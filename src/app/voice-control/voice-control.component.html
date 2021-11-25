@@ -7,26 +7,35 @@
         </mat-select>
     </mat-form-field>
     <div>
-        <label>Pitch {{data.pitch}}</label>
+        <h3>Pitch {{data.pitch}}</h3>
         <app-input-slider [min]="pitchMin"
             [max]="pitchMax" [value]="data.pitch" step="0.1" (changeValue)="changePitch($event)" label="Pitch">
         </app-input-slider>
     </div>
     <div>
-        <label>Rate {{data.rate}}</label>
+        <h3>Rate {{data.rate}}</h3>
         <app-input-slider [min]="rateMin"
             [max]="rateMax" [value]="data.rate" step="0.1" (changeValue)="changeRate($event)" label="Rate">
         </app-input-slider>
     </div>
     <div>
-        <label>Volume {{data.volume}} %</label>
+        <h3>Volume {{data.volume}} %</h3>
         <app-input-slider min=1
             max=100 [value]="data.volume" step="1" (changeValue)="changeVolume($event)" label="Volume">
         </app-input-slider>
 
     </div>
 </div>
-<div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Annuler</button>
-    <button mat-button (click)="onOkClick()" cdkFocusInitial>Ok</button>
-</div>
+<mat-dialog-actions>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>La voix dit</mat-label>
+            <input matInput [(ngModel)]="voiceTest" type="text" />
+        </mat-form-field>
+        <button mat-mini-fab color="accent" matTooltip="Testez la voix" (click)="playVoice()"><mat-icon>play_circle_filled</mat-icon></button>
+    </div>
+    <div>
+        <button mat-button (click)="onNoClick()">Annuler</button>
+        <button mat-button (click)="onOkClick()" cdkFocusInitial>Ok</button>
+    </div>
+</mat-dialog-actions>

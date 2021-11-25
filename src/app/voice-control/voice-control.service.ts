@@ -8,9 +8,6 @@ export class VoiceControlService {
     voices: SpeechSynthesisVoice[] = []
     frenchVoices: SpeechSynthesisVoice[] = []
     selectedVoice: SpeechSynthesisVoice | null = null
-    //static instances = 0
-    //thisinstanceId = 0
-    //pitch: number = 1
     volume: number = 0.75
     pitch = 1
     rate = 1
@@ -22,12 +19,6 @@ export class VoiceControlService {
                 this.listVoices()
             }
         }
-        //console.log(this.voices)
-        //console.log("Voices: " + this.voices.length)
-
-        //VoiceControlService.instances += 1
-        //this.thisinstanceId = VoiceControlService.instances
-        //console.log(`VoiceControlService this.thisinstanceId ${this.thisinstanceId}`)
     }
 
     private listVoices() {
@@ -82,6 +73,10 @@ export class VoiceControlService {
         to_speak.volume = this.volume
 
         window.speechSynthesis.speak(to_speak);
+    }
+
+    cancel() {
+        window.speechSynthesis.cancel()
     }
 
 }

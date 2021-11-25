@@ -22,34 +22,3 @@
 <button mat-raised-button color="accent" (click)="openDialog()">
   <mat-icon>settings</mat-icon> Contrôle de la voix
 </button>
-<!--mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <mat-icon>settings</mat-icon> Contrôle de la voix</mat-panel-title>
-      <mat-panel-description>
-        Changer la voix et ses propriétés
-      </mat-panel-description>
-  </mat-expansion-panel-header>
-  <mat-form-field appearance="fill">
-    <mat-label>Choix de voix</mat-label>
-    <mat-select [(value)]="selectedVoice">
-      <mat-option *ngFor="let v of voiceService.getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <div>
-    <label>Pitch {{pitch}}</label>
-    <app-input-slider [min]="pitchMin"
-      [max]="pitchMax" [value]="pitch" step="0.1" (changeValue)="changePitch($event)" label="Pitch"></app-input-slider>
-  </div>
-  <div>
-    <label>Rate {{rate}}</label>
-    <app-input-slider [min]="rateMin"
-      [max]="rateMax" [value]="rate" step="0.1" (changeValue)="changeRate($event)" label="Rate"></app-input-slider>
-  </div>
-  <div>
-    <label>Volume {{volume}} %</label>
-    <app-input-slider min=1
-      max=100 [value]="volume" step="1" (changeValue)="changeVolume($event)" label="Volume"></app-input-slider>
-
-  </div>
-</mat-expansion-panel-->
