@@ -2,7 +2,7 @@
 <div mat-dialog-content>
     <mat-form-field appearance="fill">
         <mat-label>Choix de voix</mat-label>
-        <mat-select [value]="getVoice()" (selectionChange)="setVoice($event)">
+        <mat-select [value]="getVoice()" (selectionChange)="setVoice($event)" class="voiceSelect">
             <mat-option *ngFor="let v of getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
         </mat-select>
     </mat-form-field>
@@ -28,5 +28,5 @@
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">Annuler</button>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+    <button mat-button (click)="onOkClick()" cdkFocusInitial>Ok</button>
 </div>

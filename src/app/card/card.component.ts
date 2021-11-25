@@ -17,48 +17,23 @@ export class CardComponent implements OnInit {
   given: string = ""
   mot: Mot | null = null;
   prefix = ""
-
-  //frenchVoices: SpeechSynthesisVoice[] = []
   selectedVoice: SpeechSynthesisVoice | null = null
-  //voices: SpeechSynthesisVoice[] = []
   validation: boolean = false
-
-  //pitch: number = 1
-  volume: number = 100
 
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
-
-  private pitch = 1
-  private rate = 1
 
   constructor(public dialog: MatDialog, public voiceService: VoiceControlService) {
 
   }
 
   openDialog(): void {
-
-
-    let voiceData: VolumeDialogData = {
-      pitch: this.pitch,
-      rate: this.rate,
-      volume: this.volume,
-      selectedVoice: this.selectedVoice
-    }
     const dialogRef = this.dialog.open(VoiceControlComponent, {
-      width: '350px',
-      data: voiceData,
+      width: '350px'
     });
 
     dialogRef.afterClosed().subscribe((result: VolumeDialogData) => {
       console.log('The dialog was closed');
-      console.log(result);
-      if (result) {
-        this.pitch = result.pitch;
-        this.rate = result.rate;
-        this.volume = result.volume;
-        this.selectedVoice = result.selectedVoice;
-      }
     });
   }
 
@@ -95,23 +70,7 @@ export class CardComponent implements OnInit {
 
       let text = this.generateText(this.mot)
 
-      let to_speak = new SpeechSynthesisUtterance(text);
-
-      if (this.selectedVoice) {
-        to_speak.voice = this.selectedVoice
-      } else {
-        this.selectedVoice = this.voiceService.getSelectedVoice()
-        if (this.selectedVoice) {
-          to_speak.voice = this.selectedVoice
-        }
-      }
-
-      to_speak.pitch = this.pitch
-      to_speak.rate = this.rate
-      to_speak.volume = this.volume / 100
-
-
-      window.speechSynthesis.speak(to_speak);
+      this.voiceService.play(text)
     }
   }
 

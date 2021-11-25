@@ -23,21 +23,32 @@ export class VoiceControlComponent implements OnInit {
 
   readonly rateMin = 0.1
   readonly rateMax = 10
-
+  data: VolumeDialogData
   constructor(
     public dialogRef: MatDialogRef<VoiceControlComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: VolumeDialogData,
     public voiceService: VoiceControlService) {
 
+    this.data = {
+      pitch: voiceService.pitch,
+      rate: voiceService.rate,
+      volume: voiceService.volume,
+      selectedVoice: voiceService.selectedVoice
+    }
   }
 
   ngOnInit(): void {
 
   }
 
-
-
   onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  onOkClick(): void {
+    this.voiceService.pitch = this.data.pitch
+    this.voiceService.rate = this.data.rate
+    this.voiceService.volume = this.data.volume
+    this.voiceService.selectedVoice = this.data.selectedVoice
     this.dialogRef.close();
   }
 
