@@ -8,11 +8,25 @@ import { SequenceMatcher } from 'difflib-ts';
 })
 export class CorrectorComponent implements OnInit, OnChanges {
 
-  @Input()
-  given: string = ""
+  private _given: string = ""
 
   @Input()
-  correct: string = ""
+  set given(value: any) {
+    let v = String(value)
+    this._given = v.trim().toLowerCase()
+  }
+
+  get given() { return this._given }
+
+  @Input()
+  private _correct: string = ""
+
+  set correct(value: any) {
+    let v = String(value)
+    this._correct = v.trim().toLowerCase()
+  }
+
+  get correct() { return this._correct }
 
   givenElems: Truc[] = []
   correctElems: Truc[] = []
@@ -21,7 +35,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -49,7 +63,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
 
 
 
-  bigFunc(given: string, correct: string) {
+  private bigFunc(given: string, correct: string) {
     let matchingBlock = this.tokenizeComparison(given, correct)
 
     this.givenElems = []
@@ -84,7 +98,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
     })
   }
 
-  logBad(old: number, neww: number, s: string, array: any[]): void {
+  private logBad(old: number, neww: number, s: string, array: any[]): void {
     if (old != neww) {
       let obj: Truc = {
         ok: false,
@@ -95,7 +109,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
     }
   }
 
-  logGood(start: number, cnt: number, s: string, array: any[]): void {
+  private logGood(start: number, cnt: number, s: string, array: any[]): void {
     if (cnt) {
       let obj: Truc = {
         ok: true,
@@ -105,7 +119,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
     }
   }
 
-  tokenizeComparison(given: string, correct: string): number[][] {
+  private tokenizeComparison(given: string, correct: string): number[][] {
     let s = new SequenceMatcher(null, given, correct)
     let mb: number[][] = s.getMatchingBlocks()
     console.log(" PIZZA")
