@@ -1,3 +1,4 @@
+import { coerceNumberProperty } from '@angular/cdk/coercion';
 import { Component, Input, OnInit, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MyErrorStateMatcher } from './errorStateMatcher';
@@ -9,34 +10,31 @@ import { MyErrorStateMatcher } from './errorStateMatcher';
 })
 export class InputSliderComponent implements OnInit {
 
-  @Input()
-  _min: number = 0
+
+  private _min: number = 0
 
   @Input()
-  set min(v:number|string) {
-    this._min = Number(v)
+  set min(v: any) {
+    this._min = coerceNumberProperty(v, 0)
   }
 
-  get min() : number {
+  get min(): number {
     return this._min
   }
-  
-  _max: number = 0
+
+  private _max: number = 0
 
   @Input()
-  set max(v:number|string) {
-    this._max = Number(v)
+  set max(v: any) {
+    this._max = coerceNumberProperty(v, 0)
   }
 
-  get max() : number {
+  get max(): number {
     return this._max
   }
 
-  
-
   @Input()
   step = "1"
-  
 
   @Input()
   label = ""
@@ -45,7 +43,8 @@ export class InputSliderComponent implements OnInit {
 
   @Input()
   set value(value: number | null) {
-    this.formControl.setValue(value)
+    let v = coerceNumberProperty(value, 0)
+    this.formControl.setValue(v)
   }
 
   formControl = new FormControl(1, [Validators.required]);
