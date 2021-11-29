@@ -18,10 +18,11 @@ export class CardcontrolComponent implements OnInit {
   mot: Mot | null = null;
   mots: Mot[] = []
   motIndex: number = 0
+  private _isWriting = false
 
 
-  prevDisabled: boolean = true
-  nextDisabled: boolean = true
+  private _prevDisabled: boolean = true
+  private _nextDisabled: boolean = true
 
   @ViewChild(CardComponent)
   private cardComponent!: CardComponent;
@@ -93,18 +94,39 @@ export class CardcontrolComponent implements OnInit {
       //console.log("setMot - new mot " + this.motIndex + " mot " + this.mot.mot)
       this.cardComponent.newWord(this.mot)
 
-      this.prevDisabled = false
-      this.nextDisabled = false
+      this._prevDisabled = false
+      this._nextDisabled = false
       //console.log("setMot - index " + index)
     }
 
     if (index <= 0) {
       //console.log("setMot - prevDisabled " + index)
-      this.prevDisabled = true
+      this._prevDisabled = true
     } else if (index >= this.mots.length - 1) {
       //console.log("setMot - nextDisabled " + index)
-      this.nextDisabled = true
+      this._nextDisabled = true
     }
     //console.log(this)
+  }
+
+  checkWritingState(isWriting: boolean) {
+    console.log(`isWriting ${isWriting}`)
+    this._isWriting = isWriting
+  }
+
+  prevDisabled(): boolean {
+    if (this._isWriting) {
+      return true
+    }
+
+    return this._prevDisabled
+  }
+
+  nextDisabled(): boolean {
+    if (this._isWriting) {
+      return true
+    }
+
+    return this._nextDisabled
   }
 }

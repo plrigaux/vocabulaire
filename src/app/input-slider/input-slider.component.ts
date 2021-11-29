@@ -53,7 +53,7 @@ export class InputSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.formControl.valueChanges.subscribe(
-      (newValue) => {
+      (newValue :any) => {
         if (this.formControl.errors == null) {
           this.changeValue.emit(newValue);
         }

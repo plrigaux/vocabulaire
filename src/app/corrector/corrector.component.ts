@@ -17,10 +17,10 @@ export class CorrectorComponent implements OnInit, OnChanges {
   }
 
   get given() { return this._given }
-
-  @Input()
+  
   private _correct: string = ""
 
+  @Input()
   set correct(value: any) {
     let v = String(value)
     this._correct = v.trim().toLowerCase()

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { Mot } from '../vocabulaire/vocabulaireInterfaces';
 import { MatDialog } from '@angular/material/dialog';
 import { VoiceControlComponent, VolumeDialogData } from '../voice-control/voice-control.component';
@@ -13,7 +13,17 @@ import { VoiceControlService } from '../voice-control/voice-control.service';
 })
 export class CardComponent implements OnInit {
 
-  userInput: string = ""
+  private _userInput: string = ""
+
+  set userInput(v: string) {
+    this._userInput = v;
+    this.checkIsWriting()
+  }
+
+  get userInput() {
+    return this._userInput
+  }
+
   given: string = ""
   mot: Mot | null = null;
   prefix = ""
@@ -22,6 +32,10 @@ export class CardComponent implements OnInit {
 
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
+
+
+  @Output()
+  isWriting = new EventEmitter<boolean>();
 
   constructor(public dialog: MatDialog, public voiceService: VoiceControlService) {
 
@@ -47,29 +61,61 @@ export class CardComponent implements OnInit {
     this.prefix = ""
     this.userInput = "";
     console.log(this.answerInput)
-    setTimeout(() => {
-      this.answerInput.nativeElement.focus();
-      console.log("    this.answerInput.focus(); ")
-    }, 250)
 
     this.given = "";
     this.validation = false;
+
     window.speechSynthesis.cancel()
     this.play()
+    this.focusInput()
+    this.checkIsWriting()
+  }
+
+  focusInput() {
+    setTimeout(() => {
+      this.answerInput.nativeElement.focus();
+      console.log("this.answerInput.focus(); ")
+    }, 250)
   }
 
   validate(): void {
     console.log("validate")
 
+    //setting given triggers validation
     this.given = this.userInput
     this.validation = true
+    this.focusInput()
+    this.checkIsWriting()
+  }
+
+  checkIsWriting() {
+    if (this.userInput.trim().length == 0) {
+      this.emitIsWriting(false)
+    } else {
+      if (this.validation) {
+        this.emitIsWriting(false)
+      } else {
+        this.emitIsWriting(true)
+      }
+    }
+  }
+
+  private _writingState: boolean | null = null
+  private emitIsWriting(writingState: boolean) {
+    if (this._writingState !== writingState) {
+      this._writingState = writingState
+      this.isWriting.emit(this._writingState)
+    } 
+  }
+
+  rePlay() {
+    this.play();
+    this.focusInput()
   }
 
   play() {
     if (this.mot) {
-
       let text = this.generateText(this.mot)
-
       this.voiceService.play(text)
     }
   }

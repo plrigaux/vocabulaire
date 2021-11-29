@@ -30,14 +30,14 @@
                 <ng-container *ngIf='mots.length > 0'>{{motIndex + 1}} de {{mots.length}}</ng-container>&nbsp;
             </mat-card-subtitle>
         </mat-card-header>
-        <app-card></app-card>
+        <app-card (isWriting)="checkWritingState($event)"></app-card>
         <mat-card-footer class="footer">
-            <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled">
+            <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled()">
                 <mat-icon>arrow_back_ios</mat-icon>
                 Précédent
             </button>
             <div class="flex-spacer"></div>
-            <button mat-raised-button color="primary" (click)="next()" [disabled]="nextDisabled">
+            <button mat-raised-button color="primary" (click)="next()" [disabled]="nextDisabled()">
                 Suivant <mat-icon>
                     arrow_forward_ios</mat-icon>
             </button>
