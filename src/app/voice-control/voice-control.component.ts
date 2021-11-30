@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MatSelectChange } from '@angular/material/select';
 import { VoiceControlService } from './voice-control.service';
 
@@ -30,10 +30,7 @@ export class VoiceControlComponent implements OnInit {
     public voiceService: VoiceControlService) {
 
     this.data = {
-      pitch: voiceService.pitch,
-      rate: voiceService.rate,
-      volume: voiceService.volume * 100,
-      selectedVoice: voiceService.selectedVoice
+      ...voiceService.volumeData
     }
   }
 
@@ -46,10 +43,7 @@ export class VoiceControlComponent implements OnInit {
   }
 
   onOkClick(): void {
-    this.voiceService.pitch = this.data.pitch
-    this.voiceService.rate = this.data.rate
-    this.voiceService.volume = this.data.volume / 100
-    this.voiceService.selectedVoice = this.data.selectedVoice
+    this.voiceService.volumeData = this.data
     this.dialogRef.close();
   }
 
@@ -62,7 +56,11 @@ export class VoiceControlComponent implements OnInit {
   }
 
   changeVolume(volume: number) {
-    this.data.volume = volume
+    this.data.volume = volume / 100
+  }
+
+  get volume() {
+    return this.data.volume * 100
   }
 
   getVoices() {
@@ -83,6 +81,6 @@ export class VoiceControlComponent implements OnInit {
 
   playVoice() {
     this.voiceService.cancel()
-    this.voiceService.play(this.voiceTest)
+    this.voiceService.play(this.voiceTest, this.data)
   }
 }

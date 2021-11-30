@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { VolumeDialogData } from './voice-control.component';
 
 @Injectable({
     providedIn: 'root'
@@ -7,10 +8,12 @@ export class VoiceControlService {
 
     voices: SpeechSynthesisVoice[] = []
     frenchVoices: SpeechSynthesisVoice[] = []
-    selectedVoice: SpeechSynthesisVoice | null = null
-    volume: number = 0.75
-    pitch = 1
-    rate = 1
+    volumeData : VolumeDialogData = {
+        volume : 0.75,
+        pitch : 1,
+        rate : 1,
+        selectedVoice : null
+    }
 
     constructor() {
         console.log("VoiceService")
@@ -42,7 +45,7 @@ export class VoiceControlService {
     }
 
     setVoice(voice: SpeechSynthesisVoice) {
-        this.selectedVoice = voice;
+        this.volumeData.selectedVoice = voice;
     }
 
     getVoices(): SpeechSynthesisVoice[] {
@@ -50,27 +53,33 @@ export class VoiceControlService {
     }
 
     getSelectedVoice(): SpeechSynthesisVoice | null {
-        if (this.selectedVoice == null) {
+        if (this.volumeData.selectedVoice == null) {
             this.listVoices();
         }
-        return this.selectedVoice
+        return this.volumeData.selectedVoice
     }
 
-    play(text: string) {
+    play(text: string, volumeData? : VolumeDialogData) {
+
+        let vd = this.volumeData
+        if (volumeData) {
+            vd = volumeData
+        }
+
         let to_speak = new SpeechSynthesisUtterance(text);
 
-        if (this.selectedVoice) {
-            to_speak.voice = this.selectedVoice
+        if (vd.selectedVoice) {
+            to_speak.voice = vd.selectedVoice
         } else {
-            this.selectedVoice = this.getSelectedVoice()
-            if (this.selectedVoice) {
-                to_speak.voice = this.selectedVoice
+            this.volumeData.selectedVoice = this.getSelectedVoice()
+            if (vd.selectedVoice) {
+                to_speak.voice = this.volumeData.selectedVoice
             }
         }
 
-        to_speak.pitch = this.pitch
-        to_speak.rate = this.rate
-        to_speak.volume = this.volume
+        to_speak.pitch = vd.pitch
+        to_speak.rate = vd.rate
+        to_speak.volume = vd.volume
 
         window.speechSynthesis.speak(to_speak);
     }
