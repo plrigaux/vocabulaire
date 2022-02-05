@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Theme, Semaine, Groupe, Mot } from '../vocabulaire/vocabulaireInterfaces';
-import vocabulaire from '../../resources/vocabulaire.json';
 import { CardComponent } from '../card/card.component';
-
+import stValentin from '../../resources/themes1.json';
+import vocabulaire from '../../resources/vocabulaire.json';
 
 @Component({
   selector: 'app-cardcontrol',
@@ -29,16 +29,55 @@ export class CardcontrolComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.themes.push(...stValentin)
   }
 
   getSemaines(): Semaine[] {
     //let theme = this.themes.find( (t : Theme) => t.theme == this.theme.theme)
 
     if (this.theme) {
-      return this.theme.semaines;
+      return this.theme.semaines ?? [];
     }
 
     return [];
+  }
+
+  onChangeTheme(theme: Theme) {
+    this.theme = theme
+    if (theme.mots) {
+      this.mots = []
+      this.motIndex = -1;
+      theme.mots.forEach(m => { this.crunchMot(m, "") });
+
+      CardcontrolComponent.shuffleArray(theme.mots)
+      this.next();
+    }
+  }
+
+  static shuffleArray(array: any) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  crunchMot(m: Mot, indice: string) {
+    m.indice = indice
+    if (Array.isArray(m.classe)) {
+      if (m.classe.length >= 1) {
+        let cls = m.classe[0]
+        let isNom = cls == "NM" || cls == "NF"
+        if (isNom && m.fem) {
+          let newMot: Mot = {
+            mot: m.fem,
+            classe: "NF",
+            indice: indice
+          }
+          this.mots.push(newMot)
+        }
+      }
+    }
+    this.mots.push(m)
   }
 
   onChangeSemaine(semaine: Semaine) {
@@ -50,28 +89,15 @@ export class CardcontrolComponent implements OnInit {
     this.semaine.groupes.forEach((g: Groupe) => {
 
       let indice = g.indice
-      g.mots.forEach(m => {
-        m.indice = indice
-        if (Array.isArray(m.classe)) {
-          if (m.classe.length >= 1) {
-            let cls = m.classe[0]
-            let isNom = cls == "NM" || cls == "NF"
-            if (isNom && m.fem) {
-              let newMot: Mot = {
-                mot: m.fem,
-                classe: "NF",
-                indice: indice
-              }
-              this.mots.push(newMot)
-            }
-          }
-        }
-        this.mots.push(m)
-      })
-    });
+      g.mots.forEach(m => { this.crunchMot(m, indice) });
 
-    this.next();
+      this.next();
+    }
+    )
   }
+
+
+
 
   next() {
     console.log("next - " + this.motIndex)

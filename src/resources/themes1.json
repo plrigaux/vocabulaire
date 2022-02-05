@@ -1,0 +1,92 @@
+[{
+  "theme": "Saint-Valentin",
+  "mots": [{
+      "mot": "AMOUR",
+      "classe": "NM"
+    },
+    {
+      "mot": "AMIE",
+      "classe": "NF"
+    },
+    {
+      "mot": "AMI",
+      "classe": "NM"
+    },
+    {
+      "mot": "AMOUREUSE",
+      "classe": "NF"
+    },
+    {
+      "mot": "FLEUR",
+      "classe": "NF"
+    },
+    {
+      "mot": "LETTRE",
+      "classe": "NF"
+    },
+    {
+      "mot": "CUPIDON",
+      "classe": "NM"
+    },
+    {
+      "mot": "JE T'AIME",
+      "classe": ""
+    },
+    {
+      "mot": "CHOCOLAT",
+      "classe": "NM"
+    },
+    {
+      "mot": "SOUHAIT",
+      "classe": "NM"
+    },
+    {
+      "mot": "VALENTINE",
+      "classe": "NF"
+    },
+    {
+      "mot": "VALENTIN",
+      "classe": "NM"
+    },
+    {
+      "mot": "FLÈCHE",
+      "classe": "NF"
+    },
+    {
+      "mot": "BISOU",
+      "classe": "NM"
+    },
+    {
+      "mot": "OFFRIR",
+      "classe": "V"
+    },
+    {
+      "mot": "BOUQUET",
+      "classe": "NM"
+    },
+    {
+      "mot": "POÈME",
+      "classe": "NM"
+    },
+    {
+      "mot": "FÉVRIER",
+      "classe": ""
+    },
+    {
+      "mot": "MESSAGE",
+      "classe": "NM"
+    },
+    {
+      "mot": "AMITIÉ",
+      "classe": "NF"
+    },
+    {
+      "mot": "CHER AMI",
+      "classe": "NM"
+    },
+    {
+      "mot": "CHÈRE AMIE",
+      "classe": "NF"
+    }
+  ]
+}]

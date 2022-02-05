@@ -105,7 +105,7 @@ export class CardComponent implements OnInit {
     if (this._writingState !== writingState) {
       this._writingState = writingState
       this.isWriting.emit(this._writingState)
-    } 
+    }
   }
 
   rePlay() {
@@ -125,10 +125,10 @@ export class CardComponent implements OnInit {
     let cls = Array.isArray(mot.classe) ? mot.classe[0] : mot.classe
     switch (cls) {
       case "NM":
-        text = this.apostrophe("le", mot.mot)
+        text = this.apostrophe(mot.mot, false)
         break;
       case "NF":
-        text = this.apostrophe("la", mot.mot)
+        text = this.apostrophe(mot.mot, true)
         break;
       default:
         text = mot.mot
@@ -137,14 +137,22 @@ export class CardComponent implements OnInit {
     return text
   }
 
-  private apostrophe(determinant: string, mot: string) {
-    let premiereLettre = mot.charAt(0)
-
+  inder = true
+  private apostrophe(mot: string, feminin: boolean) {
     let text = ""
-    if (/[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœÁÀÂÄÃÅÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝŸ]/.test(premiereLettre)) {
-      this.prefix = "l'"
-    } else {
+    if (this.inder) {
+      let determinant = feminin ? "une" : "un"
       this.prefix = determinant + " "
+    } else {
+      let determinant = feminin ? "la" : "le"
+
+      let premiereLettre = mot.charAt(0)
+      
+      if (/[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœAÁÀÂÄÃÅEÉÈÊËIÍÌÎÏOÓÒÔÖÕUÚÙÛÜYÝŸ]/.test(premiereLettre)) {
+        this.prefix = "l'"
+      } else {
+        this.prefix = determinant + " "
+      }
     }
 
     text = this.prefix + mot

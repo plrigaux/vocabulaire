@@ -3,7 +3,7 @@
         <h4>Thème</h4>
         <mat-form-field appearance="fill">
             <mat-label>Choisisez un thème</mat-label>
-            <mat-select [(value)]="theme">
+            <mat-select [(value)]="theme" (selectionChange)="onChangeTheme($event.value)">
                 <mat-option *ngFor="let theme of themes" [value]="theme">
                     Thème {{theme.theme}}
                 </mat-option>

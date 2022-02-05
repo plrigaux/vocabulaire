@@ -13,6 +13,9 @@
                     </ul>
                 </div>
             </li>
+            <li *ngFor="let mot of theme.mots">
+                {{mot.mot}} {{mot.classe}}
+           </li>
         </ul>
     </li>
 </ul>

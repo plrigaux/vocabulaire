@@ -1,7 +1,7 @@
 export interface Theme {
-    theme: number;
-    semaines: any;
-
+    theme: number | string;
+    semaines?: any;
+    mots?: Mot[]
 }
 
 export interface Semaine {
@@ -19,7 +19,7 @@ type MotClasse = "ADJ" | "V" | "NF" | "NM" | "MI"
 
 export interface Mot {
     mot: string,
-    classe: MotClasse | MotClasse[]
+    classe: MotClasse | MotClasse[] | string
     fem?: string
     detail?: string
     indice?: string
