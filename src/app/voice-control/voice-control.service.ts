@@ -80,6 +80,7 @@ export class VoiceControlService {
         to_speak.pitch = vd.pitch
         to_speak.rate = vd.rate
         to_speak.volume = vd.volume
+        to_speak.lang = "fr-FR"
 
         window.speechSynthesis.speak(to_speak);
     }

@@ -45,8 +45,8 @@
             "production": {
               "budgets": [{
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -112,7 +112,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "https://plrigaux.github.io/vocabulaire/",
-            "name": "Math trainer",
+            "name": "Vocabulaire",
             "email": "plr@noreply.com",
             "noSilent": true
           }
