@@ -63,7 +63,7 @@ export class VoiceControlComponent implements OnInit {
     return this.data.volume * 100
   }
 
-  getVoices() {
+  getVoices() : SpeechSynthesisVoice[] {
     return this.voiceService.getVoices();
   }
 
@@ -76,7 +76,9 @@ export class VoiceControlComponent implements OnInit {
 
   setSelectedVoice(voice: MatSelectChange) {
     //console.log(voice)
-    this.data.selectedVoice = voice.value;
+
+    let ssv : SpeechSynthesisVoice = voice.value
+    this.data.selectedVoice = ssv;
   }
 
   playVoice() {
