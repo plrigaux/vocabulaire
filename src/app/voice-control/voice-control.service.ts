@@ -80,6 +80,7 @@ export class VoiceControlService {
         to_speak.pitch = vd.pitch
         to_speak.rate = vd.rate
         to_speak.volume = vd.volume
+        //for android, it seems to need to set the lang
         to_speak.lang = to_speak.voice?.lang ?? "fr-FR"
 
         window.speechSynthesis.speak(to_speak);

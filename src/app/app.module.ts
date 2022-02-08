@@ -27,6 +27,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { VoiceControlComponent } from './voice-control/voice-control.component';
 import { MatDialogModule } from '@angular/material/dialog';
 //import { MatSelectChange } from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     ReactiveFormsModule,
     MatExpansionModule,
     MatNativeDateModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSlideToggleModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

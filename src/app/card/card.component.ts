@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter, Input } from '@angular/core';
 import { Mot } from '../vocabulaire/vocabulaireInterfaces';
 import { MatDialog } from '@angular/material/dialog';
 import { VoiceControlComponent, VolumeDialogData } from '../voice-control/voice-control.component';
@@ -29,6 +29,9 @@ export class CardComponent implements OnInit {
   prefix = ""
   selectedVoice: SpeechSynthesisVoice | null = null
   validation: boolean = false
+
+  @Input()
+  article : "unune" | "lela" | null = null
 
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
@@ -137,10 +140,10 @@ export class CardComponent implements OnInit {
     return text
   }
 
-  inder = true
+
   private apostrophe(mot: string, feminin: boolean) {
     let text = ""
-    if (this.inder) {
+    if (this.article == "unune") {
       let determinant = feminin ? "une" : "un"
       this.prefix = determinant + " "
     } else {

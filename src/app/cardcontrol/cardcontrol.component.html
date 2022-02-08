@@ -21,6 +21,15 @@
             </mat-select>
         </mat-form-field>
     </div>
+    <div>
+        <mat-slide-toggle [(ngModel)]="shuffle" (change)="onChangeToggle($event)">Mélanger</mat-slide-toggle>
+    </div>
+    <div>
+        <mat-button-toggle-group [(ngModel)]="article">
+            <mat-button-toggle value="unune">Un / Une</mat-button-toggle>
+            <mat-button-toggle value="lela">Le / La</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
 </div>
 <div class="cardContentContainer">
     <mat-card class="cardContent">
@@ -30,7 +39,7 @@
                 <ng-container *ngIf='mots.length > 0'>{{motIndex + 1}} de {{mots.length}}</ng-container>&nbsp;
             </mat-card-subtitle>
         </mat-card-header>
-        <app-card (isWriting)="checkWritingState($event)"></app-card>
+        <app-card (isWriting)="checkWritingState($event)" [article]="article"></app-card>
         <mat-card-footer class="footer">
             <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled()">
                 <mat-icon>arrow_back_ios</mat-icon>

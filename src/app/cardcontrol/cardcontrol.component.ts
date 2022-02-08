@@ -3,6 +3,7 @@ import { Theme, Semaine, Groupe, Mot } from '../vocabulaire/vocabulaireInterface
 import { CardComponent } from '../card/card.component';
 import stValentin from '../../resources/themes1.json';
 import vocabulaire from '../../resources/vocabulaire.json';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-cardcontrol',
@@ -19,7 +20,8 @@ export class CardcontrolComponent implements OnInit {
   mots: Mot[] = []
   motIndex: number = 0
   private _isWriting = false
-
+  shuffle = false;
+  article : "unune" | "lela" = "unune"
 
   private _prevDisabled: boolean = true
   private _nextDisabled: boolean = true
@@ -42,19 +44,11 @@ export class CardcontrolComponent implements OnInit {
     return [];
   }
 
-  onChangeTheme(theme: Theme) {
-    this.theme = theme
-    if (theme.mots) {
-      this.mots = []
-      this.motIndex = -1;
-      theme.mots.forEach(m => { this.crunchMot(m, "") });
-
-      CardcontrolComponent.shuffleArray(theme.mots)
-      this.next();
+  shuffleArray(array: any) {
+    if (!this.shuffle) {
+      return;
     }
-  }
 
-  static shuffleArray(array: any) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -80,24 +74,45 @@ export class CardcontrolComponent implements OnInit {
     this.mots.push(m)
   }
 
+  onChangeTheme(theme: Theme) {
+    this.theme = theme
+    if (theme.mots) {
+      this.semaine = null
+      this.mots = []
+      this.motIndex = -1;
+      theme.mots.forEach(m => { this.crunchMot(m, "") });
+
+      this.shuffleArray(this.mots)
+      this.next();
+    }
+  }
+
   onChangeSemaine(semaine: Semaine) {
     //onsole.log(semaine)
     this.semaine = semaine
 
     this.mots = []
     this.motIndex = -1;
-    this.semaine.groupes.forEach((g: Groupe) => {
-
-      let indice = g.indice
-      g.mots.forEach(m => { this.crunchMot(m, indice) });
-
+    this.semaine.groupes.forEach((group: Groupe) => {
+      let indice = group.indice
+      group.mots.forEach(m => { this.crunchMot(m, indice) });
       this.next();
-    }
-    )
+    })
   }
 
+  onChangeToggle(event: MatSlideToggleChange) {
+    console.log(event)
 
+    if(this.semaine) {
+      this.onChangeSemaine(this.semaine)
+      return
+    }
 
+    if (this.theme?.mots) {
+      this.onChangeTheme(this.theme)
+      return
+    }
+  }
 
   next() {
     console.log("next - " + this.motIndex)
