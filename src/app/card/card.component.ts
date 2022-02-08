@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter, Input } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter, Input, SimpleChanges, SimpleChange } from '@angular/core';
 import { Mot } from '../vocabulaire/vocabulaireInterfaces';
 import { MatDialog } from '@angular/material/dialog';
 import { VoiceControlComponent, VolumeDialogData } from '../voice-control/voice-control.component';
@@ -55,6 +55,16 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+
+    const article: SimpleChange = changes["article"];
+
+    if (!article.firstChange) {
+      this.play()
+    }
 
   }
 
