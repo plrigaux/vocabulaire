@@ -125,6 +125,90 @@
         ]
       },
       {
+        "semaine": 2,
+        "groupes": [
+          {
+            "indice": "Le son [eur] à la fin d'un mot s'écrit le plus souvent <i>eur</i>.",
+            "mots": [
+              {
+                "mot": "bonheur",
+                "classe": "NM"
+              },
+              {
+                "mot": "bricoleur",
+                "classe": "NM"
+              },
+              {
+                "mot": "bricoleuse",
+                "classe": "NF"
+              },
+              {
+                "mot": "chanteur",
+                "classe": "NM"
+              },
+              {
+                "mot": "chanteuse",
+                "classe": "NF"
+              },
+              {
+                "mot": "couleur",
+                "classe": "NF"
+              },
+              {
+                "mot": "docteur",
+                "classe": "NM"
+              },
+              {
+                "mot": "docteure",
+                "classe": "NF"
+              },
+              {
+                "mot": "malheur",
+                "classe": "NM"
+              },
+              {
+                "mot": "meilleur",
+                "classe": "ADJ",
+                "fem": "meilleure"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [eu] à la fin d'un adjectif masculin s'écrit le plus souvent <i>eux</i>.",
+            "mots": [
+              {
+                "mot": "amoureux",
+                "classe": "ADJ",
+                "fem": "amoureuse"
+              },
+              {
+                "mot": "chaleureux",
+                "classe": "ADJ",
+                "fem": "chaleureuse"
+              },
+              {
+                "mot": "douloureux",
+                "classe": "ADJ",
+                "fem": "douloureuse"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [eu] à la fin d'un nom masculin 1 s'écrit le plus souvent <i>eu</i>.",
+            "mots": [
+              {
+                "mot": "lieu",
+                "classe": "NM"
+              },
+              {
+                "mot": "milieu",
+                "classe": "NM"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "semaine": 4,
         "groupes": [
           {

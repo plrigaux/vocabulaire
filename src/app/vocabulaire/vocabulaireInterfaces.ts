@@ -23,4 +23,5 @@ export interface Mot {
     fem?: string
     detail?: string
     indice?: string
+    genre?: "MAS" | "FEM"
 }

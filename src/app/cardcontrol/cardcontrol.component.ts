@@ -21,7 +21,7 @@ export class CardcontrolComponent implements OnInit {
   motIndex: number = 0
   private _isWriting = false
   shuffle = false;
-  article : "unune" | "lela" = "unune"
+  article: "unune" | "lela" = "unune"
 
   private _prevDisabled: boolean = true
   private _nextDisabled: boolean = true
@@ -58,6 +58,7 @@ export class CardcontrolComponent implements OnInit {
   crunchMot(m: Mot, indice: string) {
     m.indice = indice
     if (Array.isArray(m.classe)) {
+
       if (m.classe.length >= 1) {
         let cls = m.classe[0]
         let isNom = cls == "NM" || cls == "NF"
@@ -70,7 +71,21 @@ export class CardcontrolComponent implements OnInit {
           this.mots.push(newMot)
         }
       }
+
+
+    } else if (m.classe == "ADJ") {
+      if (m.fem) {
+        let newMot: Mot = {
+          mot: m.fem,
+          classe: "ADJ",
+          indice: indice,
+          genre: "FEM"
+        }
+        this.mots.push(newMot)
+      }
+      m.genre = "MAS"
     }
+
     this.mots.push(m)
   }
 
@@ -95,15 +110,17 @@ export class CardcontrolComponent implements OnInit {
     this.motIndex = -1;
     this.semaine.groupes.forEach((group: Groupe) => {
       let indice = group.indice
-      group.mots.forEach(m => { this.crunchMot(m, indice) });
-      this.next();
+      group.mots.forEach(mot => {
+        this.crunchMot(mot, indice)
+      });
     })
+    this.next();
   }
 
   onChangeToggle(event: MatSlideToggleChange) {
     console.log(event)
 
-    if(this.semaine) {
+    if (this.semaine) {
       this.onChangeSemaine(this.semaine)
       return
     }
