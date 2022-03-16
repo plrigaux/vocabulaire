@@ -58,7 +58,6 @@ export class CardcontrolComponent implements OnInit {
   crunchMot(m: Mot, indice: string) {
     m.indice = indice
     if (Array.isArray(m.classe)) {
-
       if (m.classe.length >= 1) {
         let cls = m.classe[0]
         let isNom = cls == "NM" || cls == "NF"
@@ -71,8 +70,6 @@ export class CardcontrolComponent implements OnInit {
           this.mots.push(newMot)
         }
       }
-
-
     } else if (m.classe == "ADJ") {
       if (m.fem) {
         let newMot: Mot = {
@@ -81,9 +78,10 @@ export class CardcontrolComponent implements OnInit {
           indice: indice,
           genre: "FEM"
         }
-        this.mots.push(newMot)
+        m.genre = "MAS"
+        this.mots.push(m)
+        m = newMot
       }
-      m.genre = "MAS"
     }
 
     this.mots.push(m)

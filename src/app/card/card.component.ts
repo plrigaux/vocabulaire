@@ -158,16 +158,16 @@ export class CardComponent implements OnInit {
     let text = ""
     switch (mot.genre) {
       case "FEM":
-        text = `${mot.mot} ... adjectif féminin`
+        this.prefix = "<i>adjectif féminin</i>"
         break;
       case "MAS":
-        text = `${mot.mot} ... adjectif masculin`
+        this.prefix = "<i>adjectif masculin</i>"
         break;
       default:
-        text = mot.mot
+        this.prefix = ""
     }
 
-    return text;
+    return mot.mot;
   }
 
   private apostrophe(mot: string, feminin: boolean) {

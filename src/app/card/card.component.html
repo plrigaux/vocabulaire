@@ -1,6 +1,6 @@
 <div class="answer">
   <div class="answerLine">
-    <span id="answerPrefix">{{prefix}}</span>
+    <span id="answerPrefix" [innerHTML]="prefix"></span>
     <input #answerInput id="answerInput" placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
       autocomplete="off" spellcheck="false" [disabled]="playDisable()">
   </div>
