@@ -31,7 +31,7 @@ export class CardComponent implements OnInit {
   validation: boolean = false
 
   @Input()
-  article : "unune" | "lela" | null = null
+  article: "unune" | "lela" | null = null
 
   //@ViewChild('answerInput', { static: true }) answerInput!: MatInput;
   @ViewChild('answerInput') answerInput!: ElementRef;
@@ -143,6 +143,9 @@ export class CardComponent implements OnInit {
       case "NF":
         text = this.apostrophe(mot.mot, true)
         break;
+      case "ADJ":
+        text = this.adjective(mot)
+        break
       default:
         text = mot.mot
     }
@@ -150,6 +153,22 @@ export class CardComponent implements OnInit {
     return text
   }
 
+  private adjective(mot: Mot): string {
+
+    let text = ""
+    switch (mot.genre) {
+      case "FEM":
+        text = `${mot.mot} ... adjectif féminin`
+        break;
+      case "MAS":
+        text = `${mot.mot} ... adjectif masculin`
+        break;
+      default:
+        text = mot.mot
+    }
+
+    return text;
+  }
 
   private apostrophe(mot: string, feminin: boolean) {
     let text = ""
@@ -160,7 +179,7 @@ export class CardComponent implements OnInit {
       let determinant = feminin ? "la" : "le"
 
       let premiereLettre = mot.charAt(0)
-      
+
       if (/[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœAÁÀÂÄÃÅEÉÈÊËIÍÌÎÏOÓÒÔÖÕUÚÙÛÜYÝŸ]/.test(premiereLettre)) {
         this.prefix = "l'"
       } else {
