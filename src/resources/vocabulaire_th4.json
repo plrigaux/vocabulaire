@@ -1,0 +1,310 @@
+[
+  {
+    "theme": 4,
+    "semaines": [
+      {
+        "semaine": 1,
+        "groupes": [
+          {
+            "indice": "Le son [k] s'écrit le plus souvent <i>qu</i> et presque toujours <i>que</i> en fin de mot.",
+            "mots": [
+              {
+                "mot": "craquelin",
+                "classe": "NM"
+              },
+              {
+                "mot": "dès que",
+                "classe": "INV"
+              },
+              {
+                "mot": "plastique",
+                "classe": "NM"
+              },
+              {
+                "mot": "presque",
+                "classe": "INV"
+              },
+              {
+                "mot": "quel",
+                "classe": [
+                  "DET",
+                  "INV"
+                ]
+              },
+              {
+                "mot": "quelle",
+                "classe": [
+                  "DET",
+                  "INV"
+                ],
+                "fem": "quelle"
+              },
+              {
+                "mot": "quels",
+                "classe": [
+                  "DET",
+                  "INV"
+                ],
+                "fem": "quelles"
+              },
+              {
+                "mot": "quelqu'un",
+                "classe": "PRON"
+              },
+              {
+                "mot": "quelqu'une",
+                "classe": "PRON"
+              },
+              {
+                "mot": "quelques-uns",
+                "classe": "PRON"
+              },
+              {
+                "mot": "quelques-unes",
+                "classe": "PRON"
+              },
+              {
+                "mot": "remarquer",
+                "classe": "V"
+              },
+              {
+                "mot": "sans que",
+                "classe": "INV"
+              },
+              {
+                "mot": "taquiner",
+                "classe": "V"
+              },
+              {
+                "mot": "tranquille",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "tranquillité",
+                "classe": "NF"
+              },
+              {
+                "mot": "parc",
+                "classe": "NM"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [ien] s'écrit <i>ien</i>.",
+            "mots": [
+              {
+                "mot": "bien",
+                "classe": "INV"
+              },
+              {
+                "mot": "bientôt",
+                "classe": "INV"
+              },
+              {
+                "mot": "rien",
+                "classe": "INV"
+              },
+              {
+                "mot": "terrien",
+                "classe": "NM"
+              },
+              {
+                "mot": "terrienne",
+                "classe": "NF"
+              },
+              {
+                "mot": "végétarien",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "végétarienne",
+                "classe": "ADJ"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "semaine": 4,
+        "groupes": [
+          {
+            "indice": "Le son [f] s'écrit le plus souvent <i>f</i>.",
+            "mots": [
+              {
+                "mot": "adjectif",
+                "classe": "NM"
+              },
+              {
+                "mot": "facile",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "farine",
+                "classe": "NF"
+              },
+              {
+                "mot": "ferme",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "ferme",
+                "classe": "NF"
+              },
+              {
+                "mot": "fermer",
+                "classe": "V"
+              },
+              {
+                "mot": "fil",
+                "classe": "NM"
+              },
+              {
+                "mot": "film",
+                "classe": "NM"
+              },
+              {
+                "mot": "fixe",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "fleuve",
+                "classe": "NM"
+              },
+              {
+                "mot": "fou",
+                "classe": "ADJ",
+                "fem": "folle"
+              },
+              {
+                "mot": "folle",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "neuf",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "neuve",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "préférer",
+                "classe": "V"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [f] s'écrit parfois <i>ph</i>.",
+            "mots": [
+              {
+                "mot": "dauphin",
+                "classe": "NM"
+              },
+              {
+                "mot": "photo",
+                "classe": "NF"
+              },
+              {
+                "mot": "téléphone",
+                "classe": "NM"
+              },
+              {
+                "mot": "téléphoner",
+                "classe": "V"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "semaine": 5,
+        "groupes": [
+          {
+            "indice": "Le son [o] s'écrit souvent <i>au</i> au début d'un mot.",
+            "mots": [
+              {
+                "mot": "aussitôt",
+                "classe": "INV"
+              },
+              {
+                "mot": "autobus",
+                "classe": "NM"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [o] s'écrit o ou au à l'intérieur d'un mot.",
+            "mots": [
+              {
+                "mot": "cause",
+                "classe": "NF"
+              },
+              {
+                "mot": "faute",
+                "classe": "NF"
+              },
+              {
+                "mot": "octobre",
+                "classe": "",
+                "detail": "mois d'"
+              },
+              {
+                "mot": "promener",
+                "classe": "V"
+              },
+              {
+                "mot": "restaurant",
+                "classe": "NM"
+              },
+              {
+                "mot": "sauver",
+                "classe": "V"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [o] s'écrit o ou au à l'intérieur d'un mot.",
+            "mots": [
+              {
+                "mot": "agneau",
+                "classe": "NM"
+              },
+              {
+                "mot": "bateau",
+                "classe": "NM"
+              },
+              {
+                "mot": "bureau",
+                "classe": "NM"
+              },
+              {
+                "mot": "cadeau",
+                "classe": "NM"
+              },
+              {
+                "mot": "château",
+                "classe": "NM"
+              },
+              {
+                "mot": "morceau",
+                "classe": "NM"
+              },
+              {
+                "mot": "museau",
+                "classe": "NM"
+              },
+              {
+                "mot": "ruisseau",
+                "classe": "NM"
+              },
+              {
+                "mot": "radio",
+                "classe": "NF"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

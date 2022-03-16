@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Theme, Semaine, Groupe, Mot } from '../vocabulaire/vocabulaireInterfaces';
 import { CardComponent } from '../card/card.component';
-import stValentin from '../../resources/themes1.json';
-import vocabulaire from '../../resources/vocabulaire.json';
+
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
+import themes from '../vocabulaire/vocBuilder';
 
 @Component({
   selector: 'app-cardcontrol',
@@ -14,7 +14,7 @@ export class CardcontrolComponent implements OnInit {
 
   theme: Theme | null = null;
   semaine: Semaine | null = null;
-  themes: Theme[] = vocabulaire
+  themes: Theme[] = themes
   groupe: Groupe | null = null;
   mot: Mot | null = null;
   mots: Mot[] = []
@@ -31,7 +31,7 @@ export class CardcontrolComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.themes.push(...stValentin)
+
   }
 
   getSemaines(): Semaine[] {

@@ -15,7 +15,7 @@ export interface Groupe {
 
 }
 
-type MotClasse = "ADJ" | "V" | "NF" | "NM" | "MI"
+type MotClasse = "ADJ" | "V" | "NF" | "NM" | "MI" | "INV" | "DET" | "PORN"
 
 export interface Mot {
     mot: string,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import vocabulaire from '../../resources/vocabulaire.json';
 import stValentin from '../../resources/themes1.json';
+import themes from './vocBuilder';
 import { Theme } from './vocabulaireInterfaces';
 
 @Component({
@@ -10,12 +11,12 @@ import { Theme } from './vocabulaireInterfaces';
 })
 export class VocabulaireComponent implements OnInit {
 
-  themes: Theme[] = vocabulaire
+  themes: Theme[] = themes
 
   constructor() { }
 
   ngOnInit(): void {
-    this.themes.push(...stValentin)
+  
   }
 
 }
