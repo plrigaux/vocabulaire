@@ -209,6 +209,90 @@
         ]
       },
       {
+        "semaine": 3,
+        "groupes": [
+          {
+            "indice": "Le <i>h</i> muet",
+            "mots": [
+              {
+                "mot": "bonhomme",
+                "classe": "NM"
+              },
+              {
+                "mot": "bonshommes",
+                "classe": ""
+              },
+              {
+                "mot": "habiter",
+                "classe": "V"
+              },
+              {
+                "mot": "hauteur",
+                "classe": "NF"
+              },
+              {
+                "mot": "herbe",
+                "classe": "NF"
+              },
+              {
+                "mot": "horrible",
+                "classe": "ADJ"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [ch] s'écrit <i>ch</i>.",
+            "mots": [
+              {
+                "mot": "acheter",
+                "classe": "V"
+              },
+              {
+                "mot": "bouchon",
+                "classe": "NM"
+              },
+              {
+                "mot": "branche",
+                "classe": "NF"
+              },
+              {
+                "mot": "chacun",
+                "classe": "PRON",
+                "fem": "chacune"
+              },
+              {
+                "mot": "machine",
+                "classe": "NF"
+              },
+              {
+                "mot": "marcher",
+                "classe": "V"
+              },
+              {
+                "mot": "pencher",
+                "classe": "V"
+              },
+              {
+                "mot": "poche",
+                "classe": "NF"
+              },
+              {
+                "mot": "recherche",
+                "classe": "NF"
+              },
+              {
+                "mot": "riche",
+                "classe": "ADJ"
+              },
+              {
+                "mot": "toucher",
+                "classe": "V"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "semaine": 4,
         "groupes": [
           {
