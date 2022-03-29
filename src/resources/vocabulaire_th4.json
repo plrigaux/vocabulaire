@@ -114,11 +114,8 @@
               },
               {
                 "mot": "végétarien",
-                "classe": "ADJ"
-              },
-              {
-                "mot": "végétarienne",
-                "classe": "ADJ"
+                "classe": "ADJ",
+                "fem":"végétarienne"
               }
             ]
           }
@@ -344,16 +341,9 @@
                 "fem": "folle"
               },
               {
-                "mot": "folle",
-                "classe": "ADJ"
-              },
-              {
                 "mot": "neuf",
-                "classe": "ADJ"
-              },
-              {
-                "mot": "neuve",
-                "classe": "ADJ"
+                "classe": "ADJ",
+                "fem":"neuve"
               },
               {
                 "mot": "préférer",
