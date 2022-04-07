@@ -1,0 +1,87 @@
+[
+  {
+    "theme": 5,
+    "semaines": [
+      {
+        "semaine": 1,
+        "groupes": [
+          {
+            "indice": "Le son [è] à l'intérieur d'un mot s'écrit le plus souvent <i>è</i> ou <i>ai</i>.",
+            "mots": [
+              {
+                "mot": "après-midi",
+                "classe": "NM"
+              },
+              {
+                "mot": "clair",
+                "classe": "ADJ",
+                "fem": "claire"
+              },
+              {
+                "mot": "crème",
+                "classe": "NF"
+              },
+              {
+                "mot": "frais",
+                "classe": "ADJ",
+                "fem": "fraiche"
+              },
+              {
+                "mot": "laisser",
+                "classe": "V"
+              },
+              {
+                "mot": "lèvre",
+                "classe": "NF"
+              },
+              {
+                "mot": "lièvre",
+                "classe": "NM"
+              },
+              {
+                "mot": "lumière",
+                "classe": "NF"
+              },
+              {
+                "mot": "mètre",
+                "classe": "NM"
+              },
+              {
+                "mot": "paraitre",
+                "classe": "V"
+              },
+              {
+                "mot": "pièce",
+                "classe": "NF"
+              },
+              {
+                "mot": "rivière",
+                "classe": "NF"
+              },
+              {
+                "mot": "saison",
+                "classe": "NF"
+              },
+              {
+                "mot": "souhaiter",
+                "classe": "V"
+              },
+              {
+                "mot": "troisième",
+                "classe": [
+                  "ADJ",
+                  "NM",
+                  "NF"
+                ]
+              },
+              {
+                "mot": "vinaigre",
+                "classe": "NM"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
