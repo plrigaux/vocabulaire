@@ -81,6 +81,100 @@
             ]
           }
         ]
+      },
+      {
+        "semaine": 2,
+        "groupes": [
+          {
+            "indice": "À l'intérieur d'un mot, le son [è] peut s'écrire <i>è</i> ou <i>ê</i>",
+            "mots": [
+              {
+                "mot": "bête",
+                "classe": "NF"
+              },
+              {
+                "mot": "enquête",
+                "classe": "NF"
+              },
+              {
+                "mot": "rêver",
+                "classe": "V"
+              },
+              {
+                "mot": "vêtement",
+                "classe": "NM"
+              }
+            ]
+          },
+          {
+            "indice": "À la fin d'un nom, le son [è] s'écrit le plus souvent <i>et</i>.",
+            "mots": [
+              {
+                "mot": "bracelet",
+                "classe": "NM"
+              },
+              {
+                "mot": "cornet",
+                "classe": "NM"
+              },
+              {
+                "mot": "jouet",
+                "classe": "NM"
+              },
+              {
+                "mot": "juillet",
+                "classe": "mois"
+              },
+              {
+                "mot": "sujet",
+                "classe": "NM"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [è] peut s'écrire <i>e</i>",
+            "mots": [
+              {
+                "mot": "fer",
+                "classe": "NM"
+              },
+              {
+                "mot": "fier",
+                "classe": "ADJ",
+                "fem": "fière"
+              },
+              {
+                "mot": "mer",
+                "classe": "NF"
+              }
+            ]
+          },
+          {
+            "indice": "Des mots farfelus",
+            "mots": [
+              {
+                "mot": "aout",
+                "classe": "mois"
+              },
+              {
+                "mot": "d'abord",
+                "classe": "INV"
+              },
+              {
+                "mot": "faim",
+                "classe": "NF"
+              },
+              {
+                "mot": "juin",
+                "classe": "mois"
+              },
+              {
+                "mot": "zoo",
+                "classe": "NM"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
