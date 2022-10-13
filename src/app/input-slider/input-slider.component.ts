@@ -1,6 +1,6 @@
 import { coerceNumberProperty } from '@angular/cdk/coercion';
 import { Component, Input, OnInit, Output, EventEmitter, SimpleChanges } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { MyErrorStateMatcher } from './errorStateMatcher';
 
 @Component({
@@ -47,7 +47,7 @@ export class InputSliderComponent implements OnInit {
     this.formControl.setValue(v)
   }
 
-  formControl = new FormControl(1, [Validators.required]);
+  formControl = new UntypedFormControl(1, [Validators.required]);
   matcher = new MyErrorStateMatcher();
   constructor() { }
 
