@@ -180,7 +180,7 @@
         "semaine": 3,
         "groupes": [
           {
-            "indice": "Des consonnes qui doublent: <i>cc, ff, pp, rr, tt<i>",
+            "indice": "Des consonnes qui doublent: <i>cc, ff, pp, rr, tt</i>",
             "mots": [
               {
                 "mot": "affaire",
@@ -189,51 +189,154 @@
               {
                 "mot": "apporter",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "approcher",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "attraper",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "battre",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "botte",
                 "type": "NF"
-              }, {
+              },
+              {
                 "mot": "chiffre",
                 "type": "NM"
-              }, {
+              },
+              {
                 "mot": "frapper",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "nourriture",
                 "type": "NF"
-              }, {
+              },
+              {
                 "mot": "occuper",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "permettre",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "pierre",
                 "type": "NF"
-              }, {
+              },
+              {
                 "mot": "promettre",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "rappeler",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "remettre",
                 "type": "V"
-              }, {
+              },
+              {
                 "mot": "trottoir",
                 "type": "NM"
-              }, {
+              },
+              {
                 "mot": "verre",
                 "type": "NM"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "semaine": 4,
+        "groupes": [
+          {
+            "indice": "Le son [ill] peut s'écrire <i>ill</i>",
+            "mots": [
+              {
+                "mot": "bouteille",
+                "type": "NF"
+              },
+              {
+                "mot": "brouillon",
+                "type": "NM"
+              },
+              {
+                "mot": "cheville",
+                "type": "NF"
+              },
+              {
+                "mot": "réveiller",
+                "type": "V"
+              },
+              {
+                "mot": "taille",
+                "type": "NF"
+              },
+              {
+                "mot": "travailler",
+                "type": "V"
+              }
+            ]
+          },
+          {
+            "indice": "Le son [ill] peut s'écrire <i>y</i>",
+            "mots": [
+              {
+                "mot": "moyen",
+                "type": "NM"
+              },
+              {
+                "mot": "payer",
+                "type": "V"
+              },
+              {
+                "mot": "rayon",
+                "type": "NM"
+              },
+              {
+                "mot": "voyage",
+                "type": "NM"
+              }
+            ]
+          },
+          {
+            "indice": "Des consonnes qui redoublent: <i>ll</i>",
+            "mots": [
+              {
+                "mot": "allure",
+                "type": "NF"
+              },
+              {
+                "mot": "balle",
+                "type": "NF"
+              },
+              {
+                "mot": "ballon",
+                "type": "NM"
+              },
+              {
+                "mot": "mille",
+                "type": "DET"
+              },
+              {
+                "mot": "millier",
+                "type": "NM"
+              },
+              {
+                "mot": "million",
+                "type": "NM"
+              },
+              {
+                "mot": "salle",
+                "type": "NF"
               }
             ]
           }
