@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^14.2.6",
     "@angular/router": "^14.2.6",
     "difflib-ts": "^1.0.3",
+    "json5": "^2.2.1",
     "process": "^0.11.10",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",

@@ -1,0 +1,201 @@
+[
+  {
+    theme: 2,
+    an: 4,
+    semaines: [
+      {
+        semaine: 1,
+        groupes: [
+          {
+            indice: 'Lettre finale muette: <i>d</i> ou <i>t</i>',
+            mots: [
+              {
+                mot: 'accident',
+                classe: 'NM'
+              },
+              {
+                mot: 'accord',
+                classe: 'NM'
+              },
+              {
+                mot: 'amusant',
+                classe: 'ADJ',
+                fem: 'amusante'
+              },
+
+              {
+                mot: 'bavard',
+                classe: 'ADJ',
+                fem: 'bavarde'
+              },
+
+              {
+                mot: 'bond',
+                classe: 'NM'
+              },
+              {
+                mot: 'cent',
+                classe: 'NM'
+              },
+              {
+                mot: 'chocolat',
+                classe: 'NM'
+              },
+              {
+                mot: 'content',
+                classe: 'ADJ',
+                fem: 'contente'
+              },
+              {
+                mot: 'départ',
+                classe: 'NM'
+              },
+              {
+                mot: 'différent',
+                classe: 'ADJ',
+                fem: 'différente'
+              },
+
+              {
+                mot: 'froid',
+                classe: 'NM'
+              },
+              {
+                mot: 'front',
+                classe: 'NM'
+              },
+              {
+                mot: 'grand',
+                classe: 'ADJ',
+                fem: 'grande'
+              },
+              {
+                mot: 'gratuit',
+                classe: 'ADJ',
+                fem: 'gratuite'
+              },
+              {
+                mot: 'hasard',
+                classe: 'NM'
+              },
+              {
+                mot: 'lait',
+                classe: 'NM'
+              },
+              {
+                mot: 'nord',
+                classe: 'NM'
+              },
+              {
+                mot: 'profond',
+                classe: 'ADJ',
+                fem: 'profonde'
+              },
+              {
+                mot: 'regard',
+                classe: 'NM'
+              },
+              {
+                mot: 'tout',
+                classe: 'NM'
+              },
+              {
+                mot: 'vivant',
+                fem: 'vivante',
+                classe: 'ADJ'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+/*
+****** Result for Image/Page 1 ******
+Thème 2
+Semaine 1
+
+
+Semaine 2
+Lettre finale
+muette: g, s ou t
+biscuit n. m.
+continent n. m,
+début n. m.
+débutant adj.
+débutante
+désert n, m,
+fort n. m.
+goût/gout0R n. m
+, indécis adj.
+indécise
+instant n, m.
+plat n. m.
+port n, m,
+propos n. m.
+quart n. m.
+sang n. m.
+soldat n. m.
+soldate n. f
+sort n. m,
+suivant adj.
+suivante
+tas n. m.
+toit n. m.
+tricot n. m.
+univers n. m.
+Semaine 3
+Le n devient m
+devant le b, le m
+et le p.
+champion n. m.
+championne n. f.
+compagnie n. f.
+complètement
+mot inv.
+compte n. rn.
+de temps
+en temps mot inv.
+emmagasiner v.
+emménager v.
+emmener v.
+empêcher v.
+emporter v.
+ensemble n. m.
+framboise n. f,
+impossible adj.
+impression n. f.
+lampe n. f.
+plomb n. m.
+ressembler v.
+simple adj.
+sombre adj.
+vampire n. m.
+Semaine 4
+Le e muet à la fin
+d'un mot
+aventure n. f.
+boule n. f.
+détective n. mln. f.
+double adj./n. m.
+envie n. f.
+île/ ileOR f.
+larme n. f.
+même adj.
+meuble n. m,
+mode n. f.
+mode n. m.
+parole n. f.
+pire adj.
+plume n, f,
+poitrine n. f.
+poursuivre v,
+promenade n. f,
+pupitre n. m.
+roue n. f.
+sortie n. f.
+statue n. f.
+utile adj.
+vide adj.
+*/
