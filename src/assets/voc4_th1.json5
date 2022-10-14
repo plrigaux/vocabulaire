@@ -1,0 +1,193 @@
+[
+  {
+    theme: 1,
+    an: 4,
+    semaines: [
+      {
+        semaine: 1,
+        groupes: [
+          {
+            indice: "Le son [s] au début d'un mot s'écrit s.",
+            mots: [
+              {
+                mot: 'sable',
+                classe: 'NM'
+              },
+              {
+                mot: 'salon',
+                classe: 'NM'
+              },
+              {
+                mot: 'sens',
+                classe: 'NM'
+              },
+              {
+                mot: 'serrer',
+                classe: 'V'
+              },
+              {
+                mot: 'silence',
+                classe: 'NM'
+              },
+              {
+                mot: 'sinon',
+                classe: 'INV'
+              },
+              {
+                mot: 'ski',
+                classe: 'NM'
+              },
+              {
+                mot: 'skier',
+                classe: 'V'
+              },
+              {
+                mot: 'sofa',
+                classe: 'NM'
+              },
+              {
+                mot: 'soi',
+                classe: 'PRON'
+              },
+              {
+                mot: 'solution',
+                classe: 'NF'
+              },
+              {
+                mot: 'sorcier',
+                classe: 'NM'
+              },
+              {
+                mot: 'sorcière',
+                classe: 'NF'
+              },
+              {
+                mot: 'soupe',
+                classe: 'NF'
+              },
+              {
+                mot: 'soupirer',
+                classe: 'V'
+              },
+              {
+                mot: 'se souvenir',
+                classe: 'V'
+              },
+              {
+                mot: 'sûr',
+                classe: 'ADJ',
+                fem: 'sûre/sure'
+              }
+            ]
+          },
+          {
+            indice: 'Mot rebelle:',
+            mots: [
+              {
+                mot: 'scène',
+                classe: 'NF'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 2,
+        groupes: [
+          {
+            indice: "Le son [é] au début et à l'intérieur d'un mot s'écrit le plus souvent é.\n\
+            Le son [él à la fin d'un verbe à l'infinitif s'écrit er.\n\
+            Le son [é] à la fin d'un mot s'écrit le plus souvent er.",
+            mots: [
+              {
+                mot: 'améliorer',
+                classe: 'V'
+              },
+              {
+                mot: 'créer',
+                classe: 'V'
+              },
+              {
+                mot: 'décider',
+                classe: 'V'
+              },
+              {
+                mot: 'déclarer',
+                classe: 'V'
+              },
+              {
+                mot: 'déjeuner',
+                classe: 'NM'
+              },
+              {
+                mot: 'détester',
+                classe: 'V'
+              },
+              {
+                mot: 'éclair',
+                classe: 'NM'
+              },
+              {
+                mot: 'éclairer',
+                classe: 'V'
+              },
+              {
+                mot: 'éclater',
+                classe: 'V'
+              },
+              {
+                mot: 'énorme',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'état',
+                classe: 'NM'
+              },
+              {
+                mot: 'étudier',
+                classe: 'V'
+              },
+              {
+                mot: 'éviter',
+                classe: 'V'
+              },
+              {
+                mot: 'expérience',
+                classe: 'NF'
+              },
+              {
+                mot: 'léger',
+                classe: 'ADJ',
+                fem: 'légère'
+              },
+              {
+                mot: 'opéra',
+                classe: 'NM'
+              },
+              {
+                mot: 'pépin',
+                classe: 'NM'
+              },
+              {
+                mot: 'plancher',
+                classe: 'NM'
+              },
+              {
+                mot: 'répéter',
+                classe: 'V'
+              },
+              {
+                mot: 'réponse',
+                classe: 'NF'
+              },
+              {
+                mot: 'représenter',
+                classe: 'V'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

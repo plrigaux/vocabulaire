@@ -11,33 +11,32 @@ import { Clipboard } from '@angular/cdk/clipboard'
 export class InputerComponent implements OnInit {
   constructor (private clipboard: Clipboard) {}
 
-  rawInput = `Semaine 4
+  rawInput = `  Semaine 2
 
-  Le e muet à la fin d'un mot
-  aventure NF
-  boule NF
-  détective n. m
-  détective NF
-  double ADJ/NM
-  envie NF
-  ile f.
-  larme NF
-  même ADJ
-  meuble n. m,
-  mode NF
-  mode NM
-  parole NF
-  pire ADJ
-  plume n, f,
-  poitrine NF
-  poursuivre v,
-  promenade n. f,
-  pupitre NM
-  roue NF
-  sortie NF
-  statue NF
-  utile ADJ
-  vide ADJ`
+  Le son [é] au début   et à l'intérieur d'un mot s'écrit le plus souvent é.\n  Le son [él à la fin   d'un verbe à l'infinitif   s'écrit er.\nLe son [é] à la fin d'un mot s'écrit le plus souvent er.
+  améliorer v,
+  créer v,
+  décider v.
+  déclarer v.
+  déjeuner n. m./v.
+  détester v.
+  éclair n. rn.
+  éclairer v.
+  éclater v.
+  énorme adj.
+  état n. rn.
+  étudier v.
+  éviter v.
+  expérience n. f.
+  léger adj.
+  légère
+  opéra n. m.
+  pépin n. m.
+  plancher n. rn.
+  répéter v.
+  réponse n. f.
+  représenter v.
+  `
 
   transformed = ''
 
@@ -53,9 +52,10 @@ export class InputerComponent implements OnInit {
     let result = this.rawInput
     result = result.replace(/n[\.,]\s*(m|rn)[\.,]/g, 'NM')
     result = result.replace(/n[\.,]\s*f[\.,]/g, 'NF')
-    result = result.replace(/v[\.,]/g, 'V')
     result = result.replace(/adj[\.,]/g, 'ADJ')
-    result = result.replace(/inv[\.,]/g, 'INV')
+    result = result.replace(/(mot inv|inv)[\.,]/g, 'INV')
+    result = result.replace(/pron[\.,]/g, 'PRON')
+    result = result.replace(/v[\.,]/g, 'V')
 
     const semaineObj: Semaine = {
       semaine: 0,
@@ -72,7 +72,7 @@ export class InputerComponent implements OnInit {
     const lines: string[] = result.split('\n')
     console.log(lines)
 
-    const regexpMots = /([A-zÀ-ÿ\s]+)\s+(NF|NM|ADJ|V|INV)/
+    const regexpMots = /([A-zÀ-ÿ\s]+)\s+(NF|NM|ADJ|V|INV|PRON)/
     const regexpIndice = /./
 
     let mots: Mot[] = []
@@ -103,8 +103,10 @@ export class InputerComponent implements OnInit {
 
           semaineObj.groupes.push(groupe)
           mots = groupe.mots
+        } else if (this.is_last_an_adj(mots, line)) {
+          console.log('fem', line)
         } else {
-          console.warn("faulty line",  line)
+          console.warn('faulty line', line)
         }
       }
       previousLine = line
@@ -120,4 +122,22 @@ export class InputerComponent implements OnInit {
   copyResult () {
     this.clipboard.copy(this.transformed)
   }
+
+  is_last_an_adj (mots: Mot[], line: string): boolean {
+    const mot = mots[mots.length - 1]
+    if (mot) {
+      if (mot.classe === 'ADJ') {
+        let fem = line.trim()
+        if (fem) {
+          mot.fem = fem
+        }
+      }
+    }
+    return false
+  }
 }
+
+/*
+
+
+*/

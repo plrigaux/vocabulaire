@@ -24,6 +24,7 @@ const getVocabularyAsset = (file: string) => {
 
 //themes.push(...theme4, ...theme5, ...stValentin)
 
+getVocabularyAsset('./assets/voc4_th1.json5')
 getVocabularyAsset('./assets/voc4_th2.json5')
 
 export default themes
