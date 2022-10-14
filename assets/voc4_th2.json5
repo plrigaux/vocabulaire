@@ -107,95 +107,363 @@
             ]
           }
         ]
+      },
+      {
+        semaine: 2,
+        groupes: [
+          {
+            indice: 'Lettre finale muette: g, s ou t',
+            mots: [
+              {
+                mot: 'biscuit',
+                classe: 'NM'
+              },
+              { mot: 'continent', classe: 'NM' },
+              { mot: 'début', classe: 'NM' },
+              { mot: 'débutant', classe: 'ADJ', fem: 'débutante' },
+              { mot: 'désert', classe: 'NM' },
+              { mot: 'fort', classe: 'NM' },
+              { mot: 'goût/gout', classe: 'NM' },
+              { mot: 'indécis', classe: 'ADJ', fem: 'indécise' },
+              { mot: 'instant', classe: 'NM' },
+              { mot: 'plat', classe: 'NM' },
+              { mot: 'port', classe: 'NM' },
+              { mot: 'propos', classe: 'NM' },
+              { mot: 'quart', classe: 'NM' },
+              { mot: 'sang', classe: 'NM' },
+              { mot: 'soldat', classe: 'NM' },
+              { mot: 'soldate', classe: 'NF' },
+              { mot: 'sort', classe: 'NM' },
+              { mot: 'suivant', classe: 'ADJ', fem: 'suivante' },
+              { mot: 'tas', classe: 'NM' },
+              { mot: 'toit', classe: 'NM' },
+              { mot: 'tricot', classe: 'NM' },
+              { mot: 'univers', classe: 'NM' }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 3,
+        groupes: [
+          {
+            indice: 'Le n devient m devant le b, le m et le p.',
+            mots: [
+              {
+                mot: 'champion',
+                classe: 'NM'
+              },
+              {
+                mot: 'championne',
+                classe: 'NF'
+              },
+              {
+                mot: 'compagnie',
+                classe: 'NF'
+              },
+              {
+                mot: 'complètement',
+                classe: 'INV'
+              },
+              {
+                mot: 'compte',
+                classe: 'NM'
+              },
+              {
+                mot: 'de temps en temps',
+                classe: 'INV'
+              },
+              {
+                mot: 'emmagasiner',
+                classe: 'V'
+              },
+              {
+                mot: 'emménager',
+                classe: 'V'
+              },
+              {
+                mot: 'emmener',
+                classe: 'V'
+              },
+              {
+                mot: 'empêcher',
+                classe: 'V'
+              },
+              {
+                mot: 'emporter',
+                classe: 'V'
+              },
+              {
+                mot: 'ensemble',
+                classe: 'NM'
+              },
+              {
+                mot: 'framboise',
+                classe: 'NF'
+              },
+              {
+                mot: 'impossible',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'impression',
+                classe: 'NF'
+              },
+              {
+                mot: 'lampe',
+                classe: 'NF'
+              },
+              {
+                mot: 'plomb',
+                classe: 'NM'
+              },
+              {
+                mot: 'ressembler',
+                classe: 'V'
+              },
+              {
+                mot: 'simple',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'sombre',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'vampire',
+                classe: 'NM'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 4,
+        groupes: [
+          {
+            indice: "Le e muet à la fin d'un mot",
+            mots: [
+              {
+                mot: 'aventure',
+                classe: 'NF'
+              },
+              {
+                mot: 'boule',
+                classe: 'NF'
+              },
+              {
+                mot: 'détective',
+                classe: 'NF'
+              },
+              {
+                mot: 'double',
+                classe: ['ADJ', 'NM']
+              },
+              {
+                mot: 'envie',
+                classe: 'NF'
+              },
+              {
+                mot: 'larme',
+                classe: 'NF'
+              },
+              {
+                mot: 'même',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'meuble',
+                classe: 'NM'
+              },
+              {
+                mot: 'mode',
+                classe: 'NF'
+              },
+              {
+                mot: 'mode',
+                classe: 'NM'
+              },
+              {
+                mot: 'parole',
+                classe: 'NF'
+              },
+              {
+                mot: 'pire',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'plume',
+                classe: 'NF'
+              },
+              {
+                mot: 'poitrine',
+                classe: 'NF'
+              },
+              {
+                mot: 'poursuivre',
+                classe: 'V'
+              },
+              {
+                mot: 'promenade',
+                classe: 'NF'
+              },
+              {
+                mot: 'pupitre',
+                classe: 'NM'
+              },
+              {
+                mot: 'roue',
+                classe: 'NF'
+              },
+              {
+                mot: 'sortie',
+                classe: 'NF'
+              },
+              {
+                mot: 'statue',
+                classe: 'NF'
+              },
+              {
+                mot: 'utile',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'vide',
+                classe: 'ADJ'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 5,
+        groupes: [
+          {
+            indice: "Le son [je] s'écrit le plus souvent ge à la fin d'un mot.",
+            mots: [
+              {
+                mot: 'ange',
+                classe: 'NM'
+              },
+              {
+                mot: 'cage',
+                classe: 'NF'
+              },
+              {
+                mot: 'courage',
+                classe: 'NM'
+              },
+              {
+                mot: 'étage',
+                classe: 'NM'
+              },
+              {
+                mot: 'étrange',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'mariage',
+                classe: 'NM'
+              },
+              {
+                mot: 'mélange',
+                classe: 'NM'
+              },
+              {
+                mot: 'message',
+                classe: 'NM'
+              },
+              {
+                mot: 'ouvrage',
+                classe: 'NM'
+              },
+              {
+                mot: 'singe',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: "Le son [ji] s'écrit le plus souvent gi.",
+            mots: [
+              {
+                mot: 'agir',
+                classe: 'V'
+              },
+              {
+                mot: 'imagination',
+                classe: 'NF'
+              },
+              {
+                mot: 'imaginer',
+                classe: 'V'
+              },
+              {
+                mot: 'magie',
+                classe: 'NF'
+              },
+              {
+                mot: 'magique',
+                classe: 'ADJ'
+              }
+            ]
+          },
+          {
+            indice: "Le son [j] devant a, o et u s'écrit j.",
+            mots: [
+              {
+                mot: 'ajouter',
+                classe: 'V'
+              },
+              {
+                mot: 'jardiner',
+                classe: 'V'
+              },
+              {
+                mot: 'jujube',
+                classe: 'NM'
+              },
+              {
+                mot: 'jurer',
+                classe: 'V'
+              }
+            ]
+          }
+        ]
       }
     ]
   }
 ]
 /*
-****** Result for Image/Page 1 ******
-Thème 2
-Semaine 1
 
 
-Semaine 2
-Lettre finale
-muette: g, s ou t
-biscuit n. m.
-continent n. m,
-début n. m.
-débutant adj.
-débutante
-désert n, m,
-fort n. m.
-goût/gout0R n. m
-, indécis adj.
-indécise
-instant n, m.
-plat n. m.
-port n, m,
-propos n. m.
-quart n. m.
-sang n. m.
-soldat n. m.
-soldate n. f
-sort n. m,
-suivant adj.
-suivante
-tas n. m.
-toit n. m.
-tricot n. m.
-univers n. m.
-Semaine 3
-Le n devient m
-devant le b, le m
-et le p.
-champion n. m.
-championne n. f.
-compagnie n. f.
-complètement
-mot inv.
-compte n. rn.
-de temps
-en temps mot inv.
-emmagasiner v.
-emménager v.
-emmener v.
-empêcher v.
-emporter v.
-ensemble n. m.
-framboise n. f,
-impossible adj.
-impression n. f.
-lampe n. f.
-plomb n. m.
-ressembler v.
-simple adj.
-sombre adj.
-vampire n. m.
+
+
+
 Semaine 4
 Le e muet à la fin
 d'un mot
-aventure n. f.
-boule n. f.
-détective n. mln. f.
-double adj./n. m.
-envie n. f.
+aventure NF
+boule NF
+détective n. mlNF
+double ADJ/NM
+envie NF
 île/ ileOR f.
-larme n. f.
-même adj.
+larme NF
+même ADJ
 meuble n. m,
-mode n. f.
-mode n. m.
-parole n. f.
-pire adj.
+mode NF
+mode NM
+parole NF
+pire ADJ
 plume n, f,
-poitrine n. f.
+poitrine NF
 poursuivre v,
 promenade n. f,
-pupitre n. m.
-roue n. f.
-sortie n. f.
-statue n. f.
-utile adj.
-vide adj.
+pupitre NM
+roue NF
+sortie NF
+statue NF
+utile ADJ
+vide ADJ
 */
