@@ -5,6 +5,7 @@ import { SpeechComponent } from './speech/speech.component';
 import { CardcontrolComponent} from './cardcontrol/cardcontrol.component'
 import { CorrectorDisplayTestComponent } from './corrector-display-test/corrector-display-test.component';
 import { PortalComponent } from './portal/portal.component';
+import { InputerComponent } from './inputer/inputer.component';
 
 const routes: Routes = [
   { path: '', component: PortalComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'vocabulaire', component: VocabulaireComponent },
   { path: 'cardcontrol', component: CardcontrolComponent },
   { path: 'correctortest', component: CorrectorDisplayTestComponent },
+  { path: 'input', component: InputerComponent },
 
 ];
 

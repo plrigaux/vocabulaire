@@ -29,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 //import { MatSelectChange } from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { InputerComponent } from './inputer/inputer.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     CorrectorDisplayTestComponent,
     PortalComponent,
     InputSliderComponent,
-    VoiceControlComponent
+    VoiceControlComponent,
+    InputerComponent
   ],
   imports: [
     BrowserModule,
