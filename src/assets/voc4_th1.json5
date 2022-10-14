@@ -117,7 +117,7 @@
               },
               {
                 mot: 'déjeuner',
-                classe: 'NM'
+                classe: ['NM','V']
               },
               {
                 mot: 'détester',
