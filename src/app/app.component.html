@@ -1,23 +1,62 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1 >Vocabulaire pour Camellia</h1>
-  </mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>Vocabulaire pour Camellia</h1>
+</mat-toolbar>
 
 <mat-menu #menu="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="menuTheme">
-      <mat-icon>color_lens</mat-icon>
-      <span>Couleurs</span>
-    </button>
-  </mat-menu>
-  
-  <mat-menu #menuTheme="matMenu">
-    <mat-radio-group aria-label="Select an option" class="menu-radio-group" [(ngModel)]="cur_theme"
-      (change)="menuThemeRadioChange($event)">
-      <div mat-menu-item *ngFor="let theme of themes">
-        <mat-radio-button [value]="theme.value">{{theme.label}}</mat-radio-button>
+  <button mat-menu-item (click)="openDialog()">
+    <mat-icon>settings</mat-icon> Contrôle de la voix
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="menuTheme">
+    <mat-icon>color_lens</mat-icon>
+    <span>Couleurs</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="menuVocTheme">
+    <span>Jazz Theme</span>
+  </button>
+</mat-menu>
+
+<mat-menu #menuTheme="matMenu">
+  <mat-radio-group
+    aria-label="Select an option"
+    class="menu-radio-group"
+    [(ngModel)]="current_color_theme"
+    (change)="menuThemeRadioChange($event)"
+  >
+    <div mat-menu-item *ngFor="let theme of themes">
+      <mat-radio-button [value]="theme.value">{{theme.label}}</mat-radio-button>
+    </div>
+  </mat-radio-group>
+</mat-menu>
+
+<mat-menu #menuVocTheme="matMenu">
+  <button
+    mat-menu-item
+    [matMenuTriggerFor]="menuVocSemaine"
+    *ngFor="let theme of voc_themes"
+    [matMenuTriggerData]="theme"
+  >
+    <span>Theme {{theme.theme}}</span>
+  </button>
+</mat-menu>
+
+<mat-menu #menuVocSemaine="matMenu">
+  <ng-template matMenuContent let-voc_theme_id="theme" let-semaines="semaines">
+    <mat-radio-group
+      aria-label="Select an option"
+      class="menu-radio-group"
+      (change)="menuVocThemeRadioChange($event)"
+    >
+      <div mat-menu-item *ngFor="let semaine of semaines">
+        <mat-radio-button
+          [value]="getSemaineValue(voc_theme_id, semaine.semaine)"
+          [checked]="isSemaineChecked(voc_theme_id, semaine.semaine)"
+          >Semaine {{semaine.semaine}}</mat-radio-button
+        >
       </div>
     </mat-radio-group>
-  </mat-menu>
-  <router-outlet></router-outlet>
+  </ng-template>
+</mat-menu>
+<router-outlet></router-outlet>

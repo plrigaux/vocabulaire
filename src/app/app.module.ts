@@ -33,7 +33,7 @@ import { InputerComponent } from './inputer/inputer.component'
 import { MatRadioModule } from '@angular/material/radio'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatToolbarModule } from '@angular/material/toolbar'
-
+import { MatCheckboxModule } from '@angular/material/checkbox'
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +69,8 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     MatButtonToggleModule,
     MatRadioModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
