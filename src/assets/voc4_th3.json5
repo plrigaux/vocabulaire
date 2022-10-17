@@ -1,0 +1,335 @@
+[
+  {
+    theme: 3,
+    an: 4,
+    semaines: [
+      {
+        semaine: 1,
+        groupes: [
+          {
+            indice: 'La lettre S entre deux voyelles fait le son [z].',
+            mots: [
+              {
+                mot: 'oser',
+                classe: 'V'
+              },
+              {
+                mot: 'présence',
+                classe: 'NF'
+              },
+              {
+                mot: 'reposer',
+                classe: 'V'
+              },
+              {
+                mot: 'visiter',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: 'Il faut écrire ss pour entendre le son [S].',
+            mots: [
+              {
+                mot: 'assurer',
+                classe: 'V'
+              },
+              {
+                mot: 'casser',
+                classe: 'V'
+              },
+              {
+                mot: 'chaussure',
+                classe: 'NF'
+              },
+              {
+                mot: 'dessous',
+                classe: 'NM'
+              },
+              {
+                mot: 'dessus',
+                classe: 'NM'
+              },
+              {
+                mot: 'messe',
+                classe: 'NF'
+              },
+              {
+                mot: 'mission',
+                classe: 'NF'
+              },
+              {
+                mot: 'presser',
+                classe: 'V'
+              },
+              {
+                mot: 'ramasser',
+                classe: 'V'
+              },
+              {
+                mot: 'repasser',
+                classe: 'V'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 2,
+        groupes: [
+          {
+            indice: "Le son [gnl s'écrit gn.",
+            mots: [
+              {
+                mot: 'éloigner',
+                classe: 'V'
+              },
+              {
+                mot: 'gagnant',
+                classe: 'ADJ',
+                fem: 'gagnante'
+              },
+              {
+                mot: 'magnifique',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'signe',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: 'La lettre g fait le son [g] devant a, o, u et devant une consonne.',
+            mots: [
+              {
+                mot: 'à gauche',
+                classe: 'INV'
+              },
+              {
+                mot: 'dragon',
+                classe: 'NM'
+              },
+              {
+                mot: 'engager',
+                classe: 'V'
+              },
+              {
+                mot: 'garde',
+                classe: 'NM'
+              },
+              {
+                mot: 'grave',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'jungle',
+                classe: 'NF'
+              },
+              {
+                mot: 'ogre',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: 'Devant un e ou un i, il faut ajouter un u pour entendre le son [g].',
+            mots: [
+              {
+                mot: 'fatiguer',
+                classe: 'V'
+              },
+              {
+                mot: 'guimauve',
+                classe: 'NF'
+              },
+              {
+                mot: 'mangue',
+                classe: 'NF'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 3,
+        groupes: [
+          {
+            indice: '',
+            mots: []
+          },
+          {
+            indice: "Le son [é] à la fin d'un mot s'écrit souvent er.",
+            mots: [
+              {
+                mot: 'bouger',
+                classe: 'V'
+              },
+              {
+                mot: 'exister',
+                classe: 'V'
+              },
+              {
+                mot: 'laver',
+                classe: 'V'
+              },
+              {
+                mot: 'patiner',
+                classe: 'V'
+              },
+              {
+                mot: 'pleurer',
+                classe: 'V'
+              },
+              {
+                mot: 'ramener',
+                classe: 'V'
+              },
+              {
+                mot: 'rentrer',
+                classe: 'V'
+              },
+              {
+                mot: 'sauter',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: "Le son [é] la fin d'un nom féminin s'écrit le plus souvent ée.",
+            mots: [
+              {
+                mot: 'arrivée',
+                classe: 'NF'
+              },
+              {
+                mot: 'entrée',
+                classe: 'NF'
+              },
+              {
+                mot: 'pensée',
+                classe: 'NF'
+              }
+            ]
+          },
+          {
+            indice: 'Mots rebelles :',
+            mots: []
+          }
+        ]
+      },
+      {
+        semaine: 4,
+        groupes: [
+          {
+            indice: '',
+            mots: []
+          },
+          {
+            indice: 'Des consonnes qui doublent ff, ll, mm, nn.',
+            mots: [
+              {
+                mot: 'ancien',
+                classe: 'ADJ',
+                fem: 'ancienne'
+              },
+              {
+                mot: 'annoncer',
+                classe: 'V'
+              },
+              {
+                mot: 'dollar',
+                classe: 'NM'
+              },
+              {
+                mot: 'échelle',
+                classe: 'NF'
+              },
+              {
+                mot: 'gramme',
+                classe: 'NM'
+              },
+              {
+                mot: 'immense',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'mademoiselle',
+                classe: 'NF'
+              },
+              {
+                mot: 'mesdemoiselles',
+                classe: 'NF'
+              },
+              {
+                mot: 'nommer',
+                classe: 'V'
+              },
+              {
+                mot: 'pardonner',
+                classe: 'V'
+              },
+              {
+                mot: 'recommencer',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: "Le son [ien] s'écrit le plus souvent ien,",
+            mots: [
+              {
+                mot: 'le mien',
+                classe: 'PRON'
+              },
+              {
+                mot: 'la mienne',
+                classe: 'PRON'
+              },
+              {
+                mot: 'les miens',
+                classe: 'PRON'
+              },
+              {
+                mot: 'les miennes',
+                classe: 'PRON'
+              },
+              {
+                mot: 'le sien',
+                classe: 'PRON'
+              },
+              {
+                mot: 'la sienne',
+                classe: 'PRON'
+              },
+              {
+                mot: 'les siens',
+                classe: 'PRON'
+              },
+              {
+                mot: 'les siennes',
+                classe: 'PRON'
+              },
+              {
+                mot: 'le tien',
+                classe: 'PRON'
+              },
+              {
+                mot: 'la tienne',
+                classe: 'PRON'
+              },
+              {
+                mot: 'les tiens',
+                classe: 'PRON'
+              },
+              {
+                mot: 'les tiennes',
+                classe: 'PRON'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

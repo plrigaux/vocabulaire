@@ -1,3 +1,32 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 >Vocabulaire pour Camellia</h1>
+  
+
+  
+  </mat-toolbar>
+
+<mat-menu #menu="matMenu">
+
+    <button mat-menu-item [matMenuTriggerFor]="menuTheme">
+      <mat-icon>color_lens</mat-icon>
+      <span>Themes</span>
+    </button>
+
+  </mat-menu>
+  
+  
+  <mat-menu #menuTheme="matMenu">
+    <mat-radio-group aria-label="Select an option" class="menu-radio-group" [(ngModel)]="cur_theme"
+      (change)="menuThemeRadioChange($event)">
+      <div mat-menu-item *ngFor="let theme of themes">
+        <mat-radio-button [value]="theme.value">{{theme.label}}</mat-radio-button>
+      </div>
+    </mat-radio-group>
+  </mat-menu>
+
 <a mat-button href="cardcontrol" >Pratique</a><br/>
 <a mat-button href="vocabulaire">Vocabulaire</a><br/>
 <a mat-button href="speech" >Speech</a><br/>

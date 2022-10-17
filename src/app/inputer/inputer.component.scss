@@ -1,22 +1,26 @@
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
 
-  .flex-container {
-    display: flex;
+.example-full-width {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.ta_class {
+  height: 100%;
 }
 
 .flex-child {
-    flex: 1;
-    border: 2px solid yellow;
-}  
+  flex: 1;
+  border: 2px solid yellow;
+}
 
 .flex-child:first-child {
-    margin-right: 20px;
-} 
+  margin-right: 20px;
+}
