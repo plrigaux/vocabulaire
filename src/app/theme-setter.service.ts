@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core'
 import { BehaviorSubject, Subscription } from 'rxjs'
+import { AppConfig, COLOR_THEMES, DEFAULT_CONFIG } from './app-config'
 
 const VOC_THEME = 'VOC_THEME'
 
@@ -7,9 +8,11 @@ const VOC_THEME = 'VOC_THEME'
   providedIn: 'root'
 })
 export class ThemeSetterService {
-  private configSource: BehaviorSubject<string> = new BehaviorSubject('')
+  private configSource: BehaviorSubject<AppConfig>
 
   constructor () {
+    const default_config: AppConfig = DEFAULT_CONFIG
+    this.configSource = new BehaviorSubject(default_config)
     this.loadConfig()
     //this.configObservable = this.configSource.asObservable();
   }
@@ -24,21 +27,27 @@ export class ThemeSetterService {
     }
   }
 
-  next (theme: string) {
-    this.configSource.next(theme)
+  next (config: AppConfig) {
+    this.configSource.next(config)
 
-    this.saveConfig(theme)
+    this.saveConfig(config)
   }
 
   private loadConfig () {
     let storedData = localStorage.getItem(VOC_THEME)
 
     if (storedData) {
-      this.configSource.next(storedData)
+      try {
+        const config = JSON.parse(storedData) as AppConfig
+        this.configSource.next(config)
+      } catch (e) {
+        console.warn(e)
+      }
     }
   }
 
-  private saveConfig (theme: string) {
-    localStorage.setItem(VOC_THEME, theme)
+  private saveConfig (config: AppConfig) {
+    const config_flat = JSON.stringify(config)
+    localStorage.setItem(VOC_THEME, config_flat)
   }
 }

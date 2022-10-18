@@ -22,10 +22,10 @@
   <mat-radio-group
     aria-label="Select an option"
     class="menu-radio-group"
-    [(ngModel)]="current_color_theme"
+    [(ngModel)]="app_config.color_theme"
     (change)="menuThemeRadioChange($event)"
   >
-    <div mat-menu-item *ngFor="let theme of themes">
+    <div mat-menu-item *ngFor="let theme of COLOR_THEMES">
       <mat-radio-button [value]="theme.value">{{theme.label}}</mat-radio-button>
     </div>
   </mat-radio-group>

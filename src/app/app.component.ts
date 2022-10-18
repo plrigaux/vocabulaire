@@ -10,6 +10,7 @@ import {
 import { VoiceControlService } from './voice-control/voice-control.service'
 import themes from './vocabulaire/vocBuilder'
 import { Theme } from './vocabulaire/vocabulaireInterfaces'
+import { AppConfig, COLOR_THEMES, DEFAULT_CONFIG, ThemeSemaine } from './app-config'
 
 @Component({
   selector: 'app-root',
@@ -24,29 +25,19 @@ export class AppComponent implements OnInit, OnDestroy {
     public voiceService: VoiceControlService
   ) {}
 
-  public readonly themes = [
-    { value: 'default-theme', label: 'Default' },
-    { value: 'dark-theme', label: 'Dark' },
-    { value: 'light-theme', label: 'Light' },
-    { value: 'deeppurple-amber', label: 'Deep Purple & Amber' },
-    { value: 'indigo-pink', label: 'Indigo & Pink' },
-    { value: 'pink-bluegrey', label: 'Pink & Blue-grey' },
-    { value: 'purple-green', label: 'Purple & Green' },
-    { value: 'candy', label: 'Pumpkin' }
-  ]
-
   voc_themes: Theme[] = themes
+  COLOR_THEMES = COLOR_THEMES
 
   private myEventSubscriptions: Subscription[] = []
   previoustheme: string | null = null
-  current_color_theme: string | null = null
-  current_theme_semaine: ThemeSemaine | null = null
+
+  app_config: AppConfig = { ...DEFAULT_CONFIG }
 
   ngOnInit (): void {
     this.myEventSubscriptions.push(
       this.configSrv.subscribe({
-        next: (th: string) => {
-          this.current_color_theme = th
+        next: (config: AppConfig) => {
+          this.app_config = config
           this.setTheme()
         }
       })
@@ -61,26 +52,18 @@ export class AppComponent implements OnInit, OnDestroy {
 
   menuThemeRadioChange (event: MatRadioChange) {
     console.log(event)
-    //console.log(`currentTheme: ${this.currentTheme}`);
-    //this.currentTheme = event.value
-
-    if (this.current_color_theme) {
-      this.configSrv.next(this.current_color_theme)
-      this.setTheme()
-    }
+    this.configSrv.next(this.app_config)
+    this.setTheme()
   }
 
   menuVocThemeRadioChange (event: MatRadioChange) {
     console.warn('sem', event)
-
-    this.current_theme_semaine = event.value
-    if (this.current_theme_semaine) {
-      console.warn('value', this.current_theme_semaine)
-    }
+    this.app_config.theme_semaine = event.value
+    this.configSrv.next(this.app_config)
   }
 
   setTheme () {
-    if (this.previoustheme == this.current_color_theme) {
+    if (this.previoustheme == this.app_config.color_theme) {
       return
     }
 
@@ -88,10 +71,8 @@ export class AppComponent implements OnInit, OnDestroy {
       document.body.classList.remove(this.previoustheme)
     }
 
-    if (this.current_color_theme) {
-      document.body.classList.add(this.current_color_theme)
-      this.previoustheme = this.current_color_theme
-    }
+    document.body.classList.add(this.app_config.color_theme)
+    this.previoustheme = this.app_config.color_theme
   }
 
   openDialog (): void {
@@ -109,8 +90,11 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   isSemaineChecked (theme: number, semaine: number): boolean {
-    if (this.current_theme_semaine) {
-      if (theme == this.current_theme_semaine.theme && semaine == this.current_theme_semaine.semaine) {
+    if (this.app_config.theme_semaine) {
+      if (
+        theme == this.app_config.theme_semaine.theme &&
+        semaine == this.app_config.theme_semaine.semaine
+      ) {
         return true
       }
     }
@@ -119,7 +103,3 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 }
 
-interface ThemeSemaine {
-  theme: number
-  semaine: number
-}

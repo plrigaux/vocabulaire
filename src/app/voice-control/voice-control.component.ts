@@ -8,7 +8,7 @@ export interface VolumeDialogData {
   pitch: number;
   rate: number;
   volume: number;
-  selectedVoice: SpeechSynthesisVoice | null
+  selectedVoice: string | null
 }
 
 @Component({
@@ -30,7 +30,7 @@ export class VoiceControlComponent implements OnInit {
     public voiceService: VoiceControlService) {
 
     this.data = {
-      ...voiceService.volumeData
+      ...voiceService.getVolumeData()
     }
   }
 
@@ -43,7 +43,7 @@ export class VoiceControlComponent implements OnInit {
   }
 
   onOkClick(): void {
-    this.voiceService.volumeData = this.data
+    this.voiceService.setVolumeData(this.data)
     this.dialogRef.close();
   }
 
@@ -67,18 +67,18 @@ export class VoiceControlComponent implements OnInit {
     return this.voiceService.getVoices();
   }
 
-  getSelectedVoice() {
+  getSelectedVoice() : SpeechSynthesisVoice | null{
     if (this.data.selectedVoice == null) {
       return this.voiceService.getSelectedVoice()
     }
-    return this.data.selectedVoice;
+    return this.voiceService.getVoice(this.data.selectedVoice);
   }
 
   setSelectedVoice(voice: MatSelectChange) {
     //console.log(voice)
 
     let ssv : SpeechSynthesisVoice = voice.value
-    this.data.selectedVoice = ssv;
+    this.data.selectedVoice = ssv.voiceURI;
   }
 
   playVoice() {
