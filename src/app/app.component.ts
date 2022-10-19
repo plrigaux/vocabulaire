@@ -8,9 +8,9 @@ import {
   VolumeDialogData
 } from './voice-control/voice-control.component'
 import { VoiceControlService } from './voice-control/voice-control.service'
-import themes from './vocabulaire/vocBuilder'
 import { Theme } from './vocabulaire/vocabulaireInterfaces'
 import { AppConfig, COLOR_THEMES, DEFAULT_CONFIG, ThemeSemaine } from './app-config'
+import { VocabulaireDataHandlerService } from './vocabulaire/vocabulaire-data-handler.service'
 
 @Component({
   selector: 'app-root',
@@ -22,10 +22,14 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor (
     private configSrv: ThemeSetterService,
     public dialog: MatDialog,
-    public voiceService: VoiceControlService
-  ) {}
+    public voiceService: VoiceControlService,
+    private vocSrv: VocabulaireDataHandlerService) {}
 
-  voc_themes: Theme[] = themes
+
+  get voc_themes (): Theme[] {
+    return this.vocSrv.getThemes()
+  }
+
   COLOR_THEMES = COLOR_THEMES
 
   private myEventSubscriptions: Subscription[] = []

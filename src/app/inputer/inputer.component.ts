@@ -11,127 +11,93 @@ import { Clipboard } from '@angular/cdk/clipboard'
 export class InputerComponent implements OnInit {
   constructor (private clipboard: Clipboard) {}
 
-  rawInput = `Semaine 1
+  rawInput = `
+Thème 4
+  Semaine 1
 
-La lettre S entre deux voyelles fait le son [z].
-besoin n.
-oser v.
-présence n. f.
-prison n. f
-raison n. f
-reposer v.
-surprise n. f
-visiter v.
+  Le son [kl s'écrit le plus   souvent qu et presque   toujours que en fin de mot.
+  bibliothèque n. f.
+  cirque n. m.
+  domestique adj.
+  électrique adj.
+  époque n. f,
+  équipe n. f.
+  expliquer v,
+  jusqu'à mot inv.
+  jusqu'au
+  jusqu'aux
+  lequel pron,
+  laquelle
+  lesquels
+  lesquelles
+  marquer v.
+  phoque n, rn,
+  puisque/puisqu' mot inv.
+  quartier n, m,
+  quelque chose pron.
+  quelquefois mot inv.
+  quitter v.
+  quoi pron.
+  réplique n. f.
+  tandis que/
+  tandis qu' mot inv.
+  unique adj.
 
-Il faut écrire ss pour entendre le son [S].
-assurer v.
-casser v.
-chaussure n. f.
-dessous n. m./mot inv.
-dessus n. m./mot inv.
-messe n. f.
-mission n. f.
-passé n. m
-poussière n. f
-presser v.
-ramasser v.
-repasser v.
-tresse n. fl
+  Mots rebelles:
+  bec n. m.
+  lac n, m.
 
-Semaine 2
-Le son [gnl s'écrit gn.
-éloigner v.
-gagnant adj.
-gagnante
-magnifique adj.
-signe n. rn.
+  Semaine 2
+Le son [eur] à la fin d'un   mot s'écrit le plus souvent eur.
+  chaleur n. f.
+  directeur n, m.
+  directrice n. f.
+  douceur n. f.
+  humeur n. f.
+  joueur n. m.
+  joueuse n. f.
+  le leur pron,
+  la leur
+  les leurs
+  odeur n. f.
 
-La lettre g fait le son [g] devant a, o, u et devant une consonne.
-à gauche mot inv.
-agriculture n. f
-dragon n. rn.
-engager v.
-garde n. rrt./n. f.
-gard en n. m
-gardienne n f.
-globe n.
-grave adj.
-jungle n. f.
-ogre n. rn.
-ogresse n. E
-rigoler v
-Mot rebelle :
-seconde n f.
+  Le son [eu] à la fin d'un adjectif masculin s'écrit le plus souvent eux.
+  affreux adj.
+  affreuse
+  chanceux adj.
+  chanceuse
+  creux adj.
+  creuse
+  curieux adj.
+  curieuse
+  dangereux adj.
+  dangereuse
+  délicieux adj.
+  délicieuse
+  malheureux adj.
+  malheureuse
+  merveilleux adj.
+  merveilleuse
+  nombreux adj.
+  nombreuse
 
-Devant un e ou un i, il faut ajouter un u pour entendre le son [g].
-fatiguer v.
-guimauve n. f.
-mangue n. f.
-téléguider v
-
-Semaine 3
-
-Le son [é] à la fin d'un mot s'écrit souvent er.
-bouger v.
-dîner/diner n. m/v.
-exister v.
-laver v.
-patiner v.
-pleurer v.
-prier v
-ramener v.
-rentrer v.
-respirer v
-sauter v.
-
-Le son [é] la fin d'un nom féminin s'écrit le plus souvent ée.
-arrivée n. f.
-bouée n. f
-entrée n. f.
-pensée n. f.
-
-Mots rebelles :
-amitié n. fl
-difficulté n
-réalité n. fl
-vérité n f.
-
-Semaine 4
-
-Des consonnes qui doublent ff, ll, mm, nn.  
-ancien adj.
-ancienne
-annoncer v.
-bulle n. f
-difficile adj
-dollar n. m.
-échelle n. f.
-gramme n. rn.
-immense adj.
-mademoiselle n. f.
-mesdemoiselles n. f.
-nommer v.
-nouvelle n f.
-pardonner v.
-recommencer v.
-ruelle n.
-sommeil n. m
-souffle n. m
-
-Le son [ien] s'écrit le plus souvent ien,
-bien n.
-le mien pron.
-la mienne pron.
-les miens pron.
-les miennes pron.
-le sien pron.
-la sienne pron.
-les siens pron.
-les siennes pron.
-le tien pron.
-la tienne pron.
-les tiens pron.
-les tiennes pron.
+  Le son [al] à la fin d'un mot s'écrit le plus souvent al.
+  amical adj.
+  amicale
+  amicaux
+  amicales
+  familial adj.
+  familiale
+  familiaux
+  familiales
+  médical adj.
+  médicale
+  médicaux
+  médicales
+  normal adj.
+  normale
+  normaux
+  normales
   `
 
   transformed = ''

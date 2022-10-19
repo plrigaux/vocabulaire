@@ -32,19 +32,14 @@ Promise.all([
   data.forEach(inData => {
 
     if (Array.isArray(inData)) {
-
       inData.forEach(ininData => {
         themes.push(ininData)
       })
-    
     } else {
       themes.push(inData)
     }
-
   })
-  
   console.log(themes)
-
 })
 
-export default themes
+//export default themes

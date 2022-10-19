@@ -1,4 +1,4 @@
-<div class="selectContainer">
+<!--div class="selectContainer">
     <div>
         <h4>Thème</h4>
         <mat-form-field appearance="fill">
@@ -14,14 +14,14 @@
         <h4>Semaine</h4>
         <mat-form-field appearance="fill">
             <mat-label>Choisisez une semaine</mat-label>
-            <mat-select (selectionChange)="onChangeSemaine($event.value)">
+            <mat-select [value]="semaine?.semaine" (selectionChange)="onChangeSemaine($event.value)">
                 <mat-option *ngFor="let sem of theme?.semaines" [value]="sem.semaine">
                     Semaine {{sem.semaine}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
     </div>
-</div>
+</div -->
 <div class="selectContainer">
     <div>
         <mat-slide-toggle [(ngModel)]="shuffle" (change)="onChangeToggle($event)">Mélanger</mat-slide-toggle>
@@ -36,7 +36,7 @@
 <div class="cardContentContainer">
     <mat-card class="cardContent">
         <mat-card-header>
-            <mat-card-title>Mot de vocabulaire</mat-card-title>
+            <mat-card-title>Mot de vocabulaire {{getLabel()}}</mat-card-title>
             <mat-card-subtitle>
                 <ng-container *ngIf='mots.length > 0'>{{motIndex + 1}} de {{mots.length}}</ng-container>&nbsp;
             </mat-card-subtitle>

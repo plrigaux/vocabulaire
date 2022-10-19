@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import vocabulaire from '../../resources/vocabulaire.json';
-import stValentin from '../../resources/themes1.json';
-import themes from './vocBuilder';
-import { Theme } from './vocabulaireInterfaces';
+import { Component, OnInit } from '@angular/core'
+import vocabulaire from '../../resources/vocabulaire.json'
+import stValentin from '../../resources/themes1.json'
+import { Theme } from './vocabulaireInterfaces'
+import { VocabulaireDataHandlerService } from './vocabulaire-data-handler.service'
 
 @Component({
   selector: 'app-vocabulaire',
@@ -10,13 +10,11 @@ import { Theme } from './vocabulaireInterfaces';
   styleUrls: ['./vocabulaire.component.scss']
 })
 export class VocabulaireComponent implements OnInit {
-
-  themes: Theme[] = themes
-
-  constructor() { }
-
-  ngOnInit(): void {
-  
+  get themes (): Theme[] {
+    return this.vocSrv.getThemes()
   }
 
+  constructor (private vocSrv: VocabulaireDataHandlerService) {}
+
+  ngOnInit (): void {}
 }

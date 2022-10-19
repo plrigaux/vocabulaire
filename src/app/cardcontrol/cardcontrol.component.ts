@@ -8,9 +8,9 @@ import {
 import { CardComponent } from '../card/card.component'
 
 import { MatSlideToggleChange } from '@angular/material/slide-toggle'
-import themes from '../vocabulaire/vocBuilder'
 import { AppConfig, DEFAULT_CONFIG, ThemeSemaine } from '../app-config'
 import { ThemeSetterService } from '../theme-setter.service'
+import { VocabulaireDataHandlerService } from '../vocabulaire/vocabulaire-data-handler.service'
 
 @Component({
   selector: 'app-cardcontrol',
@@ -20,7 +20,6 @@ import { ThemeSetterService } from '../theme-setter.service'
 export class CardcontrolComponent implements OnInit {
   theme: Theme | null = null
   semaine: Semaine | null = null
-  themes: Theme[] = themes
   groupe: Groupe | null = null
   mot: Mot | null = null
   mots: Mot[] = []
@@ -36,16 +35,22 @@ export class CardcontrolComponent implements OnInit {
   @ViewChild(CardComponent)
   private cardComponent!: CardComponent
 
-  private themes_map: Map<number | string, Theme> = new Map()
-  private themes_semaine_map: Map<string, Semaine> = new Map()
-  constructor (private configSrv: ThemeSetterService) {}
+
+  constructor (private configSrv: ThemeSetterService, private vocSrv : VocabulaireDataHandlerService) {}
+
+  get themes (): Theme[] {
+    return this.vocSrv.getThemes()
+  }
 
   ngOnInit (): void {
-    console.log('THS', themes, themes.length, typeof themes, themes.values())
+    console.log('THS', this.vocSrv.getThemes(), this.vocSrv.getThemes().length, typeof this.vocSrv.getThemes(), this.vocSrv.getThemes().values())
 
     this.configSrv.subscribe({
       next: (config: AppConfig) => {
         this.app_config = config
+
+        this.onChangeTheme(this.app_config.theme_semaine.theme)
+        this.onChangeSemaine(this.app_config.theme_semaine.semaine)
       }
     })
   }
@@ -103,28 +108,11 @@ export class CardcontrolComponent implements OnInit {
     this.mots.push(m)
   }
 
-  private fillMap () {
-    if (this.themes_map.size > 0) {
-      return
-    }
-
-    for (let t of themes) {
-      const t_id: number | string = t.theme
-      this.themes_map.set(t_id, t)
-      if (t.semaines) {
-        const semaines = t.semaines as Semaine[]
-        for (let s of semaines) {
-            this.themes_semaine_map.set(`${t_id}_${s.semaine}`, s)
-        }
-      }
-    }
-  }
 
   onChangeTheme (theme_id: number | string) {
-    this.fillMap()
-    const theme_obj = this.themes_map.get(theme_id)
 
-    console.log(theme_id, theme_obj, this.themes_map)
+    const theme_obj = this.vocSrv.getThemeById(theme_id)
+
     if (!theme_obj) {
       return
     }
@@ -155,13 +143,12 @@ export class CardcontrolComponent implements OnInit {
       return
     }
    
-
-    let sem = this.themes_semaine_map.get(`${this.theme.theme}_${semaine_id}`)
+    let sem = this.vocSrv.getSemaineById(this.theme, semaine_id)
     console.warn("Sem", semaine_id, sem)
     if (!sem) {
-      console.warn("Sem th", this.themes_semaine_map)
       return
     }
+
     this.semaine = sem
 
     this.mots = []
@@ -243,5 +230,20 @@ export class CardcontrolComponent implements OnInit {
     }
 
     return this._nextDisabled
+  }
+
+  getLabel() {
+
+    let label = ""
+
+    if (this.theme) {
+      label += "Theme " + this.theme.theme
+    }
+
+    if (this.semaine) {
+      label += " Semaine " + this.semaine.semaine
+    }
+
+    return label
   }
 }
