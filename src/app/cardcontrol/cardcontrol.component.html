@@ -3,8 +3,8 @@
         <h4>Thème</h4>
         <mat-form-field appearance="fill">
             <mat-label>Choisisez un thème</mat-label>
-            <mat-select [(value)]="theme" (selectionChange)="onChangeTheme($event.value)">
-                <mat-option *ngFor="let theme of themes" [value]="theme">
+            <mat-select [value]="theme?.theme" (selectionChange)="onChangeTheme($event.value)">
+                <mat-option *ngFor="let theme of themes" [value]="theme.theme">
                     Thème {{theme.theme}}
                 </mat-option>
             </mat-select>
@@ -15,7 +15,7 @@
         <mat-form-field appearance="fill">
             <mat-label>Choisisez une semaine</mat-label>
             <mat-select (selectionChange)="onChangeSemaine($event.value)">
-                <mat-option *ngFor="let sem of theme?.semaines" [value]="sem">
+                <mat-option *ngFor="let sem of theme?.semaines" [value]="sem.semaine">
                     Semaine {{sem.semaine}}
                 </mat-option>
             </mat-select>
