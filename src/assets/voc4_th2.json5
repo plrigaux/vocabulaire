@@ -264,6 +264,11 @@
                 classe: 'NF'
               },
               {
+                mot: 'ile',
+                alt: "île",
+                classe: 'NF'
+              },
+              {
                 mot: 'larme',
                 classe: 'NF'
               },

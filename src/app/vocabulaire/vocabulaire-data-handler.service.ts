@@ -10,25 +10,42 @@ export class VocabulaireDataHandlerService {
   private themes_map: Map<number | string, Theme> = new Map()
   private themes_semaine_map: Map<string, Semaine> = new Map()
 
+  private fetcher: Promise<void>
   constructor () {
-    Promise.all([
+    this.fetcher = Promise.all([
       this.getVocabularyAsset('./assets/voc4_th1.json5'),
       this.getVocabularyAsset('./assets/voc4_th2.json5'),
-      this.getVocabularyAsset('./assets/voc4_th3.json5')
-    ]).then(data => {
-      data.forEach(inData => {
-        if (Array.isArray(inData)) {
-          inData.forEach(ininData => {
-            this.themes.push(ininData)
-          })
-        } else {
-          this.themes.push(inData)
+      this.getVocabularyAsset('./assets/voc4_th3.json5'),
+      this.getVocabularyAsset('./assets/voc4_th4.json5')
+    ])
+      .then(data => {
+        data.forEach(inData => {
+          if (Array.isArray(inData)) {
+            inData.forEach(ininData => {
+              this.themes.push(ininData)
+            })
+          } else {
+            this.themes.push(inData)
+          }
+        })
+        console.log(this.themes)
+        return this.themes
+      })
+      .then((themes: Theme[]) => {
+        for (let t of themes) {
+          const t_id: number | string = t.theme
+          this.themes_map.set(t_id, t)
+          if (t.semaines) {
+            const semaines = t.semaines as Semaine[]
+            for (let s of semaines) {
+              this.themes_semaine_map.set(`${t_id}_${s.semaine}`, s)
+            }
+          }
         }
       })
-      console.log(this.themes)
-      this.fillMap()
-      console.log("loading finnished")
-    })
+      .then(() => {
+        console.log('loading finnished')
+      })
   }
 
   getThemes (): Theme[] {
@@ -48,29 +65,20 @@ export class VocabulaireDataHandlerService {
       .catch(console.error)
   }
 
-  private fillMap () {
-    if (this.themes_map.size > 0) {
-      return
-    }
-
-    for (let t of this.themes) {
-      const t_id: number | string = t.theme
-      this.themes_map.set(t_id, t)
-      if (t.semaines) {
-        const semaines = t.semaines as Semaine[]
-        for (let s of semaines) {
-            this.themes_semaine_map.set(`${t_id}_${s.semaine}`, s)
-        }
-      }
-    }
+  async getThemeById (theme_id: number | string): Promise<Theme | undefined> {
+    return this.fetcher.then(() => {
+      console.log('getThemeById', theme_id)
+      return this.themes_map.get(theme_id)
+    })
   }
 
-  getThemeById(theme_id : number | string) : Theme | undefined {
-    return this.themes_map.get(theme_id)
+  async getSemaineById (
+    theme: Theme,
+    semaine_id: number
+  ): Promise<Semaine | undefined> {
+    return this.fetcher.then(() => {
+      console.log('getSemaineById', theme.theme, semaine_id)
+      return this.themes_semaine_map.get(`${theme.theme}_${semaine_id}`)
+    })
   }
-
-  getSemaineById(theme : Theme, semaine_id : number) : Semaine | undefined {
-    return this.themes_semaine_map.get(`${theme.theme}_${semaine_id}`)
-  }
-
 }

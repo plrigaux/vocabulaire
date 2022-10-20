@@ -35,22 +35,30 @@ export class CardcontrolComponent implements OnInit {
   @ViewChild(CardComponent)
   private cardComponent!: CardComponent
 
-
-  constructor (private configSrv: ThemeSetterService, private vocSrv : VocabulaireDataHandlerService) {}
+  constructor (
+    private configSrv: ThemeSetterService,
+    private vocSrv: VocabulaireDataHandlerService
+  ) {}
 
   get themes (): Theme[] {
     return this.vocSrv.getThemes()
   }
 
   ngOnInit (): void {
-    console.log('THS', this.vocSrv.getThemes(), this.vocSrv.getThemes().length, typeof this.vocSrv.getThemes(), this.vocSrv.getThemes().values())
+    console.log(
+      'THS',
+      this.vocSrv.getThemes(),
+      this.vocSrv.getThemes().length,
+      typeof this.vocSrv.getThemes(),
+      this.vocSrv.getThemes().values()
+    )
 
     this.configSrv.subscribe({
-      next: (config: AppConfig) => {
+      next: async (config: AppConfig) => {
         this.app_config = config
-
-        this.onChangeTheme(this.app_config.theme_semaine.theme)
-        this.onChangeSemaine(this.app_config.theme_semaine.semaine)
+        console.log('NEW CARD', config)
+        await this.onChangeTheme(this.app_config.theme_semaine.theme)
+        await this.onChangeSemaine(this.app_config.theme_semaine.semaine)
       }
     })
   }
@@ -108,10 +116,8 @@ export class CardcontrolComponent implements OnInit {
     this.mots.push(m)
   }
 
-
-  onChangeTheme (theme_id: number | string) {
-
-    const theme_obj = this.vocSrv.getThemeById(theme_id)
+  private async onChangeTheme (theme_id: number | string) {
+    const theme_obj = await this.vocSrv.getThemeById(theme_id)
 
     if (!theme_obj) {
       return
@@ -136,16 +142,24 @@ export class CardcontrolComponent implements OnInit {
     }
   }
 
-  onChangeSemaine (semaine_id: number) {
-    //onsole.log(semaine)
+  private async onChangeSemaine (semaine_id: number) {
+    console.log('semaine_id', semaine_id)
 
     if (!this.theme) {
+      console.log('No Theme')
       return
     }
-   
-    let sem = this.vocSrv.getSemaineById(this.theme, semaine_id)
-    console.warn("Sem", semaine_id, sem)
+
+    let sem: Semaine | undefined = await this.vocSrv.getSemaineById(
+      this.theme,
+      semaine_id
+    )
+    console.log('Sem', semaine_id, sem)
     if (!sem) {
+      return
+    }
+
+    if (this.semaine?.semaine == semaine_id) {
       return
     }
 
@@ -232,16 +246,15 @@ export class CardcontrolComponent implements OnInit {
     return this._nextDisabled
   }
 
-  getLabel() {
-
-    let label = ""
+  getLabel () {
+    let label = ''
 
     if (this.theme) {
-      label += "Theme " + this.theme.theme
+      label += 'Theme ' + this.theme.theme
     }
 
     if (this.semaine) {
-      label += " Semaine " + this.semaine.semaine
+      label += ' Semaine ' + this.semaine.semaine
     }
 
     return label

@@ -15,7 +15,7 @@ export class InputerComponent implements OnInit {
 Thème 4
   Semaine 1
 
-  Le son [kl s'écrit le plus   souvent qu et presque   toujours que en fin de mot.
+  Le son [kl s'écrit le plus souvent qu et presque toujours que en fin de mot.
   bibliothèque n. f.
   cirque n. m.
   domestique adj.
@@ -39,8 +39,7 @@ Thème 4
   quitter v.
   quoi pron.
   réplique n. f.
-  tandis que/
-  tandis qu' mot inv.
+  tandis que/tandis qu' mot inv.
   unique adj.
 
   Mots rebelles:
@@ -131,7 +130,7 @@ Le son [eur] à la fin d'un   mot s'écrit le plus souvent eur.
     const lines: string[] = result.split('\n')
     console.log(lines)
 
-    const regexpMots = /([A-zÀ-ÿ\s]+)\s+(NF|NM|ADJ|V|INV|PRON)/
+    const regexpMots = /([A-zÀ-ÿ\s'/]+)\s+(NF|NM|ADJ|V|INV|PRON)/
 
     let mots: Mot[] = []
 
@@ -157,12 +156,17 @@ Le son [eur] à la fin d'un   mot s'écrit le plus souvent eur.
       if (match) {
         //console.log('mot', match[1], 'classe', match[2])
 
-        const mot = match[1].trim()
+        const mots_ = match[1].trim().split('/')
+
         const classe = match[2].trim()
 
         const motcl: Mot = {
-          mot: mot,
+          mot: mots_[0],
           classe: classe
+        }
+
+        if (mots.length > 1) {
+          motcl.alt = mots_[1]
         }
 
         mots.push(motcl)

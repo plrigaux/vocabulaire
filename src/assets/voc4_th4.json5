@@ -1,0 +1,234 @@
+[
+  {
+    theme: 4,
+    an: 4,
+    semaines: [
+      {
+        semaine: 1,
+        groupes: [
+          {
+            indice: "Le son [kl s'écrit le plus souvent qu et presque toujours que en fin de mot.",
+            mots: [
+              {
+                mot: 'bibliothèque',
+                classe: 'NF'
+              },
+              {
+                mot: 'cirque',
+                classe: 'NM'
+              },
+              {
+                mot: 'domestique',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'électrique',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'époque',
+                classe: 'NF'
+              },
+              {
+                mot: 'équipe',
+                classe: 'NF'
+              },
+              {
+                mot: 'expliquer',
+                classe: 'V'
+              },
+              {
+                mot: "jusqu'à",
+                classe: 'INV'
+              },
+              {
+                mot: 'lequel',
+                classe: 'PRON'
+              },
+              {
+                mot: 'marquer',
+                classe: 'V'
+              },
+              {
+                mot: 'phoque',
+                classe: 'NM'
+              },
+              {
+                mot: 'puisque',
+                classe: 'INV',
+                alt: "puisqu'"
+              },
+              {
+                mot: 'quartier',
+                classe: 'NM'
+              },
+              {
+                mot: 'quelque chose',
+                classe: 'PRON'
+              },
+              {
+                mot: 'quelquefois',
+                classe: 'INV'
+              },
+              {
+                mot: 'quitter',
+                classe: 'V'
+              },
+              {
+                mot: 'quoi',
+                classe: 'PRON'
+              },
+              {
+                mot: 'réplique',
+                classe: 'NF'
+              },
+              {
+                mot: 'tandis que',
+                classe: 'INV',
+                alt: "tandis qu'"
+              },
+              {
+                mot: 'unique',
+                classe: 'ADJ'
+              }
+            ]
+          },
+          {
+            indice: 'Mots rebelles:',
+            mots: [
+              {
+                mot: 'bec',
+                classe: 'NM'
+              },
+              {
+                mot: 'lac',
+                classe: 'NM'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 2,
+        groupes: [
+          {
+            indice: "Le son [eur] à la fin d'un   mot s'écrit le plus souvent eur.",
+            mots: [
+              {
+                mot: 'chaleur',
+                classe: 'NF'
+              },
+              {
+                mot: 'directeur',
+                classe: 'NM'
+              },
+              {
+                mot: 'directrice',
+                classe: 'NF'
+              },
+              {
+                mot: 'douceur',
+                classe: 'NF'
+              },
+              {
+                mot: 'humeur',
+                classe: 'NF'
+              },
+              {
+                mot: 'joueur',
+                classe: 'NM'
+              },
+              {
+                mot: 'joueuse',
+                classe: 'NF'
+              },
+              {
+                mot: 'le leur',
+                classe: 'PRON'
+              },
+              {
+                mot: 'odeur',
+                classe: 'NF'
+              }
+            ]
+          },
+          {
+            indice: "Le son [eu] à la fin d'un adjectif masculin s'écrit le plus souvent eux.",
+            mots: [
+              {
+                mot: 'affreux',
+                classe: 'ADJ',
+                fem: 'affreuse'
+              },
+              {
+                mot: 'chanceux',
+                classe: 'ADJ',
+                fem: 'chanceuse'
+              },
+              {
+                mot: 'creux',
+                classe: 'ADJ',
+                fem: 'creuse'
+              },
+              {
+                mot: 'curieux',
+                classe: 'ADJ',
+                fem: 'curieuse'
+              },
+              {
+                mot: 'dangereux',
+                classe: 'ADJ',
+                fem: 'dangereuse'
+              },
+              {
+                mot: 'délicieux',
+                classe: 'ADJ',
+                fem: 'délicieuse'
+              },
+              {
+                mot: 'malheureux',
+                classe: 'ADJ',
+                fem: 'malheureuse'
+              },
+              {
+                mot: 'merveilleux',
+                classe: 'ADJ',
+                fem: 'merveilleuse'
+              },
+              {
+                mot: 'nombreux',
+                classe: 'ADJ',
+                fem: 'nombreuse'
+              }
+            ]
+          },
+          {
+            indice: "Le son [al] à la fin d'un mot s'écrit le plus souvent al.",
+            mots: [
+              {
+                mot: 'amical',
+                classe: 'ADJ',
+                fem: 'amicales'
+              },
+              {
+                mot: 'familial',
+                classe: 'ADJ',
+                fem: 'familiales'
+              },
+              {
+                mot: 'médical',
+                classe: 'ADJ',
+                fem: 'médicales'
+              },
+              {
+                mot: 'normal',
+                classe: 'ADJ',
+                fem: 'normales'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
