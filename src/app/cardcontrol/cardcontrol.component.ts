@@ -3,7 +3,10 @@ import {
   Theme,
   Semaine,
   Groupe,
-  Mot
+  Mot,
+  MotTI,
+  MotGenre,
+  MotNombre
 } from '../vocabulaire/vocabulaireInterfaces'
 import { CardComponent } from '../card/card.component'
 
@@ -21,8 +24,8 @@ export class CardcontrolComponent implements OnInit {
   theme: Theme | null = null
   semaine: Semaine | null = null
   groupe: Groupe | null = null
-  mot: Mot | null = null
-  mots: Mot[] = []
+  mot: MotTI | null = null
+  mots: MotTI[] = []
   motIndex: number = 0
   private _isWriting = false
   shuffle = false
@@ -84,36 +87,52 @@ export class CardcontrolComponent implements OnInit {
     }
   }
 
-  crunchMot (m: Mot, indice: string) {
-    m.indice = indice
-    if (Array.isArray(m.classe)) {
-      if (m.classe.length >= 1) {
-        let cls = m.classe[0]
-        let isNom = cls == 'NM' || cls == 'NF'
-        if (isNom && m.fem) {
-          let newMot: Mot = {
-            mot: m.fem,
-            classe: 'NF',
-            indice: indice
-          }
-          this.mots.push(newMot)
-        }
-      }
-    } else if (m.classe == 'ADJ') {
-      if (m.fem) {
-        let newMot: Mot = {
-          mot: m.fem,
-          classe: 'ADJ',
-          indice: indice,
-          genre: 'FEM'
-        }
-        m.genre = 'MAS'
-        this.mots.push(m)
-        m = newMot
-      }
+  private createMotTI (m: Mot, indice: string): MotTI {
+    const newMot: MotTI = {
+      mot: m.mot,
+      classe: m.classe,
+      indice: indice,
+      genre: MotGenre.NA,
+      nombre: MotNombre.NA
     }
 
-    this.mots.push(m)
+    return newMot
+  }
+
+  crunchMot (m: Mot, indice: string) {
+    const newMot: MotTI = this.createMotTI(m, indice)
+    this.mots.push(newMot)
+
+    let classe: string[] = Array.isArray(m.classe) ? [...m.classe] : [m.classe]
+
+    if (classe.length === 0) {
+      console.warn("Le mot n'a pas de classe")
+    }
+
+    classe.forEach(cls => {
+      let isNom = cls == 'NM' || cls == 'NF'
+
+      if (isNom) {
+        newMot.classe = 'NOM'       
+        newMot.genre = cls == 'NM' ? MotGenre.MASCULIN : MotGenre.FEMININ
+
+        if (m.fem) {
+          let newMot2: MotTI = this.createMotTI(m, indice)
+          newMot2.mot = m.fem
+          newMot2.classe = 'NOM'
+          newMot2.genre = MotGenre.FEMININ
+          this.mots.push(newMot2)
+        }
+      } else if (cls == 'ADJ') {
+        if (m.fem) {
+          let newMot2: MotTI = this.createMotTI(m, indice)
+          newMot2.mot = m.fem
+          newMot2.genre = MotGenre.FEMININ
+          newMot.genre = MotGenre.MASCULIN
+          this.mots.push(newMot2)
+        }
+      }
+    })
   }
 
   private async onChangeTheme (theme_id: number | string) {

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter, Input, SimpleChanges, SimpleChange } from '@angular/core';
-import { Mot } from '../vocabulaire/vocabulaireInterfaces';
+import { Mot, MotGenre, MotTI } from '../vocabulaire/vocabulaireInterfaces';
 import { MatDialog } from '@angular/material/dialog';
 import { VoiceControlComponent, VolumeDialogData } from '../voice-control/voice-control.component';
 import { VoiceControlService } from '../voice-control/voice-control.service';
@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
   }
 
   given: string = ""
-  mot: Mot | null = null;
+  mot: MotTI | null = null;
   prefix = ""
   selectedVoice: SpeechSynthesisVoice | null = null
   validation: boolean = false
@@ -68,8 +68,8 @@ export class CardComponent implements OnInit {
 
   }
 
-  newWord(mot: Mot) {
-    console.log("newWord" + mot.mot)
+  newWord(mot: MotTI) {
+    console.log("newWord", mot)
     this.mot = mot;
     this.prefix = ""
     this.userInput = "";
@@ -133,15 +133,12 @@ export class CardComponent implements OnInit {
     }
   }
 
-  private generateText(mot: Mot): string {
+  private generateText(mot: MotTI): string {
     let text = ""
     let cls = Array.isArray(mot.classe) ? mot.classe[0] : mot.classe
     switch (cls) {
-      case "NM":
-        text = this.apostrophe(mot.mot, false)
-        break;
-      case "NF":
-        text = this.apostrophe(mot.mot, true)
+      case "NOM":
+        text = this.apostrophe(mot.mot, mot.genre)
         break;
       case "ADJ":
         text = this.adjective(mot)
@@ -153,24 +150,25 @@ export class CardComponent implements OnInit {
     return text
   }
 
-  private adjective(mot: Mot): string {
+  private adjective(mot: MotTI): string {
 
     switch (mot.genre) {
-      case "FEM":
+      case MotGenre.FEMININ:
         this.prefix = "<i>adjectif féminin</i>"
         break;
-      case "MAS":
+      case MotGenre.MASCULIN:
         this.prefix = "<i>adjectif masculin</i>"
         break;
       default:
-        this.prefix = ""
+        this.prefix = "adjectif"
     }
 
     return mot.mot;
   }
 
-  private apostrophe(mot: string, feminin: boolean) {
+  private apostrophe(mot: string, genre : MotGenre) {
     let text = ""
+    const feminin = genre == MotGenre.FEMININ
     if (this.article == "unune") {
       let determinant = feminin ? "une" : "un"
       this.prefix = determinant + " "
