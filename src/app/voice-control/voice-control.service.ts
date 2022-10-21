@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { AppConfig, DEFAULT_CONFIG } from '../app-config'
+import { AppConfig, DEFAULT_CONFIG, DEFAULT_VOLUME_DATA } from '../app-config'
 import { ThemeSetterService } from '../theme-setter.service'
 import { VolumeDialogData } from './voice-control.component'
 
@@ -23,6 +23,9 @@ export class VoiceControlService {
     this.configSrv.subscribe({
       next: (config: AppConfig) => {
         this.app_config = config
+        if (!this.app_config.volumeData) {
+          this.app_config.volumeData = DEFAULT_VOLUME_DATA
+        }
       }
     })
   }
@@ -66,7 +69,7 @@ export class VoiceControlService {
   }
 
   getSelectedVoice (): SpeechSynthesisVoice | null {
-    if (this.app_config.volumeData.selectedVoice == null) {
+    if (!this.app_config.volumeData.selectedVoice) {
       this.listVoices()
     }
     return this.getVoice(this.app_config.volumeData.selectedVoice)
@@ -82,6 +85,11 @@ export class VoiceControlService {
 
   play (text: string, volumeData?: VolumeDialogData) {
     let vd = this.app_config.volumeData
+    if (!vd) {
+      console.warn('NO volume data', this.app_config)
+      vd = DEFAULT_VOLUME_DATA
+    }
+
     if (volumeData) {
       vd = volumeData
     }
@@ -96,6 +104,10 @@ export class VoiceControlService {
       if (selectedVoice) {
         to_speak.voice = selectedVoice
       }
+    }
+
+    if(!to_speak.voice) {
+      console.warn("No voices for your web browser")
     }
 
     to_speak.pitch = vd.pitch

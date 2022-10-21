@@ -11,7 +11,186 @@ import { Clipboard } from '@angular/cdk/clipboard'
 export class InputerComponent implements OnInit {
   constructor (private clipboard: Clipboard) {}
 
-  rawInput = `
+  rawInput = `Semaine 3
+
+  La lettre c fait le son [k] devant a, o et u.
+  cabane n. f.
+  capable adj.
+  confiance n. f.
+  corde n. f.
+  coupe n. f,
+  couper v.
+  minuscule adj.
+
+  La lettre c fait le son [s] devant e, i et y.
+  avance n. f.
+  ce/c' pron.
+  cela/ça pron,
+  celui-ci pron.
+  celle-ci pron.
+  ceux-ci pron.
+  celles-ci pron.
+  celui-là prom
+  ceux-là pron.
+  celle—là pron.
+  celles-là pron.
+  centre n, m.
+  cependant mot inv.
+  distance n, f,
+  force n. f.
+  lance n. f.
+  placer v,
+  racisme n. rn
+  
+  Semaine 4
+  Des mots qui s'écrivent comme. ils se prononcent.
+  bol n. m.
+  bon n. m.
+  carton n. m.
+  défi n. m.
+  dieu n, m.
+  le prom
+  la pron.
+  les pron.
+  malgré mot inv.
+  nu adj.
+  nue
+  or mot inv.
+  où mot inv.
+  pardon n. m.
+  parmi mot inv.
+  pur adj.
+  pure
+  retour n. m.
+  ruban n. m.
+  selon mot inv.
+  sol n. m.
+  sud n. m.
+  tour n. f.
+  
+ 
+  
+  `
+
+  transformed = ''
+
+  ngOnInit (): void {
+    if (this.rawInput.length > 0) {
+      this.transform()
+    }
+  }
+
+  transform () {
+    console.log('trans', this.rawInput)
+
+    let result = this.rawInput
+    result = result.replace(/n[\.,]\s*(m|rn|rrt)[\.,]/g, 'NM')
+    result = result.replace(/n[\.,]\s*f[\.,]/g, 'NF')
+    result = result.replace(/adj[\.,]/g, 'ADJ')
+    result = result.replace(/(mot inv|inv)[\.,]/g, 'INV')
+    result = result.replace(/prom|pron[\.,]/g, 'PRON')
+    result = result.replace(/v[\.,]/g, 'V')
+
+    const semaines: Semaine[] = []
+
+    let semaineObj: Semaine = {
+      semaine: 0,
+      groupes: []
+    }
+
+    const semRegEx = /semaine\s*(\d+)/i
+
+    const lines: string[] = result.split('\n')
+    console.log(lines)
+
+    const regexpMots = /([A-zÀ-ÿ\s'-/]+)\s+(NF|NM|ADJ|V|INV|PRON)/
+
+    let mots: Mot[] = []
+
+    let previousLine = lines[0]
+    for (const line of lines) {
+      const matchSem = line.match(semRegEx)
+      if (matchSem) {
+        let sem = matchSem[1]
+        console.log(`semaine num "${sem}" pint ${parseInt(sem)}`, matchSem)
+
+        semaineObj = {
+          semaine: 0,
+          groupes: []
+        }
+
+        semaineObj.semaine = parseInt(sem)
+
+        semaines.push(semaineObj)
+        continue
+      }
+
+      const match = line.match(regexpMots)
+      if (match) {
+        //console.log('mot', match[1], 'classe', match[2])
+
+        const mots_ = match[1].trim().split('/')
+
+        const classe = match[2].trim()
+
+        const motcl: Mot = {
+          mot: mots_[0],
+          classe: classe
+        }
+
+        if (mots.length > 1) {
+          motcl.alt = mots_[1]
+        }
+
+        mots.push(motcl)
+      } else {
+        console.log('line not match', line, 'prev', previousLine)
+        if (previousLine.trim().length === 0 && line.trim().length !== 0) {
+          console.log('line not match prev', line)
+          let groupe: Groupe = {
+            indice: line.trim(),
+            mots: []
+          }
+
+          semaineObj.groupes.push(groupe)
+          mots = groupe.mots
+        } else if (this.is_last_an_adj(mots, line)) {
+          console.log('fem', line)
+        } else {
+          console.warn('faulty line', line)
+        }
+      }
+      previousLine = line
+    }
+
+    console.log(mots)
+
+    console.log('semaines', semaines)
+
+    this.transformed = JSON5.stringify(semaines, null, 2)
+  }
+
+  copyResult () {
+    this.clipboard.copy(this.transformed)
+  }
+
+  is_last_an_adj (mots: Mot[], line: string): boolean {
+    const mot = mots[mots.length - 1]
+    if (mot) {
+      if (mot.classe === 'ADJ') {
+        let fem = line.trim()
+        if (fem) {
+          mot.fem = fem
+        }
+      }
+    }
+    return false
+  }
+}
+
+/*
+
+ rawInput = `
 Thème 4
   Semaine 1
 
@@ -98,124 +277,4 @@ Le son [eur] à la fin d'un   mot s'écrit le plus souvent eur.
   normaux
   normales
   `
-
-  transformed = ''
-
-  ngOnInit (): void {
-    if (this.rawInput.length > 0) {
-      this.transform()
-    }
-  }
-
-  transform () {
-    console.log('trans', this.rawInput)
-
-    let result = this.rawInput
-    result = result.replace(/n[\.,]\s*(m|rn|rrt)[\.,]/g, 'NM')
-    result = result.replace(/n[\.,]\s*f[\.,]/g, 'NF')
-    result = result.replace(/adj[\.,]/g, 'ADJ')
-    result = result.replace(/(mot inv|inv)[\.,]/g, 'INV')
-    result = result.replace(/pron[\.,]/g, 'PRON')
-    result = result.replace(/v[\.,]/g, 'V')
-
-    const semaines: Semaine[] = []
-
-    let semaineObj: Semaine = {
-      semaine: 0,
-      groupes: []
-    }
-
-    const semRegEx = /semaine\s*(\d+)/i
-
-    const lines: string[] = result.split('\n')
-    console.log(lines)
-
-    const regexpMots = /([A-zÀ-ÿ\s'/]+)\s+(NF|NM|ADJ|V|INV|PRON)/
-
-    let mots: Mot[] = []
-
-    let previousLine = lines[0]
-    for (const line of lines) {
-      const matchSem = line.match(semRegEx)
-      if (matchSem) {
-        let sem = matchSem[1]
-        console.log(`semaine num "${sem}" pint ${parseInt(sem)}`, matchSem)
-
-        semaineObj = {
-          semaine: 0,
-          groupes: []
-        }
-
-        semaineObj.semaine = parseInt(sem)
-
-        semaines.push(semaineObj)
-        continue
-      }
-
-      const match = line.match(regexpMots)
-      if (match) {
-        //console.log('mot', match[1], 'classe', match[2])
-
-        const mots_ = match[1].trim().split('/')
-
-        const classe = match[2].trim()
-
-        const motcl: Mot = {
-          mot: mots_[0],
-          classe: classe
-        }
-
-        if (mots.length > 1) {
-          motcl.alt = mots_[1]
-        }
-
-        mots.push(motcl)
-      } else {
-        console.log('line not match', line, 'prev', previousLine)
-        if (previousLine.trim().length === 0) {
-          console.log('line not match prev', line)
-          let groupe: Groupe = {
-            indice: line.trim(),
-            mots: []
-          }
-
-          semaineObj.groupes.push(groupe)
-          mots = groupe.mots
-        } else if (this.is_last_an_adj(mots, line)) {
-          console.log('fem', line)
-        } else {
-          console.warn('faulty line', line)
-        }
-      }
-      previousLine = line
-    }
-
-    console.log(mots)
-
-    console.log('semaines', semaines)
-
-    this.transformed = JSON5.stringify(semaines, null, 2)
-  }
-
-  copyResult () {
-    this.clipboard.copy(this.transformed)
-  }
-
-  is_last_an_adj (mots: Mot[], line: string): boolean {
-    const mot = mots[mots.length - 1]
-    if (mot) {
-      if (mot.classe === 'ADJ') {
-        let fem = line.trim()
-        if (fem) {
-          mot.fem = fem
-        }
-      }
-    }
-    return false
-  }
-}
-
-/*
-
-
 */

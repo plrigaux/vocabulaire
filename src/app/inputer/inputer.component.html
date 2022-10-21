@@ -1,19 +1,17 @@
-<h1>Go to see https://www.onlineocr.net/ https://ocr.space/</h1>
+<h1>Go to see https://ocr.space/</h1>
 <button mat-button color="primary" (click)="transform()">Transform</button>
 <div class="flex-container">
   <div class="flex-child magenta">
-   
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Leave a comment</mat-label>
-        <textarea
+    <mat-form-field class="raw-input" appearance="fill">
+      <mat-label>Leave a comment</mat-label>
+      <textarea
         class="ta_class"
-          matInput
-          placeholder="Ex. It makes me feel..."
-          [(ngModel)]="rawInput"
-      
-        ></textarea>
-      </mat-form-field>
-
+        matInput
+        placeholder="Ex. It makes me feel..."
+        [(ngModel)]="rawInput"
+        style="height: 100%;"
+      ></textarea>
+    </mat-form-field>
   </div>
   <div class="flex-child green">
     <button mat-button color="primary" (click)="copyResult()">Copy</button>

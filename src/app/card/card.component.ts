@@ -155,7 +155,6 @@ export class CardComponent implements OnInit {
 
   private adjective(mot: Mot): string {
 
-    let text = ""
     switch (mot.genre) {
       case "FEM":
         this.prefix = "<i>adjectif féminin</i>"

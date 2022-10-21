@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { BehaviorSubject, Subscription } from 'rxjs'
-import { AppConfig, COLOR_THEMES, DEFAULT_CONFIG } from './app-config'
+import { AppConfig, DEFAULT_CONFIG } from './app-config'
 
 const VOC_THEME = 'VOC_THEME'
 

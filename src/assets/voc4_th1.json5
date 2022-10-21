@@ -117,7 +117,7 @@
               },
               {
                 mot: 'déjeuner',
-                classe: ['NM','V']
+                classe: ['NM', 'V']
               },
               {
                 mot: 'détester',
@@ -183,6 +183,214 @@
               {
                 mot: 'représenter',
                 classe: 'V'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 3,
+        groupes: [
+          {
+            indice: 'La lettre c fait le son [k] devant a, o et u.',
+            mots: [
+              {
+                mot: 'cabane',
+                classe: 'NF'
+              },
+              {
+                mot: 'capable',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'confiance',
+                classe: 'NF'
+              },
+              {
+                mot: 'corde',
+                classe: 'NF'
+              },
+              {
+                mot: 'coupe',
+                classe: 'NF'
+              },
+              {
+                mot: 'couper',
+                classe: 'V'
+              },
+              {
+                mot: 'minuscule',
+                classe: 'ADJ'
+              }
+            ]
+          },
+          {
+            indice: 'La lettre c fait le son [s] devant e, i et y.',
+            mots: [
+              {
+                mot: 'avance',
+                classe: 'NF'
+              },
+              {
+                mot: 'ce',
+                classe: 'PRON'
+              },
+              {
+                mot: 'cela',
+                classe: 'PRON',
+                alt: 'ça'
+              },
+              {
+                mot: 'celui-ci',
+                classe: 'PRON'
+              },
+              {
+                mot: 'celle-ci',
+                classe: 'PRON'
+              },
+              {
+                mot: 'ceux-ci',
+                classe: 'PRON'
+              },
+              {
+                mot: 'celles-ci',
+                classe: 'PRON'
+              },
+              {
+                mot: 'celui-là',
+                classe: 'PRON'
+              },
+              {
+                mot: 'ceux-là',
+                classe: 'PRON'
+              },
+              {
+                mot: 'là',
+                classe: 'PRON'
+              },
+              {
+                mot: 'celles-là',
+                classe: 'PRON'
+              },
+              {
+                mot: 'centre',
+                classe: 'NM'
+              },
+              {
+                mot: 'cependant',
+                classe: 'INV'
+              },
+              {
+                mot: 'distance',
+                classe: 'NF'
+              },
+              {
+                mot: 'force',
+                classe: 'NF'
+              },
+              {
+                mot: 'lance',
+                classe: 'NF'
+              },
+              {
+                mot: 'placer',
+                classe: 'V'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 4,
+        groupes: [
+          {
+            indice: "Des mots qui s'écrivent comme. ils se prononcent.",
+            mots: [
+              {
+                mot: 'bol',
+                classe: 'NM'
+              },
+              {
+                mot: 'bon',
+                classe: 'NM'
+              },
+              {
+                mot: 'carton',
+                classe: 'NM'
+              },
+              {
+                mot: 'défi',
+                classe: 'NM'
+              },
+              {
+                mot: 'dieu',
+                classe: 'NM'
+              },
+              {
+                mot: 'le',
+                classe: 'PRON'
+              },
+              {
+                mot: 'la',
+                classe: 'PRON'
+              },
+              {
+                mot: 'les',
+                classe: 'PRON'
+              },
+              {
+                mot: 'malgré',
+                classe: 'INV'
+              },
+              {
+                mot: 'nu',
+                classe: 'ADJ',
+                fem: 'nue'
+              },
+              {
+                mot: 'or',
+                classe: 'INV'
+              },
+              {
+                mot: 'où',
+                classe: 'INV'
+              },
+              {
+                mot: 'pardon',
+                classe: 'NM'
+              },
+              {
+                mot: 'parmi',
+                classe: 'INV'
+              },
+              {
+                mot: 'pur',
+                classe: 'ADJ',
+                fem: 'pure'
+              },
+              {
+                mot: 'retour',
+                classe: 'NM'
+              },
+              {
+                mot: 'ruban',
+                classe: 'NM'
+              },
+              {
+                mot: 'selon',
+                classe: 'INV'
+              },
+              {
+                mot: 'sol',
+                classe: 'NM'
+              },
+              {
+                mot: 'sud',
+                classe: 'NM'
+              },
+              {
+                mot: 'tour',
+                classe: 'NF'
               }
             ]
           }
