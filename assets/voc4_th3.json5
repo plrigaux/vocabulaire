@@ -155,15 +155,15 @@
         semaine: 3,
         groupes: [
           {
-            indice: '',
-            mots: []
-          },
-          {
             indice: "Le son [é] à la fin d'un mot s'écrit souvent er.",
             mots: [
               {
                 mot: 'bouger',
                 classe: 'V'
+              },
+              {
+                mot: 'diner/dîner',
+                classe: ['NM', 'V']
               },
               {
                 mot: 'exister',
@@ -190,6 +190,10 @@
                 classe: 'V'
               },
               {
+                mot: 'respirer',
+                classe: 'V'
+              },
+              {
                 mot: 'sauter',
                 classe: 'V'
               }
@@ -200,6 +204,10 @@
             mots: [
               {
                 mot: 'arrivée',
+                classe: 'NF'
+              },
+              {
+                mot: 'bouée',
                 classe: 'NF'
               },
               {
@@ -214,17 +222,30 @@
           },
           {
             indice: 'Mots rebelles :',
-            mots: []
+            mots: [
+              {
+                mot: 'amitié',
+                classe: 'NF'
+              },
+              {
+                mot: 'difficulté',
+                classe: 'NF'
+              },
+              {
+                mot: 'réalité',
+                classe: 'NF'
+              },
+              {
+                mot: 'vérité',
+                classe: 'NF'
+              }
+            ]
           }
         ]
       },
       {
         semaine: 4,
         groupes: [
-          {
-            indice: '',
-            mots: []
-          },
           {
             indice: 'Des consonnes qui doublent ff, ll, mm, nn.',
             mots: [
@@ -236,6 +257,10 @@
               {
                 mot: 'annoncer',
                 classe: 'V'
+              },
+              {
+                mot: 'difficile',
+                classe: 'NM'
               },
               {
                 mot: 'dollar',
@@ -259,7 +284,8 @@
               },
               {
                 mot: 'mesdemoiselles',
-                classe: 'NF'
+                classe: 'NF',
+                nombre: 2
               },
               {
                 mot: 'nommer',
@@ -272,6 +298,18 @@
               {
                 mot: 'recommencer',
                 classe: 'V'
+              },
+              {
+                mot: 'ruelle',
+                classe: 'NF'
+              },
+              {
+                mot: 'sommeil',
+                classe: 'NM'
+              },
+              {
+                mot: 'souffle',
+                classe: 'NM'
               }
             ]
           },
@@ -280,51 +318,75 @@
             mots: [
               {
                 mot: 'le mien',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 1
               },
               {
                 mot: 'la mienne',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 1
               },
               {
                 mot: 'les miens',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 2
               },
               {
                 mot: 'les miennes',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 2
               },
               {
                 mot: 'le sien',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 1
               },
               {
                 mot: 'la sienne',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 1
               },
               {
                 mot: 'les siens',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 2
               },
               {
                 mot: 'les siennes',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 2
               },
               {
                 mot: 'le tien',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 1
               },
               {
                 mot: 'la tienne',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 1
               },
               {
                 mot: 'les tiens',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 2
               },
               {
                 mot: 'les tiennes',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 2
               }
             ]
           }
