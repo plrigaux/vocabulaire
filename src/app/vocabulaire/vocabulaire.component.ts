@@ -21,7 +21,7 @@ export class VocabulaireComponent implements OnInit {
     private vocSrv: VocabulaireDataHandlerService
   ) {}
 
-  setStep(index: number) {
+  setStep(index: number | null) {
     this.step = index;
   }
 

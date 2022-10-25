@@ -13,7 +13,7 @@
           <h3 class="indice" [innerHTML]="groupe.indice"></h3>
           <ul>
             <li *ngFor="let mot of groupe.mots">
-              {{mot.mot}} {{mot.classe}} {{getGenre(mot)}}
+              <span class="mot">{{mot.mot}}</span> {{mot.classe}} {{getGenre(mot)}}
             </li>
           </ul>
         </div>
@@ -24,3 +24,5 @@
     </ul>
   </mat-expansion-panel>
 </mat-accordion>
+<br/>
+<button mat-raised-button color="accent" (click)="setStep(null)">Fermer tout</button>
