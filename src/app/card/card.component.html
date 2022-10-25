@@ -5,7 +5,7 @@
       autocomplete="off" spellcheck="false" [disabled]="playDisable()" [matTooltip]="getIndice()" -->
       <mat-form-field appearance="outline" class="answerInput">
         <mat-label>Votre réponse</mat-label>
-        <input matInput  class="answerInput" [(ngModel)]="userInput" (keydown.enter)="validate()" 
+        <input matInput #answerInput class="answerInput" [(ngModel)]="userInput" (keydown.enter)="validate()" 
         autocomplete="off" spellcheck="false" [disabled]="playDisable()">
         <mat-hint>{{getIndice()}}</mat-hint>
       </mat-form-field>
