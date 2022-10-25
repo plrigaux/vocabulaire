@@ -24,20 +24,12 @@ export class VocabulaireDataHandlerService {
       this.getVocabularyAsset('./assets/voc4_th2.json5'),
       this.getVocabularyAsset('./assets/voc4_th3.json5'),
       this.getVocabularyAsset('./assets/voc4_th4.json5'),
-      this.getVocabularyAsset('./assets/voc4_th5.json5')
+      this.getVocabularyAsset('./assets/voc4_th5.json5'),
+      this.getVocabularyAsset('./assets/voc4_th6.json5')
     ])
       .then(data => {
-        const list_of_theme: Theme[] = []
-        data.forEach(inData => {
-          if (Array.isArray(inData)) {
-            inData.forEach(ininData => {
-              list_of_theme.push(ininData)
-            })
-          } else {
-            list_of_theme.push(inData)
-          }
-        })
-        console.log(this.themes)
+        const list_of_theme = data.flat(1)
+        console.log(list_of_theme)
         return list_of_theme
       })
       .then((themes: Theme[]) => {

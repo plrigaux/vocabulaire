@@ -3,10 +3,7 @@ import {
   Theme,
   Semaine,
   Groupe,
-  Mot,
   MotTI,
-  MotGenre,
-  MotNombre
 } from '../vocabulaire/vocabulaireInterfaces'
 import { CardComponent } from '../card/card.component'
 
@@ -139,12 +136,7 @@ export class CardcontrolComponent implements OnInit {
     this.mots = []
     this.motIndex = -1
     this.semaine.groupes.forEach((group: Groupe) => {
-      let indice = group.indice
-      /*
-      group.mots.forEach(mot => {
-        this.crunchMot(mot, indice)
-      })
-      */
+      this.mots.push(...group.mots)
     })
     this.next()
   }

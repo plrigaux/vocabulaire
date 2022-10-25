@@ -12,130 +12,68 @@ export class InputerComponent implements OnInit {
   constructor (private clipboard: Clipboard) {}
 
   rawInput = `
-  Semaine 1
-
-  Le son [è] au début d'un mot s'écrit   le plus souvent   ai ou es.
-  aide n. f.
-  escalier n. m.
-  espace n. m.
-  espèce n. f.
-  espoir n. m.
-  esprit n. m.
-  est n. m.
-
-  Mot rebelle:
-  être n. m.
-  
-  Le son [è] à l'intérieur   d'un mot s'écrit   souvent ai ou aî.
-  capitaine n. m./n. f.
-  connaître/connaitre v.
-  contraire n. rn.
-  disparaître/disparaitre v.
-  fin de semaine n. f.
-  laine n. f.
-  maître/maitre n. m.
-  maîtresse/maitresse n. f.
-  marraine n. f.
-  naître/naitre v.
-  ordinaire adj.
-  paix n. f.
-  plaire v.
-
-  Mot rebelle:
-  ouest n. m.
-  
-  
-  Semaine 2
-  
-  À l'intérieur d'un   mot, le son [è] peut   s'écrire è, ê ou ai.
-  centimètre  n. m.
-  colère n. f.
-  extraordinaire adj.
-  kilomètre n. m.
-  matière n. f.
-  misère n. f.
-  mystère n. m.
-  pêche n. f.
-  poème n. m.
-  prêt adj
-  prête
-  problème n. m.
-  quatrième adj./n. m./n. f.
-  rêve n. m.
-  système n. rn.
-
-  À la fin d'un mot, le son [è] s'écrit  le plus souvent et.
-  bleuet n. m.
-  effet n. m.
-  objet n. m.
-  secret adj./n. m.
-  secrète adj
-  sommet n. m.
-
-  À la fin d'un mot,   le son [è] peut aussi   s'écrire ais.
-  désormais mot inv.
-  
-  
-  Semaine 3
-  
-  Des consonnes qui   doublent : cc, pp,   rr, tt.
-  apparaître/apparaitre v.
-  arracher v.
-  arranger v.
-  arrière n. m.
-  attacher v.
-  bizarre adj.
-  bottine n. f.
-  derrière n. m.
-  échapper v.
-  en arrière mot inv.
-  grotte n. f.
-  horreur n. f.
-  occasion n. f.
-  rapporter v.
-  soccer n. m.
-  terrible adj.
-
-  Le son [èt] à la fin  d'un mot s'écrit le   plus souvent ette.
-  bicyclette n. f.
-  cachette n. f.
-  lunette n. f.
-  toilette n. f.
-
-  Mot rebelle:
-  net adj.
-  nette
-  
   Semaine 4
-  
-  Le son [ill] peut   s'écrire ill.
-  abeille n. f.
-  ailleurs mot inv.
-  bouillir v.
-  brouillard n. m
-  caillou n. rn.
-  cuiller/cuillère
-  fillette n. f.
-  médaille n. f.
-  paille n. f.
-  papillon n. m.
-  veille f.
 
-  Mot rebelle:
-  travail n. rn.
-  travaux
+  Le son [ir] s'écrit le   plus souvent ir à la fin  d'un verbe à l'infinitif.
+  contenir v.
+  divertir v.
+  partir v.
+  punir v.
+  réfléchir v.
+  repartir v.
+  réunir v,
+  tenir v.
+
+  Mots rebelles:
+  élire v.
+  sourire v,
+  suffire v.
+
+  Le son [oir] s'écrit le plus souvent oir à la fin d'un verbe à l'infinitif.
+  apercevoir v,
+  asseoir/assoir v.
+  pouvoir v.
+  revoir v.
+
+  Le son [uir] s'écrit le plus souvent uire à la fin d'un verbe à l'infinitif.
+  conduire v.
+  construire v.
+  détruire v.
+
+  Le son [endre] s'écrit le plus souvent endre à la fin d'un verbe
+  à l'infinitif.
+  vendre v.
+  suspendre v,
   
-  Le son [ill] peut  s'écrire y.
-  crayon n. m.
-  effroyable adj
-  ennuyer v.
-  envoyer v.
-  essayer v.
-  incroyable adj.
-  rayer v.
-  royaume n. rn.
-  voyou n. rn.
+  Semaine 5
   
+  Le s final muet 
+  cas n. m.
+  secours n. m.
+  toutefois mot inv.
+  Le x final muet
+  croix n. f.
+  perdrix n. f.
+
+  Le t final muet 
+  debout mot inv.
+  pourtant mot inv.
+  
+  Mots composés
+  à peu près mot inv.
+  à travers mot inv.
+  au lieu de mot inv.
+  au milieu de mot inv.
+  au moins mot inv.
+  en avant mot inv.
+  en bas mot inv.
+  la plupart pron.
+  la plupart des dét.
+  là-bas mot inv.
+  lors de mot inv.
+  rendez-vous n. m.
+  tout à coup mot inv.
+    
   `
 
   transformed = ''

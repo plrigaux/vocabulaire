@@ -1,0 +1,498 @@
+[
+  {
+    theme: 6,
+    an: 4,
+    semaines: [
+      {
+        semaine: 1,
+        groupes: [
+          {
+            indice: "Le son [in] s'écrit le plus souvent in   au début d'un mot.",
+            mots: [
+              {
+                mot: 'infini',
+                classe: 'NM'
+              },
+              {
+                mot: 'insister',
+                classe: 'V'
+              },
+              {
+                mot: 'interdit',
+                classe: 'ADJ',
+                fem: 'interdite'
+              },
+              {
+                mot: 'intérieur',
+                classe: 'NM'
+              },
+              {
+                mot: 'intérieur',
+                classe: 'ADJ',
+                fem: 'intérieure'
+              },
+              {
+                mot: 'intrépide',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'Inventer',
+                classe: 'V'
+              },
+              {
+                mot: 'inviter',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: 'Mot rebelle:',
+            mots: [
+              {
+                mot: 'ainsi',
+                classe: 'INV'
+              }
+            ]
+          },
+          {
+            indice: "Le son [in] s'écrit souvent in ou ain à la fin d'un mot.",
+            mots: [
+              {
+                mot: 'afin de',
+                classe: 'INV'
+              },
+              {
+                mot: 'en train de',
+                classe: 'INV'
+              },
+              {
+                mot: 'fin',
+                classe: 'NF'
+              },
+              {
+                mot: 'grain',
+                classe: 'NM'
+              },
+              {
+                mot: 'médecin',
+                classe: 'NM'
+              },
+              {
+                mot: 'nain',
+                classe: 'ADJ',
+                fem: 'naine'
+              },
+              {
+                mot: 'parrain',
+                classe: 'NM'
+              },
+              {
+                mot: 'refrain',
+                classe: 'NM'
+              },
+              {
+                mot: 'soudain',
+                classe: 'INV'
+              },
+              {
+                mot: 'soudain',
+                classe: 'ADJ',
+                fem: 'soudaine'
+              },
+              {
+                mot: 'vin',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: 'Mot rebelle:',
+            mots: []
+          }
+        ]
+      },
+      {
+        semaine: 2,
+        groupes: [
+          {
+            indice: "Le son [man] à la fin d'un mot s'écrit presque toujours ment.",
+            mots: [
+              {
+                mot: 'absolument',
+                classe: 'INV'
+              },
+              {
+                mot: 'doucement',
+                classe: 'INV'
+              },
+              {
+                mot: 'également',
+                classe: 'INV'
+              },
+              {
+                mot: 'événement',
+                classe: 'NM',
+                alt: 'evenement'
+              },
+              {
+                mot: 'évidemment',
+                classe: 'INV'
+              },
+              {
+                mot: 'exactement',
+                classe: 'INV'
+              },
+              {
+                mot: 'facilement',
+                classe: 'INV'
+              },
+              {
+                mot: 'finalement',
+                classe: 'INV'
+              },
+              {
+                mot: 'heureusement',
+                classe: 'INV'
+              },
+              {
+                mot: '',
+                classe: 'INV'
+              },
+              {
+                mot: 'mouvement',
+                classe: 'NM'
+              },
+              {
+                mot: 'parfaitement',
+                classe: 'INV'
+              },
+              {
+                mot: 'rapidement',
+                classe: 'INV'
+              },
+              {
+                mot: 'seulement',
+                classe: 'INV'
+              },
+              {
+                mot: 'sûrement',
+                classe: 'INV',
+                alt: 'surement'
+              }
+            ]
+          },
+          {
+            indice: "Le son [sion] à la fin d'un mot s'écrit presque toujours tion.",
+            mots: [
+              {
+                mot: 'direction',
+                classe: 'NF'
+              },
+              {
+                mot: 'émotion',
+                classe: 'NF'
+              },
+              {
+                mot: 'opération',
+                classe: 'NF'
+              },
+              {
+                mot: 'situation',
+                classe: 'NF'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 3,
+        groupes: [
+          {
+            indice: "Le son [t] à la fin d'un mot s'écrit le plus souvent te.",
+            mots: [
+              {
+                mot: 'à droite',
+                classe: 'INV'
+              },
+              {
+                mot: 'dentiste',
+                classe: 'NM'
+              },
+              {
+                mot: 'doute',
+                classe: 'NM'
+              },
+              {
+                mot: 'frite',
+                classe: 'NF'
+              },
+              {
+                mot: 'geste',
+                classe: 'NM'
+              },
+              {
+                mot: 'hâte',
+                classe: 'NF'
+              },
+              {
+                mot: 'note',
+                classe: 'NF'
+              },
+              {
+                mot: 'planète',
+                classe: 'NF'
+              },
+              {
+                mot: 'pointe',
+                classe: 'NF'
+              },
+              {
+                mot: 'poste',
+                classe: 'NM'
+              },
+              {
+                mot: 'poste',
+                classe: 'NF'
+              }
+            ]
+          },
+          {
+            indice: 'Lettre finale muette: t',
+            mots: [
+              {
+                mot: 'bénévolat',
+                classe: 'NM'
+              },
+              {
+                mot: 'bibelot',
+                classe: 'NM'
+              },
+              {
+                mot: 'boulot',
+                classe: 'NM'
+              },
+              {
+                mot: 'chiot',
+                classe: 'NM'
+              },
+              {
+                mot: 'durant',
+                classe: 'INV'
+              },
+              {
+                mot: 'endroit',
+                classe: 'NM'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 4,
+        groupes: [
+          {
+            indice: "Le son [ir] s'écrit le plus souvent ir à la fin  d'un verbe à l'infinitif.",
+            mots: [
+              {
+                mot: 'contenir',
+                classe: 'V'
+              },
+              {
+                mot: 'divertir',
+                classe: 'V'
+              },
+              {
+                mot: 'partir',
+                classe: 'V'
+              },
+              {
+                mot: 'punir',
+                classe: 'V'
+              },
+              {
+                mot: 'réfléchir',
+                classe: 'V'
+              },
+              {
+                mot: 'repartir',
+                classe: 'V'
+              },
+              {
+                mot: 'réunir',
+                classe: 'V'
+              },
+              {
+                mot: 'tenir',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: 'Mots rebelles:',
+            mots: [
+              {
+                mot: 'élire',
+                classe: 'V'
+              },
+              {
+                mot: 'sourire',
+                classe: 'V'
+              },
+              {
+                mot: 'suffire',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: "Le son [oir] s'écrit le plus souvent oir à la fin d'un verbe à l'infinitif.",
+            mots: [
+              {
+                mot: 'apercevoir',
+                classe: 'V'
+              },
+              {
+                mot: 'asseoir',
+                classe: 'V'
+              },
+              {
+                mot: 'pouvoir',
+                classe: 'V'
+              },
+              {
+                mot: 'revoir',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: "Le son [uir] s'écrit le plus souvent uire à la fin d'un verbe à l'infinitif.",
+            mots: [
+              {
+                mot: 'conduire',
+                classe: 'V'
+              },
+              {
+                mot: 'construire',
+                classe: 'V'
+              },
+              {
+                mot: 'détruire',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: "Le son [endre] s'écrit le plus souvent endre à la fin d'un verbe",
+            mots: [
+              {
+                mot: 'vendre',
+                classe: 'V'
+              },
+              {
+                mot: 'suspendre',
+                classe: 'V'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 5,
+        groupes: [
+          {
+            indice: 'Le s final muet',
+            mots: [
+              {
+                mot: 'cas',
+                classe: 'NM'
+              },
+              {
+                mot: 'secours',
+                classe: 'NM'
+              },
+              {
+                mot: 'toutefois',
+                classe: 'INV'
+              },
+              {
+                mot: 'croix',
+                classe: 'NF'
+              },
+              {
+                mot: 'perdrix',
+                classe: 'NF'
+              }
+            ]
+          },
+          {
+            indice: 'Le t final muet',
+            mots: [
+              {
+                mot: 'debout',
+                classe: 'INV'
+              },
+              {
+                mot: 'pourtant',
+                classe: 'INV'
+              }
+            ]
+          },
+          {
+            indice: 'Mots composés',
+            mots: [
+              {
+                mot: 'à peu près',
+                classe: 'INV'
+              },
+              {
+                mot: 'à travers',
+                classe: 'INV'
+              },
+              {
+                mot: 'au lieu de',
+                classe: 'INV'
+              },
+              {
+                mot: 'au milieu de',
+                classe: 'INV'
+              },
+              {
+                mot: 'au moins',
+                classe: 'INV'
+              },
+              {
+                mot: 'en avant',
+                classe: 'INV'
+              },
+              {
+                mot: 'en bas',
+                classe: 'INV'
+              },
+              {
+                mot: 'la plupart',
+                classe: 'PRON'
+              },
+              {
+                mot: 'là-bas',
+                classe: 'INV'
+              },
+              {
+                mot: 'lors de',
+                classe: 'INV'
+              },
+              {
+                mot: 'rendez-vous',
+                classe: 'NM'
+              },
+              {
+                mot: 'tout à coup',
+                classe: 'INV'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
