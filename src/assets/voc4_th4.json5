@@ -228,6 +228,307 @@
             ]
           }
         ]
+      },
+
+      {
+        semaine: 3,
+        groupes: [
+          {
+            indice: 'Le h muet',
+            mots: [
+              {
+                mot: 'avant-hier',
+                classe: 'INV'
+              },
+              {
+                mot: 'de bonne heure',
+                classe: 'INV'
+              },
+              {
+                mot: 'en haut',
+                classe: 'INV'
+              },
+              {
+                mot: 'habitude',
+                classe: 'NF'
+              },
+              {
+                mot: 'héros',
+                classe: 'NM'
+              },
+              {
+                mot: 'héroïne',
+                classe: 'NF'
+              },
+              {
+                mot: 'hésiter',
+                classe: 'V'
+              },
+              {
+                mot: 'hier',
+                classe: 'INV'
+              },
+              {
+                mot: 'hockey',
+                classe: 'NM'
+              },
+              {
+                mot: 'horizon',
+                classe: 'NM'
+              },
+              {
+                mot: 'huile',
+                classe: 'NF'
+              },
+              {
+                mot: 'hurler',
+                classe: 'V'
+              },
+              {
+                mot: 'théâtre',
+                classe: 'NM'
+              },
+              {
+                mot: 'thon',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: "Le son [ch] s'écrit ch.",
+            mots: [
+              {
+                mot: 'brioche',
+                classe: 'NF'
+              },
+              {
+                mot: 'chance',
+                classe: 'NF'
+              },
+              {
+                mot: 're',
+                classe: 'NM'
+              },
+              {
+                mot: 'chuchoter',
+                classe: 'V'
+              },
+              {
+                mot: 'proche',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'rechercher',
+                classe: 'V'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 4,
+        groupes: [
+          {
+            indice: "Le son [f] s'écrit le plus souvent f.",
+            mots: [
+              {
+                mot: 'bref',
+                classe: 'INV'
+              },
+              {
+                mot: 'canif',
+                classe: 'NM'
+              },
+              {
+                mot: 'chef',
+                classe: 'NM'
+              },
+              {
+                mot: 'définir',
+                classe: 'V'
+              },
+              {
+                mot: 'façon',
+                classe: 'NF'
+              },
+              {
+                mot: 'fanfare',
+                classe: 'NF'
+              },
+              {
+                mot: 'fermé',
+                classe: 'ADJ',
+                fem: 'fermée'
+              },
+              {
+                mot: 'fêter',
+                classe: 'V'
+              },
+              {
+                mot: 'forme',
+                classe: 'NF'
+              },
+              {
+                mot: 'foule',
+                classe: 'NF'
+              },
+              {
+                mot: 'fumer',
+                classe: 'V'
+              },
+              {
+                mot: 'préféré',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'préférée',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'profiter',
+                classe: 'V'
+              },
+              {
+                mot: 'refaire',
+                classe: 'V'
+              },
+              {
+                mot: 'sauf',
+                classe: 'INV'
+              },
+              {
+                mot: 'transformer',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: "Le son [f] s'écrit parfois ph.",
+            mots: [
+              {
+                mot: 'catastrophe',
+                classe: 'NF'
+              },
+              {
+                mot: 'nénuphar',
+                classe: 'NM'
+              },
+              {
+                mot: 'paragraphe',
+                classe: 'NM'
+              },
+              {
+                mot: 'phare',
+                classe: 'NM'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 5,
+        groupes: [
+          {
+            indice: "Le son [o] s'écrit au ou o au début d'un mot.",
+            mots: [
+              {
+                mot: 'aube',
+                classe: 'NF'
+              },
+              {
+                mot: 'auprès de',
+                classe: 'INV'
+              },
+              {
+                mot: 'autant',
+                classe: 'INV'
+              },
+              {
+                mot: 'automobile',
+                classe: 'NF'
+              },
+              {
+                mot: 'autre',
+                classe: 'PRON'
+              },
+              {
+                mot: 'obliger',
+                classe: 'V'
+              },
+              {
+                mot: 'observer',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: "Le son [o] s'écrit o, ô ou au à l'intérieur d'un mot.",
+            mots: [
+              {
+                mot: 'adorer',
+                classe: 'V'
+              },
+              {
+                mot: 'côte',
+                classe: 'NF'
+              },
+              {
+                mot: 'drôle',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'épaule',
+                classe: 'NF'
+              },
+              {
+                mot: 'plutôt',
+                classe: 'INV'
+              },
+              {
+                mot: 'rôle',
+                classe: 'NM'
+              },
+              {
+                mot: 'tôt',
+                classe: 'INV'
+              }
+            ]
+          },
+          {
+            indice: "Le son [o] s'écrit le plus souvent eau à la fin d'un mot.",
+            mots: [
+              {
+                mot: 'anneau',
+                classe: 'NM'
+              },
+              {
+                mot: 'gâteau',
+                classe: 'NM'
+              },
+              {
+                mot: 'rideau',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: 'Mots rebelles:',
+            mots: [
+              {
+                mot: 'métro',
+                classe: 'NM'
+              },
+              {
+                mot: 'numéro',
+                classe: 'NM'
+              },
+              {
+                mot: 'piano',
+                classe: 'NM'
+              }
+            ]
+          }
+        ]
       }
     ]
   }

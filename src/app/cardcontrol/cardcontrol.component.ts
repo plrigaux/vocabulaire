@@ -76,9 +76,13 @@ export class CardcontrolComponent implements OnInit {
     return []
   }
 
-  shuffleArray (array: any) {
+  shuffleArray (array: any | null = null) {
     if (!this.shuffle) {
       return
+    }
+
+    if (!array) {
+      array = this.mots
     }
 
     for (let i = array.length - 1; i > 0; i--) {
@@ -87,52 +91,8 @@ export class CardcontrolComponent implements OnInit {
     }
   }
 
-  private createMotTI (m: Mot, indice: string): MotTI {
-    const newMot: MotTI = {
-      mot: m.mot,
-      classe: m.classe,
-      indice: indice,
-      genre: MotGenre.NA,
-      nombre: MotNombre.NA
-    }
-
-    return newMot
-  }
-
   crunchMot (m: Mot, indice: string) {
-    const newMot: MotTI = this.createMotTI(m, indice)
-    this.mots.push(newMot)
-
-    let classe: string[] = Array.isArray(m.classe) ? [...m.classe] : [m.classe]
-
-    if (classe.length === 0) {
-      console.warn("Le mot n'a pas de classe")
-    }
-
-    classe.forEach(cls => {
-      let isNom = cls == 'NM' || cls == 'NF'
-
-      if (isNom) {
-        newMot.classe = 'NOM'       
-        newMot.genre = cls == 'NM' ? MotGenre.MASCULIN : MotGenre.FEMININ
-
-        if (m.fem) {
-          let newMot2: MotTI = this.createMotTI(m, indice)
-          newMot2.mot = m.fem
-          newMot2.classe = 'NOM'
-          newMot2.genre = MotGenre.FEMININ
-          this.mots.push(newMot2)
-        }
-      } else if (cls == 'ADJ') {
-        if (m.fem) {
-          let newMot2: MotTI = this.createMotTI(m, indice)
-          newMot2.mot = m.fem
-          newMot2.genre = MotGenre.FEMININ
-          newMot.genre = MotGenre.MASCULIN
-          this.mots.push(newMot2)
-        }
-      }
-    })
+    crunchMot(m, indice, this.mots)
   }
 
   private async onChangeTheme (theme_id: number | string) {
@@ -195,18 +155,10 @@ export class CardcontrolComponent implements OnInit {
     this.next()
   }
 
-  onChangeToggle (event: MatSlideToggleChange) {
+  onChangeShuffleToggle (event: MatSlideToggleChange) {
     console.log(event)
 
-    if (this.semaine) {
-      this.onChangeSemaine(this.semaine.semaine)
-      return
-    }
-
-    if (this.theme?.mots) {
-      this.onChangeTheme(this.theme.theme)
-      return
-    }
+    this.shuffleArray()
   }
 
   next () {
@@ -278,4 +230,47 @@ export class CardcontrolComponent implements OnInit {
 
     return label
   }
+}
+
+export const createMotTI = (m: Mot, indice: string): MotTI => {
+  const newMot: MotTI = {
+    mot: m.mot,
+    classe: m.classe,
+    indice: indice,
+    genre: MotGenre.NA,
+    nombre: MotNombre.NA
+  }
+
+  return newMot
+}
+
+export const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
+  const newMot: MotTI = createMotTI(m, indice)
+  mots.push(newMot)
+
+  let classe: string[] = Array.isArray(m.classe) ? [...m.classe] : [m.classe]
+
+  if (classe.length === 0) {
+    console.warn("Le mot n'a pas de classe")
+  }
+
+  classe.forEach(cls => {
+    if (cls == 'NM') {
+      newMot.classe = 'NOM'
+      newMot.genre = MotGenre.MASCULIN
+    }
+
+    if (cls == 'NF') {
+      newMot.classe = 'NOM'
+      newMot.genre = MotGenre.FEMININ
+    }
+
+    if (m.fem) {
+      let newMot2: MotTI = createMotTI(m, indice)
+      newMot2.mot = m.fem
+      newMot2.genre = MotGenre.FEMININ
+      newMot.genre = MotGenre.MASCULIN
+      mots.push(newMot2)
+    }
+  })
 }

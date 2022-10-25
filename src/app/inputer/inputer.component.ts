@@ -13,62 +13,93 @@ export class InputerComponent implements OnInit {
 
   rawInput = `Semaine 3
 
-  La lettre c fait le son [k] devant a, o et u.
-  cabane n. f.
-  capable adj.
-  confiance n. f.
-  corde n. f.
-  coupe n. f,
-  couper v.
-  minuscule adj.
+Le h muet 
+avant-hier mot inv. 
+de bonne heure mot inv.
+en haut mot inv.
+habitude n. f,
+héros n. m.
+héroïne n, f.
+hésiter v.
+hier mot inv.
+hockey n. m,
+horizon n. m.
+huile n. f,
+hurler v.
+théâtre n. rn.
+thon n. rn.
 
-  La lettre c fait le son [s] devant e, i et y.
-  avance n. f.
-  ce/c' pron.
-  cela/ça pron,
-  celui-ci pron.
-  celle-ci pron.
-  ceux-ci pron.
-  celles-ci pron.
-  celui-là prom
-  ceux-là pron.
-  celle—là pron.
-  celles-là pron.
-  centre n, m.
-  cependant mot inv.
-  distance n, f,
-  force n. f.
-  lance n. f.
-  placer v,
-  racisme n. rn
-  
-  Semaine 4
-  Des mots qui s'écrivent comme. ils se prononcent.
-  bol n. m.
-  bon n. m.
-  carton n. m.
-  défi n. m.
-  dieu n, m.
-  le prom
-  la pron.
-  les pron.
-  malgré mot inv.
-  nu adj.
-  nue
-  or mot inv.
-  où mot inv.
-  pardon n. m.
-  parmi mot inv.
-  pur adj.
-  pure
-  retour n. m.
-  ruban n. m.
-  selon mot inv.
-  sol n. m.
-  sud n. m.
-  tour n. f.
-  
- 
+Le son [ch] s'écrit ch.
+brioche n, f,
+chance n. f.
+chapit
+re n. m.
+chuchoter v,
+proche adj.
+rechercher v.
+
+Semaine 4
+
+Le son [f] s'écrit le plus souvent f.
+bref mot inv.
+cafétéria n. f
+canif n. m.
+chef n, m./n. f.
+définir v,
+façon n. f.
+fanfare n, f,
+fermé adj.
+fermée
+fêter v.
+forme n. f.
+foule n. f.
+fumer v,
+préféré adj./n, m.
+préférée adj./n, f,
+profiter v.
+refaire v.
+sauf mot inv.
+transformer v.
+
+Le son [f] s'écrit parfois ph.
+catastrophe n. f.
+nénuphar/nénufar n. m.
+paragraphe n. m.
+phare n. m.
+
+Semaine 5
+
+Le son [o] s'écrit au ou o au début d'un mot.
+aube n. f.
+aucun dét.
+aucune
+aucuns
+aucunes
+auprès de mot inv.
+autant mot inv.
+automobile n. f.
+autre pron.
+obliger v.
+observer v.
+
+Le son [o] s'écrit o, ô ou au à l'intérieur d'un mot.
+adorer v.
+côte n. f.
+drôle adj.
+épaule n. f.
+plutôt mot inv.
+rôle n, m.
+tôt mot inv.
+
+Le son [o] s'écrit le plus souvent eau à la fin d'un mot.
+anneau n. m.
+gâteau n. m.
+rideau n. m.
+
+Mots rebelles:
+métro n. rn.
+numéro n. m.
+piano n. rn.
   
   `
 
