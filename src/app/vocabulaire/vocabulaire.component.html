@@ -1,21 +1,26 @@
-<ul>
-    <li *ngFor="let theme of themes">
-        <h1>Thème {{theme.theme}}</h1>
-        <ul>
-            <li *ngFor="let semaine of theme.semaines">
-                <h2>Semaine {{semaine.semaine}}</h2>
-                <div *ngFor="let groupe of semaine.groupes">
-                    <h3 [innerHTML]="groupe.indice"></h3>
-                    <ul>
-                        <li *ngFor="let mot of getTransformedMot(groupe.mots)">
-                             {{mot.mot}} {{mot.classe}} {{getGenre(mot)}}
-                        </li>
-                    </ul>
-                </div>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let theme of themes; index as i;" [expanded]="step === i" (opened)="setStep(i)">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="panel-title">
+        Thème {{theme.theme}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <ul>
+      <li *ngFor="let semaine of theme.semaines">
+        <h2>Semaine {{semaine.semaine}}</h2>
+        <div *ngFor="let groupe of semaine.groupes">
+          <h3 [innerHTML]="groupe.indice"></h3>
+          <ul>
+            <li *ngFor="let mot of getTransformedMot(groupe.mots)">
+              {{mot.mot}} {{mot.classe}} {{getGenre(mot)}}
             </li>
-            <li *ngFor="let mot of theme.mots">
-                {{mot.mot}} {{mot.classe}} 
-           </li>
-        </ul>
-    </li>
-</ul>
+          </ul>
+        </div>
+      </li>
+      <li *ngFor="let mot of theme.mots">
+        {{mot.mot}} {{mot.classe}}
+      </li>
+    </ul>
+  </mat-expansion-panel>
+</mat-accordion>

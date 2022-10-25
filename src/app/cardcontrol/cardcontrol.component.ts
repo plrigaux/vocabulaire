@@ -241,6 +241,14 @@ export const createMotTI = (m: Mot, indice: string): MotTI => {
     nombre: MotNombre.NA
   }
 
+  if (m.genre) {
+    newMot.genre = m.genre
+  }
+
+  if (m.nombre) {
+    newMot.nombre = m.nombre
+  }
+
   return newMot
 }
 
