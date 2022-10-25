@@ -306,7 +306,7 @@
                 classe: 'NF'
               },
               {
-                mot: 're',
+                mot: 'chapitre',
                 classe: 'NM'
               },
               {
@@ -378,11 +378,8 @@
               },
               {
                 mot: 'préféré',
-                classe: 'ADJ'
-              },
-              {
-                mot: 'préférée',
-                classe: 'ADJ'
+                classe: 'ADJ',
+                fem: 'préférée'
               },
               {
                 mot: 'profiter',
@@ -410,7 +407,7 @@
                 classe: 'NF'
               },
               {
-                mot: 'nénuphar',
+                mot: 'nénuphar/nénufar',
                 classe: 'NM'
               },
               {

@@ -78,7 +78,7 @@
         semaine: 2,
         groupes: [
           {
-            indice: "Le son [gnl s'écrit gn.",
+            indice: "Le son [gn] s'écrit gn.",
             mots: [
               {
                 mot: 'éloigner',
