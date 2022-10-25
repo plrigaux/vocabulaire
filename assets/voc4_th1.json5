@@ -242,35 +242,49 @@
               },
               {
                 mot: 'celui-ci',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 1
               },
               {
                 mot: 'celle-ci',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 1
               },
               {
                 mot: 'ceux-ci',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 2
               },
               {
                 mot: 'celles-ci',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 2
               },
               {
                 mot: 'celui-là',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 1
               },
               {
                 mot: 'ceux-là',
                 classe: 'PRON'
               },
               {
-                mot: 'là',
-                classe: 'PRON'
+                mot: 'celle-là',
+                classe: 'PRON',
+                genre: 2,
+                nombre: 1
               },
               {
                 mot: 'celles-là',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2,
+                nombre: 2
               },
               {
                 mot: 'centre',
@@ -295,6 +309,10 @@
               {
                 mot: 'placer',
                 classe: 'V'
+              },
+              {
+                mot: 'racisme',
+                classe: 'NM'
               }
             ]
           }
@@ -328,15 +346,18 @@
               },
               {
                 mot: 'le',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1
               },
               {
                 mot: 'la',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 2
               },
               {
                 mot: 'les',
-                classe: 'PRON'
+                classe: 'PRON',
+                nombre: 2
               },
               {
                 mot: 'malgré',
