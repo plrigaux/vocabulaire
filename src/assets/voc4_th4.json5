@@ -7,7 +7,7 @@
         semaine: 1,
         groupes: [
           {
-            indice: "Le son [kl s'écrit le plus souvent qu et presque toujours que en fin de mot.",
+            indice: "Le son [k] s'écrit le plus souvent qu et presque toujours que en fin de mot.",
             mots: [
               {
                 mot: 'bibliothèque',
