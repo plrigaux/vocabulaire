@@ -11,95 +11,130 @@ import { Clipboard } from '@angular/cdk/clipboard'
 export class InputerComponent implements OnInit {
   constructor (private clipboard: Clipboard) {}
 
-  rawInput = `Semaine 3
+  rawInput = `
+  Semaine 1
 
-Le h muet 
-avant-hier mot inv. 
-de bonne heure mot inv.
-en haut mot inv.
-habitude n. f,
-héros n. m.
-héroïne n, f.
-hésiter v.
-hier mot inv.
-hockey n. m,
-horizon n. m.
-huile n. f,
-hurler v.
-théâtre n. rn.
-thon n. rn.
+  Le son [è] au début d'un mot s'écrit   le plus souvent   ai ou es.
+  aide n. f.
+  escalier n. m.
+  espace n. m.
+  espèce n. f.
+  espoir n. m.
+  esprit n. m.
+  est n. m.
 
-Le son [ch] s'écrit ch.
-brioche n, f,
-chance n. f.
-chapit
-re n. m.
-chuchoter v,
-proche adj.
-rechercher v.
+  Mot rebelle:
+  être n. m.
+  
+  Le son [è] à l'intérieur   d'un mot s'écrit   souvent ai ou aî.
+  capitaine n. m./n. f.
+  connaître/connaitre v.
+  contraire n. rn.
+  disparaître/disparaitre v.
+  fin de semaine n. f.
+  laine n. f.
+  maître/maitre n. m.
+  maîtresse/maitresse n. f.
+  marraine n. f.
+  naître/naitre v.
+  ordinaire adj.
+  paix n. f.
+  plaire v.
 
-Semaine 4
+  Mot rebelle:
+  ouest n. m.
+  
+  
+  Semaine 2
+  
+  À l'intérieur d'un   mot, le son [è] peut   s'écrire è, ê ou ai.
+  centimètre  n. m.
+  colère n. f.
+  extraordinaire adj.
+  kilomètre n. m.
+  matière n. f.
+  misère n. f.
+  mystère n. m.
+  pêche n. f.
+  poème n. m.
+  prêt adj
+  prête
+  problème n. m.
+  quatrième adj./n. m./n. f.
+  rêve n. m.
+  système n. rn.
 
-Le son [f] s'écrit le plus souvent f.
-bref mot inv.
-cafétéria n. f
-canif n. m.
-chef n, m./n. f.
-définir v,
-façon n. f.
-fanfare n, f,
-fermé adj.
-fermée
-fêter v.
-forme n. f.
-foule n. f.
-fumer v,
-préféré adj./n, m.
-préférée adj./n, f,
-profiter v.
-refaire v.
-sauf mot inv.
-transformer v.
+  À la fin d'un mot, le son [è] s'écrit  le plus souvent et.
+  bleuet n. m.
+  effet n. m.
+  objet n. m.
+  secret adj./n. m.
+  secrète adj
+  sommet n. m.
 
-Le son [f] s'écrit parfois ph.
-catastrophe n. f.
-nénuphar/nénufar n. m.
-paragraphe n. m.
-phare n. m.
+  À la fin d'un mot,   le son [è] peut aussi   s'écrire ais.
+  désormais mot inv.
+  
+  
+  Semaine 3
+  
+  Des consonnes qui   doublent : cc, pp,   rr, tt.
+  apparaître/apparaitre v.
+  arracher v.
+  arranger v.
+  arrière n. m.
+  attacher v.
+  bizarre adj.
+  bottine n. f.
+  derrière n. m.
+  échapper v.
+  en arrière mot inv.
+  grotte n. f.
+  horreur n. f.
+  occasion n. f.
+  rapporter v.
+  soccer n. m.
+  terrible adj.
 
-Semaine 5
+  Le son [èt] à la fin  d'un mot s'écrit le   plus souvent ette.
+  bicyclette n. f.
+  cachette n. f.
+  lunette n. f.
+  toilette n. f.
 
-Le son [o] s'écrit au ou o au début d'un mot.
-aube n. f.
-aucun dét.
-aucune
-aucuns
-aucunes
-auprès de mot inv.
-autant mot inv.
-automobile n. f.
-autre pron.
-obliger v.
-observer v.
+  Mot rebelle:
+  net adj.
+  nette
+  
+  Semaine 4
+  
+  Le son [ill] peut   s'écrire ill.
+  abeille n. f.
+  ailleurs mot inv.
+  bouillir v.
+  brouillard n. m
+  caillou n. rn.
+  cuiller/cuillère
+  fillette n. f.
+  médaille n. f.
+  paille n. f.
+  papillon n. m.
+  veille f.
 
-Le son [o] s'écrit o, ô ou au à l'intérieur d'un mot.
-adorer v.
-côte n. f.
-drôle adj.
-épaule n. f.
-plutôt mot inv.
-rôle n, m.
-tôt mot inv.
-
-Le son [o] s'écrit le plus souvent eau à la fin d'un mot.
-anneau n. m.
-gâteau n. m.
-rideau n. m.
-
-Mots rebelles:
-métro n. rn.
-numéro n. m.
-piano n. rn.
+  Mot rebelle:
+  travail n. rn.
+  travaux
+  
+  Le son [ill] peut  s'écrire y.
+  crayon n. m.
+  effroyable adj
+  ennuyer v.
+  envoyer v.
+  essayer v.
+  incroyable adj.
+  rayer v.
+  royaume n. rn.
+  voyou n. rn.
   
   `
 
@@ -178,7 +213,7 @@ piano n. rn.
         console.log('line not match', line, 'prev', previousLine)
         if (previousLine.trim().length === 0 && line.trim().length !== 0) {
           console.log('line not match prev', line)
-          let groupe: Groupe = {
+          let groupe: any = {
             indice: line.trim(),
             mots: []
           }

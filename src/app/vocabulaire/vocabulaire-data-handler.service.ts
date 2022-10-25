@@ -1,5 +1,12 @@
 import { Injectable } from '@angular/core'
-import { Semaine, Theme } from './vocabulaireInterfaces'
+import {
+  Mot,
+  MotGenre,
+  MotNombre,
+  MotTI,
+  Semaine,
+  Theme
+} from './vocabulaireInterfaces'
 import JSON5 from 'json5'
 
 @Injectable({
@@ -16,20 +23,49 @@ export class VocabulaireDataHandlerService {
       this.getVocabularyAsset('./assets/voc4_th1.json5'),
       this.getVocabularyAsset('./assets/voc4_th2.json5'),
       this.getVocabularyAsset('./assets/voc4_th3.json5'),
-      this.getVocabularyAsset('./assets/voc4_th4.json5')
+      this.getVocabularyAsset('./assets/voc4_th4.json5'),
+      this.getVocabularyAsset('./assets/voc4_th5.json5')
     ])
       .then(data => {
+        const list_of_theme: Theme[] = []
         data.forEach(inData => {
           if (Array.isArray(inData)) {
             inData.forEach(ininData => {
-              this.themes.push(ininData)
+              list_of_theme.push(ininData)
             })
           } else {
-            this.themes.push(inData)
+            list_of_theme.push(inData)
           }
         })
         console.log(this.themes)
-        return this.themes
+        return list_of_theme
+      })
+      .then((themes: Theme[]) => {
+        for (let t of themes) {
+          const t_id: number | string = t.theme
+
+          if (t.semaines) {
+            const semaines = t.semaines as Semaine[]
+            for (let s of semaines) {
+              for (let g of s.groupes) {
+                const mots: MotTI[] = []
+                for (let m of g.mots) {
+                  crunchMot(m as Mot, g.indice, mots)
+                }
+                g.mots = mots
+              }
+            }
+          }
+
+          if(t.mots) {
+            const mots: MotTI[] = []
+            for (let m of t.mots) {
+              crunchMot(m as Mot, "", mots)
+            }
+            t.mots = mots
+          }
+        }
+        return themes
       })
       .then((themes: Theme[]) => {
         for (let t of themes) {
@@ -42,8 +78,10 @@ export class VocabulaireDataHandlerService {
             }
           }
         }
+        return themes
       })
-      .then(() => {
+      .then((themes: Theme[]) => {
+        this.themes = themes
         console.log('loading finnished')
       })
   }
@@ -81,4 +119,55 @@ export class VocabulaireDataHandlerService {
       return this.themes_semaine_map.get(`${theme.theme}_${semaine_id}`)
     })
   }
+}
+
+const createMotTI = (m: Mot, indice: string): MotTI => {
+  const newMot: MotTI = {
+    mot: m.mot,
+    classe: m.classe,
+    indice: indice,
+    genre: MotGenre.NA,
+    nombre: MotNombre.NA
+  }
+
+  if (m.genre) {
+    newMot.genre = m.genre
+  }
+
+  if (m.nombre) {
+    newMot.nombre = m.nombre
+  }
+
+  return newMot
+}
+
+const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
+  const newMot: MotTI = createMotTI(m, indice)
+  mots.push(newMot)
+
+  let classe: string[] = Array.isArray(m.classe) ? [...m.classe] : [m.classe]
+
+  if (classe.length === 0) {
+    console.warn("Le mot n'a pas de classe")
+  }
+
+  classe.forEach(cls => {
+    if (cls == 'NM') {
+      newMot.classe = 'NOM'
+      newMot.genre = MotGenre.MASCULIN
+    }
+
+    if (cls == 'NF') {
+      newMot.classe = 'NOM'
+      newMot.genre = MotGenre.FEMININ
+    }
+
+    if (m.fem) {
+      let newMot2: MotTI = createMotTI(m, indice)
+      newMot2.mot = m.fem
+      newMot2.genre = MotGenre.FEMININ
+      newMot.genre = MotGenre.MASCULIN
+      mots.push(newMot2)
+    }
+  })
 }

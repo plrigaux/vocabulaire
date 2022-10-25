@@ -12,7 +12,7 @@
         <div *ngFor="let groupe of semaine.groupes">
           <h3 [innerHTML]="groupe.indice"></h3>
           <ul>
-            <li *ngFor="let mot of getTransformedMot(groupe.mots)">
+            <li *ngFor="let mot of groupe.mots">
               {{mot.mot}} {{mot.classe}} {{getGenre(mot)}}
             </li>
           </ul>

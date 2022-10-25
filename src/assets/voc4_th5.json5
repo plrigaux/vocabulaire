@@ -1,0 +1,415 @@
+[
+  {
+    theme: 5,
+    an: 4,
+    semaines: [
+      {
+        semaine: 1,
+        groupes: [
+          {
+            indice: "Le son [è] au début d'un mot s'écrit   le plus souvent   ai ou es.",
+            mots: [
+              {
+                mot: 'aide',
+                classe: 'NF'
+              },
+              {
+                mot: 'escalier',
+                classe: 'NM'
+              },
+              {
+                mot: 'espace',
+                classe: 'NM'
+              },
+              {
+                mot: 'espèce',
+                classe: 'NF'
+              },
+              {
+                mot: 'espoir',
+                classe: 'NM'
+              },
+              {
+                mot: 'esprit',
+                classe: 'NM'
+              },
+              {
+                mot: 'est',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: 'Mot rebelle:',
+            mots: [
+              {
+                mot: 'être',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: "Le son [è] à l'intérieur   d'un mot s'écrit   souvent ai ou aî.",
+            mots: [
+              {
+                mot: 'capitaine',
+                classe: 'NM'
+              },
+              {
+                mot: 'connaître',
+                classe: 'V'
+              },
+              {
+                mot: 'contraire',
+                classe: 'NM'
+              },
+              {
+                mot: 'disparaître',
+                classe: 'V',
+                alt: 'disparaitre'
+              },
+              {
+                mot: 'fin de semaine',
+                classe: 'NF'
+              },
+              {
+                mot: 'laine',
+                classe: 'NF'
+              },
+              {
+                mot: 'maître',
+                classe: 'NM',
+                alt: 'maitre'
+              },
+              {
+                mot: 'maîtresse',
+                classe: 'NF',
+                alt: 'maitresse'
+              },
+              {
+                mot: 'marraine',
+                classe: 'NF'
+              },
+              {
+                mot: 'naître',
+                classe: 'V',
+                alt: 'naitre'
+              },
+              {
+                mot: 'ordinaire',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'paix',
+                classe: 'NF'
+              },
+              {
+                mot: 'plaire',
+                classe: 'V'
+              }
+            ]
+          },
+          {
+            indice: 'Mot rebelle:',
+            mots: [
+              {
+                mot: 'ouest',
+                classe: 'NM'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 2,
+        groupes: [
+          {
+            indice: "À l'intérieur d'un   mot, le son [è] peut   s'écrire è, ê ou ai.",
+            mots: [
+              {
+                mot: 'centimètre',
+                classe: 'NM'
+              },
+              {
+                mot: 'colère',
+                classe: 'NF'
+              },
+              {
+                mot: 'extraordinaire',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'kilomètre',
+                classe: 'NM'
+              },
+              {
+                mot: 'matière',
+                classe: 'NF'
+              },
+              {
+                mot: 'misère',
+                classe: 'NF'
+              },
+              {
+                mot: 'mystère',
+                classe: 'NM'
+              },
+              {
+                mot: 'pêche',
+                classe: 'NF'
+              },
+              {
+                mot: 'poème',
+                classe: 'NM'
+              },
+              {
+                mot: 'problème',
+                classe: 'NM'
+              },
+              {
+                mot: 'quatrième',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'rêve',
+                classe: 'NM'
+              },
+              {
+                mot: 'système',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: "À la fin d'un mot, le son [è] s'écrit  le plus souvent et.",
+            mots: [
+              {
+                mot: 'bleuet',
+                classe: 'NM'
+              },
+              {
+                mot: 'effet',
+                classe: 'NM'
+              },
+              {
+                mot: 'objet',
+                classe: 'NM'
+              },
+              {
+                mot: 'secret',
+                classe: 'ADJ',
+                fem: 'secrète adj'
+              },
+              {
+                mot: 'sommet',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: "À la fin d'un mot,   le son [è] peut aussi   s'écrire ais.",
+            mots: [
+              {
+                mot: 'désormais',
+                classe: 'INV'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 3,
+        groupes: [
+          {
+            indice: 'Des consonnes qui   doublent : cc, pp,   rr, tt.',
+            mots: [
+              {
+                mot: 'apparaître',
+                classe: 'V'
+              },
+              {
+                mot: 'arracher',
+                classe: 'V'
+              },
+              {
+                mot: 'arranger',
+                classe: 'V'
+              },
+              {
+                mot: 'arrière',
+                classe: 'NM'
+              },
+              {
+                mot: 'attacher',
+                classe: 'V'
+              },
+              {
+                mot: 'bizarre',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'bottine',
+                classe: 'NF'
+              },
+              {
+                mot: 'derrière',
+                classe: 'NM'
+              },
+              {
+                mot: 'échapper',
+                classe: 'V'
+              },
+              {
+                mot: 'en arrière',
+                classe: 'INV'
+              },
+              {
+                mot: 'grotte',
+                classe: 'NF'
+              },
+              {
+                mot: 'horreur',
+                classe: 'NF'
+              },
+              {
+                mot: 'occasion',
+                classe: 'NF'
+              },
+              {
+                mot: 'rapporter',
+                classe: 'V'
+              },
+              {
+                mot: 'soccer',
+                classe: 'NM'
+              },
+              {
+                mot: 'terrible',
+                classe: 'ADJ'
+              }
+            ]
+          },
+          {
+            indice: "Le son [èt] à la fin  d'un mot s'écrit le   plus souvent ette.",
+            mots: [
+              {
+                mot: 'bicyclette',
+                classe: 'NF'
+              },
+              {
+                mot: 'cachette',
+                classe: 'NF'
+              },
+              {
+                mot: 'lunette',
+                classe: 'NF'
+              },
+              {
+                mot: 'toilette',
+                classe: 'NF'
+              }
+            ]
+          },
+          {
+            indice: 'Mot rebelle:',
+            mots: [
+              {
+                mot: 'net',
+                classe: 'ADJ',
+                fem: 'nette'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        semaine: 4,
+        groupes: [
+          {
+            indice: "Le son [ill] peut   s'écrire ill.",
+            mots: [
+              {
+                mot: 'abeille',
+                classe: 'NF'
+              },
+              {
+                mot: 'ailleurs',
+                classe: 'INV'
+              },
+              {
+                mot: 'bouillir',
+                classe: 'V'
+              },
+              {
+                mot: 'caillou',
+                classe: 'NM'
+              },
+              {
+                mot: 'fillette',
+                classe: 'NF'
+              },
+              {
+                mot: 'médaille',
+                classe: 'NF'
+              },
+              {
+                mot: 'paille',
+                classe: 'NF'
+              },
+              {
+                mot: 'papillon',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: 'Mot rebelle:',
+            mots: [
+              {
+                mot: 'travail',
+                classe: 'NM'
+              }
+            ]
+          },
+          {
+            indice: "Le son [ill] peut  s'écrire y.",
+            mots: [
+              {
+                mot: 'crayon',
+                classe: 'NM'
+              },
+              {
+                mot: 'ennuyer',
+                classe: 'V'
+              },
+              {
+                mot: 'envoyer',
+                classe: 'V'
+              },
+              {
+                mot: 'essayer',
+                classe: 'V'
+              },
+              {
+                mot: 'incroyable',
+                classe: 'ADJ'
+              },
+              {
+                mot: 'rayer',
+                classe: 'V'
+              },
+              {
+                mot: 'royaume',
+                classe: 'NM'
+              },
+              {
+                mot: 'voyou',
+                classe: 'NM'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

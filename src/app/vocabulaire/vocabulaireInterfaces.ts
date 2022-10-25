@@ -1,7 +1,7 @@
 export interface Theme {
   theme: number | string
   semaines?: any
-  mots?: Mot[]
+  mots?: MotTI[]
 }
 
 export interface Semaine {
@@ -11,7 +11,7 @@ export interface Semaine {
 
 export interface Groupe {
   indice: string
-  mots: Mot[]
+  mots: MotTI[]
 }
 
 type MotClasse =

@@ -5,7 +5,7 @@ import { Mot, MotGenre, MotTI, Theme } from './vocabulaireInterfaces'
 import { VocabulaireDataHandlerService } from './vocabulaire-data-handler.service'
 import { ThemeSetterService } from '../theme-setter.service'
 import { AppConfig, DEFAULT_CONFIG } from '../app-config'
-import { crunchMot } from '../cardcontrol/cardcontrol.component'
+
 
 @Component({
   selector: 'app-vocabulaire',
@@ -37,15 +37,6 @@ export class VocabulaireComponent implements OnInit {
     })
   }
 
-  getTransformedMot (mots: Mot[]): MotTI[] {
-    const transformedMots: MotTI[] = []
-
-    for (let m of mots) {
-      crunchMot(m, '', transformedMots)
-    }
-
-    return transformedMots
-  }
 
   getGenre (mot: MotTI): string {
     let genre

@@ -91,10 +91,6 @@ export class CardcontrolComponent implements OnInit {
     }
   }
 
-  crunchMot (m: Mot, indice: string) {
-    crunchMot(m, indice, this.mots)
-  }
-
   private async onChangeTheme (theme_id: number | string) {
     const theme_obj = await this.vocSrv.getThemeById(theme_id)
 
@@ -112,10 +108,6 @@ export class CardcontrolComponent implements OnInit {
       this.semaine = null
       this.mots = []
       this.motIndex = -1
-      this.theme.mots.forEach(m => {
-        this.crunchMot(m, '')
-      })
-
       this.shuffleArray(this.mots)
       this.next()
     }
@@ -148,9 +140,11 @@ export class CardcontrolComponent implements OnInit {
     this.motIndex = -1
     this.semaine.groupes.forEach((group: Groupe) => {
       let indice = group.indice
+      /*
       group.mots.forEach(mot => {
         this.crunchMot(mot, indice)
       })
+      */
     })
     this.next()
   }
@@ -230,55 +224,4 @@ export class CardcontrolComponent implements OnInit {
 
     return label
   }
-}
-
-export const createMotTI = (m: Mot, indice: string): MotTI => {
-  const newMot: MotTI = {
-    mot: m.mot,
-    classe: m.classe,
-    indice: indice,
-    genre: MotGenre.NA,
-    nombre: MotNombre.NA
-  }
-
-  if (m.genre) {
-    newMot.genre = m.genre
-  }
-
-  if (m.nombre) {
-    newMot.nombre = m.nombre
-  }
-
-  return newMot
-}
-
-export const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
-  const newMot: MotTI = createMotTI(m, indice)
-  mots.push(newMot)
-
-  let classe: string[] = Array.isArray(m.classe) ? [...m.classe] : [m.classe]
-
-  if (classe.length === 0) {
-    console.warn("Le mot n'a pas de classe")
-  }
-
-  classe.forEach(cls => {
-    if (cls == 'NM') {
-      newMot.classe = 'NOM'
-      newMot.genre = MotGenre.MASCULIN
-    }
-
-    if (cls == 'NF') {
-      newMot.classe = 'NOM'
-      newMot.genre = MotGenre.FEMININ
-    }
-
-    if (m.fem) {
-      let newMot2: MotTI = createMotTI(m, indice)
-      newMot2.mot = m.fem
-      newMot2.genre = MotGenre.FEMININ
-      newMot.genre = MotGenre.MASCULIN
-      mots.push(newMot2)
-    }
-  })
 }
