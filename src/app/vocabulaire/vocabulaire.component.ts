@@ -14,16 +14,20 @@ import { crunchMot } from '../cardcontrol/cardcontrol.component'
 })
 export class VocabulaireComponent implements OnInit {
   app_config: AppConfig = DEFAULT_CONFIG
-
-  get themes (): Theme[] {
-    return this.vocSrv.getThemes()
-  }
+  step : number | null = null
 
   constructor (
     private configSrv: ThemeSetterService,
     private vocSrv: VocabulaireDataHandlerService
   ) {}
 
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  get themes (): Theme[] {
+    return this.vocSrv.getThemes()
+  } 
   ngOnInit (): void {
     this.configSrv.subscribe({
       next: async (config: AppConfig) => {
@@ -47,10 +51,10 @@ export class VocabulaireComponent implements OnInit {
     let genre
     switch (mot.genre) {
       case MotGenre.FEMININ:
-        genre = 'FEMININ'
+        genre = 'Féminin'
         break
       case MotGenre.MASCULIN:
-        genre = 'MASCULIN'
+        genre = 'Masculin'
         break
       default:
         genre = ''
