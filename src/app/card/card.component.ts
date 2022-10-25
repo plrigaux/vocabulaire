@@ -16,6 +16,7 @@ import {
   VolumeDialogData
 } from '../voice-control/voice-control.component'
 import { VoiceControlService } from '../voice-control/voice-control.service'
+import { MatSnackBar } from '@angular/material/snack-bar'
 
 /** Error when invalid control is dirty, touched, or submitted. */
 
@@ -53,7 +54,8 @@ export class CardComponent implements OnInit {
 
   constructor (
     public dialog: MatDialog,
-    public voiceService: VoiceControlService
+    public voiceService: VoiceControlService,
+    private _snackBar: MatSnackBar
   ) {}
 
   openDialog (): void {
@@ -90,6 +92,7 @@ export class CardComponent implements OnInit {
     this.play()
     this.focusInput()
     this.checkIsWriting()
+    this.successHasBeenPraise = false
   }
 
   focusInput () {
@@ -221,5 +224,15 @@ export class CardComponent implements OnInit {
 
   playDisable (): boolean {
     return this.mot == null
+  }
+
+  successHasBeenPraise = false
+  handleSucces( success : boolean) {
+    if (!this.successHasBeenPraise && success && this.validation) {
+      this.successHasBeenPraise = true
+      this._snackBar.open("Bravo!", '', {
+        duration: 2 * 1000,
+      });
+    }
   }
 }

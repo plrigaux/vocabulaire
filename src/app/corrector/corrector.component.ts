@@ -3,9 +3,12 @@ import {
   OnInit,
   Input,
   OnChanges,
-  SimpleChanges
+  SimpleChanges,
+  Output,
+  EventEmitter
 } from '@angular/core'
 import { SequenceMatcher } from 'difflib-ts'
+
 
 @Component({
   selector: 'app-corrector',
@@ -14,12 +17,15 @@ import { SequenceMatcher } from 'difflib-ts'
 })
 export class CorrectorComponent implements OnInit, OnChanges {
   private _given: string = ''
+  all_ok : boolean = false
 
   @Input()
   set given (value: string) {
     let v = String(value)
     this._given = v.trim().toLowerCase()
   }
+
+  @Output() successEvent = new EventEmitter<boolean>();
 
   get given () {
     return this._given
@@ -60,6 +66,12 @@ export class CorrectorComponent implements OnInit, OnChanges {
     if (this.given == this.correct[1]) {
       correct_one = this.correct[1]
     }
+
+    this.all_ok = this.given_equals_correct()
+    
+    this.successEvent.emit(this.all_ok)
+    
+    
     this.bigFunc(this.given, correct_one)
   }
 
@@ -68,6 +80,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
     this.correct.forEach(word => {
       resp = resp || (this.given == word)
     })
+
 
     return resp
   }

@@ -7,8 +7,9 @@
         <mat-label>Votre réponse</mat-label>
         <input matInput #answerInput class="answerInput" [(ngModel)]="userInput" (keydown.enter)="validate()" 
         autocomplete="off" spellcheck="false" [disabled]="playDisable()">
-        <mat-hint>{{getIndice()}}</mat-hint>
-      </mat-form-field>
+        
+      </mat-form-field>  
+ 
   </div>
   <!-- p id="indice" [innerHTML]="getIndice()"></p -->
 </div>
@@ -19,7 +20,11 @@
   matTooltip="Rejouer" [disabled]="playDisable()">
   <mat-icon>play_circle_filled</mat-icon>
 </button>
+&nbsp;
+<button mat-mini-fab color="accent" [matTooltip]="getIndice()" class="icon-hint">
+  <mat-icon class="icon-hint" fontSet="material-icons-outlined">help</mat-icon>
+</button>
 <div *ngIf="validation">
-  <app-corrector [given]="given" [correct]="getMot()"></app-corrector>
+  <app-corrector [given]="given" [correct]="getMot()" (successEvent)="handleSucces($event)"></app-corrector>
 </div>
 <br />

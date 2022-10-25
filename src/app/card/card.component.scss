@@ -1,4 +1,4 @@
-$answerFontSize: x-large;
+$answerFontSize: large;
 
 #__answerInput {
     font-size: $answerFontSize;
@@ -8,7 +8,7 @@ $answerFontSize: x-large;
 }
 
 .answerInput {
-    font-size: large;
+    font-size: $answerFontSize;
     
     width: 12em;
 }
@@ -16,6 +16,7 @@ $answerFontSize: x-large;
 #answerPrefix {
     font-size: $answerFontSize;
     margin-right: 0.5em;
+    align-self: center;
 }
 
 .answer {
@@ -31,4 +32,12 @@ $answerFontSize: x-large;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.icon-hint {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
