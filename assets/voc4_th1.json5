@@ -96,7 +96,7 @@
         groupes: [
           {
             indice: "Le son [é] au début et à l'intérieur d'un mot s'écrit le plus souvent é.\n\
-            Le son [él à la fin d'un verbe à l'infinitif s'écrit er.\n\
+            Le son [é] à la fin d'un verbe à l'infinitif s'écrit er.\n\
             Le son [é] à la fin d'un mot s'écrit le plus souvent er.",
             mots: [
               {
