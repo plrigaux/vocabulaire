@@ -1,8 +1,14 @@
 <div class="answer">
   <div class="answerLine">
     <span id="answerPrefix" [innerHTML]="prefix"></span>
-    <input #answerInput id="answerInput" placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
-      autocomplete="off" spellcheck="false" [disabled]="playDisable()" [matTooltip]="getIndice()">
+    <!--input #answerInput id="answerInput" placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
+      autocomplete="off" spellcheck="false" [disabled]="playDisable()" [matTooltip]="getIndice()" -->
+      <mat-form-field appearance="outline" class="answerInput">
+        <mat-label>Votre réponse</mat-label>
+        <input matInput  class="answerInput" [(ngModel)]="userInput" (keydown.enter)="validate()" 
+        autocomplete="off" spellcheck="false" [disabled]="playDisable()">
+        <mat-hint>{{getIndice()}}</mat-hint>
+      </mat-form-field>
   </div>
   <!-- p id="indice" [innerHTML]="getIndice()"></p -->
 </div>

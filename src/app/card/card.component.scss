@@ -7,6 +7,12 @@ $answerFontSize: x-large;
     width: 10em;
 }
 
+.answerInput {
+    font-size: large;
+    
+    width: 12em;
+}
+
 #answerPrefix {
     font-size: $answerFontSize;
     margin-right: 0.5em;
