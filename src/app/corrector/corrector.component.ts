@@ -1,5 +1,11 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { SequenceMatcher } from 'difflib-ts';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges
+} from '@angular/core'
+import { SequenceMatcher } from 'difflib-ts'
 
 @Component({
   selector: 'app-corrector',
@@ -7,63 +13,74 @@ import { SequenceMatcher } from 'difflib-ts';
   styleUrls: ['./corrector.component.scss']
 })
 export class CorrectorComponent implements OnInit, OnChanges {
-
-  private _given: string = ""
+  private _given: string = ''
 
   @Input()
-  set given(value: any) {
+  set given (value: string) {
     let v = String(value)
     this._given = v.trim().toLowerCase()
   }
 
-  get given() { return this._given }
-  
-  private _correct: string = ""
-
-  @Input()
-  set correct(value: any) {
-    let v = String(value)
-    this._correct = v.trim().toLowerCase()
+  get given () {
+    return this._given
   }
 
-  get correct() { return this._correct }
+  private _correct: string[] = []
+
+  @Input()
+  set correct (value: string[]) {
+    this._correct = value.map(s => s.trim().toLowerCase())
+  }
+
+  get correct () {
+    return this._correct
+  }
 
   givenElems: Truc[] = []
   correctElems: Truc[] = []
 
+  constructor () {}
 
-  constructor() { }
+  ngOnInit (): void {}
 
-  ngOnInit(): void {
-
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    const log: string[] = [];
+  ngOnChanges (changes: SimpleChanges) {
+    const log: string[] = []
     for (const propName in changes) {
-      const changedProp = changes[propName];
-      const to = JSON.stringify(changedProp.currentValue);
+      const changedProp = changes[propName]
+      const to = JSON.stringify(changedProp.currentValue)
       if (changedProp.isFirstChange()) {
-        console.log(`Initial value of ${propName} set to ${to}`);
+        console.log(`Initial value of ${propName} set to ${to}`)
       } else {
-        const from = JSON.stringify(changedProp.previousValue);
-        console.log(`${propName} changed from ${from} to ${to}`);
+        const from = JSON.stringify(changedProp.previousValue)
+        console.log(`${propName} changed from ${from} to ${to}`)
       }
     }
-    this.bigFunc(this.given, this.correct);
+
+    let correct_one = this.correct[0]
+    if (this.given == this.correct[1]) {
+      correct_one = this.correct[1]
+    }
+    this.bigFunc(this.given, correct_one)
   }
 
-  setClassGiven(elem: Truc): string {
-    return elem.ok ? "typeGood" : "typeBad";
+  given_equals_correct() : boolean {
+    let resp = false
+    this.correct.forEach(word => {
+      resp = resp || (this.given == word)
+    })
+
+    return resp
   }
 
-  setClassCorrect(elem: Truc): string {
-    return elem.ok ? "typeGood" : "typeMissed";
+  setClassGiven (elem: Truc): string {
+    return elem.ok ? 'typeGood' : 'typeBad'
   }
 
+  setClassCorrect (elem: Truc): string {
+    return elem.ok ? 'typeGood' : 'typeMissed'
+  }
 
-
-  private bigFunc(given: string, correct: string) {
+  private bigFunc (given: string, correct: string) {
     let matchingBlock = this.tokenizeComparison(given, correct)
 
     this.givenElems = []
@@ -78,10 +95,9 @@ export class CorrectorComponent implements OnInit, OnChanges {
 
       let offby = 0
       if (cnt && y - offby > x) {
-
         let obj: Truc = {
           ok: false,
-          text: "-".repeat(y - x - offby)
+          text: '-'.repeat(y - x - offby)
         }
 
         this.givenElems.push(obj)
@@ -98,7 +114,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
     })
   }
 
-  private logBad(old: number, neww: number, s: string, array: any[]): void {
+  private logBad (old: number, neww: number, s: string, array: any[]): void {
     if (old != neww) {
       let obj: Truc = {
         ok: false,
@@ -109,7 +125,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
     }
   }
 
-  private logGood(start: number, cnt: number, s: string, array: any[]): void {
+  private logGood (start: number, cnt: number, s: string, array: any[]): void {
     if (cnt) {
       let obj: Truc = {
         ok: true,
@@ -119,16 +135,16 @@ export class CorrectorComponent implements OnInit, OnChanges {
     }
   }
 
-  private tokenizeComparison(given: string, correct: string): number[][] {
+  private tokenizeComparison (given: string, correct: string): number[][] {
     let s = new SequenceMatcher(null, given, correct)
     let mb: number[][] = s.getMatchingBlocks()
-    console.log(" PIZZA")
+    console.log(' PIZZA')
     console.log(mb)
-    return mb;
+    return mb
   }
 }
 
 interface Truc {
-  ok: boolean,
+  ok: boolean
   text: string
 }

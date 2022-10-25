@@ -13,7 +13,9 @@
           <h3 class="indice" [innerHTML]="groupe.indice"></h3>
           <ul>
             <li *ngFor="let mot of groupe.mots">
-              <span class="mot">{{mot.mot}}</span> {{mot.classe}} {{getGenre(mot)}}
+              <span class="mot">{{mot.mot}}
+                <ng-template [ngIf]="mot.alt"> OU {{mot.alt}}</ng-template>
+              </span> {{mot.classe}} {{getGenre(mot)}}
             </li>
           </ul>
         </div>

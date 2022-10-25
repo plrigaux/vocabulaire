@@ -50,6 +50,7 @@ export interface Mot {
 
 export interface MotTI {
   mot: string
+  alt?: string
   classe: string | string[]
   detail?: string
   indice: string

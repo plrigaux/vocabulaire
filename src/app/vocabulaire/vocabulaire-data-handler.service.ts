@@ -130,6 +130,17 @@ const createMotTI = (m: Mot, indice: string): MotTI => {
     newMot.nombre = m.nombre
   }
 
+  if (m.alt) {
+    newMot.alt = m.alt
+  }
+
+  let formes_alternatives : string[] = m.mot.split('/')
+
+  if (formes_alternatives.length > 1) {
+    newMot.mot = formes_alternatives[0]
+    newMot.alt = formes_alternatives[1]
+  }
+
   return newMot
 }
 
