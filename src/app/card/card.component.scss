@@ -41,6 +41,14 @@ $answerFontSize: large;
     'opsz' 48
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 .prefix_label {
     color: black;
 }
@@ -48,3 +56,10 @@ $answerFontSize: large;
 .prefix_style {
     padding-right: 1em;
 }
+
+.corrector-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
