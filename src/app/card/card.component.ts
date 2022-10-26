@@ -39,7 +39,7 @@ export class CardComponent implements OnInit {
 
   given: string = ''
   mot: MotTI | null = null
-  prefix = ''
+  _prefix = ''
   selectedVoice: SpeechSynthesisVoice | null = null
   validation: boolean = false
 
@@ -57,6 +57,10 @@ export class CardComponent implements OnInit {
     public voiceService: VoiceControlService,
     private _snackBar: MatSnackBar
   ) {}
+
+  get prefix (): string {
+    return this._prefix
+  }
 
   openDialog (): void {
     const dialogRef = this.dialog.open(VoiceControlComponent, {
@@ -81,7 +85,7 @@ export class CardComponent implements OnInit {
   newWord (mot: MotTI) {
     console.log('newWord', mot)
     this.mot = mot
-    this.prefix = ''
+    this._prefix = ''
     this.userInput = ''
     console.log(this.answerInput)
 
@@ -108,7 +112,7 @@ export class CardComponent implements OnInit {
     //setting given triggers validation
     this.given = this.userInput
     this.validation = true
-    this.focusInput()
+    //this.focusInput()
     this.checkIsWriting()
   }
 
@@ -154,6 +158,10 @@ export class CardComponent implements OnInit {
       case 'ADJ':
         text = this.adjective(mot)
         break
+      case 'V':
+        text = mot.mot
+        this._prefix = '<i>verbe</i>'
+        break
       default:
         text = mot.mot
     }
@@ -164,13 +172,13 @@ export class CardComponent implements OnInit {
   private adjective (mot: MotTI): string {
     switch (mot.genre) {
       case MotGenre.FEMININ:
-        this.prefix = '<i>adjectif féminin</i>'
+        this._prefix = '<i>adjectif féminin</i>'
         break
       case MotGenre.MASCULIN:
-        this.prefix = '<i>adjectif masculin</i>'
+        this._prefix = '<i>adjectif masculin</i>'
         break
       default:
-        this.prefix = 'adjectif'
+        this._prefix = '<i>adjectif</i>'
     }
 
     return mot.mot
@@ -181,7 +189,7 @@ export class CardComponent implements OnInit {
     const feminin = genre == MotGenre.FEMININ
     if (this.article == 'unune') {
       let determinant = feminin ? 'une' : 'un'
-      this.prefix = determinant + ' '
+      this._prefix = determinant + ' '
     } else {
       let determinant = feminin ? 'la' : 'le'
 
@@ -192,13 +200,13 @@ export class CardComponent implements OnInit {
           premiereLettre
         )
       ) {
-        this.prefix = "l'"
+        this._prefix = "l'"
       } else {
-        this.prefix = determinant + ' '
+        this._prefix = determinant + ' '
       }
     }
 
-    text = this.prefix + mot
+    text = this._prefix + mot
     return text
   }
 
@@ -227,12 +235,12 @@ export class CardComponent implements OnInit {
   }
 
   successHasBeenPraise = false
-  handleSucces( success : boolean) {
+  handleSucces (success: boolean) {
     if (!this.successHasBeenPraise && success && this.validation) {
       this.successHasBeenPraise = true
-      this._snackBar.open("Bravo!", '', {
-        duration: 2 * 1000,
-      });
+      this._snackBar.open('Bravo!', '', {
+        duration: 2 * 1000
+      })
     }
   }
 }

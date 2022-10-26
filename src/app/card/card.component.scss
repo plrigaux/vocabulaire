@@ -9,8 +9,7 @@ $answerFontSize: large;
 
 .answerInput {
     font-size: $answerFontSize;
-    
-    width: 12em;
+    width: 100%;
 }
 
 #answerPrefix {
@@ -40,4 +39,12 @@ $answerFontSize: large;
     'wght' 400,
     'GRAD' 0,
     'opsz' 48
+}
+
+.prefix_label {
+    color: black;
+}
+
+.prefix_style {
+    padding-right: 1em;
 }

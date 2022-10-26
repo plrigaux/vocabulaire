@@ -9,7 +9,6 @@ import {
 } from '@angular/core'
 import { SequenceMatcher } from 'difflib-ts'
 
-
 @Component({
   selector: 'app-corrector',
   templateUrl: './corrector.component.html',
@@ -17,7 +16,7 @@ import { SequenceMatcher } from 'difflib-ts'
 })
 export class CorrectorComponent implements OnInit, OnChanges {
   private _given: string = ''
-  all_ok : boolean = false
+  all_ok: boolean = false
 
   @Input()
   set given (value: string) {
@@ -25,7 +24,7 @@ export class CorrectorComponent implements OnInit, OnChanges {
     this._given = v.trim().toLowerCase()
   }
 
-  @Output() successEvent = new EventEmitter<boolean>();
+  @Output() successEvent = new EventEmitter<boolean>()
 
   get given () {
     return this._given
@@ -51,36 +50,39 @@ export class CorrectorComponent implements OnInit, OnChanges {
 
   ngOnChanges (changes: SimpleChanges) {
     const log: string[] = []
+    let has_changed = false
     for (const propName in changes) {
       const changedProp = changes[propName]
       const to = JSON.stringify(changedProp.currentValue)
       if (changedProp.isFirstChange()) {
         console.log(`Initial value of ${propName} set to ${to}`)
+        has_changed = true
       } else {
         const from = JSON.stringify(changedProp.previousValue)
         console.log(`${propName} changed from ${from} to ${to}`)
+        has_changed = from == to
       }
     }
 
-    let correct_one = this.correct[0]
-    if (this.given == this.correct[1]) {
-      correct_one = this.correct[1]
-    }
+    if (has_changed) {
+      let correct_one = this.correct[0]
+      if (this.given == this.correct[1]) {
+        correct_one = this.correct[1]
+      }
 
-    this.all_ok = this.given_equals_correct()
-    
-    this.successEvent.emit(this.all_ok)
-    
-    
-    this.bigFunc(this.given, correct_one)
+      this.all_ok = this.given_equals_correct()
+
+      this.successEvent.emit(this.all_ok)
+
+      this.bigFunc(this.given, correct_one)
+    }
   }
 
-  given_equals_correct() : boolean {
+  given_equals_correct (): boolean {
     let resp = false
     this.correct.forEach(word => {
-      resp = resp || (this.given == word)
+      resp = resp || this.given == word
     })
-
 
     return resp
   }
