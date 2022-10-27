@@ -1,4 +1,15 @@
-<a mat-button href="cardcontrol" >Pratique</a><br/>
-<a mat-button href="vocabulaire">Vocabulaire</a><br/>
 <!--a mat-button href="speech" >Speech</a><br/>
 <a mat-button href="correctortest" >Test du correcteur</a><br/ -->
+
+<div *ngFor="let theme of voc_themes">
+  <h2>Theme {{theme.theme}}</h2>
+  <div >
+    <a *ngFor="let semaine of theme.semaines"
+      mat-button
+      (click)="practice(theme.theme, semaine.semaine)"
+      href="cardcontrol"
+    >
+      Semaine {{semaine.semaine}}
+    </a>
+  </div>
+</div>
