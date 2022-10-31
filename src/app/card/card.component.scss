@@ -1,65 +1,80 @@
+
+
 $answerFontSize: large;
 
 #__answerInput {
-    font-size: $answerFontSize;
-    background-color: darkgray;
-    border: 0;
-    width: 10em;
+  font-size: $answerFontSize;
+  background-color: darkgray;
+  border: 0;
+  width: 10em;
 }
 
 .answerInput {
-    font-size: $answerFontSize;
-    width: 100%;
+  font-size: $answerFontSize;
+  width: 100%;
 }
 
 #answerPrefix {
-    font-size: $answerFontSize;
-    margin-right: 0.5em;
-    align-self: center;
+  font-size: $answerFontSize;
+  margin-right: 0.5em;
+  align-self: center;
 }
 
 .answer {
-    margin: 1em 0 1em;
+  margin: 1em 0 1em;
 }
 
 #indice {
-    margin-top: 0.5em;
-    max-width: 30em;
+  margin-top: 0.5em;
+  max-width: 30em;
 }
 
 .answerLine {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .icon-hint {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
 .prefix_label {
-    color: black;
+  color: black;
 }
 
 .prefix_style {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 
 .corrector-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
+
+@mixin mix-toggle-custom($th) {
+  $color-config: mat.get-color-config($th);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+  /*PIZZA*/
+  .mat-button-toggle {
+    background-color: mat.get-color-from-palette($primary);
+    //color: mat-color($primary, 'default');
+    border-color: azure;
+
+    color: mat.get-color-from-palette($primary, 'default-contrast');
+  }
+
+  .mat-button-toggle-checked {
+    background-color: mat.get-color-from-palette($accent);
+    color: mat.get-color-from-palette($accent, 'default-contrast');
+  }
+}
+
+
 
