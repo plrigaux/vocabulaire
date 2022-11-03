@@ -241,7 +241,7 @@
         semaine: 4,
         groupes: [
           {
-            indice: "Le e muet à la fin d'un mot",
+            indice: "Le <i>e</i> muet à la fin d'un mot",
             mots: [
               {
                 mot: 'aventure',
@@ -253,7 +253,7 @@
               },
               {
                 mot: 'détective',
-                classe: 'NF'
+                classe: ['NF', 'NM']
               },
               {
                 mot: 'double',
@@ -265,7 +265,7 @@
               },
               {
                 mot: 'ile',
-                alt: "île",
+                alt: 'île',
                 classe: 'NF'
               },
               {
