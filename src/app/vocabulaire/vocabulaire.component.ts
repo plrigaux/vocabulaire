@@ -43,15 +43,21 @@ export class VocabulaireComponent implements OnInit {
   getClasse (mot: MotTI): string {
     let classe = ''
     if (Array.isArray(mot.classe)) {
-      console.warn('Claase array', mot)
+      //console.log('Claase array', mot)
+      for(let c of mot.classe) {
+        if (classe) {
+          classe += ", "
+        }
+        classe += this.getClasseDetail(c, mot)
+      }
     } else {
-      classe = this.getClasseDetail(mot.classe)
+      classe = this.getClasseDetail(mot.classe, mot)
     }
 
     return classe
   }
 
-  getClasseDetail (classe: string): string {
+  getClasseDetail (classe: string, mot: MotTI): string {
     let cls: string
     switch (classe) {
       case 'V':
@@ -72,9 +78,8 @@ export class VocabulaireComponent implements OnInit {
       case 'PRON':
         cls = 'Pronom'
         break
-
       default:
-        console.warn('getClasseDetail not found:', classe)
+        console.warn('getClasseDetail not found:', classe, "|", mot)
         cls = ''
     }
 

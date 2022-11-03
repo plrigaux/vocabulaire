@@ -8,6 +8,7 @@ import {
   Theme
 } from './vocabulaireInterfaces'
 import JSON5 from 'json5'
+import { marked } from 'marked'
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +42,7 @@ export class VocabulaireDataHandlerService {
             for (let s of semaines) {
               for (let g of s.groupes) {
                 const mots: MotTI[] = []
+                g.indice = marked.parseInline(g.indice)
                 for (let m of g.mots) {
                   crunchMot(m as Mot, g.indice, mots)
                 }
@@ -120,10 +122,6 @@ const createMotTI = (m: Mot, indice: string): MotTI => {
     indice: indice,
     genre: MotGenre.NA,
     nombre: MotNombre.NA
-  }
-
-  if (Array.isArray(newMot.classe)) {
-    console.log('ARRAY', newMot.mot, newMot.classe)
   }
 
   if (m.genre) {

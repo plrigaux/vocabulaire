@@ -112,7 +112,7 @@
         semaine: 2,
         groupes: [
           {
-            indice: 'Lettre finale muette: g, s ou t',
+            indice: 'Lettre finale muette: *g*, *s* ou *t*',
             mots: [
               {
                 mot: 'biscuit',
@@ -147,7 +147,7 @@
         semaine: 3,
         groupes: [
           {
-            indice: 'Le n devient m devant le b, le m et le p.',
+            indice: 'Le n devient _m_ devant le b, le m et le p.',
             mots: [
               {
                 mot: 'champion',
