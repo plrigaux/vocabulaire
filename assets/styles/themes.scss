@@ -1,14 +1,56 @@
 @use '@angular/material' as mat;
+@use 'sass:map';
 @import 'themes_variables';
-@include mat.core();  
+@include mat.core();
 
+
+
+@function print-map ( $map, $str: "" ) {
+  @each $k, $v in $map {
+    @if type-of($v) == map {
+      $str: "#{$str} \000D\000A #{$k}: ( #{print-map($v)} \000D\000A ), ";
+    }
+    @else {
+      $str: "#{$str} \000D\000A \0009 #{$k}: #{$v}, ";
+    }
+  } // each
+  @return $str;
+} 
+
+@mixin mix-toggle-custom($thclass, $th) {
+  $color-config: mat.get-color-config($th);
+
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+
+  $val: print-map($accent, "");
+
+  //@debug "Theme #{$thclass} accent #{$val}";
+  /*PIZZA*/
+  .mat-button-toggle {
+    background-color: mat.get-color-from-palette($primary);
+    color: mat.get-color-from-palette($primary, default-contrast);
+  }
+
+  .mat-button-toggle-checked {
+
+    $background-color : mat.get-color-from-palette($accent);
+    background-color: $background-color;
+
+    $color : mat.get-color-from-palette($accent, default-contrast);
+    color: $color!important;
+    //@debug "#{$thclass} bg col #{$background-color} col  #{$color} "
+  }
+}
 
 @each $thclass, $th in $all_themes {
-    @if $thclass == "" {
-        @include mat.all-component-themes($th);
-    } @else {
-        .#{$thclass} {
-            @include mat.all-component-themes($th);
-        }
+  @if $thclass == '' {
+    @include mat.all-component-themes($th);
+    @include mix-toggle-custom($thclass, $th)
+  } @else {
+    .#{$thclass} {
+      @include mat.all-component-themes($th);
+      @include mix-toggle-custom($thclass, $th)
     }
+  }
 }

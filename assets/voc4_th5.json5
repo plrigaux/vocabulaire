@@ -124,7 +124,7 @@
         semaine: 2,
         groupes: [
           {
-            indice: "À l'intérieur d'un   mot, le son [è] peut   s'écrire è, ê ou ai.",
+            indice: "À l'intérieur d'un   mot, le son [è] peut s'écrire è, ê ou ai.",
             mots: [
               {
                 mot: 'centimètre',
@@ -181,7 +181,7 @@
             ]
           },
           {
-            indice: "À la fin d'un mot, le son [è] s'écrit  le plus souvent et.",
+            indice: "À la fin d'un mot, le son [è] s'écrit le plus souvent et.",
             mots: [
               {
                 mot: 'bleuet',
@@ -198,7 +198,7 @@
               {
                 mot: 'secret',
                 classe: 'ADJ',
-                fem: 'secrète adj'
+                fem: 'secrète'
               },
               {
                 mot: 'sommet',
@@ -207,7 +207,7 @@
             ]
           },
           {
-            indice: "À la fin d'un mot,   le son [è] peut aussi   s'écrire ais.",
+            indice: "À la fin d'un mot, le son [è] peut aussi s'écrire ais.",
             mots: [
               {
                 mot: 'désormais',
@@ -221,7 +221,7 @@
         semaine: 3,
         groupes: [
           {
-            indice: 'Des consonnes qui   doublent : cc, pp,   rr, tt.',
+            indice: 'Des consonnes qui doublent : cc, pp, rr, tt.',
             mots: [
               {
                 mot: 'apparaître',
@@ -290,7 +290,7 @@
             ]
           },
           {
-            indice: "Le son [èt] à la fin  d'un mot s'écrit le   plus souvent ette.",
+            indice: "Le son [èt] à la fin  d'un mot s'écrit le plus souvent ette.",
             mots: [
               {
                 mot: 'bicyclette',
@@ -326,7 +326,7 @@
         semaine: 4,
         groupes: [
           {
-            indice: "Le son [ill] peut   s'écrire ill.",
+            indice: "Le son [ill] peut s'écrire ill.",
             mots: [
               {
                 mot: 'abeille',
@@ -372,7 +372,7 @@
             ]
           },
           {
-            indice: "Le son [ill] peut  s'écrire y.",
+            indice: "Le son [ill] peut s'écrire y.",
             mots: [
               {
                 mot: 'crayon',
