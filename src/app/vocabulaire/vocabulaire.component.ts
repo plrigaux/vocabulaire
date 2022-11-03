@@ -6,7 +6,6 @@ import { VocabulaireDataHandlerService } from './vocabulaire-data-handler.servic
 import { ThemeSetterService } from '../theme-setter.service'
 import { AppConfig, DEFAULT_CONFIG } from '../app-config'
 
-
 @Component({
   selector: 'app-vocabulaire',
   templateUrl: './vocabulaire.component.html',
@@ -14,20 +13,20 @@ import { AppConfig, DEFAULT_CONFIG } from '../app-config'
 })
 export class VocabulaireComponent implements OnInit {
   app_config: AppConfig = DEFAULT_CONFIG
-  step : number | null = null
+  step: number | null = null
 
   constructor (
     private configSrv: ThemeSetterService,
     private vocSrv: VocabulaireDataHandlerService
   ) {}
 
-  setStep(index: number | null) {
-    this.step = index;
+  setStep (index: number | null) {
+    this.step = index
   }
 
   get themes (): Theme[] {
     return this.vocSrv.getThemes()
-  } 
+  }
   ngOnInit (): void {
     this.configSrv.subscribe({
       next: async (config: AppConfig) => {
@@ -37,6 +36,49 @@ export class VocabulaireComponent implements OnInit {
     })
   }
 
+  getType (mot: MotTI): string {
+    return `${this.getClasse(mot)} ${this.getGenre(mot)}`
+  }
+
+  getClasse (mot: MotTI): string {
+    let classe = ''
+    if (Array.isArray(mot.classe)) {
+    } else {
+      classe = this.getClasseDetail(mot.classe)
+    }
+
+    return classe
+  }
+
+  getClasseDetail (classe: string): string {
+    let cls: string
+    switch (classe) {
+      case 'V':
+        cls = 'Verbe'
+        break
+      case 'ADJ':
+        cls = 'Adjectif'
+        break
+      case 'NOM':
+        cls = 'Nom'
+        break
+      case 'INV':
+        cls = 'Mot invariable'
+        break
+      case 'DET':
+        cls = 'Déterminant'
+        break
+      case 'PRON':
+        cls = 'Pronom'
+        break
+
+      default:
+        console.warn("getClasseDetail not found:", classe)
+        cls = ''
+    }
+
+    return cls
+  }
 
   getGenre (mot: MotTI): string {
     let genre
