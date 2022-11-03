@@ -7,7 +7,7 @@
         semaine: 1,
         groupes: [
           {
-            indice: 'La lettre S entre deux voyelles fait le son [z].',
+            indice: 'La lettre s entre deux voyelles fait le son [z].',
             mots: [
               {
                 mot: 'oser',
@@ -44,11 +44,11 @@
               },
               {
                 mot: 'dessous',
-                classe: 'NM'
+                classe: ['NM', 'INV']
               },
               {
                 mot: 'dessus',
-                classe: 'NM'
+                classe: ['NM', 'INV']
               },
               {
                 mot: 'messe',
@@ -116,7 +116,7 @@
               },
               {
                 mot: 'garde',
-                classe: 'NM'
+                classe: ['NM', 'NF']
               },
               {
                 mot: 'grave',

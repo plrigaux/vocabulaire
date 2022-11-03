@@ -43,6 +43,7 @@ export class VocabulaireComponent implements OnInit {
   getClasse (mot: MotTI): string {
     let classe = ''
     if (Array.isArray(mot.classe)) {
+      console.warn('Claase array', mot)
     } else {
       classe = this.getClasseDetail(mot.classe)
     }
@@ -73,7 +74,7 @@ export class VocabulaireComponent implements OnInit {
         break
 
       default:
-        console.warn("getClasseDetail not found:", classe)
+        console.warn('getClasseDetail not found:', classe)
         cls = ''
     }
 
@@ -88,6 +89,9 @@ export class VocabulaireComponent implements OnInit {
         break
       case MotGenre.MASCULIN:
         genre = 'Masculin'
+        break
+      case MotGenre.EPICENE:
+        genre = 'Masculin et Féminin'
         break
       default:
         genre = ''

@@ -28,7 +28,8 @@ type MotClasse =
 export enum MotGenre {
   NA = 0,
   MASCULIN = 1,
-  FEMININ = 2
+  FEMININ = 2,
+  EPICENE = 3
 }
 
 export enum MotNombre {

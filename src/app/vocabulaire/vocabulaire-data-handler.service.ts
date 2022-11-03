@@ -49,10 +49,10 @@ export class VocabulaireDataHandlerService {
             }
           }
 
-          if(t.mots) {
+          if (t.mots) {
             const mots: MotTI[] = []
             for (let m of t.mots) {
-              crunchMot(m as Mot, "", mots)
+              crunchMot(m as Mot, '', mots)
             }
             t.mots = mots
           }
@@ -122,6 +122,10 @@ const createMotTI = (m: Mot, indice: string): MotTI => {
     nombre: MotNombre.NA
   }
 
+  if (Array.isArray(newMot.classe)) {
+    console.log('ARRAY', newMot.mot, newMot.classe)
+  }
+
   if (m.genre) {
     newMot.genre = m.genre
   }
@@ -134,7 +138,7 @@ const createMotTI = (m: Mot, indice: string): MotTI => {
     newMot.alt = m.alt
   }
 
-  let formes_alternatives : string[] = m.mot.split('/')
+  let formes_alternatives: string[] = m.mot.split('/')
 
   if (formes_alternatives.length > 1) {
     newMot.mot = formes_alternatives[0]
@@ -154,15 +158,16 @@ const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
     console.warn("Le mot n'a pas de classe")
   }
 
+  const newClasse  = new Set<string>()
   classe.forEach(cls => {
     if (cls == 'NM') {
-      newMot.classe = 'NOM'
-      newMot.genre = MotGenre.MASCULIN
-    }
-
-    if (cls == 'NF') {
-      newMot.classe = 'NOM'
-      newMot.genre = MotGenre.FEMININ
+      newClasse.add('NOM')
+      newMot.genre = setGenre(newMot.genre, MotGenre.MASCULIN)
+    } else if (cls == 'NF') {
+      newClasse.add('NOM')
+      newMot.genre = setGenre(newMot.genre, MotGenre.FEMININ)
+    } else {
+      newClasse.add(cls)
     }
 
     if (m.fem) {
@@ -170,7 +175,16 @@ const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
       newMot2.mot = m.fem
       newMot2.genre = MotGenre.FEMININ
       newMot.genre = MotGenre.MASCULIN
+      newMot2.classe = cls
       mots.push(newMot2)
     }
   })
+
+  const newClasseArr = [...newClasse]
+  newMot.classe = newClasseArr.length > 1 ? newClasseArr : newClasseArr[0]
+}
+
+const setGenre = (current_genre : MotGenre, new_genre : MotGenre) : MotGenre => {
+  let genre : MotGenre = current_genre ? current_genre : MotGenre.NA
+  return genre | new_genre
 }
