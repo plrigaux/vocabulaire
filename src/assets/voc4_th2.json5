@@ -147,7 +147,7 @@
         semaine: 3,
         groupes: [
           {
-            indice: 'Le n devient _m_ devant le b, le m et le p.',
+            indice: 'Le n devient _m_ devant le *b*, le *m* et le *p*.',
             mots: [
               {
                 mot: 'champion',
@@ -241,7 +241,7 @@
         semaine: 4,
         groupes: [
           {
-            indice: "Le <i>e</i> muet à la fin d'un mot",
+            indice: "Le *e* muet à la fin d'un mot",
             mots: [
               {
                 mot: 'aventure',
@@ -344,7 +344,7 @@
         semaine: 5,
         groupes: [
           {
-            indice: "Le son [je] s'écrit le plus souvent ge à la fin d'un mot.",
+            indice: "Le son [je] s'écrit le plus souvent *ge* à la fin d'un mot.",
             mots: [
               {
                 mot: 'ange',
@@ -389,7 +389,7 @@
             ]
           },
           {
-            indice: "Le son [ji] s'écrit le plus souvent gi.",
+            indice: "Le son [ji] s'écrit le plus souvent *gi*.",
             mots: [
               {
                 mot: 'agir',
@@ -414,7 +414,7 @@
             ]
           },
           {
-            indice: "Le son [j] devant a, o et u s'écrit j.",
+            indice: "Le son [j] devant *a*, *o* et *u* s'écrit *j*.",
             mots: [
               {
                 mot: 'ajouter',
