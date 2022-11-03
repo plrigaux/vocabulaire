@@ -3,9 +3,10 @@
 
 <div *ngFor="let theme of voc_themes">
   <h2>Theme {{theme.theme}}</h2>
-  <div >
-    <a *ngFor="let semaine of theme.semaines"
-      mat-button
+  <div class="semaine-chooser">
+    <a
+      *ngFor="let semaine of theme.semaines"
+      mat-raised-button
       (click)="practice(theme.theme, semaine.semaine)"
       href="cardcontrol"
     >

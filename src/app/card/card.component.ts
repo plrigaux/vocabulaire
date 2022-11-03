@@ -18,6 +18,7 @@ import {
 import { VoiceControlService } from '../voice-control/voice-control.service'
 import { MatSnackBar } from '@angular/material/snack-bar'
 
+
 /** Error when invalid control is dirty, touched, or submitted. */
 
 @Component({
@@ -51,6 +52,8 @@ export class CardComponent implements OnInit {
 
   @Output()
   isWriting = new EventEmitter<boolean>()
+
+  showIndice = false
 
   constructor (
     public dialog: MatDialog,
@@ -242,5 +245,10 @@ export class CardComponent implements OnInit {
         duration: 2 * 1000
       })
     }
+  }
+
+  showIndiceToggle ($event: MouseEvent) {
+    console.log($event)
+    this.showIndice = this.showIndice ? false : true
   }
 }

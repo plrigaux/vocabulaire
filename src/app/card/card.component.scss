@@ -76,5 +76,10 @@ $answerFontSize: large;
   }
 }
 
+.controler-section {
+  display: flex;
+}
 
-
+.controler-section-child { 
+  margin-left: 1em;
+}

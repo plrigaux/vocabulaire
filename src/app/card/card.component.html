@@ -18,52 +18,48 @@
       <span matPrefix [innerHTML]="prefix" class="prefix_style"></span>
     </mat-form-field>
   </div>
-  <!-- p id="indice" [innerHTML]="getIndice()"></p -->
+  <p *ngIf="showIndice" id="indice" [innerHTML]="getIndice()"></p>
 </div>
-<span>&nbsp;&nbsp;&nbsp;</span>
-<button
-  mat-raised-button
-  color="primary"
-  (click)="validate()"
-  [disabled]="validationDisable()"
->
-  Valider
-</button>
-<span>&nbsp;&nbsp;&nbsp;</span>
-<button
-  mat-mini-fab
-  color="accent"
-  (click)="rePlay()"
-  matTooltip="Rejouer"
-  [disabled]="playDisable()"
->
-  <mat-icon>play_circle_filled</mat-icon>
-</button>
-&nbsp;
-<button
-  mat-mini-fab
-  color="accent"
-  [matTooltip]="getIndice()"
-  class="icon-hint"
->
-  <mat-icon
-    class="icon-hint"
-    fontSet="material-symbols-outlined"
-    class="icon-hint"
-    >help</mat-icon
+<div class="controler-section">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="validate()"
+    [disabled]="validationDisable()"
+    class="controler-section-child"
   >
-</button>
-<mat-button-toggle-group name="ingredients" aria-label="Ingredients" multiple >
-  <mat-button-toggle value="flour" color="accent">
-    <mat-icon
-      class="icon-hint"
-      fontSet="material-symbols-outlined"
-      class="icon-hint"
+    Valider
+  </button>
+  <button
+    mat-mini-fab
+    color="accent"
+    (click)="rePlay()"
+    matTooltip="Rejouer"
+    [disabled]="playDisable()"
+    class="controler-section-child"
+  >
+    <mat-icon>play_circle_filled</mat-icon>
+  </button>
 
-      >help</mat-icon
-    ></mat-button-toggle
+  <mat-button-toggle-group
+    name="ingredients"
+    aria-label="Ingredients"
+    multiple
+    class="controler-section-child"
+    
   >
-</mat-button-toggle-group>
+    <mat-button-toggle value="flour" color="accent" 
+    (click)="showIndiceToggle($event)">
+      <mat-icon
+        class="icon-hint"
+        fontSet="material-symbols-outlined"
+        class="icon-hint"
+        matTooltip="Indice"
+        >help</mat-icon
+      ></mat-button-toggle
+    >
+  </mat-button-toggle-group>
+</div>
 <!-- mat-icon class="icon-hint" fontSet="material-symbols-outlined" class="icon-hint">help</mat-icon>
 <span class="material-symbols-outlined">
   home
