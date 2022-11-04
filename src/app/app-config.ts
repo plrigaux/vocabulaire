@@ -31,6 +31,6 @@ export const DEFAULT_CONFIG: AppConfig = {
 }
 
 export interface ThemeSemaine {
-  theme: number
+  theme: number | string
   semaine: number
 }

@@ -8,8 +8,13 @@ import {
   VolumeDialogData
 } from './voice-control/voice-control.component'
 import { VoiceControlService } from './voice-control/voice-control.service'
-import { Theme } from './vocabulaire/vocabulaireInterfaces'
-import { AppConfig, COLOR_THEMES, DEFAULT_CONFIG, ThemeSemaine } from './app-config'
+import { Semaine, Theme } from './vocabulaire/vocabulaireInterfaces'
+import {
+  AppConfig,
+  COLOR_THEMES,
+  DEFAULT_CONFIG,
+  ThemeSemaine
+} from './app-config'
 import { VocabulaireDataHandlerService } from './vocabulaire/vocabulaire-data-handler.service'
 
 @Component({
@@ -23,8 +28,8 @@ export class AppComponent implements OnInit, OnDestroy {
     private configSrv: ThemeSetterService,
     public dialog: MatDialog,
     public voiceService: VoiceControlService,
-    private vocSrv: VocabulaireDataHandlerService) {}
-
+    private vocSrv: VocabulaireDataHandlerService
+  ) {}
 
   get voc_themes (): Theme[] {
     return this.vocSrv.getThemes()
@@ -102,8 +107,79 @@ export class AppComponent implements OnInit, OnDestroy {
         return true
       }
     }
-
     return false
   }
-}
 
+  nextTheme () {
+    const curTheme = this.app_config.theme_semaine.theme
+    const curSemaine = this.app_config.theme_semaine.semaine
+
+    let theme = this.voc_themes.find(t => t.theme == curTheme)
+
+    if (!theme || !theme.semaines) {
+      return
+    }
+
+    const semaines: Semaine[] = theme.semaines
+
+    let semaineIndex = semaines.findIndex(s => s.semaine == curSemaine)
+
+    if (semaineIndex < semaines.length - 1) {
+      semaineIndex += 1
+      this.setThemeSemaine(theme.theme, semaines[semaineIndex].semaine)
+    } else {
+      const themeIndex = this.voc_themes.findIndex(t => t.theme == curTheme)
+
+      if (themeIndex < this.voc_themes.length - 1) {
+        theme = this.voc_themes[themeIndex + 1]
+        if (theme.semaines) {
+          semaineIndex = 0
+          this.setThemeSemaine(
+            theme.theme,
+            theme.semaines[semaineIndex].semaine
+          )
+        }
+      }
+    }
+  }
+
+  previousTheme () {
+    const curTheme = this.app_config.theme_semaine.theme
+    const curSemaine = this.app_config.theme_semaine.semaine
+
+    let theme = this.voc_themes.find(t => t.theme == curTheme)
+
+    if (!theme || !theme.semaines) {
+      return
+    }
+
+    const semaines: Semaine[] = theme.semaines
+
+    let semaineIndex = semaines.findIndex(s => s.semaine == curSemaine)
+
+    if (semaineIndex > 0) {
+      semaineIndex -= 1
+      this.setThemeSemaine(theme.theme, semaines[semaineIndex].semaine)
+    } else {
+      const themeIndex = this.voc_themes.findIndex(t => t.theme == curTheme)
+
+      if (themeIndex > 0) {
+        theme = this.voc_themes[themeIndex - 1]
+        if (theme.semaines) {
+          semaineIndex = theme.semaines.length - 1
+          this.setThemeSemaine(
+            theme.theme,
+            theme.semaines[semaineIndex].semaine
+          )
+        }
+      }
+    }
+  }
+
+  setThemeSemaine (theme: number | string, semaine: number) {
+    this.app_config.theme_semaine.theme = theme
+    this.app_config.theme_semaine.semaine = semaine
+
+    this.configSrv.next(this.app_config)
+  }
+}
