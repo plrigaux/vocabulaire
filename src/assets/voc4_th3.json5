@@ -20,7 +20,8 @@
               {
                 mot: 'présence',
                 classe: 'NF'
-              },     {
+              },
+              {
                 mot: 'surprise',
                 classe: 'V'
               },
@@ -64,7 +65,8 @@
               {
                 mot: 'mission',
                 classe: 'NF'
-              },  {
+              },
+              {
                 mot: 'passé',
                 classe: 'NM'
               },
@@ -92,7 +94,7 @@
         semaine: 2,
         groupes: [
           {
-            indice: "Le son [gn] s'écrit gn.",
+            indice: "Le son [gn] s'écrit *gn*.",
             mots: [
               {
                 mot: 'éloigner',
@@ -114,7 +116,7 @@
             ]
           },
           {
-            indice: 'La lettre g fait le son [g] devant a, o, u et devant une consonne.',
+            indice: 'La lettre *g* fait le son [g] devant *a*, *o*, *u* et devant une consonne.',
             mots: [
               {
                 mot: 'à gauche',
@@ -133,6 +135,18 @@
                 classe: ['NM', 'NF']
               },
               {
+                mot: 'gardien',
+                classe: 'NM'
+              },
+              {
+                mot: 'gardienne',
+                classe: 'NF'
+              },
+              {
+                mot: 'globe',
+                classe: 'NM'
+              },
+              {
                 mot: 'grave',
                 classe: 'ADJ'
               },
@@ -143,11 +157,28 @@
               {
                 mot: 'ogre',
                 classe: 'NM'
+              },
+              {
+                mot: 'ogresse',
+                classe: 'NF'
+              },
+              {
+                mot: 'rigoler',
+                classe: 'V'
               }
             ]
           },
           {
-            indice: 'Devant un e ou un i, il faut ajouter un u pour entendre le son [g].',
+            indice: 'Mot rebelle:',
+            mots: [
+              {
+                mot: 'seconde',
+                classe: 'NF'
+              }
+            ]
+          },
+          {
+            indice: 'Devant un *e* ou un *i*, il faut ajouter un *u* pour entendre le son [g].',
             mots: [
               {
                 mot: 'fatiguer',
@@ -160,6 +191,10 @@
               {
                 mot: 'mangue',
                 classe: 'NF'
+              },
+              {
+                mot: 'téléguider',
+                classe: 'V'
               }
             ]
           }
@@ -169,14 +204,15 @@
         semaine: 3,
         groupes: [
           {
-            indice: "Le son [é] à la fin d'un mot s'écrit souvent er.",
+            indice: "Le son [é] à la fin d'un mot s'écrit souvent *er*.",
             mots: [
               {
                 mot: 'bouger',
                 classe: 'V'
               },
               {
-                mot: 'diner/dîner',
+                mot: 'diner',
+                alt: 'dîner',
                 classe: ['NM', 'V']
               },
               {
@@ -193,6 +229,10 @@
               },
               {
                 mot: 'pleurer',
+                classe: 'V'
+              },
+              {
+                mot: 'prier',
                 classe: 'V'
               },
               {
@@ -214,7 +254,7 @@
             ]
           },
           {
-            indice: "Le son [é] la fin d'un nom féminin s'écrit le plus souvent ée.",
+            indice: "Le son [é] la fin d'un nom féminin s'écrit le plus souvent *ée*.",
             mots: [
               {
                 mot: 'arrivée',
@@ -261,7 +301,7 @@
         semaine: 4,
         groupes: [
           {
-            indice: 'Des consonnes qui doublent ff, ll, mm, nn.',
+            indice: 'Des consonnes qui doublent *ff*, *ll*, *mm*, *nn*.',
             mots: [
               {
                 mot: 'ancien',
@@ -271,6 +311,10 @@
               {
                 mot: 'annoncer',
                 classe: 'V'
+              },
+              {
+                mot: 'bulle',
+                classe: 'NF'
               },
               {
                 mot: 'difficile',
@@ -306,6 +350,10 @@
                 classe: 'V'
               },
               {
+                mot: 'nouvelle',
+                classe: 'NF'
+              },
+              {
                 mot: 'pardonner',
                 classe: 'V'
               },
@@ -328,7 +376,7 @@
             ]
           },
           {
-            indice: "Le son [ien] s'écrit le plus souvent ien,",
+            indice: "Le son [ien] s'écrit le plus souvent *ien*.",
             mots: [
               {
                 mot: 'le mien',

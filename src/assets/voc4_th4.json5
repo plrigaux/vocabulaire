@@ -7,7 +7,7 @@
         semaine: 1,
         groupes: [
           {
-            indice: "Le son [k] s'écrit le plus souvent qu et presque toujours que en fin de mot.",
+            indice: "Le son [k] s'écrit le plus souvent *qu* et presque toujours *que* en fin de mot.",
             mots: [
               {
                 mot: 'bibliothèque',
@@ -42,8 +42,37 @@
                 classe: 'INV'
               },
               {
+                mot: "jusqu'au",
+                classe: 'INV'
+              },
+              {
+                mot: "jusqu'aux",
+                classe: 'INV',
+                nombre: 2
+              },
+              {
                 mot: 'lequel',
-                classe: 'PRON'
+                classe: 'PRON',
+                genre: 1,
+                nombre: 1
+              },
+              {
+                mot: 'laquelle',
+                classe: 'PRON',
+                genre: 2,
+                nombre: 1
+              },
+              {
+                mot: 'lesquels',
+                classe: 'PRON',
+                genre: 1,
+                nombre: 2
+              },
+              {
+                mot: 'lesquelles',
+                classe: 'PRON',
+                genre: 2,
+                nombre: 2
               },
               {
                 mot: 'marquer',
@@ -112,7 +141,7 @@
         semaine: 2,
         groupes: [
           {
-            indice: "Le son [eur] à la fin d'un   mot s'écrit le plus souvent eur.",
+            indice: "Le son [eur] à la fin d'un   mot s'écrit le plus souvent *eur*.",
             mots: [
               {
                 mot: 'chaleur',
@@ -147,13 +176,23 @@
                 classe: 'PRON'
               },
               {
+                mot: 'la leur',
+                classe: 'PRON',
+                genre: 2
+              },
+              {
+                mot: 'les leurs',
+                classe: 'PRON',
+                nombre: 2
+              },
+              {
                 mot: 'odeur',
                 classe: 'NF'
               }
             ]
           },
           {
-            indice: "Le son [eu] à la fin d'un adjectif masculin s'écrit le plus souvent eux.",
+            indice: "Le son [eu] à la fin d'un adjectif masculin s'écrit le plus souvent *eux*.",
             mots: [
               {
                 mot: 'affreux',
@@ -203,25 +242,48 @@
             ]
           },
           {
-            indice: "Le son [al] à la fin d'un mot s'écrit le plus souvent al.",
+            indice: "Le son [al] à la fin d'un mot s'écrit le plus souvent *al*.",
             mots: [
               {
                 mot: 'amical',
                 classe: 'ADJ',
-                fem: 'amicales'
+                fem: 'amicale'
+              },
+              {
+                mot: 'amicaux',
+                classe: 'ADJ',
+                fem: 'amicales',
+                nombre: 2
               },
               {
                 mot: 'familial',
                 classe: 'ADJ',
-                fem: 'familiales'
+                fem: 'familiale'
+              },
+              {
+                mot: 'familiaux',
+                classe: 'ADJ',
+                fem: 'familiales',
+                nombre: 2
               },
               {
                 mot: 'médical',
                 classe: 'ADJ',
-                fem: 'médicales'
+                fem: 'médicale'
+              },
+              {
+                mot: 'médicaux',
+                classe: 'ADJ',
+                fem: 'médicales',
+                nombre: 2
               },
               {
                 mot: 'normal',
+                classe: 'ADJ',
+                fem: 'normale'
+              },
+              {
+                mot: 'normaux',
                 classe: 'ADJ',
                 fem: 'normales'
               }
@@ -234,7 +296,7 @@
         semaine: 3,
         groupes: [
           {
-            indice: 'Le h muet',
+            indice: 'Le *h* muet',
             mots: [
               {
                 mot: 'avant-hier',
@@ -295,7 +357,7 @@
             ]
           },
           {
-            indice: "Le son [ch] s'écrit ch.",
+            indice: "Le son [ch] s'écrit *ch*.",
             mots: [
               {
                 mot: 'brioche',
@@ -329,7 +391,7 @@
         semaine: 4,
         groupes: [
           {
-            indice: "Le son [f] s'écrit le plus souvent f.",
+            indice: "Le son [f] s'écrit le plus souvent *f*.",
             mots: [
               {
                 mot: 'bref',
@@ -378,8 +440,12 @@
               },
               {
                 mot: 'préféré',
-                classe: 'ADJ',
-                fem: 'préférée'
+                classe: ['ADJ', 'NM']
+              },
+              {
+                mot: 'préférée',
+                classe: ['ADJ', 'NF'],
+                genre: 2
               },
               {
                 mot: 'profiter',
@@ -400,7 +466,7 @@
             ]
           },
           {
-            indice: "Le son [f] s'écrit parfois ph.",
+            indice: "Le son [f] s'écrit parfois *ph*.",
             mots: [
               {
                 mot: 'catastrophe',
@@ -426,11 +492,33 @@
         semaine: 5,
         groupes: [
           {
-            indice: "Le son [o] s'écrit au ou o au début d'un mot.",
+            indice: "Le son [o] s'écrit *au* ou *o* au début d'un mot.",
             mots: [
               {
                 mot: 'aube',
                 classe: 'NF'
+              },
+              {
+                mot: 'aucun',
+                classe: 'DET'
+              },
+              {
+                mot: 'aucune',
+                classe: 'DET',
+                genre: 2,
+                nombre: 1
+              },
+              {
+                mot: 'aucuns',
+                classe: 'DET',
+                genre: 1,
+                nombre: 2
+              },
+              {
+                mot: 'aucunes',
+                classe: 'DET',
+                genre: 2,
+                nombre: 2
               },
               {
                 mot: 'auprès de',
@@ -459,7 +547,7 @@
             ]
           },
           {
-            indice: "Le son [o] s'écrit o, ô ou au à l'intérieur d'un mot.",
+            indice: "Le son [o] s'écrit *o*, *ô* ou *au* à l'intérieur d'un mot.",
             mots: [
               {
                 mot: 'adorer',
@@ -492,7 +580,7 @@
             ]
           },
           {
-            indice: "Le son [o] s'écrit le plus souvent eau à la fin d'un mot.",
+            indice: "Le son [o] s'écrit le plus souvent *eau* à la fin d'un mot.",
             mots: [
               {
                 mot: 'anneau',
