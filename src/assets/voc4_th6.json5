@@ -7,7 +7,7 @@
         semaine: 1,
         groupes: [
           {
-            indice: "Le son [in] s'écrit le plus souvent in   au début d'un mot.",
+            indice: "Le son [in] s'écrit le plus souvent *in* au début d'un mot.",
             mots: [
               {
                 mot: 'infini',
@@ -55,7 +55,7 @@
             ]
           },
           {
-            indice: "Le son [in] s'écrit souvent in ou ain à la fin d'un mot.",
+            indice: "Le son [in] s'écrit souvent *in* ou *ain* à la fin d'un mot.",
             mots: [
               {
                 mot: 'afin de',
@@ -75,7 +75,7 @@
               },
               {
                 mot: 'médecin',
-                classe: 'NM'
+                classe: ['NM', 'NF']
               },
               {
                 mot: 'nain',
@@ -107,7 +107,12 @@
           },
           {
             indice: 'Mot rebelle:',
-            mots: []
+            mots: [
+              {
+                mot: 'plein de',
+                classe: 'DET'
+              }
+            ]
           }
         ]
       },
@@ -115,7 +120,7 @@
         semaine: 2,
         groupes: [
           {
-            indice: "Le son [man] à la fin d'un mot s'écrit presque toujours ment.",
+            indice: "Le son [man] à la fin d'un mot s'écrit presque toujours *ment*.",
             mots: [
               {
                 mot: 'absolument',
@@ -155,7 +160,11 @@
                 classe: 'INV'
               },
               {
-                mot: '',
+                mot: 'justement',
+                classe: 'INV'
+              },
+              {
+                mot: 'malheureusement',
                 classe: 'INV'
               },
               {
@@ -175,6 +184,10 @@
                 classe: 'INV'
               },
               {
+                mot: 'simplement',
+                classe: 'INV'
+              },
+              {
                 mot: 'sûrement',
                 classe: 'INV',
                 alt: 'surement'
@@ -182,7 +195,7 @@
             ]
           },
           {
-            indice: "Le son [sion] à la fin d'un mot s'écrit presque toujours tion.",
+            indice: "Le son [sion] à la fin d'un mot s'écrit presque toujours *tion*.",
             mots: [
               {
                 mot: 'direction',
@@ -208,7 +221,7 @@
         semaine: 3,
         groupes: [
           {
-            indice: "Le son [t] à la fin d'un mot s'écrit le plus souvent te.",
+            indice: "Le son [t] à la fin d'un mot s'écrit le plus souvent *te*.",
             mots: [
               {
                 mot: 'à droite',
@@ -253,11 +266,15 @@
               {
                 mot: 'poste',
                 classe: 'NF'
+              },
+              {
+                mot: 'reste',
+                classe: 'NM'
               }
             ]
           },
           {
-            indice: 'Lettre finale muette: t',
+            indice: 'Lettre finale muette: *t*',
             mots: [
               {
                 mot: 'bénévolat',
@@ -282,6 +299,10 @@
               {
                 mot: 'endroit',
                 classe: 'NM'
+              },
+              {
+                mot: 'pont',
+                classe: 'NM'
               }
             ]
           }
@@ -291,7 +312,7 @@
         semaine: 4,
         groupes: [
           {
-            indice: "Le son [ir] s'écrit le plus souvent ir à la fin  d'un verbe à l'infinitif.",
+            indice: "Le son [ir] s'écrit le plus souvent *ir* à la fin  d'un verbe à l'infinitif.",
             mots: [
               {
                 mot: 'contenir',
@@ -345,15 +366,16 @@
             ]
           },
           {
-            indice: "Le son [oir] s'écrit le plus souvent oir à la fin d'un verbe à l'infinitif.",
+            indice: "Le son [oir] s'écrit le plus souvent *oir* à la fin d'un verbe à l'infinitif.",
             mots: [
               {
                 mot: 'apercevoir',
                 classe: 'V'
               },
               {
-                mot: 'asseoir',
-                classe: 'V'
+                mot: 'assoir',
+                classe: 'V',
+                alt: 'asseoir'
               },
               {
                 mot: 'pouvoir',
@@ -366,7 +388,7 @@
             ]
           },
           {
-            indice: "Le son [uir] s'écrit le plus souvent uire à la fin d'un verbe à l'infinitif.",
+            indice: "Le son [uir] s'écrit le plus souvent *uire* à la fin d'un verbe à l'infinitif.",
             mots: [
               {
                 mot: 'conduire',
@@ -383,7 +405,7 @@
             ]
           },
           {
-            indice: "Le son [endre] s'écrit le plus souvent endre à la fin d'un verbe",
+            indice: "Le son [endre] s'écrit le plus souvent *endre* à la fin d'un verbe",
             mots: [
               {
                 mot: 'vendre',
@@ -401,7 +423,7 @@
         semaine: 5,
         groupes: [
           {
-            indice: 'Le s final muet',
+            indice: 'Le *s* final muet',
             mots: [
               {
                 mot: 'cas',
@@ -414,7 +436,12 @@
               {
                 mot: 'toutefois',
                 classe: 'INV'
-              },
+              }
+            ]
+          },
+          {
+            indice: 'Le *x* final muet',
+            mots: [
               {
                 mot: 'croix',
                 classe: 'NF'
@@ -426,7 +453,7 @@
             ]
           },
           {
-            indice: 'Le t final muet',
+            indice: 'Le *t* final muet',
             mots: [
               {
                 mot: 'debout',
