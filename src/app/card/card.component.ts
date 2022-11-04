@@ -187,9 +187,11 @@ export class CardComponent implements OnInit {
     return mot.mot
   }
 
+  voyelRegEx = /[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœAÁÀÂÄÃÅEÉÈÊËIÍÌÎÏOÓÒÔÖÕUÚÙÛÜYÝŸ]/
+  
   private apostrophe (mot: string, genre: MotGenre) {
     let text = ''
-    const feminin = genre == MotGenre.FEMININ
+    const feminin = genre == MotGenre.FEMININ || genre == MotGenre.EPICENE
     if (this.article == 'unune') {
       let determinant = feminin ? 'une' : 'un'
       this._prefix = determinant + ' '
@@ -199,7 +201,7 @@ export class CardComponent implements OnInit {
       let premiereLettre = mot.charAt(0)
 
       if (
-        /[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœAÁÀÂÄÃÅEÉÈÊËIÍÌÎÏOÓÒÔÖÕUÚÙÛÜYÝŸ]/.test(
+        this.voyelRegEx.test(
           premiereLettre
         )
       ) {

@@ -3,7 +3,7 @@ import {
   Theme,
   Semaine,
   Groupe,
-  MotTI,
+  MotTI
 } from '../vocabulaire/vocabulaireInterfaces'
 import { CardComponent } from '../card/card.component'
 
@@ -73,7 +73,7 @@ export class CardcontrolComponent implements OnInit {
     return []
   }
 
-  shuffleArray (array: any | null = null) {
+  private shuffleArray (array: any | null = null) {
     if (!this.shuffle) {
       return
     }
@@ -133,6 +133,13 @@ export class CardcontrolComponent implements OnInit {
 
     this.semaine = sem
 
+    this.loadMots()
+  }
+
+  private loadMots () {
+    if (!this.semaine) {
+      return
+    }
     this.mots = []
     this.motIndex = -1
     this.semaine.groupes.forEach((group: Groupe) => {
@@ -144,7 +151,14 @@ export class CardcontrolComponent implements OnInit {
   onChangeShuffleToggle (event: MatSlideToggleChange) {
     console.log(event)
 
+    if (!this.shuffle) {
+      this.loadMots();
+      return
+    }
+
     this.shuffleArray()
+    this.motIndex = -1
+    this.next()
   }
 
   next () {
