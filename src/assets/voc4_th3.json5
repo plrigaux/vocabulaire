@@ -7,8 +7,12 @@
         semaine: 1,
         groupes: [
           {
-            indice: 'La lettre s entre deux voyelles fait le son [z].',
+            indice: 'La lettre *s* entre deux voyelles fait le son [z].',
             mots: [
+              {
+                mot: 'besoin',
+                classe: 'V'
+              },
               {
                 mot: 'oser',
                 classe: 'V'
@@ -16,6 +20,9 @@
               {
                 mot: 'présence',
                 classe: 'NF'
+              },     {
+                mot: 'surprise',
+                classe: 'V'
               },
               {
                 mot: 'reposer',
@@ -28,7 +35,7 @@
             ]
           },
           {
-            indice: 'Il faut écrire ss pour entendre le son [S].',
+            indice: 'Il faut écrire *ss* pour entendre le son [s].',
             mots: [
               {
                 mot: 'assurer',
@@ -57,6 +64,9 @@
               {
                 mot: 'mission',
                 classe: 'NF'
+              },  {
+                mot: 'passé',
+                classe: 'NM'
               },
               {
                 mot: 'presser',
@@ -69,6 +79,10 @@
               {
                 mot: 'repasser',
                 classe: 'V'
+              },
+              {
+                mot: 'tresse',
+                classe: 'NF'
               }
             ]
           }
