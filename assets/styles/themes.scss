@@ -46,11 +46,11 @@
 @each $thclass, $th in $all_themes {
   @if $thclass == '' {
     @include mat.all-component-themes($th);
-    @include mix-toggle-custom($thclass, $th)
+    //@include mix-toggle-custom($thclass, $th)
   } @else {
     .#{$thclass} {
       @include mat.all-component-themes($th);
-      @include mix-toggle-custom($thclass, $th)
+      //@include mix-toggle-custom($thclass, $th)
     }
   }
 }
