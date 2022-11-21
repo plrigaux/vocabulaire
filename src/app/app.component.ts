@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog'
-import { MatLegacyRadioChange as MatRadioChange } from '@angular/material/legacy-radio'
+import { MatDialog as MatDialog } from '@angular/material/dialog'
+import { MatRadioChange as MatRadioChange } from '@angular/material/radio'
 import { Subscription } from 'rxjs'
 import { ThemeSetterService } from './theme-setter.service'
 import {

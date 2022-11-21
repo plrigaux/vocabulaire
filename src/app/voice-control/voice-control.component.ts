@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
-import { MatLegacySelectChange as MatSelectChange } from '@angular/material/legacy-select';
+import { MatDialogRef  } from '@angular/material/dialog';
+import { MatSelectChange as MatSelectChange } from '@angular/material/select';
 import { VoiceControlService } from './voice-control.service';
 
 
