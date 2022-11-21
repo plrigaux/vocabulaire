@@ -10,13 +10,13 @@ import {
   SimpleChange
 } from '@angular/core'
 import { Mot, MotGenre, MotTI } from '../vocabulaire/vocabulaireInterfaces'
-import { MatDialog } from '@angular/material/dialog'
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog'
 import {
   VoiceControlComponent,
   VolumeDialogData
 } from '../voice-control/voice-control.component'
 import { VoiceControlService } from '../voice-control/voice-control.service'
-import { MatSnackBar } from '@angular/material/snack-bar'
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar'
 
 
 /** Error when invalid control is dirty, touched, or submitted. */

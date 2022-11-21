@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import { MatRadioChange } from '@angular/material/radio'
+import { MatLegacyRadioChange as MatRadioChange } from '@angular/material/legacy-radio'
 import { Subscription } from 'rxjs'
 import { AppConfig, DEFAULT_CONFIG } from '../app-config'
 import { ThemeSetterService } from '../theme-setter.service'

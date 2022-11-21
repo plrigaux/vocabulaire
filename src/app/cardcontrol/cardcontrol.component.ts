@@ -7,7 +7,7 @@ import {
 } from '../vocabulaire/vocabulaireInterfaces'
 import { CardComponent } from '../card/card.component'
 
-import { MatSlideToggleChange } from '@angular/material/slide-toggle'
+import { MatLegacySlideToggleChange as MatSlideToggleChange } from '@angular/material/legacy-slide-toggle'
 import { AppConfig, DEFAULT_CONFIG, ThemeSemaine } from '../app-config'
 import { ThemeSetterService } from '../theme-setter.service'
 import { VocabulaireDataHandlerService } from '../vocabulaire/vocabulaire-data-handler.service'
