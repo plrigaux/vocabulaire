@@ -9,7 +9,7 @@ import {
   SimpleChanges,
   SimpleChange
 } from '@angular/core'
-import { Mot, MotGenre, MotTI } from '../vocabulaire/vocabulaireInterfaces'
+import { Mot, MotGenre, MotNombre, MotTI } from '../vocabulaire/vocabulaireInterfaces'
 import { MatDialog as MatDialog } from '@angular/material/dialog'
 import {
   VoiceControlComponent,
@@ -43,6 +43,7 @@ export class CardComponent implements OnInit {
   _prefix = ''
   selectedVoice: SpeechSynthesisVoice | null = null
   validation: boolean = false
+
 
   @Input()
   article: 'unune' | 'lela' | null = null
@@ -156,7 +157,7 @@ export class CardComponent implements OnInit {
     let cls = Array.isArray(mot.classe) ? mot.classe[0] : mot.classe
     switch (cls) {
       case 'NOM':
-        text = this.apostrophe(mot.mot, mot.genre)
+        text = this.apostrophe(mot.mot, mot.genre, mot.nombre)
         break
       case 'ADJ':
         text = this.adjective(mot)
@@ -189,17 +190,24 @@ export class CardComponent implements OnInit {
 
   voyelRegEx = /[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœAÁÀÂÄÃÅEÉÈÊËIÍÌÎÏOÓÒÔÖÕUÚÙÛÜYÝŸ]/
   
-  private apostrophe (mot: string, genre: MotGenre) {
+  private apostrophe (mot: string, genre: MotGenre, nombre: MotNombre) {
     let text = ''
     const feminin = genre == MotGenre.FEMININ || genre == MotGenre.EPICENE
-    if (this.article == 'unune') {
+    if (this.article == ARTICE_INDET) {
       let determinant = feminin ? 'une' : 'un'
+      if (nombre == MotNombre.PLURIEL) {
+        determinant = "des"
+      }
       this._prefix = determinant + ' '
     } else {
       let determinant = feminin ? 'la' : 'le'
-
       let premiereLettre = mot.charAt(0)
 
+      if (nombre == MotNombre.PLURIEL) {
+        determinant = "les"
+        premiereLettre = 'b' //not a voyelle
+      }
+      
       if (
         this.voyelRegEx.test(
           premiereLettre
@@ -254,3 +262,5 @@ export class CardComponent implements OnInit {
     this.showIndice = this.showIndice ? false : true
   }
 }
+
+const ARTICE_INDET = 'unune' 
