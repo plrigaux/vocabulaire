@@ -17,13 +17,9 @@
     <mat-icon class="material-symbols-outlined">speaker_notes</mat-icon>
     <span>Jazz Themes</span>
   </button>
-  <a mat-menu-item href="cardcontrol">
-    Pratique
-  </a>
+  <a mat-menu-item href="cardcontrol"> Pratique </a>
 
-  <a mat-menu-item href="vocabulaire">
-    Liste des mots
-  </a>
+  <a mat-menu-item href="vocabulaire"> Liste des mots </a>
 </mat-menu>
 
 <mat-menu #menuTheme="matMenu">
@@ -34,7 +30,9 @@
     (change)="menuThemeRadioChange($event)"
   >
     <div mat-menu-item *ngFor="let theme of COLOR_THEMES">
-      <mat-radio-button [value]="theme.value">{{theme.label}}</mat-radio-button>
+      <mat-radio-button [value]="theme.value">{{
+        theme.label
+      }}</mat-radio-button>
     </div>
   </mat-radio-group>
 </mat-menu>
@@ -52,12 +50,17 @@
     *ngFor="let theme of voc_themes"
     [matMenuTriggerData]="theme"
   >
-    <span>Theme {{theme.theme}}</span>
+    <span>Theme {{ theme.theme }}</span>
   </button>
 </mat-menu>
 
 <mat-menu #menuVocSemaine="matMenu">
-  <ng-template matMenuContent let-voc_theme_id="theme" let-semaines="semaines">
+  <ng-template
+    matMenuContent
+    let-voc_theme_id="theme"
+    let-semaines="semaines"
+    let-series="series"
+  >
     <mat-radio-group
       aria-label="Select an option"
       class="menu-radio-group"
@@ -67,7 +70,14 @@
         <mat-radio-button
           [value]="getSemaineValue(voc_theme_id, semaine.semaine)"
           [checked]="isSemaineChecked(voc_theme_id, semaine.semaine)"
-          >Semaine {{semaine.semaine}}</mat-radio-button
+          >Semaine {{ semaine.semaine }}</mat-radio-button
+        >
+      </div>
+      <div mat-menu-item *ngFor="let serie of series">
+        <mat-radio-button
+          [value]="getSerieValue(voc_theme_id, serie.id)"
+          [checked]="isSemaineChecked(voc_theme_id, serie.id)"
+          >Serie {{ voc_theme_id }}.{{ serie.id }}</mat-radio-button
         >
       </div>
     </mat-radio-group>

@@ -100,7 +100,9 @@ export class AppComponent implements OnInit, OnDestroy {
     return { theme: theme, semaine: semaine }
   }
 
-
+  getSerieValue(theme: number, id: number): ThemeSerie {
+    return { theme: theme, serie: id }
+  }
 
   isSemaineChecked(theme: number, semaine: number): boolean {
     if (this.app_config.theme_semaine) {

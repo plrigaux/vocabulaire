@@ -22,7 +22,7 @@ export class VocabulaireDataHandlerService {
 
 
   private fetcher: Promise<void>
-  constructor () {
+  constructor() {
     this.fetcher = Promise.all([
       this.getVocabularyAsset('./assets/voc4_th1.json5'),
       this.getVocabularyAsset('./assets/voc4_th2.json5'),
@@ -53,9 +53,16 @@ export class VocabulaireDataHandlerService {
                 g.mots = mots
               }
             }
-          }
-
-          if (t.mots) {
+          } else if (t.series) {
+            const serie = t.series as Serie[]
+            for (let s of serie) {
+              const mots: MotTI[] = []
+              for (let m of s.mots) {
+                crunchMot(m as Mot, '', mots)
+              }
+              s.mots = mots
+            }
+          } else if (t.mots) {
             const mots: MotTI[] = []
             for (let m of t.mots) {
               crunchMot(m as Mot, '', mots)
@@ -89,7 +96,7 @@ export class VocabulaireDataHandlerService {
       })
   }
 
-  getThemes (): Theme[] {
+  getThemes(): Theme[] {
     return this.themes
   }
 
@@ -106,14 +113,14 @@ export class VocabulaireDataHandlerService {
       .catch(console.error)
   }
 
-  async getThemeById (theme_id: number | string): Promise<Theme | undefined> {
+  async getThemeById(theme_id: number | string): Promise<Theme | undefined> {
     return this.fetcher.then(() => {
       console.log('getThemeById', theme_id)
       return this.themes_map.get(theme_id)
     })
   }
 
-  async getSemaineById (
+  async getSemaineById(
     theme: Theme,
     semaine_id: number
   ): Promise<Semaine | undefined> {
@@ -123,7 +130,7 @@ export class VocabulaireDataHandlerService {
     })
   }
 
-  async getSerieById (
+  async getSerieById(
     theme: Theme,
     serie_id: number
   ): Promise<Serie | undefined> {
@@ -175,7 +182,7 @@ const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
     console.warn("Le mot n'a pas de classe")
   }
 
-  const newClasse  = new Set<string>()
+  const newClasse = new Set<string>()
   classe.forEach(cls => {
     if (cls == 'NM') {
       newClasse.add('NOM')
@@ -201,7 +208,7 @@ const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
   newMot.classe = newClasseArr.length > 1 ? newClasseArr : newClasseArr[0]
 }
 
-const setGenre = (current_genre : MotGenre, new_genre : MotGenre) : MotGenre => {
-  let genre : MotGenre = current_genre ? current_genre : MotGenre.NA
+const setGenre = (current_genre: MotGenre, new_genre: MotGenre): MotGenre => {
+  let genre: MotGenre = current_genre ? current_genre : MotGenre.NA
   return genre | new_genre
 }

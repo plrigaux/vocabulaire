@@ -1,30 +1,48 @@
 <mat-accordion>
-  <mat-expansion-panel *ngFor="let theme of themes; index as i;" [expanded]="step === i" (opened)="setStep(i)">
+  <mat-expansion-panel
+    *ngFor="let theme of themes; index as i"
+    [expanded]="step === i"
+    (opened)="setStep(i)"
+  >
     <mat-expansion-panel-header>
       <mat-panel-title class="panel-title">
-        Thème {{theme.theme}}
+        Thème {{ theme.theme }}
       </mat-panel-title>
     </mat-expansion-panel-header>
 
     <ul>
       <li *ngFor="let semaine of theme.semaines">
-        <h2>Semaine {{semaine.semaine}}</h2>
+        <h2>Semaine {{ semaine.semaine }}</h2>
         <div *ngFor="let groupe of semaine.groupes">
           <h3 class="indice" [innerHTML]="groupe.indice"></h3>
           <ul>
             <li *ngFor="let mot of groupe.mots">
-              <span class="mot">{{mot.mot}}
-                <ng-template [ngIf]="mot.alt"> OU {{mot.alt}}</ng-template>
-              </span> {{getType(mot)}}
+              <span class="mot"
+                >{{ mot.mot }}
+                <ng-template [ngIf]="mot.alt"> OU {{ mot.alt }}</ng-template>
+              </span>
+              {{ getType(mot) }}
             </li>
           </ul>
         </div>
       </li>
-      <li *ngFor="let mot of theme.mots">
-        {{mot.mot}} {{mot.classe}}
+      <li *ngFor="let serie of theme.series">
+        <h2>Série {{ theme.theme }}.{{ serie.id }}</h2>
+        <ul>
+          <li *ngFor="let mot of serie.mots">
+            <span class="mot"
+              >{{ mot.mot }}
+              <ng-template [ngIf]="mot.alt"> OU {{ mot.alt }}</ng-template>
+            </span>
+            {{ getType(mot) }}
+          </li>
+        </ul>
       </li>
+      <li *ngFor="let mot of theme.mots">{{ mot.mot }} {{ mot.classe }}</li>
     </ul>
   </mat-expansion-panel>
 </mat-accordion>
-<br/>
-<button mat-raised-button color="accent" (click)="setStep(null)">Fermer tout</button>
+<br />
+<button mat-raised-button color="accent" (click)="setStep(null)">
+  Fermer tout
+</button>
