@@ -1,0 +1,236 @@
+[
+  {
+    theme: 2,
+    description: 'Sous la terre',
+    series: [
+      {
+        id: 1,
+        mots: [
+          {
+            mot: 'allée',
+            classe: 'NF'
+          },
+          {
+            mot: 'atteindre',
+            classe: 'V'
+          },
+          {
+            mot: 'bas',
+            classe: 'NM'
+          },
+          {
+            mot: 'bas',
+            classe: 'ADJ',
+            fem: 'basse'
+          },
+          {
+            mot: 'caractère',
+            classe: 'NM'
+          },
+          {
+            mot: 'casque',
+            classe: 'NM'
+          },
+          {
+            mot: 'contraire',
+            classe: ['ADJ', 'NM']
+          },
+          {
+            mot: 'couche',
+            classe: 'NM'
+          },
+          {
+            mot: 'couverture',
+            classe: 'NF'
+          },
+          {
+            mot: 'creuser',
+            classe: 'V'
+          },
+          {
+            mot: 'curiosité',
+            classe: 'NF'
+          },
+          {
+            mot: 'descente',
+            classe: 'NF'
+          },
+          {
+            mot: 'falaise',
+            classe: 'NF'
+          },
+          {
+            mot: 'grandeur',
+            classe: 'NM'
+          },
+          {
+            mot: 'impatience',
+            classe: 'NF'
+          },
+          {
+            mot: 'moue',
+            classe: 'NF'
+          },
+          {
+            mot: 'obscurité',
+            classe: 'NF'
+          },
+          {
+            mot: 'obstacle',
+            classe: 'NM'
+          },
+          {
+            mot: 'orgueil',
+            classe: 'NM'
+          },
+          {
+            mot: 'paroi',
+            classe: 'NF'
+          },
+          {
+            mot: 'personnage',
+            classe: 'NM'
+          },
+          {
+            mot: 'qualité',
+            classe: 'NF'
+          },
+          {
+            mot: 'risque',
+            classe: 'NM'
+          },
+          {
+            mot: 'roche',
+            classe: 'NF'
+          },
+          {
+            mot: 'rocher',
+            classe: 'NM'
+          },
+          {
+            mot: 'source',
+            classe: 'NF'
+          }
+        ]
+      },
+      {
+        id: 2,
+        mots: [
+          {
+            mot: 'appel',
+            classe: 'NM'
+          },
+          {
+            mot: 'cap',
+            classe: 'NM'
+          },
+          {
+            mot: 'colline',
+            classe: 'NF'
+          },
+          {
+            mot: 'copain',
+            classe: 'NM'
+          },
+          {
+            mot: 'copine',
+            classe: 'NF'
+          },
+          {
+            mot: 'couloir',
+            classe: 'NM'
+          },
+          {
+            mot: 'couteau',
+            classe: 'NM'
+          },
+          {
+            mot: 'couteaux',
+            classe: 'NM',
+            nombre: 2
+          },
+          {
+            mot: 'couvrir',
+            classe: 'V'
+          },
+          {
+            mot: 'défaut',
+            classe: 'NM'
+          },
+          {
+            mot: 'effort',
+            classe: 'NM'
+          },
+          {
+            mot: 'ficelle',
+            classe: 'NF'
+          },
+          {
+            mot: 'gars',
+            classe: 'NM'
+          },
+          {
+            mot: 'liquide',
+            classe: 'NM'
+          },
+          {
+            mot: 'liquide',
+            classe: 'ADJ'
+          },
+          {
+            mot: 'objectif',
+            classe: 'NM'
+          },
+          {
+            mot: 'objection',
+            classe: 'NF'
+          },
+          {
+            mot: 'pente',
+            classe: 'NF'
+          },
+          {
+            mot: 'piège',
+            classe: 'NM'
+          },
+          {
+            mot: 'plafond',
+            classe: 'NM'
+          },
+          {
+            mot: 'profondeur',
+            classe: 'NF'
+          },
+          {
+            mot: 'racine',
+            classe: 'NF'
+          },
+          {
+            mot: 'réserve',
+            classe: 'NF'
+          },
+          {
+            mot: 'résistance',
+            classe: 'NF'
+          },
+          {
+            mot: 'résister',
+            classe: 'V'
+          },
+          {
+            mot: 'rompre',
+            classe: 'V'
+          },
+          {
+            mot: 'tunnel',
+            classe: 'NM'
+          },
+          {
+            mot: 'vitre',
+            classe: 'NF'
+          }
+        ]
+      }
+    ]
+  }
+]
