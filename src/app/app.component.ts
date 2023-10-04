@@ -13,7 +13,9 @@ import {
   AppConfig,
   COLOR_THEMES,
   DEFAULT_CONFIG,
-  ThemeSemaine
+  ThemeSemaine,
+  ThemeSerie,
+  get_semaine_serie_id
 } from './app-config'
 import { VocabulaireDataHandlerService } from './vocabulaire/vocabulaire-data-handler.service'
 
@@ -24,14 +26,14 @@ import { VocabulaireDataHandlerService } from './vocabulaire/vocabulaire-data-ha
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'vocabulaire'
-  constructor (
+  constructor(
     private configSrv: ThemeSetterService,
     public dialog: MatDialog,
     public voiceService: VoiceControlService,
     private vocSrv: VocabulaireDataHandlerService
-  ) {}
+  ) { }
 
-  get voc_themes (): Theme[] {
+  get voc_themes(): Theme[] {
     return this.vocSrv.getThemes()
   }
 
@@ -42,7 +44,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   app_config: AppConfig = { ...DEFAULT_CONFIG }
 
-  ngOnInit (): void {
+  ngOnInit(): void {
     this.myEventSubscriptions.push(
       this.configSrv.subscribe({
         next: (config: AppConfig) => {
@@ -53,25 +55,25 @@ export class AppComponent implements OnInit, OnDestroy {
     )
   }
 
-  ngOnDestroy (): void {
+  ngOnDestroy(): void {
     this.myEventSubscriptions.forEach(subscription =>
       subscription.unsubscribe()
     )
   }
 
-  menuThemeRadioChange (event: MatRadioChange) {
+  menuThemeRadioChange(event: MatRadioChange) {
     console.log(event)
     this.configSrv.next(this.app_config)
     this.setTheme()
   }
 
-  menuVocThemeRadioChange (event: MatRadioChange) {
+  menuVocThemeRadioChange(event: MatRadioChange) {
     console.warn('sem', event)
     this.app_config.theme_semaine = event.value
     this.configSrv.next(this.app_config)
   }
 
-  setTheme () {
+  setTheme() {
     if (this.previoustheme == this.app_config.color_theme) {
       return
     }
@@ -84,7 +86,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.previoustheme = this.app_config.color_theme
   }
 
-  openDialog (): void {
+  openDialog(): void {
     const dialogRef = this.dialog.open(VoiceControlComponent, {
       width: '350px'
     })
@@ -94,15 +96,17 @@ export class AppComponent implements OnInit, OnDestroy {
     })
   }
 
-  getSemaineValue (theme: number, semaine: number): ThemeSemaine {
+  getSemaineValue(theme: number, semaine: number): ThemeSemaine {
     return { theme: theme, semaine: semaine }
   }
 
-  isSemaineChecked (theme: number, semaine: number): boolean {
+
+
+  isSemaineChecked(theme: number, semaine: number): boolean {
     if (this.app_config.theme_semaine) {
       if (
         theme == this.app_config.theme_semaine.theme &&
-        semaine == this.app_config.theme_semaine.semaine
+        semaine == get_semaine_serie_id(this.app_config.theme_semaine)
       ) {
         return true
       }
@@ -110,9 +114,9 @@ export class AppComponent implements OnInit, OnDestroy {
     return false
   }
 
-  nextTheme () {
+  nextTheme() {
     const curTheme = this.app_config.theme_semaine.theme
-    const curSemaine = this.app_config.theme_semaine.semaine
+    const curSemaine =  get_semaine_serie_id(this.app_config.theme_semaine)
 
     let theme = this.voc_themes.find(t => t.theme == curTheme)
 
@@ -143,13 +147,13 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   }
 
-  previousTheme () {
+  previousTheme() {
     const curTheme = this.app_config.theme_semaine.theme
-    const curSemaine = this.app_config.theme_semaine.semaine
+    const curSemaine =  get_semaine_serie_id(this.app_config.theme_semaine)
 
     let theme = this.voc_themes.find(t => t.theme == curTheme)
 
-    if (!theme || !theme.semaines) {
+    if (!theme || !theme.semaines || !theme.series) {
       return
     }
 
@@ -176,10 +180,14 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   }
 
-  setThemeSemaine (theme: number | string, semaine: number) {
-    this.app_config.theme_semaine.theme = theme
-    this.app_config.theme_semaine.semaine = semaine
+  setThemeSemaine(theme: number | string, semaine: number) {
+    this.app_config.theme_semaine = {
+      theme: theme,
+      semaine: semaine
+    }
 
     this.configSrv.next(this.app_config)
   }
 }
+
+

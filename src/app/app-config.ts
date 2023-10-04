@@ -2,9 +2,11 @@ import { VolumeDialogData } from './voice-control/voice-control.component'
 
 export interface AppConfig {
   color_theme: string
-  theme_semaine: ThemeSemaine
+  theme_semaine: ThemeSemaine | ThemeSerie
   volumeData: VolumeDialogData
 }
+
+
 
 export const COLOR_THEMES = [
   { value: 'default-theme', label: 'Default' },
@@ -33,4 +35,25 @@ export const DEFAULT_CONFIG: AppConfig = {
 export interface ThemeSemaine {
   theme: number | string
   semaine: number
+}
+
+export interface ThemeSerie {
+  theme: number 
+  serie: number
+}
+
+export const get_semaine_serie_id = (obj: ThemeSemaine | ThemeSerie): number => {
+  if ("semaine" in obj) {
+    return obj.semaine
+  }
+
+  return obj.serie
+}
+
+export const is_serie = (obj: ThemeSemaine | ThemeSerie): boolean => {
+  if ("semaine" in obj) {
+    return false
+  }
+
+  return true
 }

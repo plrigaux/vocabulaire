@@ -1,0 +1,74 @@
+[
+  {
+    theme: 2,
+    description: 'Sous la terre',
+    series: [
+      {
+        id: 1,
+        mots: [
+          {
+            mot: 'infini',
+            classe: 'NM'
+          },
+          {
+            mot: 'insister',
+            classe: 'V'
+          },
+          {
+            mot: 'interdit',
+            classe: 'ADJ',
+            fem: 'interdite'
+          },
+          {
+            mot: 'intérieur',
+            classe: 'NM'
+          },
+          {
+            mot: 'intérieur',
+            classe: 'ADJ',
+            fem: 'intérieure'
+          },
+          {
+            mot: 'intrépide',
+            classe: 'ADJ'
+          },
+          {
+            mot: 'Inventer',
+            classe: 'V'
+          },
+          {
+            mot: 'inviter',
+            classe: 'V'
+          }
+        ]
+      },
+      {
+        id: 2,
+        mots: [
+          {
+            mot: 'appel',
+            classe: 'NM'
+          },
+          {
+            mot: 'cap',
+            classe: 'NM'
+          },
+          {
+            mot: 'colline',
+            classe: 'NF'
+          },
+          {
+            mot: 'copain',
+            classe: 'NM'
+          },
+          {
+            mot: 'copine',
+            classe: 'NF'
+          }
+          //1. appel n. m. 2. cap n. m. 3. colline n. f. 4. copain/copine n. m. et n. f. 5. couloir n. m. 6. couteau • couteaux n. m. 7. couvrir v. 8. défaut n. m. 9. effort n. m. 10. ficelle ft f. 11. gars n. m. 12. liquide n. m. liquide adj. ----
+          //13. objectif n. m. 14. objection n. f. 15. pente n. f. 16. piège n. m. 17. plafond n. m. 18. profondeur n. f. 19. racine n. f. 20. réserve n. f. 21. résistance n. f. 22. résister v. 23. rompre v. 24. tunnel n. m. 25. vitre n. f.
+        ]
+      }
+    ]
+  }
+]

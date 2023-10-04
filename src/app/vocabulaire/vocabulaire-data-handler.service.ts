@@ -5,6 +5,7 @@ import {
   MotNombre,
   MotTI,
   Semaine,
+  Serie,
   Theme
 } from './vocabulaireInterfaces'
 import JSON5 from 'json5'
@@ -17,6 +18,8 @@ export class VocabulaireDataHandlerService {
   private themes: Theme[] = []
   private themes_map: Map<number | string, Theme> = new Map()
   private themes_semaine_map: Map<string, Semaine> = new Map()
+  private themes_serie_map: Map<string, Serie> = new Map()
+
 
   private fetcher: Promise<void>
   constructor () {
@@ -26,7 +29,8 @@ export class VocabulaireDataHandlerService {
       this.getVocabularyAsset('./assets/voc4_th3.json5'),
       this.getVocabularyAsset('./assets/voc4_th4.json5'),
       this.getVocabularyAsset('./assets/voc4_th5.json5'),
-      this.getVocabularyAsset('./assets/voc4_th6.json5')
+      this.getVocabularyAsset('./assets/voc4_th6.json5'),
+      this.getVocabularyAsset('./assets/voc5_th1.json5')
     ])
       .then(data => {
         const list_of_theme = data.flat(1)
@@ -70,6 +74,11 @@ export class VocabulaireDataHandlerService {
             for (let s of semaines) {
               this.themes_semaine_map.set(`${t_id}_${s.semaine}`, s)
             }
+          } else if (t.series) {
+            const series = t.series as Serie[]
+            for (let s of series) {
+              this.themes_serie_map.set(`${t_id}_${s.id}`, s)
+            }
           }
         }
         return themes
@@ -111,6 +120,16 @@ export class VocabulaireDataHandlerService {
     return this.fetcher.then(() => {
       console.log('getSemaineById', theme.theme, semaine_id)
       return this.themes_semaine_map.get(`${theme.theme}_${semaine_id}`)
+    })
+  }
+
+  async getSerieById (
+    theme: Theme,
+    serie_id: number
+  ): Promise<Serie | undefined> {
+    return this.fetcher.then(() => {
+      console.log('getSerieById', theme.theme, serie_id)
+      return this.themes_serie_map.get(`${theme.theme}_${serie_id}`)
     })
   }
 }

@@ -5,12 +5,20 @@
   <h2>Theme {{theme.theme}}</h2>
   <div class="semaine-chooser">
     <a
-      *ngFor="let semaine of theme.semaines"
+      *ngFor="let semaine of theme?.semaines"
       mat-raised-button
       (click)="practice(theme.theme, semaine.semaine)"
       href="cardcontrol"
     >
       Semaine {{semaine.semaine}}
     </a>
+    <a
+    *ngFor="let serie of theme?.series"
+    mat-raised-button
+    (click)="practice_serie(theme.theme, serie.id)"
+    href="cardcontrol"
+  >
+    Serieee {{theme.theme}}.{{serie.id}}
+  </a>
   </div>
 </div>

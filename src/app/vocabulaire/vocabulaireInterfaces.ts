@@ -1,7 +1,14 @@
 export interface Theme {
-  theme: number | string
+  theme: number
+  description: string
   semaines?: any
+  series?: Serie[]
   mots?: MotTI[]
+}
+
+export interface Serie {
+  id: number
+  mots: MotTI[]
 }
 
 export interface Semaine {

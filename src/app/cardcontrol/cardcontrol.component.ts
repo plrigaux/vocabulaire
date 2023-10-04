@@ -3,12 +3,13 @@ import {
   Theme,
   Semaine,
   Groupe,
-  MotTI
+  MotTI,
+  Serie
 } from '../vocabulaire/vocabulaireInterfaces'
 import { CardComponent } from '../card/card.component'
 
 import { MatSlideToggleChange as MatSlideToggleChange } from '@angular/material/slide-toggle'
-import { AppConfig, DEFAULT_CONFIG, ThemeSemaine } from '../app-config'
+import { AppConfig, DEFAULT_CONFIG, ThemeSemaine, ThemeSerie, get_semaine_serie_id, is_serie } from '../app-config'
 import { ThemeSetterService } from '../theme-setter.service'
 import { VocabulaireDataHandlerService } from '../vocabulaire/vocabulaire-data-handler.service'
 
@@ -20,6 +21,7 @@ import { VocabulaireDataHandlerService } from '../vocabulaire/vocabulaire-data-h
 export class CardcontrolComponent implements OnInit {
   theme: Theme | null = null
   semaine: Semaine | null = null
+  serie: Serie | null = null
   groupe: Groupe | null = null
   mot: MotTI | null = null
   mots: MotTI[] = []
@@ -35,16 +37,16 @@ export class CardcontrolComponent implements OnInit {
   @ViewChild(CardComponent)
   private cardComponent!: CardComponent
 
-  constructor (
+  constructor(
     private configSrv: ThemeSetterService,
     private vocSrv: VocabulaireDataHandlerService
-  ) {}
+  ) { }
 
-  get themes (): Theme[] {
+  get themes(): Theme[] {
     return this.vocSrv.getThemes()
   }
 
-  ngOnInit (): void {
+  ngOnInit(): void {
     console.log(
       'THS',
       this.vocSrv.getThemes(),
@@ -58,12 +60,12 @@ export class CardcontrolComponent implements OnInit {
         this.app_config = config
         console.log('NEW CARD', config)
         await this.onChangeTheme(this.app_config.theme_semaine.theme)
-        await this.onChangeSemaine(this.app_config.theme_semaine.semaine)
+        await this.onChangeSemaine(this.app_config.theme_semaine)
       }
     })
   }
 
-  getSemaines (): Semaine[] {
+  getSemaines(): Semaine[] {
     //let theme = this.themes.find( (t : Theme) => t.theme == this.theme.theme)
 
     if (this.theme) {
@@ -73,7 +75,7 @@ export class CardcontrolComponent implements OnInit {
     return []
   }
 
-  private shuffleArray (array: any | null = null) {
+  private shuffleArray(array: any | null = null) {
     if (!this.shuffle) {
       return
     }
@@ -84,11 +86,11 @@ export class CardcontrolComponent implements OnInit {
 
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-      ;[array[i], array[j]] = [array[j], array[i]]
+        ;[array[i], array[j]] = [array[j], array[i]]
     }
   }
 
-  private async onChangeTheme (theme_id: number | string) {
+  private async onChangeTheme(theme_id: number | string) {
     const theme_obj = await this.vocSrv.getThemeById(theme_id)
 
     if (!theme_obj) {
@@ -110,45 +112,74 @@ export class CardcontrolComponent implements OnInit {
     }
   }
 
-  private async onChangeSemaine (semaine_id: number) {
-    console.log('semaine_id', semaine_id)
+  private async onChangeSemaine(theme_semaine: ThemeSemaine | ThemeSerie) {
+    console.log('theme_semaine', theme_semaine)
 
     if (!this.theme) {
       console.log('No Theme')
       return
     }
 
-    let sem: Semaine | undefined = await this.vocSrv.getSemaineById(
-      this.theme,
-      semaine_id
-    )
-    console.log('Sem', semaine_id, sem)
-    if (!sem) {
-      return
-    }
+    if (is_serie(theme_semaine)) {
+      const serie_id = get_semaine_serie_id(theme_semaine)
+      let serie: Serie | undefined = await this.vocSrv.getSerieById(
+        this.theme,
+        serie_id
+      )
 
-    if (this.semaine?.semaine == semaine_id) {
-      return
-    }
+      console.log('Serie', serie_id, serie)
+      if (!serie) {
+        return
+      }
 
-    this.semaine = sem
+      if (this.serie?.id == serie_id) {
+        return
+      }
+
+      this.serie = serie
+      this.semaine = null
+    } else {
+      const semaine_id = get_semaine_serie_id(theme_semaine)
+      let sem: Semaine | undefined = await this.vocSrv.getSemaineById(
+        this.theme,
+        semaine_id
+      )
+
+      console.log('Sem', semaine_id, sem)
+      if (!sem) {
+        return
+      }
+
+      if (this.semaine?.semaine == semaine_id) {
+        return
+      }
+
+      this.semaine = sem
+      this.serie = null
+    }
 
     this.loadMots()
   }
 
-  private loadMots () {
-    if (!this.semaine) {
+  private loadMots() {
+    if (!this.semaine && !this.serie) {
       return
     }
+
     this.mots = []
     this.motIndex = -1
-    this.semaine.groupes.forEach((group: Groupe) => {
-      this.mots.push(...group.mots)
-    })
+
+    if (this.semaine) {
+      this.semaine.groupes.forEach((group: Groupe) => {
+        this.mots.push(...group.mots)
+      })
+    } else if (this.serie) {
+      this.mots.push(...this.serie.mots)
+    }
     this.next()
   }
 
-  onChangeShuffleToggle (event: MatSlideToggleChange) {
+  onChangeShuffleToggle(event: MatSlideToggleChange) {
     console.log(event)
 
     if (!this.shuffle) {
@@ -161,19 +192,19 @@ export class CardcontrolComponent implements OnInit {
     this.next()
   }
 
-  next () {
+  next() {
     console.log('next - ' + this.motIndex)
     let index = this.motIndex + 1
     this.setMot(index)
     console.log('next - ' + this.motIndex)
   }
 
-  previous () {
+  previous() {
     let index = this.motIndex - 1
     this.setMot(index)
   }
 
-  private setMot (index: number) {
+  private setMot(index: number) {
     //console.log("setMot - index " + index)
     if (index >= 0 && index < this.mots.length) {
       this.motIndex = index
@@ -196,12 +227,12 @@ export class CardcontrolComponent implements OnInit {
     //console.log(this)
   }
 
-  checkWritingState (isWriting: boolean) {
+  checkWritingState(isWriting: boolean) {
     console.log(`isWriting ${isWriting}`)
     this._isWriting = isWriting
   }
 
-  prevDisabled (): boolean {
+  prevDisabled(): boolean {
     if (this._isWriting) {
       return true
     }
@@ -209,7 +240,7 @@ export class CardcontrolComponent implements OnInit {
     return this._prevDisabled
   }
 
-  nextDisabled (): boolean {
+  nextDisabled(): boolean {
     if (this._isWriting) {
       return true
     }
@@ -217,7 +248,7 @@ export class CardcontrolComponent implements OnInit {
     return this._nextDisabled
   }
 
-  getLabel () {
+  getLabel() {
     let label = ''
 
     if (this.theme) {
