@@ -1,5 +1,20 @@
 [
   {
+    theme: 1,
+    description: 'Ici et ailleurs',
+    series: [
+      {
+        id: 1,
+        mots: [
+          {
+            mot: 'anglais',
+            classe: 'NM'
+          }
+        ]
+      }
+    ]
+  },
+  {
     theme: 2,
     description: 'Sous la terre',
     series: [
@@ -61,7 +76,7 @@
           },
           {
             mot: 'grandeur',
-            classe: 'NM'
+            classe: 'NF'
           },
           {
             mot: 'impatience',
@@ -228,6 +243,133 @@
           {
             mot: 'vitre',
             classe: 'NF'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    theme: 3,
+    description: 'Des défis de taille',
+    series: [
+      {
+        id: 1,
+        mots: [
+          {
+            mot: 'acier',
+            classe: 'NM'
+          },
+          {
+            mot: 'associer',
+            classe: 'V'
+          },
+          {
+            mot: 'boulevard',
+            classe: 'NM'
+          },
+          {
+            mot: 'charge',
+            classe: 'NF'
+          },
+          {
+            mot: 'charger',
+            classe: 'V'
+          },
+          {
+            mot: 'chauffage',
+            classe: 'NM'
+          },
+          {
+            mot: 'ciment',
+            classe: 'NM'
+          },
+          {
+            mot: 'dessin',
+            classe: 'NM'
+          },
+          {
+            mot: 'détail',
+            classe: 'NM'
+          },
+          {
+            mot: 'détour',
+            classe: 'NM'
+          },
+          {
+            mot: 'entier',
+            classe: 'ADJ',
+            fem: 'entière'
+          },
+          {
+            mot: 'ciment',
+            classe: 'NM'
+          },
+          {
+            mot: 'fontaine',
+            classe: 'NF'
+          },
+          {
+            mot: 'hausse',
+            classe: 'NM'
+          },
+          {
+            mot: 'haut',
+            classe: ['ADJ', 'NM', 'ADV'],
+            genre: 1
+          },
+          {
+            classe: ['ADJ'],
+            mot: 'haute',
+            genre: 2
+          },
+          {
+            mot: 'incident',
+            classe: 'NM'
+          },
+          {
+            mot: 'inutile',
+            classe: 'ADJ'
+          },
+          {
+            mot: 'longueur',
+            classe: 'NF'
+          },
+          {
+            mot: 'mathématique',
+            classe: 'NF'
+          },
+          {
+            mot: 'moteur',
+            classe: 'NM'
+          },
+          {
+            mot: 'outil',
+            classe: 'NM'
+          },
+          {
+            mot: 'peindre',
+            classe: 'V'
+          },
+          {
+            mot: 'peintre',
+            classe: ['NF', 'NM']
+          },
+          {
+            mot: 'peinture',
+            classe: 'NF'
+          },
+          {
+            mot: 'pinceau',
+            classe: 'NM'
+          },
+          {
+            mot: 'pinceaux',
+            classe: 'NM',
+            nombre: 2
+          },
+          {
+            mot: 'véhicule',
+            classe: 'NM'
           }
         ]
       }
