@@ -2,7 +2,7 @@
 <a mat-button href="correctortest" >Test du correcteur</a><br/ -->
 
 <div *ngFor="let theme of voc_themes">
-  <h2>Theme {{theme.theme}}</h2>
+  <h2>Theme {{theme.theme}} {{ theme.description }}</h2>
   <div class="semaine-chooser">
     <a
       *ngFor="let semaine of theme?.semaines"

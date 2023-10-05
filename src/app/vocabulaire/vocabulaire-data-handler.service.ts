@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import {
   Mot,
+  MotClasse,
   MotGenre,
   MotNombre,
   MotTI,
@@ -24,12 +25,12 @@ export class VocabulaireDataHandlerService {
   private fetcher: Promise<void>
   constructor() {
     this.fetcher = Promise.all([
-      this.getVocabularyAsset('./assets/voc4_th1.json5'),
+      /*this.getVocabularyAsset('./assets/voc4_th1.json5'),
       this.getVocabularyAsset('./assets/voc4_th2.json5'),
       this.getVocabularyAsset('./assets/voc4_th3.json5'),
       this.getVocabularyAsset('./assets/voc4_th4.json5'),
       this.getVocabularyAsset('./assets/voc4_th5.json5'),
-      this.getVocabularyAsset('./assets/voc4_th6.json5'),
+      this.getVocabularyAsset('./assets/voc4_th6.json5'),*/
       this.getVocabularyAsset('./assets/voc5_th1.json5')
     ])
       .then(data => {
@@ -142,31 +143,28 @@ export class VocabulaireDataHandlerService {
 }
 
 const createMotTI = (m: Mot, indice: string): MotTI => {
+
+  let genre = MotGenre.NA
+  if (m.genre) {
+    genre = m.genre
+  }
+
+  let nombre = MotNombre.NA
+  if (m.nombre) {
+    console.warn("TM", m.nombre, m)
+    nombre = m.nombre
+  }
+
   const newMot: MotTI = {
     mot: m.mot,
-    classe: m.classe,
+    classe: MotClasse.NA,
     indice: indice,
-    genre: MotGenre.NA,
-    nombre: MotNombre.NA
-  }
-
-  if (m.genre) {
-    newMot.genre = m.genre
-  }
-
-  if (m.nombre) {
-    newMot.nombre = m.nombre
+    genre: genre,
+    nombre: nombre
   }
 
   if (m.alt) {
     newMot.alt = m.alt
-  }
-
-  let formes_alternatives: string[] = m.mot.split('/')
-
-  if (formes_alternatives.length > 1) {
-    newMot.mot = formes_alternatives[0]
-    newMot.alt = formes_alternatives[1]
   }
 
   return newMot
@@ -182,16 +180,17 @@ const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
     console.warn("Le mot n'a pas de classe")
   }
 
-  const newClasse = new Set<string>()
-  classe.forEach(cls => {
+  const newClasse = new Set<MotClasse>()
+  classe.forEach((cls: string) => {
     if (cls == 'NM') {
-      newClasse.add('NOM')
+      newClasse.add(MotClasse.NOM)
       newMot.genre = setGenre(newMot.genre, MotGenre.MASCULIN)
     } else if (cls == 'NF') {
-      newClasse.add('NOM')
+      newClasse.add(MotClasse.NOM)
       newMot.genre = setGenre(newMot.genre, MotGenre.FEMININ)
     } else {
-      newClasse.add(cls)
+      let mot_classe = map_string_to_MotClass(cls);
+      newClasse.add(mot_classe)
     }
 
     if (m.fem) {
@@ -199,13 +198,49 @@ const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
       newMot2.mot = m.fem
       newMot2.genre = MotGenre.FEMININ
       newMot.genre = MotGenre.MASCULIN
-      newMot2.classe = cls
+      newMot2.classe = map_string_to_MotClass(cls)
       mots.push(newMot2)
     }
   })
 
   const newClasseArr = [...newClasse]
   newMot.classe = newClasseArr.length > 1 ? newClasseArr : newClasseArr[0]
+}
+
+const map_string_to_MotClass = (string_class: string): MotClasse => {
+  let c = MotClasse.NA
+  switch (string_class) {
+    case 'V':
+      c = MotClasse.V
+      break
+    case 'ADJ':
+      c = MotClasse.ADJ
+      break
+    case 'ADV':
+      c = MotClasse.ADV
+      break
+    case 'INV':
+      c = MotClasse.INV
+      break
+    case 'DET':
+      c = MotClasse.DET
+      break
+    case 'PRON':
+      c = MotClasse.PRON
+      break
+    case 'NOM':
+    case 'NI':
+    case 'NF':
+    case 'NM':
+      c = MotClasse.NOM
+      break
+
+    default:
+      console.warn("Mapping to MotClass FAILED! input:", string_class)
+      c = MotClasse.NA
+  }
+
+  return c
 }
 
 const setGenre = (current_genre: MotGenre, new_genre: MotGenre): MotGenre => {

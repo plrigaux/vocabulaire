@@ -21,16 +21,16 @@ export interface Groupe {
   mots: MotTI[]
 }
 
-type MotClasse =
-  | 'ADJ'
-  | 'V'
-  | 'NF'
-  | 'NM'
-  | 'MI'
-  | 'INV'
-  | 'DET'
-  | 'PRON'
-  | 'NOM'
+export enum MotClasse {
+  ADJ = 'ADJ',
+  ADV = 'ADV',
+  V = 'V',
+  INV = 'INV',
+  DET = 'DET',
+  PRON = 'PRON',
+  NOM = 'NOM',
+  NA = 'NA'
+}
 
 export enum MotGenre {
   NA = 0,
@@ -59,7 +59,7 @@ export interface Mot {
 export interface MotTI {
   mot: string
   alt?: string
-  classe: string | string[]
+  classe: MotClasse | MotClasse[]
   detail?: string
   indice: string
   genre: MotGenre

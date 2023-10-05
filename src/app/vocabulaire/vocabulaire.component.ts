@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import vocabulaire from '../../resources/vocabulaire.json'
 import stValentin from '../../resources/themes1.json'
-import { Mot, MotGenre, MotTI, Theme } from './vocabulaireInterfaces'
+import { Mot, MotGenre, MotNombre, MotTI, Theme } from './vocabulaireInterfaces'
 import { VocabulaireDataHandlerService } from './vocabulaire-data-handler.service'
 import { ThemeSetterService } from '../theme-setter.service'
 import { AppConfig, DEFAULT_CONFIG } from '../app-config'
@@ -15,19 +15,19 @@ export class VocabulaireComponent implements OnInit {
   app_config: AppConfig = DEFAULT_CONFIG
   step: number | null = null
 
-  constructor (
+  constructor(
     private configSrv: ThemeSetterService,
     private vocSrv: VocabulaireDataHandlerService
-  ) {}
+  ) { }
 
-  setStep (index: number | null) {
+  setStep(index: number | null) {
     this.step = index
   }
 
-  get themes (): Theme[] {
+  get themes(): Theme[] {
     return this.vocSrv.getThemes()
   }
-  ngOnInit (): void {
+  ngOnInit(): void {
     this.configSrv.subscribe({
       next: async (config: AppConfig) => {
         this.app_config = config
@@ -36,28 +36,28 @@ export class VocabulaireComponent implements OnInit {
     })
   }
 
-  getType (mot: MotTI): string {
-    return `${this.getClasse(mot)} ${this.getGenre(mot)}`
+  getType(mot: MotTI): string {
+    return `${this.get_classe_label(mot)} ${this.getGenre(mot)} ${this.getNombre(mot)}`
   }
 
-  getClasse (mot: MotTI): string {
-    let classe = ''
+  get_classe_label(mot: MotTI): string {
+    let classe_label = ''
     if (Array.isArray(mot.classe)) {
       //console.log('Claase array', mot)
-      for(let c of mot.classe) {
-        if (classe) {
-          classe += ", "
+      for (let c of mot.classe) {
+        if (classe_label) {
+          classe_label += ", "
         }
-        classe += this.getClasseDetail(c, mot)
+        classe_label += this.getClasseDetail(c, mot)
       }
     } else {
-      classe = this.getClasseDetail(mot.classe, mot)
+      classe_label = this.getClasseDetail(mot.classe, mot)
     }
 
-    return classe
+    return classe_label
   }
 
-  getClasseDetail (classe: string, mot: MotTI): string {
+  getClasseDetail(classe: string, mot: MotTI): string {
     let cls: string
     switch (classe) {
       case 'V':
@@ -78,6 +78,9 @@ export class VocabulaireComponent implements OnInit {
       case 'PRON':
         cls = 'Pronom'
         break
+      case 'ADV':
+        cls = 'Adverbe'
+        break
       default:
         console.warn('getClasseDetail not found:', classe, "|", mot)
         cls = ''
@@ -86,7 +89,7 @@ export class VocabulaireComponent implements OnInit {
     return cls
   }
 
-  getGenre (mot: MotTI): string {
+  getGenre(mot: MotTI): string {
     let genre
     switch (mot.genre) {
       case MotGenre.FEMININ:
@@ -102,5 +105,16 @@ export class VocabulaireComponent implements OnInit {
         genre = ''
     }
     return genre
+  }
+
+  getNombre(mot: MotTI): string {
+    let nombre_label = ''
+
+    if (MotNombre.PLURIEL == mot.nombre) {
+      if ('NOM' == mot.classe || 'ADJ' == mot.classe ) {
+        nombre_label = 'Pluriel'
+      }
+    }
+    return nombre_label
   }
 }

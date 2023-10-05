@@ -20,6 +20,8 @@
   <a mat-menu-item href="cardcontrol"> Pratique </a>
 
   <a mat-menu-item href="vocabulaire"> Liste des mots </a>
+
+  <a mat-menu-item href="/"> <mat-icon class="material-symbols-outlined">home</mat-icon> Accueil </a>
 </mat-menu>
 
 <mat-menu #menuTheme="matMenu">
@@ -50,7 +52,7 @@
     *ngFor="let theme of voc_themes"
     [matMenuTriggerData]="theme"
   >
-    <span>Theme {{ theme.theme }}</span>
+    <span>Theme {{ theme.theme }} {{theme.description}}</span>
   </button>
 </mat-menu>
 
