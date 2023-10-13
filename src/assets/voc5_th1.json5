@@ -469,7 +469,7 @@
           },
           {
             mot: 'solide',
-            classe: ['NM','ADJ']
+            classe: ['NM', 'ADJ']
           },
           {
             mot: 'tuyau',
@@ -487,23 +487,234 @@
         ]
       }
     ]
+  },
+  {
+    theme: 4,
+    description: 'Comme par magie!',
+    series: [
+      {
+        id: 1,
+        mots: [
+          {
+            mot: 'ancêtre',
+            classe: ['NF', 'NM']
+          },
+          {
+            mot: 'anniversaire',
+            classe: 'NM'
+          },
+          {
+            mot: 'boutique',
+            classe: 'NF'
+          },
+          {
+            mot: 'carnet',
+            classe: 'NM'
+          },
+          {
+            mot: 'cérémonie',
+            classe: 'NF'
+          },
+          {
+            mot: 'craindre',
+            classe: 'V'
+          },
+          {
+            mot: 'crainte',
+            classe: 'NF'
+          },
+          {
+            mot: 'désir',
+            classe: 'NM'
+          },
+          {
+            mot: 'désirer',
+            classe: 'V'
+          },
+          {
+            mot: 'destin',
+            classe: 'NM'
+          },
+          {
+            mot: 'effroi',
+            classe: 'NM'
+          },
+          {
+            mot: 'ennemi',
+            classe: 'NM',
+            fem: 'ennemie'
+          },
+          {
+            mot: 'époux',
+            classe: 'NM',
+            fem: 'épouse'
+          },
+          {
+            mot: 'félicitations',
+            classe: 'NF',
+            nombre: 2
+          },
+          {
+            mot: 'funérailles',
+            classe: 'NF',
+            nombre: 2
+          },
+          {
+            mot: 'haine',
+            classe: 'NF'
+          },
+          {
+            mot: 'hurlement',
+            classe: 'NM'
+          },
+          {
+            mot: 'invité',
+            classe: 'NM',
+            fem: 'invitée'
+          },
+          {
+            mot: 'légende',
+            classe: 'NF'
+          },
+          {
+            mot: 'mélanger',
+            classe: 'V'
+          },
+          {
+            mot: 'mesure',
+            classe: 'NF'
+          },
+          {
+            mot: 'mesurer',
+            classe: 'V'
+          },
+          {
+            mot: 'remède',
+            classe: 'NM'
+          },
+          {
+            mot: 'tromper',
+            classe: 'V'
+          },
+          {
+            mot: 'vengeance',
+            classe: 'NF'
+          }
+        ]
+      },
+      {
+        id: 2,
+        mots: [
+          {
+            mot: 'allumette',
+            classe: 'NF'
+          },
+          {
+            mot: 'apparition',
+            classe: 'NF'
+          },
+          {
+            mot: 'atelier',
+            classe: 'NM'
+          },
+          {
+            mot: 'atmosphère',
+            classe: 'NF'
+          },
+          {
+            mot: 'brume',
+            classe: 'NF'
+          },
+          {
+            mot: 'cauchemar',
+            classe: 'NM'
+          },
+          {
+            mot: 'charme',
+            classe: 'NM'
+          },
+          {
+            mot: 'charmer',
+            classe: 'V'
+          },
+          {
+            mot: 'cimetière',
+            classe: 'NM'
+          },
+          {
+            mot: 'don',
+            classe: 'NM'
+          },
+          {
+            mot: 'étendre',
+            classe: 'V'
+          },
+          {
+            mot: 'flamme',
+            classe: 'NF'
+          },
+          {
+            mot: 'formule',
+            classe: 'NF'
+          },
+          {
+            mot: 'fou',
+            classe: ['NM', 'ADJ'],
+            fem: 'folle'
+          },
+          {
+            mot: 'frisson',
+            classe: 'NM'
+          },
+          {
+            mot: 'fumée',
+            classe: 'NF'
+          },
+          {
+            mot: 'grognement',
+            classe: 'NM'
+          },
+          {
+            mot: 'inquiétude',
+            classe: 'NF'
+          },
+          {
+            mot: 'magicien',
+            classe: 'NM',
+            fem: 'magicienne'
+          },
+          {
+            mot: 'miracle',
+            classe: 'NM'
+          },
+          {
+            mot: 'mystérieux',
+            classe: 'ADJ',
+            fem: 'mystérieuse'
+          },
+          {
+            mot: 'naturel',
+            classe: 'NM'
+          },
+          {
+            mot: 'naturel',
+            classe: 'ADJ',
+            fem: 'naturelle'
+          },
+          {
+            mot: 'paysage',
+            classe: 'NM'
+          },
+          {
+            mot: 'recette',
+            classe: 'NF'
+          },
+          {
+            mot: 'terreur',
+            classe: 'NF'
+          }
+        ]
+      }
+    ]
   }
 ]
-
-/*
-
-Série 3.2 
-1. canon n. m. 2. chantier n. m. 3. clou n. m. 4. colle n. f. 5. coller V. 6. désordre n. m, 7. entrepôt n. m. 8. exigence n. f. 9. file n. f. 10. filer v. fixer V. 12. immeuble n. 13. installer V. 
-14. instruction n. f. 15. instrument n. m. 16. lourd/lourde adj. 17. ordre n. m. 18. ouvrier/ouvrière n. m. et n. f. ou adj. 19. patron /patronne n. m. et n. f. 20. pendre V. 21. sécurité n. f. 22. siège n. m. 23. solide n. m. solide adj. 24. tuyau 4 tuyaux n. m. 25. volume n. m. 
-Comme par magie! 
-
-Série 4.1 
-1. ancêtre n. m. ou n. f. 2. anniversaire n. m. 3. boutique n. f. 4. carnet n. m. 5. cérémonie n. f. 6. craindre V. 7. crainte n. f. 8. désir n. m. 9. désirer v. 10. destin n. m. effroi n. M. 12. ennemi/ennemie n. m. et n. f. ou adj. 13. époux/épouse n. m. et n. f. 
-14. félicitations n. f. pl. 15. funérailles n. f. pl. 16. haine n. 1. 17. hurlement n. m. 18. invité/invitée n. m. et n. 19. légende n. f. 20. mélanger V. 21. mesure n. f. 22. mesurer V. 23. remède n. m 24. tromper V. 25. vengeance n, f. 
-Série 4.2 
-1. allumette n. f. 2. apparition n. f. 3. atelier n. m. 4. atmosphère n. f. 5. brume n. f. 6. cauchemar n. m. 7. charme n. m. 8. charmer V. 9. cimetière n. m. 10. don n. m. il. étendre V. 12. flamme n. f. 13. formule n. f. 
-14. fou/folle n. m. et n. f. ou adj. 15. frisson n. M. 16. fumée n. f. 17. grognement n. m. 18. inquiétude n. f. 19. magicien /magicienne n. m. et n. f. 20. miracle n. n, 21. mystérieux/mystérieuse adj. 22. naturel n. ni. naturel/naturelle ad. 23. paysage n. m. 24. recette n. f. 25. terreur n. f. 
-5e année 57 
-
-
-*/
