@@ -46,29 +46,32 @@ export class VocabulaireDataHandlerService {
             const semaines = t.semaines as Semaine[]
             for (let s of semaines) {
               for (let g of s.groupes) {
-                const mots: MotTI[] = []
+                const mots: Map<string, MotTI> = new Map()
                 g.indice = marked.parseInline(g.indice)
                 for (let m of g.mots) {
                   crunchMot(m as Mot, g.indice, mots)
                 }
-                g.mots = mots
+                g.mots = [...mots.values()]
               }
             }
           } else if (t.series) {
             const serie = t.series as Serie[]
             for (let s of serie) {
-              const mots: MotTI[] = []
+              const mots: Map<string, MotTI> = new Map()
               for (let m of s.mots) {
                 crunchMot(m as Mot, '', mots)
               }
-              s.mots = mots
+              s.mots = [...mots.values()]
+
             }
           } else if (t.mots) {
-            const mots: MotTI[] = []
+            const mots: Map<string, MotTI> = new Map()
             for (let m of t.mots) {
               crunchMot(m as Mot, '', mots)
             }
-            t.mots = mots
+
+            t.mots = [...mots.values()]
+
           }
         }
         return themes
@@ -170,9 +173,10 @@ const createMotTI = (m: Mot, indice: string): MotTI => {
   return newMot
 }
 
-const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
+const crunchMot = (m: Mot, indice: string, mots: Map<string, MotTI>) => {
   const newMot: MotTI = createMotTI(m, indice)
-  mots.push(newMot)
+  let newMot2: MotTI | undefined = undefined
+
 
   let classe: string[] = Array.isArray(m.classe) ? [...m.classe] : [m.classe]
 
@@ -193,18 +197,42 @@ const crunchMot = (m: Mot, indice: string, mots: MotTI[]) => {
       newClasse.add(mot_classe)
     }
 
+    const newClasseArr = [...newClasse]
+    newMot.classe = newClasseArr.length > 1 ? newClasseArr : newClasseArr[0]
+
     if (m.fem) {
-      let newMot2: MotTI = createMotTI(m, indice)
+      newMot2 = createMotTI(m, indice)
       newMot2.mot = m.fem
       newMot2.genre = MotGenre.FEMININ
       newMot.genre = MotGenre.MASCULIN
-      newMot2.classe = map_string_to_MotClass(cls)
-      mots.push(newMot2)
+      newMot2.classe = newMot.classe
     }
   })
 
-  const newClasseArr = [...newClasse]
-  newMot.classe = newClasseArr.length > 1 ? newClasseArr : newClasseArr[0]
+  add_new_mot_to_list(mots, newMot)
+
+  if (newMot2) {
+    add_new_mot_to_list(mots, newMot2)
+  }
+}
+
+const mot_classe_array = (mc: MotClasse | MotClasse[]): MotClasse[] => {
+  if (Array.isArray(mc)) {
+    return mc;
+  }
+  return [mc]
+}
+
+const add_new_mot_to_list = (mots: Map<string, MotTI>, newMot: MotTI) => {
+  let old_mot: MotTI | undefined = mots.get(newMot.mot)
+  if (old_mot) {
+    let omca = mot_classe_array(old_mot.classe)
+    let nmca = mot_classe_array(newMot.classe)
+    const newClasse = new Set<MotClasse>([...omca, ...nmca])
+    old_mot.classe = [...newClasse]
+  } else {
+    mots.set(newMot.mot, newMot)
+  }
 }
 
 const map_string_to_MotClass = (string_class: string): MotClasse => {
@@ -247,3 +275,5 @@ const setGenre = (current_genre: MotGenre, new_genre: MotGenre): MotGenre => {
   let genre: MotGenre = current_genre ? current_genre : MotGenre.NA
   return genre | new_genre
 }
+
+

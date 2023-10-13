@@ -82,7 +82,7 @@ export class VocabulaireComponent implements OnInit {
         cls = 'Adverbe'
         break
       default:
-        console.warn('getClasseDetail not found:', classe, "|", mot)
+        console.warn('getClasseDetail not found: "', classe, "\"|", mot.mot, mot)
         cls = ''
     }
 

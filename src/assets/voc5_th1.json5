@@ -9,11 +9,226 @@
           {
             mot: 'anglais',
             classe: 'NM'
+          },
+          {
+            mot: 'bâtiment',
+            classe: 'NM'
+          },
+          {
+            mot: 'bienvenu',
+            classe: 'ADJ',
+            fem: 'bienvenue'
+          },
+          {
+            mot: 'bienvenue',
+            classe: 'NF',
+          },
+          {
+            mot: 'cahier',
+            classe: 'NM'
+          },
+          {
+            mot: 'cité',
+            classe: 'NF'
+          },
+          {
+            mot: 'composer',
+            classe: 'V'
+          },
+          {
+            mot: 'correspondance',
+            classe: 'NF'
+          },
+          {
+            mot: 'decouverte',
+            classe: 'NF'
+          },
+          {
+            mot: 'demeure',
+            classe: 'NM'
+          },
+          {
+            mot: 'devant',
+            classe: 'NM'
+          },
+          {
+            mot: 'difference',
+            classe: 'NF'
+          },
+          {
+            mot: 'education',
+            classe: 'NF'
+          },
+          {
+            mot: 'français',
+            classe: 'NM'
+          },
+          {
+            mot: 'manque',
+            classe: 'NM'
+          },
+          {
+            mot: 'méthode',
+            classe: 'V'
+          },
+          {
+            mot: 'noter',
+            classe: 'V'
+          },
+          {
+            mot: 'orthographe',
+            classe: 'NF'
+          },
+          {
+            mot: 'pauvreté',
+            classe: 'NF'
+          },
+          {
+            mot: 'prénom',
+            classe: 'NM'
+          },
+          {
+            mot: 'rang',
+            classe: 'NM'
+          },
+          {
+            mot: 'récréation',
+            classe: 'NF'
+          },
+          {
+            mot: 'richesse',
+            classe: 'NF'
+          },
+          {
+            mot: 'style',
+            classe: 'NM'
+          },
+          {
+            mot: 'tisser',
+            classe: 'V'
+          },
+          {
+            mot: 'vieillard',
+            classe: 'NM'
+          }
+        ]
+      },
+      {
+        id: 2,
+        mots: [
+          {
+            mot: 'armée',
+            classe: 'NF'
+          },
+          {
+            mot: 'assister',
+            classe: 'V'
+          },
+          {
+            mot: 'base',
+            classe: 'NF'
+          },
+          {
+            mot: 'civilisation',
+            classe: 'NF'
+          },
+          {
+            mot: 'comportement',
+            classe: 'NM'
+          },
+          {
+            mot: 'connaissance',
+            classe: 'NF'
+          },
+          {
+            mot: 'étranger',
+            classe: 'NM',
+            fem: 'étrangère'
+          },
+          {
+            mot: 'frontière',
+            classe: 'NF'
+          },
+          {
+            mot: 'lui',
+            classe: 'PRON'
+          },
+          {
+            mot: 'leur',
+            classe: 'PRON'
+          },
+          {
+            mot: 'militaire',
+            classe: ['NM', 'NM', 'ADJ']
+          },
+          {
+            mot: 'nation',
+            classe: 'NF'
+          },
+          {
+            mot: 'origine',
+            classe: 'NF'
+          },
+          {
+            mot: 'peuple',
+            classe: 'NM'
+          },
+          {
+            mot: 'prisonnier',
+            classe: ['NM', 'ADJ'],
+            fem: 'prisonnière'
+          },
+          {
+            mot: 'ranger',
+            classe: 'V'
+          },
+          {
+            mot: 'région',
+            classe: 'NF'
+          },
+          {
+            mot: 'ruine',
+            classe: 'NF'
+          },
+          {
+            mot: 'saisir',
+            classe: 'V'
+          },
+          {
+            mot: 'sérieux',
+            classe: 'ADJ',
+            fem: 'sérieuse'
+          },
+          {
+            mot: 'terme',
+            classe: 'NM'
+          },
+          {
+            mot: 'territoire',
+            classe: 'NM'
+          },
+          {
+            mot: 'trace',
+            classe: 'NF'
+          },
+          {
+            mot: 'usage',
+            classe: 'NM'
+          },
+          {
+            mot: 'valeur',
+            classe: 'NF'
+          },
+          {
+            mot: 'visiteur',
+            classe: 'NM',
+            fem: 'visiteuse'
           }
         ]
       }
     ]
   },
+
   {
     theme: 2,
     description: 'Sous la terre',
