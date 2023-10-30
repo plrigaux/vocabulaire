@@ -111,10 +111,55 @@ export class VocabulaireComponent implements OnInit {
     let nombre_label = ''
 
     if (MotNombre.PLURIEL == mot.nombre) {
-      if ('NOM' == mot.classe || 'ADJ' == mot.classe ) {
+      if ('NOM' == mot.classe || 'ADJ' == mot.classe) {
         nombre_label = 'Pluriel'
       }
     }
     return nombre_label
+  }
+
+  copyTheme(theme_id: number): string {
+    let mots = ""
+
+
+    let return_theme = this.themes.find(element => element.theme === theme_id)
+
+    if (return_theme) {
+      if (return_theme.series) {
+        return_theme.series.forEach((element) => {
+          element.mots.forEach(elemment_mot => {
+            mots += elemment_mot.mot + "\n"
+          })
+        })
+      }
+    } else {
+      console.warn("No them found for value:", theme_id)
+    }
+
+    return mots
+  }
+
+
+  copySerie(theme_id: number, serie_id: number): string {
+    let mots = ""
+
+
+    let return_theme = this.themes.find(element => element.theme === theme_id)
+
+    if (return_theme) {
+      if (return_theme.series) {
+        return_theme.series.forEach((element) => {
+          if (element.id === serie_id) {
+            element.mots.forEach(elemment_mot => {
+              mots += elemment_mot.mot + "\n"
+            })
+          }
+        })
+      }
+    } else {
+      console.warn("No them found for value:", theme_id)
+    }
+
+    return mots
   }
 }

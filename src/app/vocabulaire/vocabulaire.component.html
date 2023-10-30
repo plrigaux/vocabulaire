@@ -6,13 +6,14 @@
   >
     <mat-expansion-panel-header>
       <mat-panel-title class="panel-title">
-        Thème {{ theme.theme }} {{ theme.description }}
+        Thème {{ theme.theme }} {{ theme.description }} 
       </mat-panel-title>
     </mat-expansion-panel-header>
-
+    <button mat-raised-button [cdkCopyToClipboard]="copyTheme(theme.theme)" color="primary">Copier les mots</button>
     <ul>
       <li *ngFor="let semaine of theme.semaines">
         <h2>Semaine {{ semaine.semaine }}</h2>
+        <button mat-raised-button>Copier les mots</button>
         <div *ngFor="let groupe of semaine.groupes">
           <h3 class="indice" [innerHTML]="groupe.indice"></h3>
           <ul>
@@ -28,6 +29,7 @@
       </li>
       <li *ngFor="let serie of theme.series">
         <h2>Série {{ theme.theme }}.{{ serie.id }}</h2>
+        <button mat-raised-button [cdkCopyToClipboard]="copySerie(theme.theme, serie.id)">Copier les mots</button>
         <ul>
           <li *ngFor="let mot of serie.mots">
             <span class="mot"

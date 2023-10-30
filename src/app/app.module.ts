@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-
+import { ClipboardModule } from '@angular/cdk/clipboard';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -33,7 +33,7 @@ import { MatRadioModule as MatRadioModule } from '@angular/material/radio'
 import { MatMenuModule as MatMenuModule } from '@angular/material/menu'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatCheckboxModule as MatCheckboxModule } from '@angular/material/checkbox'
-import {MatSnackBarModule as MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule as MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,9 +71,10 @@ import {MatSnackBarModule as MatSnackBarModule} from '@angular/material/snack-ba
     MatMenuModule,
     MatToolbarModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
