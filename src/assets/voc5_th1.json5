@@ -21,7 +21,7 @@
           },
           {
             mot: 'bienvenue',
-            classe: 'NF',
+            classe: 'NF'
           },
           {
             mot: 'cahier',
@@ -931,5 +931,85 @@
         ]
       }
     ]
+  },
+  {
+    theme: 5,
+    description: 'En quelques clics',
+    series: [
+      {
+        id: 1,
+        mots: [
+          { mot: 'accès', classe: 'NM' },
+          { mot: 'appareil', classe: 'NM' },
+          { mot: 'application', classe: 'NF' },
+          { mot: 'classer', classe: 'V' },
+          { mot: 'conscience', classe: 'NF' },
+          { mot: 'contact', classe: 'NM' },
+          { mot: 'contenu', classe: 'NM' },
+          { mot: 'déclaration', classe: 'NF' },
+          { mot: 'définition', classe: 'NF' },
+          { mot: 'document', classe: 'NM' },
+          { mot: 'dossier', classe: 'NM' },
+          { mot: 'étude', classe: 'NF' },
+          { mot: 'examen', classe: 'NM' },
+          { mot: 'information', classe: 'NF' },
+          { mot: 'intéresser', classe: 'V' },
+          { mot: 'intérêt', classe: 'NM' },
+          { mot: 'presse', classe: 'NF' },
+          { mot: 'programme', classe: 'NM' },
+          { mot: 'publicité', classe: 'NF' },
+          { mot: 'quantité', classe: 'NF' },
+          { mot: 'remarque', classe: 'NF' },
+          { mot: 'remise', classe: 'NF' },
+          {
+            mot: 'savant',
+            classe: ['NM', 'ADJ'],
+            fem: 'savante'
+          },
+          { mot: 'technique', classe: 'NF' },
+          { mot: 'téléviseur', classe: 'NM' }
+        ]
+      },
+      {
+        id: 2,
+        mots: [
+          { mot: 'annonce', classe: 'NF' },
+          { mot: 'avertissement', classe: 'NM' },
+          { mot: 'bouton', classe: 'NM' },
+          { mot: 'complet/complète', classe: 'ADJ' },
+          { mot: 'contrat', classe: 'NM' },
+          { mot: 'contrôle', classe: 'NM' },
+          { mot: 'convenir', classe: 'V' },
+          { mot: 'délai', classe: 'NM' },
+          { mot: 'domaine', classe: 'NM' },
+          { mot: 'écran', classe: 'NM' },
+          { mot: 'flèche', classe: 'NF' },
+          { mot: 'jeune', classe: ['NF', 'NM'] },
+          { mot: 'jeunesse', classe: 'NF' },
+          { mot: 'lien', classe: 'NM' },
+          { mot: 'lier', classe: 'V' },
+          { mot: 'mémoire', classe: 'NF' },
+          { mot: 'prétexte', classe: 'NM' },
+          { mot: 'propriété', classe: 'NF' },
+          { mot: 'protection', classe: 'NF' },
+          { mot: 'rapport', classe: 'NM' },
+          { mot: 'réforme', classe: 'NF' },
+          { mot: 'série', classe: 'NF' },
+          { mot: 'somme', classe: 'NF' },
+          { mot: 'texte', classe: 'NM' },
+          { mot: 'toile', classe: 'NF' }
+        ]
+      }
+    ]
   }
 ]
+
+/*
+Les parcs marins 
+
+1. admirer y. 2. ancre n. f. 3. aspect n. m. 4. bouquet n. m. 5. calme n. m. calme adj. 6. chute n. f. 7. directive n. f. 8. enlever y. 9. épave n. f. 10. équipage n. m. 11. flotte n, f. 12. maillot n. m. 13. manche n. m. 
+< 58 Arob@s • MES OUTILS 
+14. manche n. f. 15. manoeuvre n. f. 16. mensonge n. m. 17. noeud n. m. 18. océan n. m. 19. plante n. f. 20. plongée n. f. 21. portée n. f. 22. sirène n. f. 23. tissu n. m. 
+24. total • totaux n. m. total • totaux /totale • totales adj. 25. velours n. m. 
+
+*/

@@ -161,7 +161,7 @@ export class InputerComponent implements OnInit {
         } else if (this.is_last_an_adj(mots, line)) {
           console.log('fem', line)
         } else {
-          console.warn('faulty line', line)
+          console.warn('faulty line nb:', line)
         }
       }
       previousLine = line
