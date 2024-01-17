@@ -21,7 +21,7 @@
           },
           {
             mot: 'bienvenue',
-            classe: 'NF',
+            classe: 'NF'
           },
           {
             mot: 'cahier',
@@ -931,5 +931,74 @@
         ]
       }
     ]
+  },
+  {
+    theme: 5,
+    description: 'Comme par magie!',
+    series: [
+      {
+        id: 1,
+        mots: [
+          {
+            mot: '',
+            classe: ''
+          },
+          { mot: 'accès', classe: 'NM' },
+          { mot: 'appareil', classe: 'NM' },
+          { mot: 'application', classe: 'NF' },
+          { mot: 'classer', classe: 'V' },
+          { mot: 'conscience', classe: 'NF' },
+          { mot: 'contact', classe: 'NM' },
+          { mot: 'contenu', classe: 'NM' },
+          { mot: 'déclaration', classe: 'NF' },
+          { mot: 'définition', classe: 'NF' },
+          { mot: 'document', classe: 'NM' },
+          { mot: 'dossier', classe: 'NM' },
+          { mot: 'étude', classe: 'NF' },
+          { mot: 'examen', classe: 'NM' },
+          { mot: 'information', classe: 'NF' },
+          { mot: 'intéresser', classe: 'V' },
+          { mot: 'intérêt', classe: 'NM' },
+          { mot: 'presse', classe: 'NF' },
+          { mot: 'programme', classe: 'NM' },
+          { mot: 'publicité', classe: 'NF' },
+          { mot: 'quantité', classe: 'NF' },
+          { mot: 'remarque', classe: 'NF' },
+          { mot: 'remise', classe: 'NF' },
+          {
+            mot: 'savant',
+            classe: ['NM', 'ADJ'],
+            fem: 'savante'
+          },
+          { mot: 'technique', classe: 'NF' },
+          { mot: 'téléviseur', classe: 'NM' },
+          { mot: '', classe: '' }
+        ]
+      }
+    ]
   }
 ]
+
+/*
+
+L accès n. m. 2. appareil n. m. 3. application n. f. 4. classer y. 5. conscience n. f, 6. contact n. m. 7. contenu n. m. 
+8. déclaration n. f. 9. définition n. f. 
+10. document n. m. 11. dossier n. m. 12. étude n. f. 13. examen n. m. 
+
+14. information n. f. 15. intéresser v. 16. intérêt n. m, 17. presse n. f. 18. programme n. m. 19. publicité n. f. 20. quantité n. f, 
+21. remarque n. f. 22. remise n. f. 23. savant /savante n m. et n. f. ou adj. 24. technique n. f, 25. téléviseur n. m. 
+
+1. annonce n. f. 2. avertissement n. m. 3. bouton n. m. 4. complet/complète adj. 5. contrat n. m. 6. contrôle n. m. 7. convenir V. 8. délai n. m. 9. domaine n. m. 10. écran n. m. 11. flèche n. f. 12. jeune n. m. ou n. f. 13. jeunesse n. f. 
+
+
+14. lien n. m. 15. lier y. 16. mémoire n. f. 17. prétexte n. m. 18. propriété n. f. 19. protection n. f. 20. rapport n. m. 21. réforme n. f. 22. série n. f. 23. somme n. f. 24. texte n. m. 25. toile n. f. 
+Les parcs marins 
+
+1. admirer y. 2. ancre n. f. 3. aspect n. m. 4. bouquet n. m. 5. calme n. m. calme adj. 6. chute n. f. 7. directive n. f. 8. enlever y. 9. épave n. f. 10. équipage n. m. 11. flotte n, f. 12. maillot n. m. 13. manche n. m. 
+< 58 Arob@s • MES OUTILS 
+14. manche n. f. 15. manoeuvre n. f. 16. mensonge n. m. 17. noeud n. m. 18. océan n. m. 19. plante n. f. 20. plongée n. f. 21. portée n. f. 22. sirène n. f. 23. tissu n. m. 
+24. total • totaux n. m. total • totaux /totale • totales adj. 25. velours n. m. 
+
+ IN 
+
+*/
