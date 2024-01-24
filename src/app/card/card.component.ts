@@ -29,12 +29,12 @@ import { MatSnackBar as MatSnackBar } from '@angular/material/snack-bar'
 export class CardComponent implements OnInit {
   private _userInput: string = ''
 
-  set userInput (v: string) {
+  set userInput(v: string) {
     this._userInput = v
     this.checkIsWriting()
   }
 
-  get userInput () {
+  get userInput() {
     return this._userInput
   }
 
@@ -56,17 +56,17 @@ export class CardComponent implements OnInit {
 
   showIndice = false
 
-  constructor (
+  constructor(
     public dialog: MatDialog,
     public voiceService: VoiceControlService,
     private _snackBar: MatSnackBar
-  ) {}
+  ) { }
 
-  get prefix (): string {
+  get prefix(): string {
     return this._prefix
   }
 
-  openDialog (): void {
+  openDialog(): void {
     const dialogRef = this.dialog.open(VoiceControlComponent, {
       width: '350px'
     })
@@ -76,9 +76,9 @@ export class CardComponent implements OnInit {
     })
   }
 
-  ngOnInit (): void {}
+  ngOnInit(): void { }
 
-  ngOnChanges (changes: SimpleChanges) {
+  ngOnChanges(changes: SimpleChanges) {
     const article: SimpleChange = changes['article']
 
     if (!article.firstChange) {
@@ -86,7 +86,7 @@ export class CardComponent implements OnInit {
     }
   }
 
-  newWord (mot: MotTI) {
+  newWord(mot: MotTI) {
     console.log('newWord', mot)
     this.mot = mot
     this._prefix = ''
@@ -103,14 +103,14 @@ export class CardComponent implements OnInit {
     this.successHasBeenPraise = false
   }
 
-  focusInput () {
+  focusInput() {
     setTimeout(() => {
       this.answerInput.nativeElement.focus()
       console.log('this.answerInput.focus(); ')
     }, 250)
   }
 
-  validate (): void {
+  validate(): void {
     console.log('validate')
 
     //setting given triggers validation
@@ -120,7 +120,7 @@ export class CardComponent implements OnInit {
     this.checkIsWriting()
   }
 
-  checkIsWriting () {
+  checkIsWriting() {
     if (this.userInput.trim().length == 0) {
       this.emitIsWriting(false)
     } else {
@@ -133,26 +133,26 @@ export class CardComponent implements OnInit {
   }
 
   private _writingState: boolean | null = null
-  private emitIsWriting (writingState: boolean) {
+  private emitIsWriting(writingState: boolean) {
     if (this._writingState !== writingState) {
       this._writingState = writingState
       this.isWriting.emit(this._writingState)
     }
   }
 
-  rePlay () {
+  rePlay() {
     this.play()
     this.focusInput()
   }
 
-  play () {
+  play() {
     if (this.mot) {
       let text = this.generateText(this.mot)
       this.voiceService.play(text)
     }
   }
 
-  private generateText (mot: MotTI): string {
+  private generateText(mot: MotTI): string {
     let text = ''
     let cls = Array.isArray(mot.classe) ? mot.classe[0] : mot.classe
     switch (cls) {
@@ -173,10 +173,16 @@ export class CardComponent implements OnInit {
     return text
   }
 
-  private adjective (mot: MotTI): string {
+  private adjective(mot: MotTI): string {
     switch (mot.genre) {
       case MotGenre.FEMININ:
-        this._prefix = '<i>adjectif féminin</i>'
+        this._prefix = '<i>adjectif féminin'
+
+        if (MotNombre.PLURIEL == mot.nombre) {
+          this._prefix += ' pluriel'
+        }
+
+        this._prefix += '</i>'
         break
       case MotGenre.MASCULIN:
         this._prefix = '<i>adjectif masculin</i>'
@@ -189,8 +195,8 @@ export class CardComponent implements OnInit {
   }
 
   voyelRegEx = /[aáàâäãåeéèêëiíìîïoóòôöõuúùûüyýÿæœAÁÀÂÄÃÅEÉÈÊËIÍÌÎÏOÓÒÔÖÕUÚÙÛÜYÝŸ]/
-  
-  private apostrophe (mot: string, genre: MotGenre, nombre: MotNombre) {
+
+  private apostrophe(mot: string, genre: MotGenre, nombre: MotNombre) {
     let text = ''
     const feminin = genre == MotGenre.FEMININ || genre == MotGenre.EPICENE
     if (this.article == ARTICE_INDET) {
@@ -207,7 +213,7 @@ export class CardComponent implements OnInit {
         determinant = "les"
         premiereLettre = 'b' //not a voyelle
       }
-      
+
       if (
         this.voyelRegEx.test(
           premiereLettre
@@ -223,7 +229,7 @@ export class CardComponent implements OnInit {
     return text
   }
 
-  getMot (): string[] {
+  getMot(): string[] {
     if (!this.mot) {
       return []
     }
@@ -235,20 +241,20 @@ export class CardComponent implements OnInit {
     return list_mots
   }
 
-  getIndice (): string {
+  getIndice(): string {
     return this.mot?.indice ? this.mot.indice : ''
   }
 
-  validationDisable (): boolean {
+  validationDisable(): boolean {
     return this.userInput === '' || this.mot == null
   }
 
-  playDisable (): boolean {
+  playDisable(): boolean {
     return this.mot == null
   }
 
   successHasBeenPraise = false
-  handleSucces (success: boolean) {
+  handleSucces(success: boolean) {
     if (!this.successHasBeenPraise && success && this.validation) {
       this.successHasBeenPraise = true
       this._snackBar.open('Bravo!', '', {
@@ -257,7 +263,7 @@ export class CardComponent implements OnInit {
     }
   }
 
-  showIndiceToggle ($event: MouseEvent) {
+  showIndiceToggle($event: MouseEvent) {
     console.log($event)
     this.showIndice = this.showIndice ? false : true
   }
