@@ -1001,15 +1001,48 @@
         ]
       }
     ]
-  }
+  },
+   {
+    theme: 6,
+    description: 'Les parcs marins ',
+    series: [
+      {
+        id: 1,
+        mots: [
+          { mot: 'admirer', classe: 'V' },
+          { mot: 'ancre', classe: 'NF' },
+          { mot: 'aspect', classe: 'NM' },
+          { mot: 'bouquet', classe: 'NM' },
+          { mot: 'calme', classe: ['NM','ADJ'] },
+          { mot: 'chute', classe: 'NF' },
+          { mot: 'directive', classe: 'NF' },
+          { mot: 'enlever', classe: 'V' },
+          { mot: 'épave', classe: 'NF' },
+          { mot: 'équipage', classe: 'NM' },
+          { mot: 'flotte', classe: 'NF' },
+          { mot: 'maillot', classe: 'NM' },
+          { mot: 'manche', classe: ['NM','NF'] },
+          { mot: 'manoeuvre', classe: 'NF' },
+          { mot: 'mensonge', classe: 'NM' },
+          { mot: 'noeud', classe: 'NM' },
+          { mot: 'océan', classe: 'NM' },
+          { mot: 'plante', classe: 'NF' },
+          { mot: 'plongée', classe: 'NF' },
+          { mot: 'portée', classe: 'NF' },
+          { mot: 'tissu', classe: 'NM' },
+          { mot: 'total', classe: ['NM','ADJ'] },
+          { mot: 'totaux', classe: ['NM','ADJ'], nombre: 2 },
+          { mot: 'totale', classe: 'ADJ', genre:2 },
+          { mot: 'totales', classe: 'ADJ', nombre: 2 , genre:2 },
+          { mot: 'velours', classe: 'NM' },
+   
+
+        ]
+      }]
+   }
 ]
 
-/*
-Les parcs marins 
 
-1. admirer y. 2. ancre n. f. 3. aspect n. m. 4. bouquet n. m. 5. calme n. m. calme adj. 6. chute n. f. 7. directive n. f. 8. enlever y. 9. épave n. f. 10. équipage n. m. 11. flotte n, f. 12. maillot n. m. 13. manche n. m. 
-< 58 Arob@s • MES OUTILS 
-14. manche n. f. 15. manoeuvre n. f. 16. mensonge n. m. 17. noeud n. m. 18. océan n. m. 19. plante n. f. 20. plongée n. f. 21. portée n. f. 22. sirène n. f. 23. tissu n. m. 
-24. total • totaux n. m. total • totaux /totale • totales adj. 25. velours n. m. 
 
-*/
+
+
