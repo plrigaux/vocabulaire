@@ -1,0 +1,1020 @@
+[
+    {
+        "mot": "à côté de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "aller",
+        "classe": "V"
+    },
+    {
+        "mot": "alors",
+        "classe": "ADV"
+    },
+    {
+        "mot": "amuser",
+        "classe": "V"
+    },
+    {
+        "mot": "an",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "appeler",
+        "classe": "V"
+    },
+    {
+        "mot": "après",
+        "classe": "ADV"
+    },
+    {
+        "mot": "après",
+        "classe": "PREP"
+    },
+    {
+        "mot": "arrêter",
+        "classe": "V"
+    },
+    {
+        "mot": "arriver",
+        "classe": "V"
+    },
+    {
+        "mot": "attendre",
+        "classe": "V"
+    },
+    {
+        "mot": "au aux",
+        "classe": "DET"
+    },
+    {
+        "mot": "aujourd'hui",
+        "classe": "ADV"
+    },
+    {
+        "mot": "aussi",
+        "classe": "ADV"
+    },
+    {
+        "mot": "auto",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "automne",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "autour",
+        "classe": "ADV"
+    },
+    {
+        "mot": "autre",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "avant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "avant",
+        "classe": "PREP"
+    },
+    {
+        "mot": "avec",
+        "classe": "PREP"
+    },
+    {
+        "mot": "banane",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "bas",
+        "classe": "ADJ",
+        "fem": "basse"
+    },
+    {
+        "mot": "bois",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bout",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "brebis",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "bruit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "café",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "campagne",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "canard",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cane",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "carotte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ce cet cette ces",
+        "classe": "DET"
+    },
+    {
+        "mot": "celle",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "celui"
+    },
+    {
+        "mot": "celles",
+        "classe": "PRON",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "celui"
+    },
+    {
+        "mot": "celui",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "celui"
+    },
+    {
+        "mot": "cent",
+        "classe": "DET"
+    },
+    {
+        "mot": "certains certaines",
+        "classe": "DET"
+    },
+    {
+        "mot": "ceux",
+        "classe": "PRON",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "celui"
+    },
+    {
+        "mot": "chanson",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chaque",
+        "classe": "DET"
+    },
+    {
+        "mot": "chez",
+        "classe": "PREP"
+    },
+    {
+        "mot": "cinquante",
+        "classe": "DET"
+    },
+    {
+        "mot": "comme",
+        "classe": "ADV"
+    },
+    {
+        "mot": "comme",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "comment",
+        "classe": "ADV"
+    },
+    {
+        "mot": "coq",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "côté",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cour",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "cousin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cousine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "déjà",
+        "classe": "ADV"
+    },
+    {
+        "mot": "depuis",
+        "classe": "ADV"
+    },
+    {
+        "mot": "depuis",
+        "classe": "PREP"
+    },
+    {
+        "mot": "dernier",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "dernier",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "dernière",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "dernière",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "derrière",
+        "classe": "ADV"
+    },
+    {
+        "mot": "derrière",
+        "classe": "PREP"
+    },
+    {
+        "mot": "deuxième",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "deuxième",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "devant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "devant",
+        "classe": "PREP"
+    },
+    {
+        "mot": "dire",
+        "classe": "V"
+    },
+    {
+        "mot": "donc",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "douze",
+        "classe": "DET"
+    },
+    {
+        "mot": "élève",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "élève",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "en",
+        "classe": "PREP"
+    },
+    {
+        "mot": "encore",
+        "classe": "ADV"
+    },
+    {
+        "mot": "enfin",
+        "classe": "ADV"
+    },
+    {
+        "mot": "ensuite",
+        "classe": "ADV"
+    },
+    {
+        "mot": "entendre",
+        "classe": "V"
+    },
+    {
+        "mot": "entre",
+        "classe": "PREP"
+    },
+    {
+        "mot": "été",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "face",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "faire",
+        "classe": "V"
+    },
+    {
+        "mot": "fantôme",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "faux",
+        "classe": "ADJ",
+        "fem": "fausse"
+    },
+    {
+        "mot": "fée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "femme",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "figure",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fils",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "fort",
+        "classe": "ADJ",
+        "fem": "forte"
+    },
+    {
+        "mot": "froid",
+        "classe": "ADJ",
+        "fem": "froide"
+    },
+    {
+        "mot": "fruit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "grand-maman",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "grand-mère",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "grand-papa",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "grand-père",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "haut",
+        "classe": "ADJ",
+        "fem": "haute"
+    },
+    {
+        "mot": "hiver",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "homme",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "ici",
+        "classe": "ADV"
+    },
+    {
+        "mot": "idée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "image",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "jamais",
+        "classe": "ADV"
+    },
+    {
+        "mot": "joyeux",
+        "classe": "ADJ",
+        "fem": "joyeuse"
+    },
+    {
+        "mot": "jument",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "là",
+        "classe": "ADV"
+    },
+    {
+        "mot": "laid",
+        "classe": "ADJ",
+        "fem": "laide"
+    },
+    {
+        "mot": "large",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "leçon",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "lecture",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "légume",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "leur leurs",
+        "classe": "DET"
+    },
+    {
+        "mot": "loin",
+        "classe": "ADV"
+    },
+    {
+        "mot": "lorsque lorsqu’",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "madame",
+        "classe": "N",
+        "genre": 2,
+        "groupe": "madame"
+    },
+    {
+        "mot": "maintenant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "mal",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "malade",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "malade",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "malade",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "marier",
+        "classe": "V"
+    },
+    {
+        "mot": "me m'",
+        "classe": "PRON"
+    },
+    {
+        "mot": "même",
+        "classe": "ADV"
+    },
+    {
+        "mot": "mesdames",
+        "classe": "N",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "madame"
+    },
+    {
+        "mot": "mettre",
+        "classe": "V"
+    },
+    {
+        "mot": "mieux",
+        "classe": "ADV"
+    },
+    {
+        "mot": "moi",
+        "classe": "PRON"
+    },
+    {
+        "mot": "moins",
+        "classe": "ADV"
+    },
+    {
+        "mot": "moment",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "monsieur",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "monstre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "monter",
+        "classe": "V"
+    },
+    {
+        "mot": "nature",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ni",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "non",
+        "classe": "ADV"
+    },
+    {
+        "mot": "notre nos",
+        "classe": "DET"
+    },
+    {
+        "mot": "nouveau",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "nouveau",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "nouvelle",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "nouvelle",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "oncle",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "onze",
+        "classe": "DET"
+    },
+    {
+        "mot": "orange",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "orange",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "oui",
+        "classe": "ADV"
+    },
+    {
+        "mot": "paire",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "par",
+        "classe": "PREP"
+    },
+    {
+        "mot": "parce que parce qu’",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "parent",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "parfois",
+        "classe": "ADV"
+    },
+    {
+        "mot": "partout",
+        "classe": "ADV"
+    },
+    {
+        "mot": "pas",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "passer",
+        "classe": "V"
+    },
+    {
+        "mot": "patate",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "patte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "peau",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "peine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "pendant",
+        "classe": "PREP"
+    },
+    {
+        "mot": "penser",
+        "classe": "V"
+    },
+    {
+        "mot": "peu",
+        "classe": "ADV"
+    },
+    {
+        "mot": "peur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "peut-être",
+        "classe": "ADV"
+    },
+    {
+        "mot": "porc",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "pour",
+        "classe": "PREP"
+    },
+    {
+        "mot": "pourquoi",
+        "classe": "ADV"
+    },
+    {
+        "mot": "prendre",
+        "classe": "V"
+    },
+    {
+        "mot": "près",
+        "classe": "ADV"
+    },
+    {
+        "mot": "prière",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "prince",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "princesse",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "printemps",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "propre",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "puis",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "quarante",
+        "classe": "DET"
+    },
+    {
+        "mot": "quatorze",
+        "classe": "DET"
+    },
+    {
+        "mot": "que qu'",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "que qu'",
+        "classe": "PRON"
+    },
+    {
+        "mot": "quelque",
+        "classe": "DET"
+    },
+    {
+        "mot": "quelques",
+        "classe": "DET",
+        "nombre": 2
+    },
+    {
+        "mot": "quinze",
+        "classe": "DET"
+    },
+    {
+        "mot": "reine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "répondre",
+        "classe": "V"
+    },
+    {
+        "mot": "rester",
+        "classe": "V"
+    },
+    {
+        "mot": "rose",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "sage",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "sans",
+        "classe": "PREP"
+    },
+    {
+        "mot": "savoir",
+        "classe": "V"
+    },
+    {
+        "mot": "se s’",
+        "classe": "PRON"
+    },
+    {
+        "mot": "seize",
+        "classe": "DET"
+    },
+    {
+        "mot": "semaine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "seul",
+        "classe": "ADJ",
+        "fem": "seule"
+    },
+    {
+        "mot": "si",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "soixante",
+        "classe": "DET"
+    },
+    {
+        "mot": "sortir",
+        "classe": "V"
+    },
+    {
+        "mot": "sous",
+        "classe": "PREP"
+    },
+    {
+        "mot": "souvent",
+        "classe": "ADV"
+    },
+    {
+        "mot": "suivre",
+        "classe": "V"
+    },
+    {
+        "mot": "sur",
+        "classe": "PREP"
+    },
+    {
+        "mot": "surtout",
+        "classe": "ADV"
+    },
+    {
+        "mot": "tableau",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "tant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "tante",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "tard",
+        "classe": "ADV"
+    },
+    {
+        "mot": "te t'",
+        "classe": "PRON"
+    },
+    {
+        "mot": "tellement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "temps",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "toi",
+        "classe": "PRON"
+    },
+    {
+        "mot": "tomber",
+        "classe": "V"
+    },
+    {
+        "mot": "toujours",
+        "classe": "ADV"
+    },
+    {
+        "mot": "tourner",
+        "classe": "V"
+    },
+    {
+        "mot": "tout tous toute toutes",
+        "classe": "DET"
+    },
+    {
+        "mot": "treize",
+        "classe": "DET"
+    },
+    {
+        "mot": "trente",
+        "classe": "DET"
+    },
+    {
+        "mot": "très",
+        "classe": "ADV"
+    },
+    {
+        "mot": "trop",
+        "classe": "ADV"
+    },
+    {
+        "mot": "trouver",
+        "classe": "V"
+    },
+    {
+        "mot": "truie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "venir",
+        "classe": "V"
+    },
+    {
+        "mot": "vers",
+        "classe": "PREP"
+    },
+    {
+        "mot": "vieux",
+        "classe": "ADJ",
+        "fem": "vieille"
+    },
+    {
+        "mot": "vingt",
+        "classe": "DET"
+    },
+    {
+        "mot": "vite",
+        "classe": "ADV"
+    },
+    {
+        "mot": "voici",
+        "classe": "PREP"
+    },
+    {
+        "mot": "voilà",
+        "classe": "PREP"
+    },
+    {
+        "mot": "voix",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "votre vos",
+        "classe": "DET"
+    },
+    {
+        "mot": "vrai",
+        "classe": "ADJ",
+        "fem": "vraie"
+    },
+    {
+        "mot": "vraiment",
+        "classe": "ADV"
+    },
+    {
+        "mot": "y",
+        "classe": "PRON"
+    },
+    {
+        "mot": "zéro",
+        "classe": "DET"
+    },
+    {
+        "mot": "zéro",
+        "classe": "N",
+        "genre": 1
+    }
+]

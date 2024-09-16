@@ -31,7 +31,14 @@ export class VocabulaireDataHandlerService {
       this.getVocabularyAsset('./assets/voc4_th4.json5'),
       this.getVocabularyAsset('./assets/voc4_th5.json5'),
       this.getVocabularyAsset('./assets/voc4_th6.json5'),*/
-      this.getVocabularyAsset('./assets/voc5_th1.json5')
+      //this.getVocabularyAsset('./assets/voc5_th1.json5')
+
+      this.getVocabularyAsset('./assets/voca_1re.json', 1, "1ère année"),
+      this.getVocabularyAsset('./assets/voca_2e.json', 2, "2e année"),
+      this.getVocabularyAsset('./assets/voca_3e.json', 3, "3e année"),
+      this.getVocabularyAsset('./assets/voca_4e.json', 4, "4e année"),
+      this.getVocabularyAsset('./assets/voca_5e.json', 5, "5e année"),
+      this.getVocabularyAsset('./assets/voca_6e.json', 6, "6e année"),
     ])
       .then(data => {
         const list_of_theme = data.flat(1)
@@ -104,17 +111,42 @@ export class VocabulaireDataHandlerService {
     return this.themes
   }
 
-  private getVocabularyAsset = (file: string): Promise<any> => {
-    return fetch(file)
-      .then(response => response.text())
-      .then(text => {
-        // Do something with your data
-        //console.log(text)
-        let data: any = JSON5.parse(text)
-        //console.log(data)
-        return data
-      })
-      .catch(console.error)
+  private getVocabularyAsset = async (file: string, theme_id: number | undefined, theme_description: string | undefined
+  ): Promise<any> => {
+    try {
+      const response = await fetch(file)
+      const text = await response.text()
+      // Do something with your data
+      //console.log(text)
+
+      let data: any
+      if (file.endsWith(".json5")) {
+        data = JSON5.parse(text)
+      } else {
+        data = JSON.parse(text)
+      }
+
+      if (theme_id) {
+        let serie: Serie = {
+          id: 0,
+          mots: data
+        }
+
+        let mots_an =
+        {
+          theme: theme_id,
+          an: theme_id,
+          description: theme_description,
+          series: [serie]
+        };
+
+        return mots_an
+      }
+
+      return data
+    } catch (message) {
+      return console.error(message)
+    }
   }
 
   async getThemeById(theme_id: number | string): Promise<Theme | undefined> {
@@ -154,7 +186,7 @@ const createMotTI = (m: Mot, indice: string): MotTI => {
 
   let nombre = MotNombre.NA
   if (m.nombre) {
-    console.warn("TM", m.nombre, m)
+    //console.warn("TM", m.nombre, m)
     nombre = m.nombre
   }
 
@@ -260,9 +292,15 @@ const map_string_to_MotClass = (string_class: string): MotClasse => {
     case 'NI':
     case 'NF':
     case 'NM':
+    case 'N':
       c = MotClasse.NOM
       break
-
+    case 'CONJ':
+      c = MotClasse.CONJ
+      break
+    case 'PREP':
+      c = MotClasse.PREP
+      break
     default:
       console.warn("Mapping to MotClass FAILED! input:", string_class)
       c = MotClasse.NA

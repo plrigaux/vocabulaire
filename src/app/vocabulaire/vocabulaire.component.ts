@@ -66,6 +66,7 @@ export class VocabulaireComponent implements OnInit {
       case 'ADJ':
         cls = 'Adjectif'
         break
+      case 'N':
       case 'NOM':
         cls = 'Nom'
         break
@@ -81,6 +82,13 @@ export class VocabulaireComponent implements OnInit {
       case 'ADV':
         cls = 'Adverbe'
         break
+      case 'PREP':
+        cls = 'Préposition'
+        break
+      case 'CONJ':
+        cls = 'Conjonction'
+        break
+        
       default:
         console.warn('getClasseDetail not found: "', classe, "\"|", mot.mot, mot)
         cls = ''

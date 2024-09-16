@@ -1,0 +1,2635 @@
+[
+    {
+        "mot": "à droite",
+        "classe": "ADV"
+    },
+    {
+        "mot": "à gauche",
+        "classe": "ADV"
+    },
+    {
+        "mot": "à peu près",
+        "classe": "ADV"
+    },
+    {
+        "mot": "à travers",
+        "classe": "PREP"
+    },
+    {
+        "mot": "absolument",
+        "classe": "ADV"
+    },
+    {
+        "mot": "accident",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "accord",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "adorer",
+        "classe": "V"
+    },
+    {
+        "mot": "affreux",
+        "classe": "ADJ",
+        "fem": "affreuse"
+    },
+    {
+        "mot": "afin de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "agir",
+        "classe": "V"
+    },
+    {
+        "mot": "agriculture",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "aide",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "aide",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ailleurs",
+        "classe": "ADV"
+    },
+    {
+        "mot": "ainsi",
+        "classe": "ADV"
+    },
+    {
+        "mot": "ajouter",
+        "classe": "V"
+    },
+    {
+        "mot": "améliorer",
+        "classe": "V"
+    },
+    {
+        "mot": "amitié",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "amusant",
+        "classe": "ADJ",
+        "fem": "amusante"
+    },
+    {
+        "mot": "ancien",
+        "classe": "ADJ",
+        "fem": "ancienne"
+    },
+    {
+        "mot": "ange",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "anneau",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "annoncer",
+        "classe": "V"
+    },
+    {
+        "mot": "apercevoir",
+        "classe": "V"
+    },
+    {
+        "mot": "apparaître",
+        "alt": "apparaitre ",
+        "classe": "V"
+    },
+    {
+        "mot": "arracher",
+        "classe": "V"
+    },
+    {
+        "mot": "arranger",
+        "classe": "V"
+    },
+    {
+        "mot": "arrière",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "arrivée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "asseoir",
+        "alt": "assoir ",
+        "classe": "V"
+    },
+    {
+        "mot": "assurer",
+        "classe": "V"
+    },
+    {
+        "mot": "attacher",
+        "classe": "V"
+    },
+    {
+        "mot": "au lieu de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "au milieu de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "au moins",
+        "classe": "ADV"
+    },
+    {
+        "mot": "aube",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "aucun",
+        "classe": "DET",
+        "genre": 1,
+        "groupe": "aucun"
+    },
+    {
+        "mot": "aucune",
+        "classe": "DET",
+        "genre": 2,
+        "groupe": "aucun"
+    },
+    {
+        "mot": "aucunes",
+        "classe": "DET",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "aucun"
+    },
+    {
+        "mot": "aucuns",
+        "classe": "DET",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "aucun"
+    },
+    {
+        "mot": "auprès de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "autant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "automobile",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "autre",
+        "classe": "PRON"
+    },
+    {
+        "mot": "avance",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "avant-hier",
+        "classe": "ADV"
+    },
+    {
+        "mot": "aventure",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "bec",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "besoin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bibliothèque",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "bicyclette",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "bien",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "biscuit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bizarre",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "bleuet",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bol",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bond",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bottine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "bouger",
+        "classe": "V"
+    },
+    {
+        "mot": "boule",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "brouillard",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bulle",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "cabane",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "cachette",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "cage",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "caillou",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "capable",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "capitaine",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "capitaine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "carton",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cas",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "casser",
+        "classe": "V"
+    },
+    {
+        "mot": "catastrophe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ce",
+        "classe": "PRON"
+    },
+    {
+        "mot": "cela ça",
+        "classe": "PRON"
+    },
+    {
+        "mot": "celle-ci",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "celui-ci"
+    },
+    {
+        "mot": "celles-ci",
+        "classe": "PRON",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "celui-ci"
+    },
+    {
+        "mot": "celui-ci",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "celui-ci"
+    },
+    {
+        "mot": "cent",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "centimètre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "centre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cependant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "ceux-ci",
+        "classe": "PRON",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "celui-ci"
+    },
+    {
+        "mot": "chaleur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "champion",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "championne",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chance",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chanceux",
+        "classe": "ADJ",
+        "fem": "chanceuse"
+    },
+    {
+        "mot": "chapitre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "chaussure",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chef",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "chef",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chocolat",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "chuchoter",
+        "classe": "V"
+    },
+    {
+        "mot": "cirque",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "colère",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "compagnie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "complètement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "compte",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "conduire",
+        "classe": "V"
+    },
+    {
+        "mot": "confiance",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "connaître",
+        "alt": "connaitre ",
+        "classe": "V"
+    },
+    {
+        "mot": "construire",
+        "classe": "V"
+    },
+    {
+        "mot": "contenir",
+        "classe": "V"
+    },
+    {
+        "mot": "content",
+        "classe": "ADJ",
+        "fem": "contente"
+    },
+    {
+        "mot": "continent",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "contraire",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "corde",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "côte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "coupe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "couper",
+        "classe": "V"
+    },
+    {
+        "mot": "courage",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "crayon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "créer",
+        "classe": "V"
+    },
+    {
+        "mot": "creux",
+        "classe": "ADJ",
+        "fem": "creuse"
+    },
+    {
+        "mot": "croix",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "cuiller / cuillère",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "curieux",
+        "classe": "ADJ",
+        "fem": "curieuse"
+    },
+    {
+        "mot": "dangereux",
+        "classe": "ADJ",
+        "fem": "dangereuse"
+    },
+    {
+        "mot": "de bonne heure",
+        "classe": "ADV"
+    },
+    {
+        "mot": "de temps en temps",
+        "classe": "ADV"
+    },
+    {
+        "mot": "debout",
+        "classe": "ADV"
+    },
+    {
+        "mot": "début",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "décider",
+        "classe": "V"
+    },
+    {
+        "mot": "déclarer",
+        "classe": "V"
+    },
+    {
+        "mot": "défi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "déjeuner",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "déjeuner",
+        "classe": "V"
+    },
+    {
+        "mot": "délicieux",
+        "classe": "ADJ",
+        "fem": "délicieuse"
+    },
+    {
+        "mot": "départ",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "derrière",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "désert",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "désormais",
+        "classe": "ADV"
+    },
+    {
+        "mot": "dessous",
+        "classe": "ADV"
+    },
+    {
+        "mot": "dessous",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "dessus",
+        "classe": "ADV"
+    },
+    {
+        "mot": "dessus",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "détective",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "détective",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "détester",
+        "classe": "V"
+    },
+    {
+        "mot": "détruire",
+        "classe": "V"
+    },
+    {
+        "mot": "dieu",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "différent",
+        "classe": "ADJ",
+        "fem": "différente"
+    },
+    {
+        "mot": "difficile",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "difficulté",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "dîner",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "dîner",
+        "alt": "diner ",
+        "classe": "V"
+    },
+    {
+        "mot": "directeur",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "direction",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "directrice",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "disparaître",
+        "alt": "disparaitre ",
+        "classe": "V"
+    },
+    {
+        "mot": "distance",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "dollar",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "domestique",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "double",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "double",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "doucement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "douceur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "doute",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "dragon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "drôle",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "durant",
+        "classe": "PREP"
+    },
+    {
+        "mot": "échapper",
+        "classe": "V"
+    },
+    {
+        "mot": "échelle",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "éclair",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "éclairer",
+        "classe": "V"
+    },
+    {
+        "mot": "éclater",
+        "classe": "V"
+    },
+    {
+        "mot": "effet",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "effroyable",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "également",
+        "classe": "ADV"
+    },
+    {
+        "mot": "électrique",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "élire",
+        "classe": "V"
+    },
+    {
+        "mot": "éloigner",
+        "classe": "V"
+    },
+    {
+        "mot": "émotion",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "empêcher",
+        "classe": "V"
+    },
+    {
+        "mot": "emporter",
+        "classe": "V"
+    },
+    {
+        "mot": "en arrière",
+        "classe": "ADV"
+    },
+    {
+        "mot": "en avant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "en bas",
+        "classe": "ADV"
+    },
+    {
+        "mot": "en haut",
+        "classe": "ADV"
+    },
+    {
+        "mot": "en train de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "endroit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "ennuyer, s'",
+        "classe": "V"
+    },
+    {
+        "mot": "énorme",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "ensemble",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "entrée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "envie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "envoyer",
+        "classe": "V"
+    },
+    {
+        "mot": "épaule",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "époque",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "équipe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "escalier",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "espace",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "espèce",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "espoir",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "esprit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "essayer",
+        "classe": "V"
+    },
+    {
+        "mot": "est",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "étage",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "état",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "étrange",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "être",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "étudier",
+        "classe": "V"
+    },
+    {
+        "mot": "événement",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "évidemment",
+        "classe": "ADV"
+    },
+    {
+        "mot": "éviter",
+        "classe": "V"
+    },
+    {
+        "mot": "exactement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "exister",
+        "classe": "V"
+    },
+    {
+        "mot": "expérience",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "expliquer",
+        "classe": "V"
+    },
+    {
+        "mot": "extraordinaire",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "facilement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "façon",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fatiguer",
+        "classe": "V"
+    },
+    {
+        "mot": "fermé",
+        "classe": "ADJ",
+        "fem": "fermée"
+    },
+    {
+        "mot": "fêter",
+        "classe": "V"
+    },
+    {
+        "mot": "fillette",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fin",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fin de semaine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "finalement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "force",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "forme",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fort",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "foule",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "framboise",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "froid",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "front",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "fumer",
+        "classe": "V"
+    },
+    {
+        "mot": "garde",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "garde",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "gardien",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "gardienne",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "gâteau",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "geste",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "goût",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "gramme",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "grand",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "grande",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "grave",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "grotte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "habitude",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "hasard",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "hâte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "héroïne",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "héros",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "hésiter",
+        "classe": "V"
+    },
+    {
+        "mot": "heureusement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "hier",
+        "classe": "ADV"
+    },
+    {
+        "mot": "hockey",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "horizon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "horreur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "huile",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "humeur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "hurler",
+        "classe": "V"
+    },
+    {
+        "mot": "île",
+        "alt": "ile ",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "imagination",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "imaginer",
+        "classe": "V"
+    },
+    {
+        "mot": "immense",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "impossible",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "impression",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "incroyable",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "insister",
+        "classe": "V"
+    },
+    {
+        "mot": "instant",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "intérieur",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "intérieur",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "intérieure",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "intrépide",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "inventer",
+        "classe": "V"
+    },
+    {
+        "mot": "inviter",
+        "classe": "V"
+    },
+    {
+        "mot": "joueur",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "joueuse",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "jurer",
+        "classe": "V"
+    },
+    {
+        "mot": "jusqu'à",
+        "classe": "PREP",
+        "groupe": "jusqu'à"
+    },
+    {
+        "mot": "jusqu’au",
+        "classe": "PREP",
+        "groupe": "jusqu'à"
+    },
+    {
+        "mot": "jusqu’aux",
+        "classe": "PREP",
+        "nombre": 2,
+        "groupe": "jusqu'à"
+    },
+    {
+        "mot": "justement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "kilomètre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "l'",
+        "classe": "PRON",
+        "genre": 3,
+        "groupe": "le"
+    },
+    {
+        "mot": "la",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "le"
+    },
+    {
+        "mot": "la leur",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "le leur"
+    },
+    {
+        "mot": "la mienne",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "le mien"
+    },
+    {
+        "mot": "la plupart",
+        "classe": "PRON"
+    },
+    {
+        "mot": "la plupart des",
+        "classe": "DET"
+    },
+    {
+        "mot": "la sienne",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "le sien"
+    },
+    {
+        "mot": "la tienne",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "le tien"
+    },
+    {
+        "mot": "là-bas",
+        "classe": "ADV"
+    },
+    {
+        "mot": "lac",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "laine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "lait",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "lampe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "lance",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "laquelle",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "lequel"
+    },
+    {
+        "mot": "larme",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "laver",
+        "classe": "V"
+    },
+    {
+        "mot": "le",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "le"
+    },
+    {
+        "mot": "le leur",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "le leur"
+    },
+    {
+        "mot": "le mien",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "le mien"
+    },
+    {
+        "mot": "le sien",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "le sien"
+    },
+    {
+        "mot": "le tien",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "le tien"
+    },
+    {
+        "mot": "léger",
+        "classe": "ADJ",
+        "fem": "légère"
+    },
+    {
+        "mot": "lequel",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "lequel"
+    },
+    {
+        "mot": "les",
+        "classe": "PRON",
+        "genre": 3,
+        "nombre": 2,
+        "groupe": "le"
+    },
+    {
+        "mot": "les leurs",
+        "classe": "PRON",
+        "genre": 3,
+        "nombre": 2,
+        "groupe": "le leur"
+    },
+    {
+        "mot": "les miennes",
+        "classe": "PRON",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "le mien"
+    },
+    {
+        "mot": "les miens",
+        "classe": "PRON",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "le mien"
+    },
+    {
+        "mot": "les siennes",
+        "classe": "PRON",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "le sien"
+    },
+    {
+        "mot": "les siens",
+        "classe": "PRON",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "le sien"
+    },
+    {
+        "mot": "les tiennes",
+        "classe": "PRON",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "le tien"
+    },
+    {
+        "mot": "les tiens",
+        "classe": "PRON",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "le tien"
+    },
+    {
+        "mot": "lesquelles",
+        "classe": "PRON",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "lequel"
+    },
+    {
+        "mot": "lesquels",
+        "classe": "PRON",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "lequel"
+    },
+    {
+        "mot": "lors de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "lunette",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mademoiselle",
+        "classe": "N",
+        "genre": 2,
+        "groupe": "mademoiselle"
+    },
+    {
+        "mot": "magie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "magique",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "magnifique",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "maître",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "malgré",
+        "classe": "PREP"
+    },
+    {
+        "mot": "malheureusement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "malheureux",
+        "classe": "ADJ",
+        "fem": "malheureuse"
+    },
+    {
+        "mot": "mariage",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "marquer",
+        "classe": "V"
+    },
+    {
+        "mot": "marraine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "matière",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "médaille",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "médecin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "médecin",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mélange",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "même",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "merveilleux",
+        "classe": "ADJ",
+        "fem": "merveilleuse"
+    },
+    {
+        "mot": "mesdemoiselles",
+        "classe": "N",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "mademoiselle"
+    },
+    {
+        "mot": "message",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "messe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "métro",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "meuble",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "minuscule",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "misère",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mission",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mode",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "mode",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mouvement",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "mystère",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "naître",
+        "alt": "naitre ",
+        "classe": "V"
+    },
+    {
+        "mot": "net",
+        "classe": "ADJ",
+        "fem": "nette"
+    },
+    {
+        "mot": "nombreux",
+        "classe": "ADJ",
+        "fem": "nombreuse"
+    },
+    {
+        "mot": "nommer",
+        "classe": "V"
+    },
+    {
+        "mot": "nord",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "normal",
+        "classe": "ADJ",
+        "genre": 1,
+        "groupe": "normal"
+    },
+    {
+        "mot": "normale",
+        "classe": "ADJ",
+        "genre": 2,
+        "groupe": "normal"
+    },
+    {
+        "mot": "normales",
+        "classe": "ADJ",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "normal"
+    },
+    {
+        "mot": "normaux",
+        "classe": "ADJ",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "normal"
+    },
+    {
+        "mot": "nouvelle",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "nu",
+        "classe": "ADJ",
+        "fem": "nue"
+    },
+    {
+        "mot": "numéro",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "objet",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "obliger",
+        "classe": "V"
+    },
+    {
+        "mot": "observer",
+        "classe": "V"
+    },
+    {
+        "mot": "occasion",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "odeur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "opération",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "or",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "ordinaire",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "oser",
+        "classe": "V"
+    },
+    {
+        "mot": "où",
+        "classe": "ADV"
+    },
+    {
+        "mot": "ouest",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "ouvrage",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "paille",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "paix",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "papillon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "pardon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "pardonner",
+        "classe": "V"
+    },
+    {
+        "mot": "parfaitement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "parmi",
+        "classe": "PREP"
+    },
+    {
+        "mot": "parole",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "parrain",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "partir",
+        "classe": "V"
+    },
+    {
+        "mot": "passé",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "patiner",
+        "classe": "V"
+    },
+    {
+        "mot": "pêche",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "pensée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "phoque",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "piano",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "pire",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "placer",
+        "classe": "V"
+    },
+    {
+        "mot": "plaire",
+        "classe": "V"
+    },
+    {
+        "mot": "plancher",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "planète",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "plat",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "plein de",
+        "classe": "DET"
+    },
+    {
+        "mot": "pleurer",
+        "classe": "V"
+    },
+    {
+        "mot": "plume",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "plutôt",
+        "classe": "ADV"
+    },
+    {
+        "mot": "poème",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "pointe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "poitrine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "pont",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "port",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "poste",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "poste",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "poursuivre",
+        "classe": "V"
+    },
+    {
+        "mot": "pourtant",
+        "classe": "ADV"
+    },
+    {
+        "mot": "poussière",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "pouvoir",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "préféré",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "préféré",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "préférée",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "préférée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "présence",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "presser",
+        "classe": "V"
+    },
+    {
+        "mot": "prêt",
+        "classe": "ADJ",
+        "fem": "prête"
+    },
+    {
+        "mot": "prier",
+        "classe": "V"
+    },
+    {
+        "mot": "prison",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "problème",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "proche",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "profiter",
+        "classe": "V"
+    },
+    {
+        "mot": "profond",
+        "classe": "ADJ",
+        "fem": "profonde"
+    },
+    {
+        "mot": "promenade",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "propos",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "puisque puisqu’",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "pupitre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "pur",
+        "classe": "ADJ",
+        "fem": "pure"
+    },
+    {
+        "mot": "quart",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "quartier",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "quatrième",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "quatrième",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "quatrième",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "quelque chose",
+        "classe": "PRON"
+    },
+    {
+        "mot": "quelquefois",
+        "classe": "ADV",
+        "groupe": "bel"
+    },
+    {
+        "mot": "quitter",
+        "classe": "V"
+    },
+    {
+        "mot": "quoi",
+        "classe": "PRON"
+    },
+    {
+        "mot": "racisme",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "raison",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ramasser",
+        "classe": "V"
+    },
+    {
+        "mot": "ramener",
+        "classe": "V"
+    },
+    {
+        "mot": "rapidement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "rapporter",
+        "classe": "V"
+    },
+    {
+        "mot": "réalité",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "rechercher",
+        "classe": "V"
+    },
+    {
+        "mot": "recommencer",
+        "classe": "V"
+    },
+    {
+        "mot": "refaire",
+        "classe": "V"
+    },
+    {
+        "mot": "réfléchir",
+        "classe": "V"
+    },
+    {
+        "mot": "refrain",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "regard",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "rendez-vous",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "rentrer",
+        "classe": "V"
+    },
+    {
+        "mot": "repartir",
+        "classe": "V"
+    },
+    {
+        "mot": "repasser",
+        "classe": "V"
+    },
+    {
+        "mot": "répéter",
+        "classe": "V"
+    },
+    {
+        "mot": "réplique",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "réponse",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "reposer",
+        "classe": "V"
+    },
+    {
+        "mot": "représenter",
+        "classe": "V"
+    },
+    {
+        "mot": "respirer",
+        "classe": "V"
+    },
+    {
+        "mot": "ressembler",
+        "classe": "V"
+    },
+    {
+        "mot": "reste",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "retour",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "rêve",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "revoir",
+        "classe": "V"
+    },
+    {
+        "mot": "rideau",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "rôle",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "roue",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "royaume",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "ruban",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "ruelle",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "sable",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "salon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sang",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sauf",
+        "classe": "PREP"
+    },
+    {
+        "mot": "sauter",
+        "classe": "V"
+    },
+    {
+        "mot": "scène",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "secours",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "secret",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "secret",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "secrète",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "selon",
+        "classe": "PREP"
+    },
+    {
+        "mot": "sens",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "serrer",
+        "classe": "V"
+    },
+    {
+        "mot": "seulement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "signe",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "silence",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "simple",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "simplement",
+        "classe": "ADV"
+    },
+    {
+        "mot": "singe",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sinon",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "situation",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ski",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "soccer",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "soi",
+        "classe": "PRON"
+    },
+    {
+        "mot": "sol",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "soldat",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "soldate",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "solution",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "sombre",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "sommeil",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sommet",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sorcier",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sorcière",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "sort",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sortie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "soudain",
+        "classe": "ADV"
+    },
+    {
+        "mot": "soudain",
+        "classe": "ADJ",
+        "fem": "soudaine"
+    },
+    {
+        "mot": "souffle",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "soupe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "soupirer",
+        "classe": "V"
+    },
+    {
+        "mot": "sourire",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sourire",
+        "classe": "V"
+    },
+    {
+        "mot": "souvenir, se",
+        "classe": "V"
+    },
+    {
+        "mot": "statue",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "sud",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "suffire",
+        "classe": "V"
+    },
+    {
+        "mot": "suivant",
+        "classe": "ADJ",
+        "fem": "suivante"
+    },
+    {
+        "mot": "sûr",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "sûre",
+        "alt": "sure ",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "sûrement",
+        "alt": "surement ",
+        "classe": "ADV"
+    },
+    {
+        "mot": "surprendre",
+        "classe": "V"
+    },
+    {
+        "mot": "surprise",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "système",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "tandis que tandis qu’",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "tas",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "tenir",
+        "classe": "V"
+    },
+    {
+        "mot": "terrible",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "théâtre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "toilette",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "toit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "tôt",
+        "classe": "ADV"
+    },
+    {
+        "mot": "tour",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "tout",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "tout à coup",
+        "classe": "ADV"
+    },
+    {
+        "mot": "toutefois",
+        "classe": "ADV"
+    },
+    {
+        "mot": "transformer",
+        "classe": "V"
+    },
+    {
+        "mot": "travail",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "tresse",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "unique",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "univers",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "utile",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "vampire",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "veille",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "vendre",
+        "classe": "V"
+    },
+    {
+        "mot": "vérité",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "vide",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "vide",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "vin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "visiter",
+        "classe": "V"
+    },
+    {
+        "mot": "vivant",
+        "classe": "ADJ",
+        "fem": "vivante"
+    }
+]

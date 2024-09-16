@@ -29,6 +29,8 @@ export enum MotClasse {
   DET = 'DET',
   PRON = 'PRON',
   NOM = 'NOM',
+  PREP = 'PREP',
+  CONJ = 'CONJ',
   NA = 'NA'
 }
 
