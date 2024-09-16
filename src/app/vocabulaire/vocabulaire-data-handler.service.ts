@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core'
 import {
+  Groupe,
   Mot,
   MotClasse,
   MotGenre,
@@ -52,13 +53,19 @@ export class VocabulaireDataHandlerService {
           if (t.semaines) {
             const semaines = t.semaines as Semaine[]
             for (let s of semaines) {
-              for (let g of s.groupes) {
+              for (let groupes of s.groupes) {
                 const mots: Map<string, MotTI> = new Map()
-                g.indice = marked.parseInline(g.indice)
-                for (let m of g.mots) {
-                  crunchMot(m as Mot, g.indice, mots)
+                let parsed = marked.parseInline(groupes.indice)
+
+                if (typeof parsed === "string") {
+                  groupes.indice = parsed
+                  this.groupes_mots_indice(groupes, mots)
+                } else if (parsed instanceof Promise) {
+                  parsed.then(s => {
+                    groupes.indice = s
+                    this.groupes_mots_indice(groupes, mots)
+                  });
                 }
-                g.mots = [...mots.values()]
               }
             }
           } else if (t.series) {
@@ -109,6 +116,13 @@ export class VocabulaireDataHandlerService {
 
   getThemes(): Theme[] {
     return this.themes
+  }
+
+  groupes_mots_indice(groupes : Groupe, mots: Map<string, MotTI>): void {
+    for (let m of groupes.mots) {
+      crunchMot(m as Mot, groupes.indice, mots)
+    }
+    groupes.mots = [...mots.values()]
   }
 
   private getVocabularyAsset = async (file: string, theme_id: number | undefined, theme_description: string | undefined
