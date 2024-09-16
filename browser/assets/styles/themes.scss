@@ -30,7 +30,7 @@
 } 
 
 @mixin mix-toggle-custom($thclass, $th) {
-  $color-config: mat.get-color-config($th);
+  $color-config: mat.m2-get-color-config($th);
 
   $primary: map.get($color-config, 'primary');
   $accent: map.get($color-config, 'accent');
@@ -40,16 +40,16 @@
   //@debug "Theme #{$thclass} accent #{$val}";
   /*PIZZA*/
   .mat-button-toggle {
-    background-color: mat.get-color-from-palette($primary);
-    color: mat.get-color-from-palette($primary, default-contrast);
+    background-color: mat.m2-get-color-from-palette($primary);
+    color: mat.m2-get-color-from-palette($primary, default-contrast);
   }
 
   .mat-button-toggle-checked {
 
-    $background-color : mat.get-color-from-palette($accent);
+    $background-color : mat.m2-get-color-from-palette($accent);
     background-color: $background-color;
 
-    $color : mat.get-color-from-palette($accent, default-contrast);
+    $color : mat.m2-get-color-from-palette($accent, default-contrast);
     color: $color!important;
     //@debug "#{$thclass} bg col #{$background-color} col  #{$color} "
   }

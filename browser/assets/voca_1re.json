@@ -1,0 +1,1042 @@
+[
+    {
+        "mot": "à",
+        "classe": "PREP"
+    },
+    {
+        "mot": "aile",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "aimer",
+        "classe": "V"
+    },
+    {
+        "mot": "air",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "ami",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "amie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "animal",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "arbre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "avoir",
+        "classe": "V"
+    },
+    {
+        "mot": "beau",
+        "classe": "ADJ",
+        "fem": "belle"
+    },
+    {
+        "mot": "beaucoup",
+        "classe": "ADV"
+    },
+    {
+        "mot": "beaucoup de",
+        "classe": "DET"
+    },
+    {
+        "mot": "bébé",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "blanc",
+        "classe": "ADJ",
+        "fem": "blanche"
+    },
+    {
+        "mot": "bleu",
+        "classe": "ADJ",
+        "fem": "bleue"
+    },
+    {
+        "mot": "bon",
+        "classe": "ADJ",
+        "fem": "bonne"
+    },
+    {
+        "mot": "bonbon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "bouche",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "bras",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "brun",
+        "classe": "ADJ",
+        "fem": "brune"
+    },
+    {
+        "mot": "carte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chambre",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chanter",
+        "classe": "V"
+    },
+    {
+        "mot": "chapeau",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "chat",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "chatte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chaud",
+        "classe": "ADJ",
+        "fem": "chaude"
+    },
+    {
+        "mot": "chemin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cher",
+        "classe": "ADJ",
+        "fem": "chère"
+    },
+    {
+        "mot": "chercher",
+        "classe": "V"
+    },
+    {
+        "mot": "cheval",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cheveu",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "chien",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "chienne",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "chose",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ciel",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cinq",
+        "classe": "DET"
+    },
+    {
+        "mot": "classe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "cœur",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "cou",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "coup",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "dame",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "dans",
+        "classe": "PREP"
+    },
+    {
+        "mot": "de",
+        "classe": "PREP"
+    },
+    {
+        "mot": "de l'",
+        "classe": "DET"
+    },
+    {
+        "mot": "de la",
+        "classe": "DET",
+        "genre": 2
+    },
+    {
+        "mot": "demander",
+        "classe": "V"
+    },
+    {
+        "mot": "dent",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "des",
+        "classe": "DET",
+        "genre": 3,
+        "nombre": 2
+    },
+    {
+        "mot": "deux",
+        "classe": "DET"
+    },
+    {
+        "mot": "devenir",
+        "classe": "V"
+    },
+    {
+        "mot": "devoir",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "devoir",
+        "classe": "V"
+    },
+    {
+        "mot": "dimanche",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "dix",
+        "classe": "DET"
+    },
+    {
+        "mot": "donner",
+        "classe": "V"
+    },
+    {
+        "mot": "dormir",
+        "classe": "V"
+    },
+    {
+        "mot": "doux",
+        "classe": "ADJ",
+        "fem": "douce"
+    },
+    {
+        "mot": "du",
+        "classe": "DET",
+        "genre": 1
+    },
+    {
+        "mot": "eau",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "école",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "enfant",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "enfant",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "et",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "être",
+        "classe": "V"
+    },
+    {
+        "mot": "famille",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fenêtre",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fête",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "feu",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "feuille",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fille",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "finir",
+        "classe": "V"
+    },
+    {
+        "mot": "fleur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "fois",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "forêt",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "frère",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "garçon",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "grand",
+        "classe": "ADJ",
+        "fem": "grande"
+    },
+    {
+        "mot": "gris",
+        "classe": "ADJ",
+        "fem": "grise"
+    },
+    {
+        "mot": "gros",
+        "classe": "ADJ",
+        "fem": "grosse"
+    },
+    {
+        "mot": "heure",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "heureux",
+        "classe": "ADJ",
+        "fem": "heureuse"
+    },
+    {
+        "mot": "histoire",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "huit",
+        "classe": "DET"
+    },
+    {
+        "mot": "il ils elle elles",
+        "classe": "PRON"
+    },
+    {
+        "mot": "jardin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "jaune",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "je j’",
+        "classe": "PRON"
+    },
+    {
+        "mot": "jeu",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "jeudi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "joie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "joli",
+        "classe": "ADJ",
+        "fem": "jolie"
+    },
+    {
+        "mot": "jouer",
+        "classe": "V"
+    },
+    {
+        "mot": "jour",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "journée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "l'",
+        "classe": "DET",
+        "genre": 3,
+        "groupe": "le"
+    },
+    {
+        "mot": "la",
+        "classe": "DET",
+        "genre": 2,
+        "groupe": "le"
+    },
+    {
+        "mot": "lapin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "lapine",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "le",
+        "classe": "DET",
+        "genre": 1,
+        "groupe": "le"
+    },
+    {
+        "mot": "les",
+        "classe": "DET",
+        "genre": 3,
+        "nombre": 2,
+        "groupe": "le"
+    },
+    {
+        "mot": "lettre",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "lever",
+        "classe": "V"
+    },
+    {
+        "mot": "lire",
+        "classe": "V"
+    },
+    {
+        "mot": "lit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "livre",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "long",
+        "classe": "ADJ",
+        "fem": "longue"
+    },
+    {
+        "mot": "loup",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "louve",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "lundi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "lune",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "main",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mais",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "maison",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "maman",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "manger",
+        "classe": "V"
+    },
+    {
+        "mot": "marche",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mardi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "matin",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "merci",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "mercredi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "mère",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "midi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "mon ma mes",
+        "classe": "DET"
+    },
+    {
+        "mot": "monde",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "montagne",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "mot",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "mouton",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "musique",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "n' … pas",
+        "classe": "ADV"
+    },
+    {
+        "mot": "ne ... pas",
+        "classe": "ADV"
+    },
+    {
+        "mot": "ne pas",
+        "classe": "ADV"
+    },
+    {
+        "mot": "neige",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "neuf",
+        "classe": "DET"
+    },
+    {
+        "mot": "nez",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "noir",
+        "classe": "ADJ",
+        "fem": "noire"
+    },
+    {
+        "mot": "nom",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "nous",
+        "classe": "PRON"
+    },
+    {
+        "mot": "nuit",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "œil",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "œuf",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "oiseau",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "on",
+        "classe": "PRON"
+    },
+    {
+        "mot": "oreille",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ou",
+        "classe": "CONJ"
+    },
+    {
+        "mot": "ouvrir",
+        "classe": "V"
+    },
+    {
+        "mot": "page",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "pain",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "papa",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "papier",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "parler",
+        "classe": "V"
+    },
+    {
+        "mot": "pauvre",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "pays",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "père",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "personne",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "petit",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "petit",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "petite",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "petite",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "phrase",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "pied",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "place",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "plaisir",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "plein",
+        "classe": "ADJ",
+        "fem": "pleine"
+    },
+    {
+        "mot": "pluie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "plus",
+        "classe": "ADV"
+    },
+    {
+        "mot": "poisson",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "pomme",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "porte",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "poule",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "poupée",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "pouvoir",
+        "classe": "V"
+    },
+    {
+        "mot": "premier",
+        "classe": "ADJ",
+        "genre": 1
+    },
+    {
+        "mot": "premier",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "première",
+        "classe": "ADJ",
+        "genre": 2
+    },
+    {
+        "mot": "première",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "quand",
+        "classe": "ADV"
+    },
+    {
+        "mot": "quatre",
+        "classe": "DET"
+    },
+    {
+        "mot": "queue",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "qui",
+        "classe": "PRON"
+    },
+    {
+        "mot": "regarder",
+        "classe": "V"
+    },
+    {
+        "mot": "robe",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "roi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "rose",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "rouge",
+        "classe": "ADJ",
+        "genre": 3
+    },
+    {
+        "mot": "route",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "rue",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "sac",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "samedi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "sept",
+        "classe": "DET"
+    },
+    {
+        "mot": "six",
+        "classe": "DET"
+    },
+    {
+        "mot": "sœur",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "soir",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "soleil",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "son sa ses",
+        "classe": "DET"
+    },
+    {
+        "mot": "souris",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "table",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "terre",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "tête",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ton ta tes",
+        "classe": "DET"
+    },
+    {
+        "mot": "train",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "trois",
+        "classe": "DET"
+    },
+    {
+        "mot": "tu",
+        "classe": "PRON"
+    },
+    {
+        "mot": "un",
+        "classe": "DET",
+        "genre": 1,
+        "groupe": "un"
+    },
+    {
+        "mot": "une",
+        "classe": "DET",
+        "genre": 2,
+        "groupe": "un"
+    },
+    {
+        "mot": "des",
+        "classe": "DET",
+        "genre": 3,
+        "nombre": 2,
+        "groupe": "un"
+    },
+    {
+        "mot": "vélo",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "vendredi",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "vent",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "vert",
+        "classe": "ADJ",
+        "fem": "verte"
+    },
+    {
+        "mot": "vie",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "ville",
+        "classe": "N",
+        "genre": 2
+    },
+    {
+        "mot": "visage",
+        "classe": "N",
+        "genre": 1
+    },
+    {
+        "mot": "voir",
+        "classe": "V"
+    },
+    {
+        "mot": "voler",
+        "classe": "V"
+    },
+    {
+        "mot": "vouloir",
+        "classe": "V"
+    },
+    {
+        "mot": "vous",
+        "classe": "PRON"
+    }
+]
