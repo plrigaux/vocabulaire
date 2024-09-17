@@ -45,8 +45,15 @@
         "classe": "V"
     },
     {
-        "mot": "au aux",
-        "classe": "DET"
+        "mot": "au",
+        "classe": "DET",
+        "groupe": "au"
+    },
+    {
+        "mot": "aux",
+        "classe": "DET",
+        "nombre": 2,
+        "groupe": "au"
     },
     {
         "mot": "aujourd'hui",
@@ -143,8 +150,29 @@
         "genre": 2
     },
     {
-        "mot": "ce cet cette ces",
-        "classe": "DET"
+        "mot": "ce",
+        "classe": "DET",
+        "genre": 1,
+        "groupe": "ce"
+    },
+    {
+        "mot": "cet",
+        "classe": "DET",
+        "genre": 1,
+        "groupe": "ce"
+    },
+    {
+        "mot": "cette",
+        "classe": "DET",
+        "genre": 2,
+        "groupe": "ce"
+    },
+    {
+        "mot": "ces",
+        "classe": "DET",
+        "genre": 3,
+        "nombre": 2,
+        "groupe": "ce"
     },
     {
         "mot": "celle",
@@ -490,15 +518,22 @@
         "genre": 1
     },
     {
-        "mot": "leur leurs",
-        "classe": "DET"
+        "mot": "leur",
+        "classe": "DET",
+        "groupe": "leur"
+    },
+    {
+        "mot": "leurs",
+        "classe": "DET",
+        "nombre": 2,
+        "groupe": "leur"
     },
     {
         "mot": "loin",
         "classe": "ADV"
     },
     {
-        "mot": "lorsque lorsqu’",
+        "mot": "lorsque",
         "classe": "CONJ"
     },
     {
@@ -536,7 +571,7 @@
         "classe": "V"
     },
     {
-        "mot": "me m'",
+        "mot": "me",
         "classe": "PRON"
     },
     {
@@ -599,8 +634,13 @@
         "classe": "ADV"
     },
     {
-        "mot": "notre nos",
+        "mot": "notre",
         "classe": "DET"
+    },
+    {
+        "mot": "nos",
+        "classe": "DET",
+        "nombre": 2
     },
     {
         "mot": "nouveau",
@@ -655,7 +695,7 @@
         "classe": "PREP"
     },
     {
-        "mot": "parce que parce qu’",
+        "mot": "parce que",
         "classe": "CONJ"
     },
     {
@@ -780,11 +820,11 @@
         "classe": "DET"
     },
     {
-        "mot": "que qu'",
+        "mot": "que",
         "classe": "CONJ"
     },
     {
-        "mot": "que qu'",
+        "mot": "que",
         "classe": "PRON"
     },
     {
@@ -832,7 +872,7 @@
         "classe": "V"
     },
     {
-        "mot": "se s’",
+        "mot": "se",
         "classe": "PRON"
     },
     {
@@ -900,7 +940,7 @@
         "classe": "ADV"
     },
     {
-        "mot": "te t'",
+        "mot": "te",
         "classe": "PRON"
     },
     {
@@ -929,8 +969,30 @@
         "classe": "V"
     },
     {
-        "mot": "tout tous toute toutes",
-        "classe": "DET"
+        "mot": "tout",
+        "classe": "DET",
+        "genre": 1,
+        "groupe": "tout"
+    },
+    {
+        "mot": "tous",
+        "classe": "DET",
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "tout"
+    },
+    {
+        "mot": "toute",
+        "classe": "DET",
+        "genre": 2,
+        "groupe": "tout"
+    },
+    {
+        "mot": "toutes",
+        "classe": "DET",
+        "genre": 2,
+        "nombre": 2,
+        "groupe": "tout"
     },
     {
         "mot": "treize",
@@ -992,8 +1054,15 @@
         "genre": 2
     },
     {
-        "mot": "votre vos",
-        "classe": "DET"
+        "mot": "votre",
+        "classe": "DET",
+        "groupe": "votre"
+    },
+    {
+        "mot": "vos",
+        "classe": "DET",
+        "nombre": 2,
+        "groupe": "votre"
     },
     {
         "mot": "vrai",

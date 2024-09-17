@@ -668,7 +668,7 @@
     },
     {
         "mot": "chaîne",
-        "alt": "chaine ",
+        "alt": "chaine",
         "classe": "N",
         "genre": 2
     },
@@ -1542,7 +1542,7 @@
     },
     {
         "mot": "entraîner",
-        "alt": "entrainer ",
+        "alt": "entrainer",
         "classe": "V"
     },
     {
@@ -1880,7 +1880,7 @@
     },
     {
         "mot": "flûte",
-        "alt": "flute ",
+        "alt": "flute",
         "classe": "N",
         "genre": 2
     },
@@ -2466,7 +2466,7 @@
         "genre": 2
     },
     {
-        "mot": "lui leur",
+        "mot": "lui",
         "classe": "PRON"
     },
     {
@@ -3510,7 +3510,7 @@
     },
     {
         "mot": "reconnaître",
-        "alt": "reconnaitre ",
+        "alt": "reconnaitre",
         "classe": "V"
     },
     {
@@ -4166,7 +4166,7 @@
     },
     {
         "mot": "traîner",
-        "alt": "trainer ",
+        "alt": "trainer",
         "classe": "V"
     },
     {
