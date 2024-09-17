@@ -23,7 +23,7 @@ export class VocabulaireDataHandlerService {
   private themes_serie_map: Map<string, Serie> = new Map()
 
 
-  private fetcher: Promise<void>
+  private fetcher: Promise<Theme[]>
   constructor() {
     this.fetcher = Promise.all([
       /*this.getVocabularyAsset('./assets/voc4_th1.json5'),
@@ -73,7 +73,7 @@ export class VocabulaireDataHandlerService {
             for (let s of serie) {
               const mots: Map<string, MotTI> = new Map()
               for (let m of s.mots) {
-                crunchMot(m as Mot, '', mots)
+                crunchMot(m as Mot, '', mots, t.an)
               }
               s.mots = [...mots.values()]
 
@@ -81,7 +81,7 @@ export class VocabulaireDataHandlerService {
           } else if (t.mots) {
             const mots: Map<string, MotTI> = new Map()
             for (let m of t.mots) {
-              crunchMot(m as Mot, '', mots)
+              crunchMot(m as Mot, '', mots, t.an)
             }
 
             t.mots = [...mots.values()]
@@ -111,16 +111,21 @@ export class VocabulaireDataHandlerService {
       .then((themes: Theme[]) => {
         this.themes = themes
         console.log('loading finnished')
+        return themes
       })
+  }
+
+  get_loaded(): Promise<Theme[]> {
+    return this.fetcher
   }
 
   getThemes(): Theme[] {
     return this.themes
   }
 
-  groupes_mots_indice(groupes : Groupe, mots: Map<string, MotTI>): void {
+  groupes_mots_indice(groupes: Groupe, mots: Map<string, MotTI>): void {
     for (let m of groupes.mots) {
-      crunchMot(m as Mot, groupes.indice, mots)
+      crunchMot(m as Mot, groupes.indice, mots, undefined)
     }
     groupes.mots = [...mots.values()]
   }
@@ -146,11 +151,10 @@ export class VocabulaireDataHandlerService {
           mots: data
         }
 
-        let mots_an =
-        {
+        let mots_an: Theme = {
           theme: theme_id,
           an: theme_id,
-          description: theme_description,
+          description: theme_description as string,
           series: [serie]
         };
 
@@ -191,7 +195,7 @@ export class VocabulaireDataHandlerService {
   }
 }
 
-const createMotTI = (m: Mot, indice: string): MotTI => {
+const createMotTI = (m: Mot, indice: string, an: number | undefined): MotTI => {
 
   let genre = MotGenre.NA
   if (m.genre) {
@@ -209,18 +213,22 @@ const createMotTI = (m: Mot, indice: string): MotTI => {
     classe: MotClasse.NA,
     indice: indice,
     genre: genre,
-    nombre: nombre
+    nombre: nombre,
   }
 
   if (m.alt) {
     newMot.alt = m.alt
   }
 
+  if (an) {
+    newMot.an = an
+  }
+
   return newMot
 }
 
-const crunchMot = (m: Mot, indice: string, mots: Map<string, MotTI>) => {
-  const newMot: MotTI = createMotTI(m, indice)
+const crunchMot = (m: Mot, indice: string, mots: Map<string, MotTI>, an: number | undefined) => {
+  const newMot: MotTI = createMotTI(m, indice, an)
   let newMot2: MotTI | undefined = undefined
 
 
@@ -247,7 +255,7 @@ const crunchMot = (m: Mot, indice: string, mots: Map<string, MotTI>) => {
     newMot.classe = newClasseArr.length > 1 ? newClasseArr : newClasseArr[0]
 
     if (m.fem) {
-      newMot2 = createMotTI(m, indice)
+      newMot2 = createMotTI(m, indice, an)
       newMot2.mot = m.fem
       newMot2.genre = MotGenre.FEMININ
       newMot.genre = MotGenre.MASCULIN

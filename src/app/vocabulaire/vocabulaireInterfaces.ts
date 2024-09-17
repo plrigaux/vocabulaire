@@ -4,6 +4,7 @@ export interface Theme {
   semaines?: any
   series?: Serie[]
   mots?: MotTI[]
+  an?: number
 }
 
 export interface Serie {
@@ -66,4 +67,5 @@ export interface MotTI {
   indice: string
   genre: MotGenre
   nombre: MotNombre
+  an?: number
 }

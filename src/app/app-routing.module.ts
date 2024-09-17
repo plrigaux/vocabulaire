@@ -6,6 +6,7 @@ import { CardcontrolComponent} from './cardcontrol/cardcontrol.component'
 import { CorrectorDisplayTestComponent } from './corrector-display-test/corrector-display-test.component';
 import { PortalComponent } from './portal/portal.component';
 import { InputerComponent } from './inputer/inputer.component';
+import { MotTableComponent } from './mot-table/mot-table.component';
 
 const routes: Routes = [
   { path: '', component: PortalComponent },
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'cardcontrol', component: CardcontrolComponent },
   { path: 'correctortest', component: CorrectorDisplayTestComponent },
   { path: 'input', component: InputerComponent },
+  { path: 'table', component: MotTableComponent },
+
 
 ];
 
