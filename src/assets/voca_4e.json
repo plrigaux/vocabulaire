@@ -112,7 +112,7 @@
     },
     {
         "mot": "apparaître",
-        "alt": "apparaitre ",
+        "alt": "apparaitre",
         "classe": "V"
     },
     {
@@ -135,7 +135,7 @@
     },
     {
         "mot": "asseoir",
-        "alt": "assoir ",
+        "alt": "assoir",
         "classe": "V"
     },
     {
@@ -495,7 +495,7 @@
     },
     {
         "mot": "connaître",
-        "alt": "connaitre ",
+        "alt": "connaitre",
         "classe": "V"
     },
     {
@@ -565,7 +565,8 @@
         "genre": 2
     },
     {
-        "mot": "cuiller / cuillère",
+        "mot": "cuiller",
+        "alt": "cuillère",
         "classe": "N",
         "genre": 2
     },
@@ -705,7 +706,7 @@
     },
     {
         "mot": "dîner",
-        "alt": "diner ",
+        "alt": "diner",
         "classe": "V"
     },
     {
@@ -725,7 +726,7 @@
     },
     {
         "mot": "disparaître",
-        "alt": "disparaitre ",
+        "alt": "disparaitre",
         "classe": "V"
     },
     {
@@ -869,7 +870,7 @@
         "genre": 1
     },
     {
-        "mot": "ennuyer, s'",
+        "mot": "s'ennuyer",
         "classe": "V"
     },
     {
@@ -1212,7 +1213,7 @@
     },
     {
         "mot": "île",
-        "alt": "ile ",
+        "alt": "ile",
         "classe": "N",
         "genre": 2
     },
@@ -1681,7 +1682,7 @@
     },
     {
         "mot": "naître",
-        "alt": "naitre ",
+        "alt": "naitre",
         "classe": "V"
     },
     {
@@ -2045,7 +2046,7 @@
         "genre": 1
     },
     {
-        "mot": "puisque puisqu’",
+        "mot": "puisque",
         "classe": "CONJ"
     },
     {
@@ -2453,7 +2454,7 @@
         "classe": "V"
     },
     {
-        "mot": "souvenir, se",
+        "mot": "se souvenir",
         "classe": "V"
     },
     {
@@ -2482,13 +2483,13 @@
     },
     {
         "mot": "sûre",
-        "alt": "sure ",
+        "alt": "sure",
         "classe": "ADJ",
         "genre": 2
     },
     {
         "mot": "sûrement",
-        "alt": "surement ",
+        "alt": "surement",
         "classe": "ADV"
     },
     {
@@ -2506,7 +2507,7 @@
         "genre": 1
     },
     {
-        "mot": "tandis que tandis qu’",
+        "mot": "tandis que",
         "classe": "CONJ"
     },
     {

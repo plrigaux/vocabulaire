@@ -210,10 +210,6 @@
         "classe": "PREP"
     },
     {
-        "mot": "de l'",
-        "classe": "DET"
-    },
-    {
         "mot": "de la",
         "classe": "DET",
         "genre": 2
@@ -399,8 +395,26 @@
         "classe": "DET"
     },
     {
-        "mot": "il ils elle elles",
-        "classe": "PRON"
+        "mot": "il",
+        "classe": "PRON",
+        "groupe": "il"
+    },
+    {
+        "mot": "ils",
+        "classe": "PRON",
+        "nombre": 2,
+        "groupe": "il"
+    },
+    {
+        "mot": "elle",
+        "classe": "PRON",
+        "groupe": "elle"
+    },
+    {
+        "mot": "elles",
+        "classe": "PRON",
+        "nombre": 2,
+        "groupe": "elle"
     },
     {
         "mot": "jardin",
@@ -413,7 +427,7 @@
         "genre": 3
     },
     {
-        "mot": "je j’",
+        "mot": "je",
         "classe": "PRON"
     },
     {
@@ -592,8 +606,19 @@
         "genre": 1
     },
     {
-        "mot": "mon ma mes",
-        "classe": "DET"
+        "mot": "mon",
+        "classe": "DET",
+        "groupe": "mon"
+    },
+    {
+        "mot": "ma",
+        "classe": "DET",
+        "groupe": "mon"
+    },
+    {
+        "mot": "mes",
+        "classe": "DET",
+        "groupe": "mon"
     },
     {
         "mot": "monde",
@@ -619,10 +644,6 @@
         "mot": "musique",
         "classe": "N",
         "genre": 2
-    },
-    {
-        "mot": "n' … pas",
-        "classe": "ADV"
     },
     {
         "mot": "ne ... pas",
@@ -929,8 +950,19 @@
         "genre": 1
     },
     {
-        "mot": "son sa ses",
-        "classe": "DET"
+        "mot": "son",
+        "classe": "DET",
+        "groupe": "son"
+    },
+    {
+        "mot": "sa",
+        "classe": "DET",
+        "groupe": "son"
+    },
+    {
+        "mot": "ses",
+        "classe": "DET",
+        "groupe": "son"
     },
     {
         "mot": "souris",
@@ -953,8 +985,21 @@
         "genre": 2
     },
     {
-        "mot": "ton ta tes",
-        "classe": "DET"
+        "mot": "ton",
+        "classe": "DET",
+        "groupe": "ton"
+    },
+    {
+        "mot": "ta",
+        "classe": "DET",
+        "genre": 2,
+        "groupe": "ton"
+    },
+    {
+        "mot": "tes",
+        "classe": "DET",
+        "nombre": 2,
+        "groupe": "ton"
     },
     {
         "mot": "train",

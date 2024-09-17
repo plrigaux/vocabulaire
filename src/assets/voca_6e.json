@@ -387,7 +387,7 @@
     },
     {
         "mot": "brûlure",
-        "alt": "brulure ",
+        "alt": "brulure",
         "classe": "N",
         "genre": 2
     },
@@ -414,12 +414,20 @@
         "mot": "caporal",
         "classe": "N",
         "genre": 1,
-        "groupe": "fol"
+        "groupe": "caporal"
+    },
+    {
+        "mot": "caporale",
+        "classe": "N",
+        "genre": 2,
+        "groupe": "caporal"
     },
     {
         "mot": "caporaux",
         "classe": "N",
-        "genre": 2
+        "genre": 1,
+        "nombre": 2,
+        "groupe": "caporal"
     },
     {
         "mot": "caprice",
@@ -857,7 +865,7 @@
         "genre": 1
     },
     {
-        "mot": "élancer, s'",
+        "mot": "s'élancer",
         "classe": "V"
     },
     {
@@ -1241,7 +1249,7 @@
     },
     {
         "mot": "goûter",
-        "alt": "gouter ",
+        "alt": "gouter",
         "classe": "V"
     },
     {
@@ -1716,7 +1724,7 @@
         "genre": 1
     },
     {
-        "mot": "moquer, se",
+        "mot": "se moquer",
         "classe": "V"
     },
     {
@@ -1970,7 +1978,7 @@
     },
     {
         "mot": "piqûre",
-        "alt": "piqure ",
+        "alt": "piqure",
         "classe": "N",
         "genre": 2
     },
@@ -2261,7 +2269,7 @@
         "genre": 1
     },
     {
-        "mot": "réfugier, se",
+        "mot": "se réfugier",
         "classe": "V"
     },
     {
@@ -2298,7 +2306,7 @@
         "classe": "V"
     },
     {
-        "mot": "repentir, se",
+        "mot": "se repentir",
         "classe": "V"
     },
     {
@@ -2702,7 +2710,7 @@
     },
     {
         "mot": "sûreté",
-        "alt": "sureté ",
+        "alt": "sureté",
         "classe": "N",
         "genre": 2
     },

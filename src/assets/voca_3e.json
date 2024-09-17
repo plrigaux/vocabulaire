@@ -241,7 +241,7 @@
     },
     {
         "mot": "boîte",
-        "alt": "boite ",
+        "alt": "boite",
         "classe": "N",
         "genre": 2
     },
@@ -355,8 +355,16 @@
         "fem": "certaine"
     },
     {
-        "mot": "chacun chacune",
-        "classe": "PRON"
+        "mot": "chacun",
+        "classe": "PRON",
+        "genre": 1,
+        "groupe": "chacun"
+    },
+    {
+        "mot": "chacune",
+        "classe": "PRON",
+        "genre": 2,
+        "groupe": "chacun"
     },
     {
         "mot": "chagrin",
@@ -431,7 +439,8 @@
         "fem": "claire"
     },
     {
-        "mot": "clé / clef",
+        "mot": "clé",
+        "alt": "clef",
         "classe": "N",
         "genre": 2
     },
@@ -798,7 +807,7 @@
     },
     {
         "mot": "fraîche",
-        "alt": "fraiche ",
+        "alt": "fraiche",
         "classe": "ADJ",
         "genre": 2
     },
@@ -1039,11 +1048,6 @@
         "genre": 2
     },
     {
-        "mot": "LISTE",
-        "classe": "N",
-        "genre": 1
-    },
-    {
         "mot": "longtemps",
         "classe": "ADV"
     },
@@ -1222,11 +1226,6 @@
         "genre": 2
     },
     {
-        "mot": "morte",
-        "classe": "N",
-        "genre": 2
-    },
-    {
         "mot": "mourir",
         "classe": "V"
     },
@@ -1343,7 +1342,7 @@
     },
     {
         "mot": "paraître",
-        "alt": "paraitre ",
+        "alt": "paraitre",
         "classe": "V"
     },
     {
@@ -1560,36 +1559,36 @@
         "groupe": "quel"
     },
     {
-        "mot": "quel  ",
+        "mot": "quel",
         "classe": "PRON",
         "genre": 1,
-        "groupe": "quel  "
+        "groupe": "quel"
     },
     {
         "mot": "quelle",
         "classe": "DET",
         "genre": 2,
-        "groupe": "quel  "
+        "groupe": "quel"
     },
     {
         "mot": "quelle",
         "classe": "PRON",
         "genre": 2,
-        "groupe": "quel  "
+        "groupe": "quel"
     },
     {
         "mot": "quelles",
         "classe": "DET",
         "genre": 2,
         "nombre": 2,
-        "groupe": "quel  "
+        "groupe": "quel"
     },
     {
         "mot": "quelles",
         "classe": "PRON",
         "genre": 2,
         "nombre": 2,
-        "groupe": "quel  "
+        "groupe": "quel"
     },
     {
         "mot": "quelqu'un",
@@ -1622,14 +1621,14 @@
         "classe": "DET",
         "genre": 1,
         "nombre": 2,
-        "groupe": "quel  "
+        "groupe": "quel"
     },
     {
         "mot": "quels",
         "classe": "PRON",
         "genre": 1,
         "nombre": 2,
-        "groupe": "quel  "
+        "groupe": "quel"
     },
     {
         "mot": "question",
