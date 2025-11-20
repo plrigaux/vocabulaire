@@ -6,9 +6,10 @@ import { VocabulaireDataHandlerService } from '../vocabulaire/vocabulaire-data-h
 import { Theme } from '../vocabulaire/vocabulaireInterfaces'
 
 @Component({
-  selector: 'app-portal',
-  templateUrl: './portal.component.html',
-  styleUrls: ['./portal.component.scss']
+    selector: 'app-portal',
+    templateUrl: './portal.component.html',
+    styleUrls: ['./portal.component.scss'],
+    standalone: false
 })
 export class PortalComponent implements OnInit {
   constructor(

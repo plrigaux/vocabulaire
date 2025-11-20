@@ -7,9 +7,10 @@ import { ThemeSetterService } from '../theme-setter.service'
 import { AppConfig, DEFAULT_CONFIG } from '../app-config'
 
 @Component({
-  selector: 'app-vocabulaire',
-  templateUrl: './vocabulaire.component.html',
-  styleUrls: ['./vocabulaire.component.scss']
+    selector: 'app-vocabulaire',
+    templateUrl: './vocabulaire.component.html',
+    styleUrls: ['./vocabulaire.component.scss'],
+    standalone: false
 })
 export class VocabulaireComponent implements OnInit {
   app_config: AppConfig = DEFAULT_CONFIG

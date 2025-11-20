@@ -4,9 +4,10 @@ import { FormControl, UntypedFormControl, Validators } from '@angular/forms';
 import { MyErrorStateMatcher } from './errorStateMatcher';
 
 @Component({
-  selector: 'app-input-slider',
-  templateUrl: './input-slider.component.html',
-  styleUrls: ['./input-slider.component.scss']
+    selector: 'app-input-slider',
+    templateUrl: './input-slider.component.html',
+    styleUrls: ['./input-slider.component.scss'],
+    standalone: false
 })
 export class InputSliderComponent implements OnInit {
 

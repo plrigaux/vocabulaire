@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-speech',
-  templateUrl: './speech.component.html',
-  styleUrls: ['./speech.component.scss']
+    selector: 'app-speech',
+    templateUrl: './speech.component.html',
+    styleUrls: ['./speech.component.scss'],
+    standalone: false
 })
 export class SpeechComponent implements OnInit {
 

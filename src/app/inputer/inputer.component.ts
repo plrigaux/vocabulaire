@@ -4,9 +4,10 @@ import JSON5 from 'json5'
 import { Clipboard } from '@angular/cdk/clipboard'
 
 @Component({
-  selector: 'app-inputer',
-  templateUrl: './inputer.component.html',
-  styleUrls: ['./inputer.component.scss']
+    selector: 'app-inputer',
+    templateUrl: './inputer.component.html',
+    styleUrls: ['./inputer.component.scss'],
+    standalone: false
 })
 export class InputerComponent implements OnInit {
   constructor (private clipboard: Clipboard) {}

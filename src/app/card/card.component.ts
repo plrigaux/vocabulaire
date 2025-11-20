@@ -22,9 +22,10 @@ import { MatSnackBar as MatSnackBar } from '@angular/material/snack-bar'
 /** Error when invalid control is dirty, touched, or submitted. */
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+    selector: 'app-card',
+    templateUrl: './card.component.html',
+    styleUrls: ['./card.component.scss'],
+    standalone: false
 })
 export class CardComponent implements OnInit {
   private _userInput: string = ''

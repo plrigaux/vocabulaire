@@ -14,9 +14,10 @@ import { ThemeSetterService } from '../theme-setter.service'
 import { VocabulaireDataHandlerService } from '../vocabulaire/vocabulaire-data-handler.service'
 
 @Component({
-  selector: 'app-cardcontrol',
-  templateUrl: './cardcontrol.component.html',
-  styleUrls: ['./cardcontrol.component.scss']
+    selector: 'app-cardcontrol',
+    templateUrl: './cardcontrol.component.html',
+    styleUrls: ['./cardcontrol.component.scss'],
+    standalone: false
 })
 export class CardcontrolComponent implements OnInit {
   theme: Theme | null = null

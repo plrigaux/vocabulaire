@@ -10,9 +10,10 @@ import {
 import { SequenceMatcher } from 'difflib-ts'
 
 @Component({
-  selector: 'app-corrector',
-  templateUrl: './corrector.component.html',
-  styleUrls: ['./corrector.component.scss']
+    selector: 'app-corrector',
+    templateUrl: './corrector.component.html',
+    styleUrls: ['./corrector.component.scss'],
+    standalone: false
 })
 export class CorrectorComponent implements OnInit, OnChanges {
   private _given: string = ''

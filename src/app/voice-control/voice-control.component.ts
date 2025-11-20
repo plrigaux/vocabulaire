@@ -12,9 +12,10 @@ export interface VolumeDialogData {
 }
 
 @Component({
-  selector: 'app-voice-control',
-  templateUrl: './voice-control.component.html',
-  styleUrls: ['./voice-control.component.scss']
+    selector: 'app-voice-control',
+    templateUrl: './voice-control.component.html',
+    styleUrls: ['./voice-control.component.scss'],
+    standalone: false
 })
 export class VoiceControlComponent implements OnInit {
   readonly pitchMin = 0

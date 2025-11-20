@@ -15,11 +15,10 @@ import {
 
 
 @Component({
-  selector: 'app-mot-table',
-  standalone: true,
-  imports: [MatTableModule],
-  templateUrl: './mot-table.component.html',
-  styleUrl: './mot-table.component.scss'
+    selector: 'app-mot-table',
+    imports: [MatTableModule],
+    templateUrl: './mot-table.component.html',
+    styleUrl: './mot-table.component.scss'
 })
 export class MotTableComponent {
   constructor(
