@@ -1,57 +1,59 @@
 <!--div class="selectContainer">
-    <div>
-        <h4>Thème</h4>
-        <mat-form-field appearance="fill">
-            <mat-label>Choisisez un thème</mat-label>
-            <mat-select [value]="theme?.theme" (selectionChange)="onChangeTheme($event.value)">
-                <mat-option *ngFor="let theme of themes" [value]="theme.theme">
-                    Thème {{theme.theme}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-    <div>
-        <h4>Semaine</h4>
-        <mat-form-field appearance="fill">
-            <mat-label>Choisisez une semaine</mat-label>
-            <mat-select [value]="semaine?.semaine" (selectionChange)="onChangeSemaine($event.value)">
-                <mat-option *ngFor="let sem of theme?.semaines" [value]="sem.semaine">
-                    Semaine {{sem.semaine}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
+<div>
+  <h4>Thème</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Choisisez un thème</mat-label>
+    <mat-select [value]="theme?.theme" (selectionChange)="onChangeTheme($event.value)">
+      <mat-option *ngFor="let theme of themes" [value]="theme.theme">
+        Thème {{theme.theme}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div>
+  <h4>Semaine</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Choisisez une semaine</mat-label>
+    <mat-select [value]="semaine?.semaine" (selectionChange)="onChangeSemaine($event.value)">
+      <mat-option *ngFor="let sem of theme?.semaines" [value]="sem.semaine">
+        Semaine {{sem.semaine}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
 </div -->
 <div class="selectContainer">
-    <div>
-        <mat-slide-toggle [(ngModel)]="shuffle" (change)="onChangeShuffleToggle($event)">Mélanger</mat-slide-toggle>
-    </div>
-    <div>
-        <mat-button-toggle-group [(ngModel)]="article">
-            <mat-button-toggle value="unune">Un / Une</mat-button-toggle>
-            <mat-button-toggle value="lela">Le / La</mat-button-toggle>
-        </mat-button-toggle-group>
-    </div>
+  <div>
+    <mat-slide-toggle [(ngModel)]="shuffle" (change)="onChangeShuffleToggle($event)">Mélanger</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-button-toggle-group [(ngModel)]="article">
+      <mat-button-toggle value="unune">Un / Une</mat-button-toggle>
+      <mat-button-toggle value="lela">Le / La</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
 </div>
 <div class="cardContentContainer">
-    <mat-card class="cardContent">
-        <mat-card-header>
-            <mat-card-title>Mot de vocabulaire {{getLabel()}}</mat-card-title>
-            <mat-card-subtitle>
-                <ng-container *ngIf='mots.length > 0'>{{motIndex + 1}} de {{mots.length}}</ng-container>&nbsp;
-            </mat-card-subtitle>
-        </mat-card-header>
-        <app-card (isWriting)="checkWritingState($event)" [article]="article"></app-card>
-        <mat-card-footer class="footer">
-            <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled()">
-                <mat-icon>arrow_back_ios</mat-icon>
-                Précédent
-            </button>
-            <div class="flex-spacer"></div>
-            <button mat-raised-button color="primary" (click)="next()" [disabled]="nextDisabled()">
-                Suivant <mat-icon>
-                    arrow_forward_ios</mat-icon>
-            </button>
-        </mat-card-footer>
-    </mat-card>
+  <mat-card class="cardContent">
+    <mat-card-header>
+      <mat-card-title>Mot de vocabulaire {{getLabel()}}</mat-card-title>
+      <mat-card-subtitle>
+        @if (mots.length > 0) {
+          {{motIndex + 1}} de {{mots.length}}
+          }&nbsp;
+        </mat-card-subtitle>
+      </mat-card-header>
+      <app-card (isWriting)="checkWritingState($event)" [article]="article"></app-card>
+      <mat-card-footer class="footer">
+        <button mat-raised-button color="primary" (click)="previous()" [disabled]="prevDisabled()">
+          <mat-icon>arrow_back_ios</mat-icon>
+          Précédent
+        </button>
+        <div class="flex-spacer"></div>
+        <button mat-raised-button color="primary" (click)="next()" [disabled]="nextDisabled()">
+          Suivant <mat-icon>
+        arrow_forward_ios</mat-icon>
+      </button>
+    </mat-card-footer>
+  </mat-card>
 </div>

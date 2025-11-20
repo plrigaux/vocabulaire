@@ -3,7 +3,7 @@
     matSliderThumb
     [value]="formControl.value"
     (change)="formControl.setValue(value)"
-  />
+    />
 </mat-slider>
 <mat-form-field appearance="outline" class="valueInput">
   <mat-label>{{label}}</mat-label>
@@ -14,14 +14,20 @@
     [errorStateMatcher]="matcher"
     [min]="min"
     [max]="max"
-  />
-  <mat-error *ngIf="formControl.hasError('required')">
-    SVP le champs ne peux etre vide
-  </mat-error>
-  <mat-error *ngIf="formControl.hasError('min')">
-    SVP la valeur minimum est {{min}}
-  </mat-error>
-  <mat-error *ngIf="formControl.hasError('max')">
-    SVP la valeur maximum est {{max}}
-  </mat-error>
+    />
+  @if (formControl.hasError('required')) {
+    <mat-error>
+      SVP le champs ne peux etre vide
+    </mat-error>
+  }
+  @if (formControl.hasError('min')) {
+    <mat-error>
+      SVP la valeur minimum est {{min}}
+    </mat-error>
+  }
+  @if (formControl.hasError('max')) {
+    <mat-error>
+      SVP la valeur maximum est {{max}}
+    </mat-error>
+  }
 </mat-form-field>

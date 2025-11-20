@@ -1,14 +1,19 @@
-<div *ngIf="all_ok; else notShow">
+@if (all_ok) {
+  <div>
     <div class="corrector">
-        <span class="typeGood">{{given}}</span>
+      <span class="typeGood">{{given}}</span>
     </div>
-</div>
-<ng-template #notShow>
-    <div class="corrector">
-        <span *ngFor="let elem of givenElems; let i = index" [ngClass]="setClassGiven(elem)">{{elem.text}}</span>
-    </div>
-    <span id="typearrow">&darr;</span>
-    <div class="corrector">
-        <span *ngFor="let elem of correctElems; let i = index" [ngClass]="setClassCorrect(elem)">{{elem.text}}</span>
-    </div>
-</ng-template>
+  </div>
+} @else {
+  <div class="corrector">
+    @for (elem of givenElems; track elem; let i = $index) {
+      <span [ngClass]="setClassGiven(elem)">{{elem.text}}</span>
+    }
+  </div>
+  <span id="typearrow">&darr;</span>
+  <div class="corrector">
+    @for (elem of correctElems; track elem; let i = $index) {
+      <span [ngClass]="setClassCorrect(elem)">{{elem.text}}</span>
+    }
+  </div>
+}

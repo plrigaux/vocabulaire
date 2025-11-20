@@ -1,7 +1,7 @@
 <div class="answer">
   <div class="answerLine">
     <!--input #answerInput id="answerInput" placeholder="Votre réponse" [(ngModel)]="userInput" (keydown.enter)="validate()"
-      autocomplete="off" spellcheck="false" [disabled]="playDisable()" [matTooltip]="getIndice()" -->
+    autocomplete="off" spellcheck="false" [disabled]="playDisable()" [matTooltip]="getIndice()" -->
 
     <mat-form-field appearance="fill" class="answerInput">
       <input
@@ -14,11 +14,13 @@
         spellcheck="false"
         [disabled]="playDisable()"
         placeholder="Votre réponse"
-      />
+        />
       <span matPrefix [innerHTML]="prefix" class="prefix_style"></span>
     </mat-form-field>
   </div>
-  <p *ngIf="showIndice" id="indice" [innerHTML]="getIndice()"></p>
+  @if (showIndice) {
+    <p id="indice" [innerHTML]="getIndice()"></p>
+  }
 </div>
 <div class="controler-section">
   <button
@@ -27,7 +29,7 @@
     (click)="validate()"
     [disabled]="validationDisable()"
     class="controler-section-child"
-  >
+    >
     Valider
   </button>
   <button
@@ -37,7 +39,7 @@
     matTooltip="Rejouer"
     [disabled]="playDisable()"
     class="controler-section-child"
-  >
+    >
     <mat-icon>play_circle_filled</mat-icon>
   </button>
 
@@ -46,35 +48,37 @@
     aria-label="Ingredients"
     multiple
     class="controler-section-child"
-  >
+    >
     <mat-button-toggle
       value="flour"
       color="accent"
       (click)="showIndiceToggle($event)"
-    >
+      >
       <mat-icon
         class="icon-hint"
         fontSet="material-symbols-outlined"
         class="icon-hint"
         matTooltip="Indice"
         >help</mat-icon
-      ></mat-button-toggle
-    >
-  </mat-button-toggle-group>
-</div>
-<!-- mat-icon class="icon-hint" fontSet="material-symbols-outlined" class="icon-hint">help</mat-icon>
-<span class="material-symbols-outlined">
-  home
+        ></mat-button-toggle
+        >
+      </mat-button-toggle-group>
+    </div>
+  <!-- mat-icon class="icon-hint" fontSet="material-symbols-outlined" class="icon-hint">help</mat-icon>
+  <span class="material-symbols-outlined">
+    home
   </span>
   <span class="material-icons-outlined">
     home
-    </span>
-    <mat-icon fontSet="material-symbols-outlined">breastfeeding</mat-icon -->
-<div *ngIf="validation" class="corrector-container">
-  <app-corrector
-    [given]="given"
-    [correct]="getMot()"
-    (successEvent)="handleSucces($event)"
-  ></app-corrector>
-</div>
-<br />
+  </span>
+  <mat-icon fontSet="material-symbols-outlined">breastfeeding</mat-icon -->
+    @if (validation) {
+      <div class="corrector-container">
+        <app-corrector
+          [given]="given"
+          [correct]="getMot()"
+          (successEvent)="handleSucces($event)"
+        ></app-corrector>
+      </div>
+    }
+    <br />

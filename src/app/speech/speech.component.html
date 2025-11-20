@@ -1,38 +1,40 @@
 
 <mat-form-field appearance="fill">
-    <mat-label>Select an option</mat-label>
-    <mat-select [(value)]="selectedVoice">
-      <mat-option *ngFor="let v of voices" [value]="v.name" lang="v.lang">{{v.name}}</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <mat-label>Select an option</mat-label>
+  <mat-select [(value)]="selectedVoice">
+    @for (v of voices; track v) {
+      <mat-option [value]="v.name" lang="v.lang">{{v.name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
 
- 
-  
-    <label >pitch {{pitch}}</label>
 
-  <mat-slider
+
+<label >pitch {{pitch}}</label>
+
+<mat-slider
   thumbLabel
   [(ngModel)]="pitch"
   step="0.1"
   min="0"
   max="2"
-  aria-label="units"></mat-slider>
+aria-label="units"></mat-slider>
 
-  <label >rate {{rate}}</label>
+<label >rate {{rate}}</label>
 
-  <mat-slider
+<mat-slider
   thumbLabel
   [(ngModel)]="rate"
   step="0.1"
   min="0.1"
   max="10"
-  aria-label="units"></mat-slider>
-  <br/>
+aria-label="units"></mat-slider>
+<br/>
 <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Phrase à dire</mat-label>
-    <input matInput placeholder="Ex. Pizza" [(ngModel)]="textToSpeak" type="text">
-  </mat-form-field>
- <span>&nbsp;</span><button mat-raised-button color="accent" (click)="test()">Speak</button>
+  <mat-label>Phrase à dire</mat-label>
+  <input matInput placeholder="Ex. Pizza" [(ngModel)]="textToSpeak" type="text">
+</mat-form-field>
+<span>&nbsp;</span><button mat-raised-button color="accent" (click)="test()">Speak</button>
 
 
 

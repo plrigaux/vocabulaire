@@ -1,24 +1,28 @@
 <!--a mat-button href="speech" >Speech</a><br/>
 <a mat-button href="correctortest" >Test du correcteur</a><br/ -->
 
-<div *ngFor="let theme of voc_themes">
-  <h2>Theme {{theme.theme}} {{ theme.description }}</h2>
-  <div class="semaine-chooser">
-    <a
-      *ngFor="let semaine of theme?.semaines"
-      mat-raised-button
-      (click)="practice(theme.theme, semaine.semaine)"
-      href="cardcontrol"
-    >
-      Semaine {{semaine.semaine}}
-    </a>
-    <a
-    *ngFor="let serie of theme?.series"
-    mat-raised-button
-    (click)="practice_serie(theme.theme, serie.id)"
-    href="cardcontrol"
-  >
-    Serie {{theme.theme}}.{{serie.id}}
-  </a>
+@for (theme of voc_themes; track theme) {
+  <div>
+    <h2>Theme {{theme.theme}} {{ theme.description }}</h2>
+    <div class="semaine-chooser">
+      @for (semaine of theme?.semaines; track semaine) {
+        <a
+          mat-raised-button
+          (click)="practice(theme.theme, semaine.semaine)"
+          href="cardcontrol"
+          >
+          Semaine {{semaine.semaine}}
+        </a>
+      }
+      @for (serie of theme?.series; track serie) {
+        <a
+          mat-raised-button
+          (click)="practice_serie(theme.theme, serie.id)"
+          href="cardcontrol"
+          >
+          Serie {{theme.theme}}.{{serie.id}}
+        </a>
+      }
+    </div>
   </div>
-</div>
+}

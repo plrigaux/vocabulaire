@@ -1,41 +1,43 @@
 <h1 mat-dialog-title>Contôles de la voix</h1>
 <div mat-dialog-content>
-    <mat-form-field appearance="fill">
-        <mat-label>Choix de voix</mat-label>
-        <mat-select [value]="getSelectedVoice()" (selectionChange)="setSelectedVoice($event)" class="voiceSelect">
-            <mat-option *ngFor="let v of getVoices()" [value]="v" lang="v.lang">{{v.name}}</mat-option>
-        </mat-select>
-    </mat-form-field>
-    <div>
-        <h3>Pitch {{data.pitch}}</h3>
-        <app-input-slider [min]="pitchMin"
-            [max]="pitchMax" [value]="data.pitch" step="0.1" (changeValue)="changePitch($event)" label="Pitch">
-        </app-input-slider>
-    </div>
-    <div>
-        <h3>Rate {{data.rate}}</h3>
-        <app-input-slider [min]="rateMin"
-            [max]="rateMax" [value]="data.rate" step="0.1" (changeValue)="changeRate($event)" label="Rate">
-        </app-input-slider>
-    </div>
-    <div>
-        <h3>Volume {{volume}} %</h3>
-        <app-input-slider min=1
-            max=100 [value]="volume" step="1" (changeValue)="changeVolume($event)" label="Volume">
-        </app-input-slider>
+  <mat-form-field appearance="fill">
+    <mat-label>Choix de voix</mat-label>
+    <mat-select [value]="getSelectedVoice()" (selectionChange)="setSelectedVoice($event)" class="voiceSelect">
+      @for (v of getVoices(); track v) {
+        <mat-option [value]="v" lang="v.lang">{{v.name}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <div>
+    <h3>Pitch {{data.pitch}}</h3>
+    <app-input-slider [min]="pitchMin"
+      [max]="pitchMax" [value]="data.pitch" step="0.1" (changeValue)="changePitch($event)" label="Pitch">
+    </app-input-slider>
+  </div>
+  <div>
+    <h3>Rate {{data.rate}}</h3>
+    <app-input-slider [min]="rateMin"
+      [max]="rateMax" [value]="data.rate" step="0.1" (changeValue)="changeRate($event)" label="Rate">
+    </app-input-slider>
+  </div>
+  <div>
+    <h3>Volume {{volume}} %</h3>
+    <app-input-slider min=1
+      max=100 [value]="volume" step="1" (changeValue)="changeVolume($event)" label="Volume">
+    </app-input-slider>
 
-    </div>
+  </div>
 </div>
 <mat-dialog-actions>
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>La voix dit</mat-label>
-            <input matInput [(ngModel)]="voiceTest" type="text" />
-        </mat-form-field>
-        <button mat-mini-fab color="accent" matTooltip="Testez la voix" (click)="playVoice()"><mat-icon>play_circle_filled</mat-icon></button>
-    </div>
-    <div>
-        <button mat-button (click)="onNoClick()">Annuler</button>
-        <button mat-button (click)="onOkClick()" color="accent" cdkFocusInitial>Ok</button>
-    </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>La voix dit</mat-label>
+      <input matInput [(ngModel)]="voiceTest" type="text" />
+    </mat-form-field>
+    <button mat-mini-fab color="accent" matTooltip="Testez la voix" (click)="playVoice()"><mat-icon>play_circle_filled</mat-icon></button>
+  </div>
+  <div>
+    <button mat-button (click)="onNoClick()">Annuler</button>
+    <button mat-button (click)="onOkClick()" color="accent" cdkFocusInitial>Ok</button>
+  </div>
 </mat-dialog-actions>

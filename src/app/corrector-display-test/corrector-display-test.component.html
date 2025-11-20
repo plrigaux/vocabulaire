@@ -1,5 +1,7 @@
 <p>corrector-display-test works!</p>
-<div *ngFor="let test of data; let first = first; let last = last">
+@for (test of data; track test; let first = $first; let last = $last) {
+  <div>
     <app-corrector [given]="test.given" [correct]="[test.correct]" ></app-corrector>
     <hr/>
-</div>
+  </div>
+}
