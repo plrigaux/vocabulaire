@@ -35,8 +35,8 @@ export class SpeechComponent implements OnInit {
   }
 
   private listVoices() {
-    console.log("list voices")
     this.voices = speechSynthesis.getVoices();
+    console.log("list voices", this.voices)
 
     this.voices.forEach(voice => {
 
