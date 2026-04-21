@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
-@import 'themes_variables';
+@use 'themes_variables';
 // TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
 //  The following line adds:
 //    1. Default typography styles for all components
@@ -55,7 +55,7 @@
   }
 }
 
-@each $thclass, $th in $all_themes {
+@each $thclass, $th in themes_variables.$all_themes {
   @if $thclass == '' {
     @include mat.all-component-themes($th);
     //@include mix-toggle-custom($thclass, $th)
